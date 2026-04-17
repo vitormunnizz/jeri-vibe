@@ -177,21 +177,56 @@ export default function HomePage() {
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           </section>
 
       {/* EXPERIÊNCIAS */}
-      <section id="experiencias" className="py-20 px-6 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-black tracking-tighter mb-12 uppercase text-gray-900 text-center">
-            Nossas Experiências
-          </h2>
+      <section id="experiencias" className="bg-orange-600 py-20 px-6 text-white">
+        <div className="max-w-5xl mx-auto">
+          <div className="flex flex-col items-center mb-12 text-center">
+            <span className="uppercase tracking-widest text-xs font-bold mb-2">
+              Descubra Nossas Ofertas
+            </span>
+            <h2 className="text-3xl md:text-4xl font-black">
+              Nossas Experiências
+            </h2>
+            <div className="h-1 w-20 bg-white mt-4 rounded-full"></div>
+          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-10 leading-relaxed text-base md:text-lg">
+            <div className="space-y-5">
+              <p>
+                Na Jeri 4XP, oferecemos uma variedade completa de experiências para tornar sua estadia em Jericoacoara inesquecível. Desde passeios emocionantes pelas dunas e lagoas cristalinas até hospedagem confortável e transfers seguros.
+              </p>
+
+              <p className="italic border-l-2 border-white/30 pl-5">
+                Cada experiência é cuidadosamente planejada para garantir que você aproveite ao máximo a beleza natural e a cultura vibrante de Jeri.
+              </p>
+
+              <p>
+                Nossos serviços incluem passeios em buggy, quadriciclo, UTV e 4x4, acomodações em pousadas selecionadas, transfers confortáveis e aulas de esportes aquáticos. Tudo pensado para proporcionar conforto, segurança e muita diversão.
+              </p>
+            </div>
+
+            <div className="space-y-5">
+              <p>
+                Contamos com uma equipe experiente e atenciosa, pronta para personalizar cada detalhe de sua viagem. Seja você um aventureiro em busca de adrenalina ou alguém procurando relaxamento total, temos a experiência perfeita para você.
+              </p>
+
+              <p>
+                Nossas aulas de esportes aquáticos, como kitesurfing e wingfoil, são ministradas por instrutores certificados. Os passeios exploram os melhores pontos da região, enquanto as hospedagens oferecem conforto e hospitalidade calorosa.
+              </p>
+
+              <p>
+                Prepare-se para criar memórias que durarão para sempre. Cada momento em Jericoacoara com a Jeri 4XP é uma oportunidade de descobrir por que este lugar é tão especial e por que tantas pessoas voltam sempre.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-12">
             {experiences.map((item) => (
               <a
                 key={item.name}
                 href={item.link}
-                className="relative h-64 rounded-2xl flex items-end p-8 bg-gradient-to-br from-gray-800 to-black text-white text-2xl font-black hover:shadow-lg transition overflow-hidden group"
+                className="bg-white/10 hover:bg-white/20 transition p-6 rounded-xl text-center font-bold text-lg"
               >
-                <Image src="https://static.wixstatic.com/media/792b6b_d4c5932b099c4552a2356fa26ce00f01~mv2.png?originWidth=576&originHeight=384" alt={item.name} className="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-30 transition" />
-                <span className="relative z-10">{item.name}</span>
+                {item.name}
               </a>
             ))}
           </div>
