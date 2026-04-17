@@ -1,3 +1,4 @@
+import { Image } from '@/components/ui/image';
 import { useState } from "react";
 
 export default function Home() {
@@ -67,7 +68,7 @@ export default function Home() {
       {/* HERO */}
       <section className="min-h-screen w-full text-white relative">
         <header className="absolute w-full flex justify-between px-10 py-4 z-50 items-center">
-          <img src="/logo_jeri4xp.png" alt="Logo" className="w-24" />
+          <Image src="/logo_jeri4xp.png" alt="Logo" className="w-24" />
 
           <nav className="hidden md:flex gap-10 text-lg font-bold uppercase tracking-wider">
             {navItems.map((item) => (
@@ -83,6 +84,16 @@ export default function Home() {
           >
             ☰
           </button>
+                {/* FOOTER */}
+      <div className="p-10 text-center">
+        <h2 className="text-2xl font-bold">
+          Sua aventura em Jericoacoara começa aqui
+        </h2>
+
+        <p className="mt-4 text-gray-600 italic max-w-xl mx-auto">
+          Turismo com qualidade, aventuras personalizadas e memórias inesquecíveis em Jericoacoara.
+        </p>
+      </div>
         </header>
 
         {/* MENU MOBILE */}
@@ -108,10 +119,7 @@ export default function Home() {
           </div>
         )}
 
-        <img
-          src="/jeri1.webp"
-          className="absolute w-full h-full object-cover opacity-80"
-        />
+        <Image src="/jeri1.webp" className="absolute w-full h-full object-cover opacity-80" />
 
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
           <span className="text-orange-600 mb-2 uppercase tracking-widest">
@@ -222,10 +230,7 @@ export default function Home() {
               <p className="mb-4 italic">{item.content}</p>
 
               <div className="flex items-center gap-4">
-                <img
-                  src={item.avatar}
-                  className="w-14 h-14 rounded-full"
-                />
+                <Image src={item.avatar} className="w-14 h-14 rounded-full" />
                 <div>
                   <h4 className="font-bold">{item.name}</h4>
                   <span className="text-sm text-gray-500">
