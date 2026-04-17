@@ -119,7 +119,7 @@ export default function HomePage() {
             variants={fadeInUp}
             className="text-center mb-16"
           >
-            <p className="text-sm font-bold tracking-widest uppercase mb-2 opacity-80">Descubra a Vila</p>
+            <p className="text-sm font-bold tracking-widest uppercase mb-2 opacity-80 font-paragraph">Descubra a Vila</p>
             <h2 className="text-4xl md:text-5xl font-heading font-bold">História de Jericoacoara</h2>
           </motion.div>
 
@@ -167,7 +167,7 @@ export default function HomePage() {
             variants={fadeInUp}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-heading font-bold uppercase tracking-wide text-secondary">
+            <h2 className="text-4xl md:text-5xl font-heading font-bold uppercase tracking-wide text-secondary">
               Nossas Experiências
             </h2>
           </motion.div>
@@ -272,7 +272,7 @@ export default function HomePage() {
             variants={fadeInUp}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-secondary">
+            <h2 className="text-4xl md:text-5xl font-heading font-bold text-secondary">
               O que dizem sobre a Jeri 4XP
             </h2>
           </motion.div>
@@ -350,7 +350,7 @@ export default function HomePage() {
             variants={fadeInUp}
             className="text-center mb-16"
           >
-            <p className="text-sm font-bold tracking-widest uppercase mb-2 opacity-80">Fale com a gente</p>
+            <p className="text-sm font-bold tracking-widest uppercase mb-2 opacity-80 font-paragraph">Fale com a gente</p>
             <h2 className="text-4xl md:text-5xl font-heading font-bold">
               Prepare sua próxima<br />aventura em Jeri
             </h2>
