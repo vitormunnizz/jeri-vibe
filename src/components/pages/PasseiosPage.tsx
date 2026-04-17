@@ -1,5 +1,16 @@
 import { Image } from '@/components/ui/image';
 import { useState } from "react";
+import { useSwiper } from 'swiper/react';
+
+export default function PasseioLeste() {
+  const swiper = useSwiper();
+
+  const items = [
+    'Árvore da Preguiça',
+    'Lagoa do Paraíso',
+    'Buraco Azul',
+    'Lagoa Azul'
+  ];
 
 
 export default function Jeri4xp() {
