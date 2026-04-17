@@ -219,14 +219,34 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
             {experiences.map((item) => (
               <a
                 key={item.name}
                 href={item.link}
-                className="bg-white/10 hover:bg-white/20 transition p-6 rounded-xl text-center font-bold text-lg"
+                className="group relative h-70 rounded-3xl flex flex-col justify-end items-start p-10 overflow-hidden bg-black shadow-xl"
               >
-                {item.name}
+                <Image
+                  src={
+                    item.name === "Passeios"
+                      ? "https://static.wixstatic.com/media/792b6b_4f20f630624849c0af228c95edd905b7~mv2.png?originWidth=256&originHeight=256"
+                      : item.name === "Hospedagem"
+                      ? "https://static.wixstatic.com/media/792b6b_ea2817bcd0de4f6e8d235353decd6caf~mv2.png?originWidth=256&originHeight=256"
+                      : item.name === "Transfer"
+                      ? "https://static.wixstatic.com/media/792b6b_24b85beb673d4e1bbd945bb5e3412cd4~mv2.png?originWidth=256&originHeight=256"
+                      : "https://static.wixstatic.com/media/792b6b_308bfaa4612a43949f0b088dfb2b0b83~mv2.png?originWidth=256&originHeight=256"
+                  }
+                  alt={item.name}
+                  className="absolute inset-0 w-full h-full object-cover opacity-70 transition-all duration-700 group-hover:scale-110 group-hover:opacity-50"
+                />
+                <div className="relative z-10">
+                  <h2 className="text-white text-4xl font-black mb-4 uppercase italic tracking-tighter">
+                    {item.name}
+                  </h2>
+                  <button className="bg-orange-600 text-white py-3 px-8 rounded-full font-bold text-sm uppercase tracking-widest hover:bg-white hover:text-orange-600 hover:cursor-pointer transition-all duration-300">
+                    Saiba mais
+                  </button>
+                </div>
               </a>
             ))}
           </div>
