@@ -178,46 +178,6 @@ export default function HomePage() {
 
       {/* EXPERIÊNCIAS */}
       <section id="experiencias" className="bg-orange-600 py-20 px-6 text-white">
-        <div className="max-w-5xl mx-auto">
-          <div className="flex flex-col items-center mb-12 text-center">
-            <span className="uppercase tracking-widest text-xs font-bold mb-2">
-              Descubra Nossas Ofertas
-            </span>
-            <h2 className="text-3xl md:text-4xl font-black">
-              Nossas Experiências
-            </h2>
-            <div className="h-1 w-20 bg-white mt-4 rounded-full"></div>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-10 leading-relaxed text-base md:text-lg">
-            <div className="space-y-5">
-              <p>
-                Na Jeri 4XP, oferecemos uma variedade completa de experiências para tornar sua estadia em Jericoacoara inesquecível. Desde passeios emocionantes pelas dunas e lagoas cristalinas até hospedagem confortável e transfers seguros.
-              </p>
-
-              <p className="italic border-l-2 border-white/30 pl-5">
-                Cada experiência é cuidadosamente planejada para garantir que você aproveite ao máximo a beleza natural e a cultura vibrante de Jeri.
-              </p>
-
-              <p>
-                Nossos serviços incluem passeios em buggy, quadriciclo, UTV e 4x4, acomodações em pousadas selecionadas, transfers confortáveis e aulas de esportes aquáticos. Tudo pensado para proporcionar conforto, segurança e muita diversão.
-              </p>
-            </div>
-
-            <div className="space-y-5">
-              <p>
-                Contamos com uma equipe experiente e atenciosa, pronta para personalizar cada detalhe de sua viagem. Seja você um aventureiro em busca de adrenalina ou alguém procurando relaxamento total, temos a experiência perfeita para você.
-              </p>
-
-              <p>
-                Nossas aulas de esportes aquáticos, como kitesurfing e wingfoil, são ministradas por instrutores certificados. Os passeios exploram os melhores pontos da região, enquanto as hospedagens oferecem conforto e hospitalidade calorosa.
-              </p>
-
-              <p>
-                Prepare-se para criar memórias que durarão para sempre. Cada momento em Jericoacoara com a Jeri 4XP é uma oportunidade de descobrir por que este lugar é tão especial e por que tantas pessoas voltam sempre.
-              </p>
-            </div>
-          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
             {experiences.map((item) => (
