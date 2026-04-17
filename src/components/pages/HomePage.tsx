@@ -182,7 +182,7 @@ export default function HomePage() {
           >
             {/* Passeios */}
             <motion.div variants={fadeInUp}>
-              <Link to="/tours" className="block group h-full">
+              <Link to="/passeios" className="block group h-full">
                 <Card className="relative h-[350px] md:h-[420px] overflow-hidden rounded-2xl border-0 shadow-md hover:shadow-xl transition-all duration-500 group-hover:-translate-y-2">
                   <Image 
                     src="https://jeri4xp.vercel.app/img/passeio.4d2eed74.webp"
@@ -202,7 +202,7 @@ export default function HomePage() {
 
             {/* Hospedagem */}
             <motion.div variants={fadeInUp}>
-              <Link to="/accommodations" className="block group h-full">
+              <Link to="/hospedagem" className="block group h-full">
                 <Card className="relative h-[350px] md:h-[420px] overflow-hidden rounded-2xl border-0 shadow-md hover:shadow-xl transition-all duration-500 group-hover:-translate-y-2">
                   <Image 
                     src="https://jeri4xp.vercel.app/img/hotel.a362b7ec.webp"
@@ -222,7 +222,7 @@ export default function HomePage() {
 
             {/* Transfer */}
             <motion.div variants={fadeInUp}>
-              <Link to="/contact" className="block group h-full">
+              <Link to="/transfer" className="block group h-full">
                 <Card className="relative h-[350px] md:h-[420px] overflow-hidden rounded-2xl border-0 shadow-md hover:shadow-xl transition-all duration-500 group-hover:-translate-y-2">
                   <Image 
                     src="https://jeri4xp.vercel.app/img/transfer.fb2f24b4.webp"
@@ -242,7 +242,7 @@ export default function HomePage() {
 
             {/* Aulas */}
             <motion.div variants={fadeInUp}>
-              <Link to="/contact" className="block group h-full">
+              <Link to="/aulas" className="block group h-full">
                 <Card className="relative h-[350px] md:h-[420px] overflow-hidden rounded-2xl border-0 shadow-md hover:shadow-xl transition-all duration-500 group-hover:-translate-y-2">
                   <Image 
                     src="https://jeri4xp.vercel.app/img/aula.208d909e.webp"

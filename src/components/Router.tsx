@@ -3,10 +3,10 @@ import { createBrowserRouter, RouterProvider, Navigate, Outlet } from 'react-rou
 import { ScrollToTop } from '@/lib/scroll-to-top';
 import ErrorPage from '@/integrations/errorHandlers/ErrorPage';
 import HomePage from '@/components/pages/HomePage';
-import ToursPage from '@/components/pages/ToursPage';
-import AccommodationsPage from '@/components/pages/AccommodationsPage';
-import AboutPage from '@/components/pages/AboutPage';
-import ContactPage from '@/components/pages/ContactPage';
+import PasseiosPage from '@/components/pages/PasseiosPage';
+import HospedagemPage from '@/components/pages/HospedagemPage';
+import TransferPage from '@/components/pages/TransferPage';
+import AulasPage from '@/components/pages/AulasPage';
 
 // Layout component that includes ScrollToTop
 function Layout() {
@@ -32,31 +32,31 @@ const router = createBrowserRouter([
         },
       },
       {
-        path: "tours",
-        element: <ToursPage />,
+        path: "passeios",
+        element: <PasseiosPage />,
         routeMetadata: {
-          pageIdentifier: 'tours',
+          pageIdentifier: 'passeios',
         },
       },
       {
-        path: "accommodations",
-        element: <AccommodationsPage />,
+        path: "hospedagem",
+        element: <HospedagemPage />,
         routeMetadata: {
-          pageIdentifier: 'accommodations',
+          pageIdentifier: 'hospedagem',
         },
       },
       {
-        path: "about",
-        element: <AboutPage />,
+        path: "transfer",
+        element: <TransferPage />,
         routeMetadata: {
-          pageIdentifier: 'about',
+          pageIdentifier: 'transfer',
         },
       },
       {
-        path: "contact",
-        element: <ContactPage />,
+        path: "aulas",
+        element: <AulasPage />,
         routeMetadata: {
-          pageIdentifier: 'contact',
+          pageIdentifier: 'aulas',
         },
       },
       {

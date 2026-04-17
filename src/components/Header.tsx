@@ -17,17 +17,17 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            <Link to="/tours" className="text-foreground hover:text-accent transition-colors font-medium">
+            <Link to="/passeios" className="text-foreground hover:text-accent transition-colors font-medium">
               Passeios
             </Link>
-            <Link to="/accommodations" className="text-foreground hover:text-accent transition-colors font-medium">
+            <Link to="/hospedagem" className="text-foreground hover:text-accent transition-colors font-medium">
               Hospedagem
             </Link>
-            <Link to="/about" className="text-foreground hover:text-accent transition-colors font-medium">
-              Sobre
+            <Link to="/transfer" className="text-foreground hover:text-accent transition-colors font-medium">
+              Transfer
             </Link>
-            <Link to="/contact" className="text-foreground hover:text-accent transition-colors font-medium">
-              Contato
+            <Link to="/aulas" className="text-foreground hover:text-accent transition-colors font-medium">
+              Aulas
             </Link>
             <Button 
               onClick={() => window.open('https://wa.me/5585999001339', '_blank')}
@@ -51,32 +51,32 @@ export default function Header() {
         {isMenuOpen && (
           <nav className="md:hidden mt-4 pb-4 flex flex-col gap-4 border-t border-border pt-4">
             <Link 
-              to="/tours" 
+              to="/passeios" 
               className="text-foreground hover:text-accent transition-colors font-medium"
               onClick={() => setIsMenuOpen(false)}
             >
               Passeios
             </Link>
             <Link 
-              to="/accommodations" 
+              to="/hospedagem" 
               className="text-foreground hover:text-accent transition-colors font-medium"
               onClick={() => setIsMenuOpen(false)}
             >
               Hospedagem
             </Link>
             <Link 
-              to="/about" 
+              to="/transfer" 
               className="text-foreground hover:text-accent transition-colors font-medium"
               onClick={() => setIsMenuOpen(false)}
             >
-              Sobre
+              Transfer
             </Link>
             <Link 
-              to="/contact" 
+              to="/aulas" 
               className="text-foreground hover:text-accent transition-colors font-medium"
               onClick={() => setIsMenuOpen(false)}
             >
-              Contato
+              Aulas
             </Link>
             <Button 
               onClick={() => {
