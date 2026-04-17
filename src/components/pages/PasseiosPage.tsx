@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { MessageCircle } from "lucide-react";
+import { MessageCircle, ChevronLeft, ChevronRight } from "lucide-react";
 import { Image } from '@/components/ui/image';
 
 export default function PasseiosPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [expandedFaq, setExpandedFaq] = useState(null);
+  const [carouselIndex, setCarouselIndex] = useState(0);
 
   const navItems = [
     { name: "Visão Geral", link: "#geralPasseios" },
@@ -187,7 +188,7 @@ export default function PasseiosPage() {
         </div>
       </section>
 
-      {/* PASSEIOS */}
+      {/* PASSEIOS - CAROUSEL */}
       <section id="passeios" className="py-20 px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col items-center mb-12 text-center">
@@ -200,62 +201,102 @@ export default function PasseiosPage() {
             <div className="h-1 w-20 bg-orange-600 mt-4 rounded-full"></div>
           </div>
 
-          <div className="space-y-12">
-            {passeios.map((passeio, index) => (
-              <div key={index} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition">
-                <div className="grid md:grid-cols-2 gap-0">
-                  {/* IMAGEM */}
-                  <div className="relative min-h-64 md:min-h-auto">
-                    <Image
-                      src="https://static.wixstatic.com/media/792b6b_d4c5932b099c4552a2356fa26ce00f01~mv2.png?originWidth=576&originHeight=384"
-                      alt={passeio.titulo}
-                      className="w-full h-full object-cover"
-                    />
+          {/* CAROUSEL CONTAINER */}
+          <div className="relative">
+            {/* CAROUSEL ITEM */}
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition">
+              <div className="grid md:grid-cols-2 gap-0">
+                {/* IMAGEM */}
+                <div className="relative min-h-64 md:min-h-auto">
+                  <Image
+                    src="https://static.wixstatic.com/media/792b6b_d4c5932b099c4552a2356fa26ce00f01~mv2.png?originWidth=576&originHeight=384"
+                    alt={passeios[carouselIndex].titulo}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+
+                {/* CONTEÚDO */}
+                <div className="p-8 flex flex-col justify-center">
+                  <span className="inline-block px-4 py-1 bg-orange-100 text-orange-600 text-xs font-bold rounded-full mb-3 w-fit">
+                    {passeios[carouselIndex].badge}
+                  </span>
+
+                  <h3 className="text-2xl md:text-3xl font-black mb-3 text-gray-900">
+                    {passeios[carouselIndex].titulo}
+                  </h3>
+
+                  <p className="text-gray-600 mb-4">
+                    {passeios[carouselIndex].descricao}
+                  </p>
+
+                  <div className="text-gray-700 space-y-2 mb-6">
+                    {passeios[carouselIndex].texto.map((t, i) => (
+                      <p key={i} className="text-sm">{t}</p>
+                    ))}
                   </div>
 
-                  {/* CONTEÚDO */}
-                  <div className="p-8 flex flex-col justify-center">
-                    <span className="inline-block px-4 py-1 bg-orange-100 text-orange-600 text-xs font-bold rounded-full mb-3 w-fit">
-                      {passeio.badge}
-                    </span>
-
-                    <h3 className="text-2xl md:text-3xl font-black mb-3 text-gray-900">
-                      {passeio.titulo}
-                    </h3>
-
-                    <p className="text-gray-600 mb-4">
-                      {passeio.descricao}
-                    </p>
-
-                    <div className="text-gray-700 space-y-2 mb-6">
-                      {passeio.texto.map((t, i) => (
-                        <p key={i} className="text-sm">{t}</p>
-                      ))}
-                    </div>
-
-                    {/* LISTA DE ATRAÇÕES */}
-                    <div className="grid grid-cols-2 gap-3 mb-6">
-                      {passeio.itens.map(item => (
-                        <div key={item} className="flex items-center gap-2">
-                          <span className="text-orange-600 font-bold">✓</span>
-                          <span className="text-sm text-gray-700">{item}</span>
-                        </div>
-                      ))}
-                    </div>
-
-                    {/* CTA */}
-                    <a
-                      href="https://wa.me/5585999001339"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="bg-orange-600 hover:bg-orange-700 text-white font-bold px-6 py-3 rounded-xl transition w-fit"
-                    >
-                      Reservar Agora
-                    </a>
+                  {/* LISTA DE ATRAÇÕES */}
+                  <div className="grid grid-cols-2 gap-3 mb-6">
+                    {passeios[carouselIndex].itens.map(item => (
+                      <div key={item} className="flex items-center gap-2">
+                        <span className="text-orange-600 font-bold">✓</span>
+                        <span className="text-sm text-gray-700">{item}</span>
+                      </div>
+                    ))}
                   </div>
+
+                  {/* CTA */}
+                  <a
+                    href="https://wa.me/5585999001339"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="bg-orange-600 hover:bg-orange-700 text-white font-bold px-6 py-3 rounded-xl transition w-fit"
+                  >
+                    Reservar Agora
+                  </a>
                 </div>
               </div>
-            ))}
+            </div>
+
+            {/* CAROUSEL CONTROLS */}
+            <div className="flex items-center justify-between mt-8">
+              {/* LEFT BUTTON */}
+              <button
+                onClick={() => setCarouselIndex((prev) => (prev - 1 + passeios.length) % passeios.length)}
+                className="bg-orange-600 hover:bg-orange-700 text-white p-3 rounded-full transition"
+                aria-label="Passeio anterior"
+              >
+                <ChevronLeft size={24} />
+              </button>
+
+              {/* INDICATORS */}
+              <div className="flex gap-3">
+                {passeios.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCarouselIndex(index)}
+                    className={`w-3 h-3 rounded-full transition ${
+                      index === carouselIndex ? 'bg-orange-600' : 'bg-gray-300'
+                    }`}
+                    aria-label={`Ir para passeio ${index + 1}`}
+                  />
+                ))}
+              </div>
+
+              {/* RIGHT BUTTON */}
+              <button
+                onClick={() => setCarouselIndex((prev) => (prev + 1) % passeios.length)}
+                className="bg-orange-600 hover:bg-orange-700 text-white p-3 rounded-full transition"
+                aria-label="Próximo passeio"
+              >
+                <ChevronRight size={24} />
+              </button>
+            </div>
+
+            {/* COUNTER */}
+            <div className="text-center mt-6 text-gray-600 text-sm font-bold">
+              {carouselIndex + 1} de {passeios.length}
+            </div>
           </div>
         </div>
       </section>
