@@ -1,3 +1,4 @@
+import { Image } from '@/components/ui/image';
 import { useState } from 'react';
 
 const JeriLandingPage = () => {
@@ -26,7 +27,7 @@ const JeriLandingPage = () => {
       {/* --- MENU & HERO (MenuSite.vue) --- */}
       <section className="relative w-full h-screen overflow-hidden text-white uppercase font-bold tracking-widest">
         <header className="absolute w-full flex justify-between z-50 px-10 py-5 items-center">
-          <a href="/"><img src="/logo_jeri4xp.png" alt="Logo Jeri4xp" className="w-24" /></a>
+          <a href="/"><Image src="/logo_jeri4xp.png" alt="Logo Jeri4xp" className="w-24" /></a>
 
           <nav className="hidden md:block">
             <ul className="flex gap-10 text-lg">
@@ -54,7 +55,7 @@ const JeriLandingPage = () => {
         )}
 
         <main className="relative h-full bg-black">
-          <img src="/jeri1.webp" className="w-full h-full object-cover opacity-70" alt="Jeri Background" />
+          <Image src="/jeri1.webp" className="w-full h-full object-cover opacity-70" alt="Jeri Background" />
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
             <span className="text-orange-600 mb-2 tracking-widest">Bem-vindo ao Destino Nº 1</span>
             <h1 className="text-4xl md:text-6xl font-black italic tracking-tighter mb-6 leading-tight">
@@ -76,39 +77,39 @@ const JeriLandingPage = () => {
       </section>
 
       {/* --- HISTÓRIA (HistoriaJeri.vue) --- */}
-  <section id="historia" class="bg-orange-600 min-h-screen flex items-center justify-center py-20 px-6 relative font-sans">
+  <section id="historia" className="bg-orange-600 min-h-screen flex items-center justify-center py-20 px-6 relative font-sans">
 
-    <div class="max-w-5xl w-full text-white">
+    <div className="max-w-5xl w-full text-white">
 
-      <div class="flex flex-col items-center mb-12">
-        <span class="uppercase tracking-widest text-xs font-bold mb-2">
+      <div className="flex flex-col items-center mb-12">
+        <span className="uppercase tracking-widest text-xs font-bold mb-2">
           Descubra a Vila
         </span>
-        <h1 class="text-4xl md:text-6xl font-black text-center">
+        <h1 className="text-4xl md:text-6xl font-black text-center">
           História de Jericoacoara
         </h1>
-        <div class="h-1 w-24 bg-white mt-6 rounded-full"></div>
+        <div className="h-1 w-24 bg-white mt-6 rounded-full"></div>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-12 leading-relaxed">
+      <div className="grid md:grid-cols-2 gap-12 leading-relaxed">
 
-        <div class="space-y-6">
+        <div className="space-y-6">
           <p
-            class="text-xl md:text-2xl font-light first-letter:text-7xl first-letter:font-black first-letter:mr-3 first-letter:float-left">
+            className="text-xl md:text-2xl font-light first-letter:text-7xl first-letter:font-black first-letter:mr-3 first-letter:float-left">
             Jericoacoara, carinhosamente apelidada de Jeri, é um destino onde o tempo parece ditar o próprio ritmo
             através do movimento das marés e dos ventos.
           </p>
-          <p class="text-lg opacity-90 border-l-2 border-white/20 pl-6 italic">
+          <p className="text-lg opacity-90 border-l-2 border-white/20 pl-6 italic">
             Localizada no Ceará, a cerca de 300 km de Fortaleza, a vila transformou-se de uma isolada aldeia de
             pescadores em um refúgio de fama internacional.
           </p>
-          <p class="text-lg">
+          <p className="text-lg">
             A essência rústica permanece intacta: as ruas continuam cobertas de areia e a iluminação pública é
             inexistente para preservar o brilho do céu estrelado, criando uma conexão única com o cosmos.
           </p>
         </div>
 
-        <div class="space-y-6 text-lg">
+        <div className="space-y-6 text-lg">
           <p>
             A história mudou drasticamente em 1984, quando o The Washington Post a elegeu como uma das dez praias mais
             bonitas do mundo.
@@ -156,7 +157,7 @@ const JeriLandingPage = () => {
                 <span className="text-orange-600 text-5xl font-serif">“</span>
                 <p className="text-slate-700 text-lg mb-6">{item.content}</p>
                 <div className="mt-auto flex items-center gap-4 not-italic">
-                  <img src={item.avatar} alt={item.name} className="w-12 h-12 rounded-full border-2 border-orange-600" />
+                  <Image src={item.avatar} alt={item.name} className="w-12 h-12 rounded-full border-2 border-orange-600" />
                   <div>
                     <h4 className="font-bold">{item.name}</h4>
                     <p className="text-xs text-slate-500">{item.role}</p>
