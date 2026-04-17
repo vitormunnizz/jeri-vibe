@@ -1,3 +1,4 @@
+import { Image } from '@/components/ui/image';
 import { useState } from "react";
 
 export default function Jeri4xp() {
@@ -72,10 +73,10 @@ export default function Jeri4xp() {
 
       {/* HERO */}
       <section className="relative h-screen text-white">
-        <img src="/jeri1.webp" className="absolute w-full h-full object-cover opacity-80" />
+        <Image src="/jeri1.webp" className="absolute w-full h-full object-cover opacity-80" />
 
         <header className="absolute w-full flex justify-between px-10 py-5 z-50">
-          <img src="/logo_jeri4xp.png" className="w-24" />
+          <Image src="/logo_jeri4xp.png" className="w-24" />
 
           <nav className="hidden md:block">
             <ul className="flex gap-8">
@@ -155,6 +156,7 @@ export default function Jeri4xp() {
               em algo verdadeiramente inesquecível.
             </p>
 
+          </div>
           </div>
       </section>
 
