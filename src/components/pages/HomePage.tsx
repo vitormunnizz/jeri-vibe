@@ -177,21 +177,31 @@ export default function HomePage() {
       </section>
 
       {/* EXPERIÊNCIAS */}
-      <section id="experiencias" className="py-20 px-6 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-black tracking-tighter mb-12 uppercase text-gray-900 text-center">
-            Nossas Experiências
-          </h2>
+      <section id="experiencias" className="bg-orange-600 py-20 px-6 text-white">
+        <div className="max-w-5xl mx-auto">
+          <div className="flex flex-col items-center mb-12 text-center">
+            <span className="uppercase tracking-widest text-xs font-bold mb-2">
+              Nossas Experiências
+            </span>
+            <h2 className="text-3xl md:text-4xl font-black">
+              Os Passeios Mais Incríveis de Jericoacoara Começam Aqui
+            </h2>
+            <div className="h-1 w-20 bg-white mt-4 rounded-full"></div>
+          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {experiences.map((item) => (
+          <div className="grid md:grid-cols-2 gap-10 leading-relaxed text-base md:text-lg">
+            {experiences.map((item, index) => (
               <a
                 key={item.name}
                 href={item.link}
-                className="relative h-64 rounded-2xl flex items-end p-8 bg-gradient-to-br from-gray-800 to-black text-white text-2xl font-black hover:shadow-lg transition overflow-hidden group"
+                className="space-y-5 hover:opacity-80 transition"
               >
-                <Image src="https://static.wixstatic.com/media/792b6b_d4c5932b099c4552a2356fa26ce00f01~mv2.png?originWidth=576&originHeight=384" alt={item.name} className="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-30 transition" />
-                <span className="relative z-10">{item.name}</span>
+                <p className="font-bold text-xl md:text-2xl">
+                  {item.name}
+                </p>
+                <p>
+                  Descubra as melhores experiências que Jericoacoara tem a oferecer. Cada passeio é cuidadosamente planejado para proporcionar momentos inesquecíveis e conexão autêntica com a natureza e a cultura local.
+                </p>
               </a>
             ))}
           </div>
