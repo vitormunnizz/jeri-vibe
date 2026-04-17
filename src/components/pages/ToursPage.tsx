@@ -57,7 +57,7 @@ export default function ToursPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[45vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/80 to-secondary/90 z-10" />
         <div 
           className="absolute inset-0 bg-cover bg-center"
@@ -68,18 +68,18 @@ export default function ToursPage() {
           <div className="absolute bottom-20 left-20 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
         </div>
         
-        <div className="relative z-20 container mx-auto px-4 text-center text-primary-foreground">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold mb-6">
+        <div className="relative z-20 container mx-auto px-4 text-center text-primary-foreground py-12">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-heading font-bold mb-4">
             Passeios em Jericoacoara
           </h1>
-          <p className="text-lg md:text-xl max-w-3xl mx-auto opacity-90">
+          <p className="text-base md:text-lg max-w-3xl mx-auto opacity-90">
             Descubra as maravilhas de Jeri através de experiências inesquecíveis. Da icônica Pedra Furada às lagoas paradisíacas.
           </p>
         </div>
       </section>
 
       {/* Tours Grid Section */}
-      <section className="py-20 bg-gradient-to-br from-background via-muted/20 to-background">
+      <section className="py-12 bg-gradient-to-br from-background via-muted/20 to-background">
         <div className="container mx-auto px-4">
           <div className="min-h-[600px]">
             {isLoading ? (
@@ -188,13 +188,13 @@ export default function ToursPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-accent via-accent to-accent/90">
+      <section className="py-12 bg-gradient-to-br from-accent via-accent to-accent/90">
         <div className="container mx-auto px-4 text-center">
           <AnimatedElement>
-            <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6 text-accent-foreground">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4 text-accent-foreground">
               Pronto para sua aventura?
             </h2>
-            <p className="text-lg md:text-xl mb-8 text-accent-foreground/90 max-w-2xl mx-auto">
+            <p className="text-base md:text-lg mb-6 text-accent-foreground/90 max-w-2xl mx-auto">
               Entre em contato conosco e reserve seu passeio em Jericoacoara hoje mesmo!
             </p>
             <Button 
