@@ -153,125 +153,76 @@ export default function PasseiosPage() {
       </section>
 
       {/* VISÃO GERAL */}
-      <section id="geralPasseios" className="bg-gradient-to-b from-white via-blue-50 to-white py-16 px-6 md:py-24 relative overflow-hidden">
-        {/* Decorative elements */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-100 rounded-full opacity-20 blur-3xl -z-10"></div>
-        <div className="absolute bottom-0 left-0 w-80 h-80 bg-orange-100 rounded-full opacity-20 blur-3xl -z-10"></div>
-
+      <section id="geralPasseios" className="bg-white py-16 px-6 md:py-24">
         <div className="max-w-6xl mx-auto">
-          {/* TÍTULO COM ÍCONES */}
+          {/* TÍTULO */}
           <motion.div 
-            className="text-center mb-16"
+            className="text-center mb-12"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <div className="flex justify-center gap-4 mb-6">
-              <motion.div 
-                className="p-3 bg-blue-100 rounded-full"
-                animate={{ y: [0, -8, 0] }}
-                transition={{ duration: 3, repeat: Infinity }}
-              >
-                <Waves className="w-6 h-6 text-blue-600" />
-              </motion.div>
-              <motion.div 
-                className="p-3 bg-orange-100 rounded-full"
-                animate={{ y: [0, -8, 0] }}
-                transition={{ duration: 3, repeat: Infinity, delay: 0.2 }}
-              >
-                <Mountain className="w-6 h-6 text-orange-600" />
-              </motion.div>
-              <motion.div 
-                className="p-3 bg-green-100 rounded-full"
-                animate={{ y: [0, -8, 0] }}
-                transition={{ duration: 3, repeat: Infinity, delay: 0.4 }}
-              >
-                <Compass className="w-6 h-6 text-green-600" />
-              </motion.div>
-            </div>
-
             <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-4 leading-tight">
               Os Passeios Mais Incríveis de Jericoacoara Começam Aqui
             </h2>
-            <div className="h-1 w-24 bg-gradient-to-r from-blue-600 via-orange-600 to-green-600 mx-auto rounded-full"></div>
+            <div className="h-1 w-24 bg-orange-600 mx-auto rounded-full"></div>
           </motion.div>
 
-          {/* CONTEÚDO COM CARDS */}
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          {/* CONTEÚDO COM CARDS SIMPLES */}
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
             <motion.div 
-              className="p-8 bg-white rounded-2xl shadow-lg border-l-4 border-blue-600 hover:shadow-xl transition"
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              viewport={{ once: true }}
-            >
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-blue-100 rounded-lg flex-shrink-0">
-                  <Waves className="w-6 h-6 text-blue-600" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-gray-900 mb-2">Lagoas Cristalinas</h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">
-                    Jericoacoara é muito mais do que um destino turístico — é onde cada paisagem surpreende e cada dia reserva uma nova experiência.
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-
-            <motion.div 
-              className="p-8 bg-white rounded-2xl shadow-lg border-l-4 border-orange-600 hover:shadow-xl transition"
-              initial={{ opacity: 0, y: 20 }}
+              className="p-6 bg-orange-50 rounded-lg border-l-4 border-orange-600"
+              initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true }}
             >
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-orange-100 rounded-lg flex-shrink-0">
-                  <Mountain className="w-6 h-6 text-orange-600" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-gray-900 mb-2">Dunas Imponentes</h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">
-                    Ao longo desses roteiros, você vai se deparar com lagoas de águas cristalinas, dunas imponentes e vistas memoráveis.
-                  </p>
-                </div>
-              </div>
+              <h3 className="font-bold text-orange-600 mb-2 text-lg">Lagoas Cristalinas</h3>
+              <p className="text-sm text-gray-700 leading-relaxed">
+                Jericoacoara é muito mais do que um destino turístico — é onde cada paisagem surpreende e cada dia reserva uma nova experiência.
+              </p>
             </motion.div>
 
             <motion.div 
-              className="p-8 bg-white rounded-2xl shadow-lg border-l-4 border-green-600 hover:shadow-xl transition"
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+              className="p-6 bg-orange-50 rounded-lg border-l-4 border-orange-600"
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-green-100 rounded-lg flex-shrink-0">
-                  <Compass className="w-6 h-6 text-green-600" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-gray-900 mb-2">Experiências Únicas</h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">
-                    Cada passeio oferece uma proposta diferente, desde relaxo nas lagoas até emoção e aventura nas dunas.
-                  </p>
-                </div>
-              </div>
+              <h3 className="font-bold text-orange-600 mb-2 text-lg">Dunas Imponentes</h3>
+              <p className="text-sm text-gray-700 leading-relaxed">
+                Ao longo desses roteiros, você vai se deparar com lagoas de águas cristalinas, dunas imponentes e vistas memoráveis.
+              </p>
+            </motion.div>
+
+            <motion.div 
+              className="p-6 bg-orange-50 rounded-lg border-l-4 border-orange-600"
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="font-bold text-orange-600 mb-2 text-lg">Experiências Únicas</h3>
+              <p className="text-sm text-gray-700 leading-relaxed">
+                Cada passeio oferece uma proposta diferente, desde relaxo nas lagoas até emoção e aventura nas dunas.
+              </p>
             </motion.div>
           </div>
 
           {/* TEXTO DESCRITIVO */}
           <motion.div 
-            className="bg-gradient-to-r from-blue-50 to-orange-50 p-8 rounded-2xl border border-blue-200"
+            className="bg-orange-100 p-8 rounded-lg"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            <p className="text-base md:text-lg leading-relaxed text-gray-700 mb-4">
+            <p className="text-base md:text-lg leading-relaxed text-gray-800 mb-4">
               Para realmente viver tudo o que Jeri tem a oferecer, os passeios são parte essencial da viagem, permitindo explorar desde os cenários mais famosos até cantos que só quem conhece a região sabe chegar.
             </p>
-            <p className="text-base md:text-lg leading-relaxed text-gray-700">
+            <p className="text-base md:text-lg leading-relaxed text-gray-800">
               Tudo isso com o suporte de quem entende da região, garantindo mais segurança, conforto e uma experiência muito mais completa. Essa variedade faz com que cada escolha traga uma nova forma de conhecer Jericoacoara.
             </p>
           </motion.div>
