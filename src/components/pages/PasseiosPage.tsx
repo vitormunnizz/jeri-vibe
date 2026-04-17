@@ -1,6 +1,7 @@
 import { Image } from '@/components/ui/image';
-import { ChevronLeft, ChevronRight, MessageCircle } from "lucide-react";
+import { ChevronLeft, ChevronRight, MessageCircle, Waves, Mountain, Compass } from "lucide-react";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function PasseiosPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -152,29 +153,128 @@ export default function PasseiosPage() {
       </section>
 
       {/* VISÃO GERAL */}
-      <section id="geralPasseios" className="bg-white py-16 px-6 md:py-24">
-        <div className="max-w-4xl mx-auto">
-          {/* TÍTULO */}
-          <div className="text-center mb-10">
+      <section id="geralPasseios" className="bg-gradient-to-b from-white via-blue-50 to-white py-16 px-6 md:py-24 relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-100 rounded-full opacity-20 blur-3xl -z-10"></div>
+        <div className="absolute bottom-0 left-0 w-80 h-80 bg-orange-100 rounded-full opacity-20 blur-3xl -z-10"></div>
+
+        <div className="max-w-6xl mx-auto">
+          {/* TÍTULO COM ÍCONES */}
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <div className="flex justify-center gap-4 mb-6">
+              <motion.div 
+                className="p-3 bg-blue-100 rounded-full"
+                animate={{ y: [0, -8, 0] }}
+                transition={{ duration: 3, repeat: Infinity }}
+              >
+                <Waves className="w-6 h-6 text-blue-600" />
+              </motion.div>
+              <motion.div 
+                className="p-3 bg-orange-100 rounded-full"
+                animate={{ y: [0, -8, 0] }}
+                transition={{ duration: 3, repeat: Infinity, delay: 0.2 }}
+              >
+                <Mountain className="w-6 h-6 text-orange-600" />
+              </motion.div>
+              <motion.div 
+                className="p-3 bg-green-100 rounded-full"
+                animate={{ y: [0, -8, 0] }}
+                transition={{ duration: 3, repeat: Infinity, delay: 0.4 }}
+              >
+                <Compass className="w-6 h-6 text-green-600" />
+              </motion.div>
+            </div>
+
             <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-4 leading-tight">
               Os Passeios Mais Incríveis de Jericoacoara Começam Aqui
             </h2>
+            <div className="h-1 w-24 bg-gradient-to-r from-blue-600 via-orange-600 to-green-600 mx-auto rounded-full"></div>
+          </motion.div>
+
+          {/* CONTEÚDO COM CARDS */}
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <motion.div 
+              className="p-8 bg-white rounded-2xl shadow-lg border-l-4 border-blue-600 hover:shadow-xl transition"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <div className="flex items-start gap-4">
+                <div className="p-3 bg-blue-100 rounded-lg flex-shrink-0">
+                  <Waves className="w-6 h-6 text-blue-600" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-gray-900 mb-2">Lagoas Cristalinas</h3>
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    Jericoacoara é muito mais do que um destino turístico — é onde cada paisagem surpreende e cada dia reserva uma nova experiência.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div 
+              className="p-8 bg-white rounded-2xl shadow-lg border-l-4 border-orange-600 hover:shadow-xl transition"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <div className="flex items-start gap-4">
+                <div className="p-3 bg-orange-100 rounded-lg flex-shrink-0">
+                  <Mountain className="w-6 h-6 text-orange-600" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-gray-900 mb-2">Dunas Imponentes</h3>
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    Ao longo desses roteiros, você vai se deparar com lagoas de águas cristalinas, dunas imponentes e vistas memoráveis.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div 
+              className="p-8 bg-white rounded-2xl shadow-lg border-l-4 border-green-600 hover:shadow-xl transition"
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <div className="flex items-start gap-4">
+                <div className="p-3 bg-green-100 rounded-lg flex-shrink-0">
+                  <Compass className="w-6 h-6 text-green-600" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-gray-900 mb-2">Experiências Únicas</h3>
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    Cada passeio oferece uma proposta diferente, desde relaxo nas lagoas até emoção e aventura nas dunas.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
           </div>
 
-          {/* CONTEÚDO */}
-          <div className="space-y-6 text-gray-700">
-            <p className="text-base md:text-lg leading-relaxed">
-              Jericoacoara é muito mais do que um destino turístico — é onde cada paisagem surpreende e cada dia reserva uma nova experiência. Para realmente viver tudo o que Jeri tem a oferecer, os passeios são parte essencial da viagem, permitindo explorar desde os cenários mais famosos até cantos que só quem conhece a região sabe chegar.
+          {/* TEXTO DESCRITIVO */}
+          <motion.div 
+            className="bg-gradient-to-r from-blue-50 to-orange-50 p-8 rounded-2xl border border-blue-200"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: true }}
+          >
+            <p className="text-base md:text-lg leading-relaxed text-gray-700 mb-4">
+              Para realmente viver tudo o que Jeri tem a oferecer, os passeios são parte essencial da viagem, permitindo explorar desde os cenários mais famosos até cantos que só quem conhece a região sabe chegar.
             </p>
-
-            <p className="text-base md:text-lg leading-relaxed">
-              Ao longo desses roteiros, você vai se deparar com lagoas de águas cristalinas, dunas imponentes, travessias entre mangues e vistas que transformam qualquer momento em algo memorável. Tudo isso com o suporte de quem entende da região, garantindo mais segurança, conforto e uma experiência muito mais completa.
+            <p className="text-base md:text-lg leading-relaxed text-gray-700">
+              Tudo isso com o suporte de quem entende da região, garantindo mais segurança, conforto e uma experiência muito mais completa. Essa variedade faz com que cada escolha traga uma nova forma de conhecer Jericoacoara.
             </p>
-
-            <p className="text-base md:text-lg leading-relaxed">
-              Cada passeio oferece uma proposta diferente: alguns são perfeitos para relaxar e aproveitar a tranquilidade das lagoas, enquanto outros são ideais para quem busca emoção e aventura nas dunas. Essa variedade faz com que cada escolha traga uma nova forma de conhecer Jericoacoara.
-            </p>
-          </div>
+          </motion.div>
         </div>
       </section>
 
