@@ -64,7 +64,7 @@ export default function HomePage() {
       <Header />
 
       {/* HERO SECTION */}
-      <section className="relative w-full min-h-[70vh] md:min-h-[85vh] flex flex-col items-center justify-start pt-24 md:pt-32 overflow-hidden bg-[#F4EBE1]">
+      <section className="relative w-full h-screen flex flex-col items-center justify-start pt-24 md:pt-32 overflow-hidden bg-[#F4EBE1]">
         {/* Background Illustration */}
         <div 
           className="absolute inset-0 z-0 bg-cover bg-bottom md:bg-center bg-no-repeat"
@@ -110,7 +110,7 @@ export default function HomePage() {
       </section>
 
       {/* HISTÓRIA SECTION */}
-      <section id="historia" className="py-20 md:py-32 bg-accent text-white relative z-20">
+      <section id="historia" className="h-screen py-20 md:py-32 bg-accent text-white relative z-20 flex items-center">
         <div className="container mx-auto px-4 max-w-6xl">
           <motion.div 
             initial="hidden"
@@ -158,7 +158,7 @@ export default function HomePage() {
       </section>
 
       {/* EXPERIÊNCIAS SECTION */}
-      <section className="py-24 bg-background">
+      <section className="h-screen py-24 bg-background flex items-center">
         <div className="container mx-auto px-4 max-w-6xl">
           <motion.div 
             initial="hidden"
@@ -263,7 +263,7 @@ export default function HomePage() {
       </section>
 
       {/* TESTIMONIALS SECTION */}
-      <section className="py-24 bg-[#FAFAFA]">
+      <section className="h-screen py-24 bg-[#FAFAFA] flex items-center">
         <div className="container mx-auto px-4 max-w-6xl">
           <motion.div 
             initial="hidden"
@@ -335,7 +335,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA / CONTACT SECTION */}
-      <section className="py-24 bg-accent text-white relative overflow-hidden">
+      <section className="h-screen bg-accent text-white relative overflow-hidden flex items-center">
         {/* Decorative background elements */}
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
           <div className="absolute -top-24 -right-24 w-96 h-96 bg-white/5 rounded-full blur-3xl" />
