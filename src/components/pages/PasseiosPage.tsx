@@ -125,7 +125,7 @@ export default function Jeri4xp() {
           Os Passeios Mais Incríveis de Jericoacoara Começam Aqui
         </h2>
 
-<div className="border-l-4 border-orange-600 pl-6">
+        <div className="border-l-4 border-orange-600 pl-6">
           <div className="space-y-4 text-md md:text-lg">
 
             <p className="first-letter:text-4xl first-letter:font-bold first-letter:text-orange-600 first-letter:mr-1 first-letter:float-left">
