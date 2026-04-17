@@ -103,26 +103,50 @@ export default function HospedagemPage() {
       </section>
 
       {/* INTRO */}
-      <section id="geralHospedagem" className="bg-orange-600 min-h-screen flex items-center justify-center p-8">
-        <div className="max-w-4xl bg-white p-8 rounded-3xl text-slate-800">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-center">
-            Encontre a Hospedagem Ideal para Aproveitar{" "}
-            <span className="text-orange-600">Jericoacoara</span>
-          </h2>
+<section id="geralHospedagem" className="bg-orange-600 min-h-screen p-8 flex items-center justify-center font-sans">
+    <div className="w-full max-w-5xl p-8 bg-white rounded-4xl shadow-2xl mx-auto text-slate-800">
+      <div className="flex justify-center mb-4">
+        <div className="w-18 h-1 bg-orange-600 rounded-full"></div>
+      </div>
 
-          <p className="mb-4">
-            Escolher bem onde se hospedar faz toda a diferença para viver Jericoacoara da melhor forma. Mais do que apenas um lugar para dormir, sua hospedagem influencia diretamente no conforto, na praticidade e na qualidade da sua experiência.
-          </p>
+      <h1 className="text-2xl md:text-5xl font-extrabold text-center mb-8">
+        Encontre a Hospedagem Ideal para Aproveitar <span className="text-orange-600">Jericoacoara</span>
+      </h1>
 
-          <p className="mb-4">
-            A vila oferece opções para todos os estilos: pousadas aconchegantes, hotéis completos e experiências exclusivas cercadas por paisagens incríveis.
+      <div className="border-l-4 border-orange-600 pl-6">
+        <div className="space-y-4 text-md md:text-lg">
+
+          <p className="first-letter:text-4xl first-letter:font-bold first-letter:text-orange-600 first-letter:mr-1 first-letter:float-left">
+            Hospedar-se bem faz toda a diferença para aproveitar Jericoacoara com mais conforto,
+            praticidade e tranquilidade. A vila oferece opções para todos os estilos de viagem, desde pousadas
+            aconchegantes até hotéis com estrutura completa, sempre cercados pela beleza natural da região.
           </p>
 
           <p>
-            Seja em uma viagem romântica, em família ou entre amigos, a escolha certa transforma sua viagem em algo inesquecível.
+            Para quem busca praticidade, ficar próximo ao centrinho é uma ótima escolha. Assim, você terá fácil
+            acesso a restaurantes, lojas, praia, vida noturna e aos principais pontos de saída dos passeios,
+            tornando sua experiência muito mais confortável durante toda a estadia.
           </p>
+
+          <p>
+            Se a ideia for relaxar e aproveitar momentos especiais, há opções mais reservadas e tranquilas,
+            perfeitas para casais, famílias ou quem deseja descansar com mais privacidade. Também existem
+            hospedagens com piscina, café da manhã, espaços amplos e serviços pensados para tornar sua viagem
+            ainda melhor.
+          </p>
+
+          <p>
+            Seja para uma viagem romântica, em família ou entre amigos, escolher a hospedagem certa é o primeiro
+            passo para viver Jericoacoara da melhor forma. A seguir, você vai encontrar opções que combinam com
+            seu perfil e tornam sua experiência ainda mais inesquecível.
+          </p>
+
         </div>
-      </section>
+      </div>
+
+    </div>
+
+  </section>
 
       {/* TIPOS */}
       <section id="tipos" className="p-10 text-center">
