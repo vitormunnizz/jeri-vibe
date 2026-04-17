@@ -202,9 +202,18 @@ export default function PasseiosPage() {
           </div>
 
           {/* CAROUSEL CONTAINER */}
-          <div className="relative">
+          <div className="relative flex items-center gap-4">
+            {/* LEFT BUTTON - OUTSIDE CARD */}
+            <button
+              onClick={() => setCarouselIndex((prev) => (prev - 1 + passeios.length) % passeios.length)}
+              className="hidden md:flex bg-orange-600 hover:bg-orange-700 text-white p-3 rounded-full transition shadow-lg flex-shrink-0"
+              aria-label="Passeio anterior"
+            >
+              <ChevronLeft size={24} />
+            </button>
+
             {/* CAROUSEL ITEM */}
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition relative">
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition relative flex-1">
               <div className="grid md:grid-cols-2 gap-0">
                 {/* IMAGEM */}
                 <div className="relative min-h-64 md:min-h-auto">
@@ -257,8 +266,8 @@ export default function PasseiosPage() {
                 </div>
               </div>
 
-              {/* EMBEDDED CAROUSEL CONTROLS */}
-              <div className="absolute bottom-4 left-0 right-0 flex items-center justify-center gap-4 px-4">
+              {/* MOBILE CAROUSEL CONTROLS - BOTTOM CENTER */}
+              <div className="md:hidden flex items-center justify-center gap-4 px-4 py-4 bg-gray-50">
                 {/* LEFT BUTTON */}
                 <button
                   onClick={() => setCarouselIndex((prev) => (prev - 1 + passeios.length) % passeios.length)}
@@ -275,7 +284,7 @@ export default function PasseiosPage() {
                       key={index}
                       onClick={() => setCarouselIndex(index)}
                       className={`w-2 h-2 rounded-full transition ${
-                        index === carouselIndex ? 'bg-white' : 'bg-white/50'
+                        index === carouselIndex ? 'bg-orange-600' : 'bg-gray-300'
                       }`}
                       aria-label={`Ir para passeio ${index + 1}`}
                     />
@@ -291,7 +300,30 @@ export default function PasseiosPage() {
                   <ChevronRight size={20} />
                 </button>
               </div>
+
+              {/* DESKTOP INDICATORS - BOTTOM CENTER */}
+              <div className="hidden md:flex items-center justify-center gap-2 py-4 bg-gray-50">
+                {passeios.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCarouselIndex(index)}
+                    className={`w-2 h-2 rounded-full transition ${
+                      index === carouselIndex ? 'bg-orange-600' : 'bg-gray-300'
+                    }`}
+                    aria-label={`Ir para passeio ${index + 1}`}
+                  />
+                ))}
+              </div>
             </div>
+
+            {/* RIGHT BUTTON - OUTSIDE CARD */}
+            <button
+              onClick={() => setCarouselIndex((prev) => (prev + 1) % passeios.length)}
+              className="hidden md:flex bg-orange-600 hover:bg-orange-700 text-white p-3 rounded-full transition shadow-lg flex-shrink-0"
+              aria-label="Próximo passeio"
+            >
+              <ChevronRight size={24} />
+            </button>
           </div>
         </div>
       </section>
