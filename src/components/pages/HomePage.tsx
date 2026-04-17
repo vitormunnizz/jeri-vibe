@@ -2,6 +2,7 @@
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import { Button } from '@/components/ui/button';
+import { Image } from '@/components/ui/image';
 import { LoadingSpinner } from '@/components/ui/loading-spinner';
 import { CustomerTestimonials } from '@/entities';
 import { BaseCrudService } from '@/integrations';
@@ -116,11 +117,7 @@ export default function HomePage() {
             </div>
 
             <div className="relative">
-              <img
-                src="https://jeri4xp.vercel.app/img/jeri1.e05b0107.webp"
-                className="rounded-3xl shadow-2xl border-4 border-white/10"
-                alt="Jericoacoara"
-              />
+              <Image src="https://jeri4xp.vercel.app/img/jeri1.e05b0107.webp" className="rounded-3xl shadow-2xl border-4 border-white/10" alt="Jericoacoara" />
               <div className="absolute -bottom-6 -left-6 bg-white text-secondary p-6 rounded-2xl shadow-xl hidden md:block">
                 <p className="font-black italic text-2xl uppercase leading-none">Pé na areia</p>
                 <p className="text-sm font-bold opacity-60 mt-1">Desde sempre.</p>
@@ -150,7 +147,7 @@ export default function HomePage() {
                 to={item.path}
                 className="group relative h-80 rounded-[2rem] overflow-hidden shadow-lg hover:shadow-2xl transition-all block"
               >
-                <img src={item.img} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt={item.title} />
+                <Image src={item.img} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt={item.title} />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
                 <div className="absolute bottom-6 left-6 text-white">
                   <h3 className="text-2xl font-black italic uppercase tracking-tighter mb-2">{item.title}</h3>
@@ -175,7 +172,7 @@ export default function HomePage() {
                   <Quote className="text-accent opacity-20 w-8 h-8 mb-4" />
                   <p className="text-slate-600 italic mb-8 flex-grow">"{t.reviewText}"</p>
                   <div className="flex items-center gap-4 pt-4 border-t border-slate-50">
-                    <img src={t.customerPhoto || `https://i.pravatar.cc/150?u=${i}`} className="w-12 h-12 rounded-full object-cover" />
+                    <Image src={t.customerPhoto || `https://i.pravatar.cc/150?u=${i}`} className="w-12 h-12 rounded-full object-cover" />
                     <div>
                       <h4 className="font-bold text-secondary uppercase text-sm leading-none">{t.customerName}</h4>
                       <p className="text-[10px] text-slate-400 font-bold uppercase mt-1 tracking-widest">{t.customerLocation}</p>
