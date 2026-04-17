@@ -66,6 +66,14 @@ const JeriLandingPage = () => {
             </a>
           </div>
         </main>
+
+      {/* --- FOOTER --- */}
+      <div className="bg-white p-10 text-center border-t">
+        <h2 className="text-xl font-bold">Sua aventura em Jericoacoara começa aqui</h2>
+        <p className="mt-4 text-gray-500 max-w-2xl mx-auto italic">
+          Turismo com qualidade, aventuras personalizadas e memórias inesquecíveis em Jericoacoara.
+        </p>
+      </div>
       </section>
 
       {/* --- HISTÓRIA (HistoriaJeri.vue) --- */}
