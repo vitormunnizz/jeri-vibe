@@ -204,7 +204,7 @@ export default function PasseiosPage() {
           {/* CAROUSEL CONTAINER */}
           <div className="relative">
             {/* CAROUSEL ITEM */}
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition">
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition relative">
               <div className="grid md:grid-cols-2 gap-0">
                 {/* IMAGEM */}
                 <div className="relative min-h-64 md:min-h-auto">
@@ -256,46 +256,41 @@ export default function PasseiosPage() {
                   </a>
                 </div>
               </div>
-            </div>
 
-            {/* CAROUSEL CONTROLS */}
-            <div className="flex items-center justify-between mt-8">
-              {/* LEFT BUTTON */}
-              <button
-                onClick={() => setCarouselIndex((prev) => (prev - 1 + passeios.length) % passeios.length)}
-                className="bg-orange-600 hover:bg-orange-700 text-white p-3 rounded-full transition"
-                aria-label="Passeio anterior"
-              >
-                <ChevronLeft size={24} />
-              </button>
+              {/* EMBEDDED CAROUSEL CONTROLS */}
+              <div className="absolute bottom-4 left-0 right-0 flex items-center justify-center gap-4 px-4">
+                {/* LEFT BUTTON */}
+                <button
+                  onClick={() => setCarouselIndex((prev) => (prev - 1 + passeios.length) % passeios.length)}
+                  className="bg-orange-600 hover:bg-orange-700 text-white p-2 rounded-full transition shadow-lg"
+                  aria-label="Passeio anterior"
+                >
+                  <ChevronLeft size={20} />
+                </button>
 
-              {/* INDICATORS */}
-              <div className="flex gap-3">
-                {passeios.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCarouselIndex(index)}
-                    className={`w-3 h-3 rounded-full transition ${
-                      index === carouselIndex ? 'bg-orange-600' : 'bg-gray-300'
-                    }`}
-                    aria-label={`Ir para passeio ${index + 1}`}
-                  />
-                ))}
+                {/* INDICATORS */}
+                <div className="flex gap-2">
+                  {passeios.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCarouselIndex(index)}
+                      className={`w-2 h-2 rounded-full transition ${
+                        index === carouselIndex ? 'bg-white' : 'bg-white/50'
+                      }`}
+                      aria-label={`Ir para passeio ${index + 1}`}
+                    />
+                  ))}
+                </div>
+
+                {/* RIGHT BUTTON */}
+                <button
+                  onClick={() => setCarouselIndex((prev) => (prev + 1) % passeios.length)}
+                  className="bg-orange-600 hover:bg-orange-700 text-white p-2 rounded-full transition shadow-lg"
+                  aria-label="Próximo passeio"
+                >
+                  <ChevronRight size={20} />
+                </button>
               </div>
-
-              {/* RIGHT BUTTON */}
-              <button
-                onClick={() => setCarouselIndex((prev) => (prev + 1) % passeios.length)}
-                className="bg-orange-600 hover:bg-orange-700 text-white p-3 rounded-full transition"
-                aria-label="Próximo passeio"
-              >
-                <ChevronRight size={24} />
-              </button>
-            </div>
-
-            {/* COUNTER */}
-            <div className="text-center mt-6 text-gray-600 text-sm font-bold">
-              {carouselIndex + 1} de {passeios.length}
             </div>
           </div>
         </div>
