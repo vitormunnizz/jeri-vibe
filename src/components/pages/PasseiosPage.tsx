@@ -1,17 +1,48 @@
 import { Image } from '@/components/ui/image';
 import { useState } from "react";
-import { useSwiper } from 'swiper/react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper/modules';
 
-export default function PasseioLeste() {
-  const swiper = useSwiper();
+import 'swiper/css';
+import 'swiper/css/navigation';
 
-  const items = [
-    'Árvore da Preguiça',
-    'Lagoa do Paraíso',
-    'Buraco Azul',
-    'Lagoa Azul'
+export default function Passeios() {
+
+  const passeios = [
+    {
+      badge: "Roteiro Lado Leste",
+      titulo: <>Águas <span className="text-slate-800">Cristalinas</span> & Redes no <span className="text-slate-800">Paraíso</span></>,
+      descricao: "Das esculturas naturais da Árvore da Preguiça ao mergulho inesquecível no Buraco Azul.",
+      texto: [
+        "Nosso roteiro começa com a Árvore da Preguiça e segue até a Praia do Preá.",
+        "Depois visitamos o Buraco Azul, Lagoa do Paraíso e Lagoa Azul."
+      ],
+      itens: ['Árvore da Preguiça', 'Lagoa do Paraíso', 'Buraco Azul', 'Lagoa Azul'],
+      reverse: false
+    },
+    {
+      badge: "Roteiro Lado Oeste",
+      titulo: <>Dunas <span className="text-slate-800">Gigantes</span> & Mangue <span className="text-slate-800">Selvagem</span></>,
+      descricao: "Dos cavalos-marinhos no Rio Guriú ao relaxo total nas redes da Lagoa da Torta.",
+      texto: [
+        "Explore o Rio Guriú e o Mangue Seco.",
+        "Finalize nas redes da Lagoa da Torta."
+      ],
+      itens: ['Mangue Seco', 'Rio Guriú', 'Dunas de Tatajuba', 'Lagoa da Torta'],
+      reverse: true
+    },
+    {
+      badge: "Roteiro Extremo Leste",
+      titulo: <>Dunas de <span className="text-slate-800">Cristal</span> & Vila de <span className="text-slate-800">Barrinha</span></>,
+      descricao: "A beleza intocada da vila de pescadores e o pôr do sol mais espetacular da região.",
+      texto: [
+        "Conheça a vila de Barrinha e suas dunas gigantes.",
+        "Explore a Lagoa do Coração e finalize com experiência gastronômica."
+      ],
+      itens: ['Vila da Barrinha', 'Lagoa do Coração', 'Dunas Vermelhas', 'Coqueirais'],
+      reverse: false
+    }
   ];
-
 
 export default function Jeri4xp() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
