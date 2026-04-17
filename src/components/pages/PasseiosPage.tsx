@@ -153,7 +153,7 @@ export default function PasseiosPage() {
 
       {/* VISÃO GERAL */}
       <section id="geralPasseios" className="bg-orange-600 min-h-screen p-8 flex items-center justify-center">
-        <div className="w-full max-w-5xl p-4 bg-white rounded-2xl shadow-2xl mx-auto text-slate-800">
+        <div className="w-full max-w-5xl py-2 px-8 bg-white rounded-2xl shadow-2xl mx-auto text-slate-800">
           {/* BARRA DECORATIVA */}
           <div className="flex justify-center mb-4">
             <div className="w-18 h-1 bg-orange-600 rounded-full"></div>
