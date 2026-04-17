@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { MessageCircle, ChevronLeft, ChevronRight } from "lucide-react";
+import { MessageCircle, ChevronLeft, ChevronRight, Compass, Waves, Mountain, Zap } from "lucide-react";
 import { Image } from '@/components/ui/image';
 
 export default function PasseiosPage() {
@@ -152,15 +152,50 @@ export default function PasseiosPage() {
       </section>
 
       {/* VISÃO GERAL */}
-      <section id="geralPasseios" className="bg-orange-600 py-16 px-6 text-white">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl font-black mb-4">
+      <section id="geralPasseios" className="bg-gradient-to-br from-orange-600 to-orange-700 py-20 px-6 text-white relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full -mr-48 -mt-48"></div>
+        <div className="absolute bottom-0 left-0 w-72 h-72 bg-white/5 rounded-full -ml-36 -mb-36"></div>
+        
+        <div className="max-w-5xl mx-auto text-center relative z-10">
+          <h2 className="text-3xl md:text-4xl font-black mb-8">
             Os Passeios Mais Incríveis de Jericoacoara Começam Aqui
           </h2>
 
-          <p className="text-base md:text-lg leading-relaxed">
-            Jericoacoara é muito mais do que um destino turístico - é onde cada paisagem surpreende e cada dia reserva uma nova experiência. Para realmente viver tudo o que Jeri tem a oferecer, os passeios são parte essencial da viagem, permitindo explorar desde os cenários mais famosos até cantos que só quem conhece a região sabe chegar.
+          <p className="text-base md:text-lg leading-relaxed mb-8">
+            Jericoacoara é muito mais do que um destino turístico — é onde cada paisagem surpreende e cada dia reserva uma nova experiência. Para realmente viver tudo o que Jeri tem a oferecer, os passeios são parte essencial da viagem, permitindo explorar desde os cenários mais famosos até cantos que só quem conhece a região sabe chegar.
           </p>
+
+          <p className="text-base md:text-lg leading-relaxed mb-8">
+            Ao longo desses roteiros, você vai se deparar com lagoas de águas cristalinas, dunas imponentes, travessias entre mangues e vistas que transformam qualquer momento em algo memorável. Tudo isso com o suporte de quem entende da região, garantindo mais segurança, conforto e uma experiência muito mais completa.
+          </p>
+
+          <p className="text-base md:text-lg leading-relaxed mb-8">
+            Cada passeio oferece uma proposta diferente: alguns são perfeitos para relaxar e aproveitar a tranquilidade das lagoas, enquanto outros são ideais para quem busca emoção e aventura nas dunas. Essa variedade faz com que cada escolha traga uma nova forma de conhecer Jericoacoara.
+          </p>
+
+          <p className="text-base md:text-lg leading-relaxed mb-8">
+            A seguir, você vai encontrar os principais passeios disponíveis, com todos os detalhes necessários para escolher a experiência ideal para o seu perfil e transformar sua viagem em algo verdadeiramente inesquecível.
+          </p>
+
+          {/* FEATURE CARDS */}
+          <div className="grid md:grid-cols-4 gap-4 mt-12">
+            <div className="bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/20 hover:bg-white/20 transition">
+              <Waves className="mx-auto mb-2" size={28} />
+              <p className="text-sm font-bold">Lagoas Cristalinas</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/20 hover:bg-white/20 transition">
+              <Mountain className="mx-auto mb-2" size={28} />
+              <p className="text-sm font-bold">Dunas Gigantes</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/20 hover:bg-white/20 transition">
+              <Compass className="mx-auto mb-2" size={28} />
+              <p className="text-sm font-bold">Exploração Segura</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/20 hover:bg-white/20 transition">
+              <Zap className="mx-auto mb-2" size={28} />
+              <p className="text-sm font-bold">Pura Adrenalina</p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -179,7 +214,7 @@ export default function PasseiosPage() {
 
           <div className="grid md:grid-cols-4 gap-6">
             {vehicleTypes.map((v) => (
-              <div key={v.name} className="p-6 border-2 border-gray-200 rounded-xl hover:border-orange-600 transition">
+              <div key={v.name} className="p-6 border-2 border-gray-200 rounded-xl hover:border-orange-600 transition hover:shadow-lg">
                 <h3 className="font-bold text-orange-600 text-lg mb-2">{v.name}</h3>
                 <p className="text-gray-600 text-sm">{v.description}</p>
               </div>
