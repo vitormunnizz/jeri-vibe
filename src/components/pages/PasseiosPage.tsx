@@ -153,10 +153,10 @@ export default function PasseiosPage() {
 
       {/* VISÃO GERAL */}
       <section id="geralPasseios" className="bg-orange-600 min-h-screen p-8 flex items-center justify-center">
-        <div className="w-full max-w-5xl py-4 px-8 bg-white rounded-2xl shadow-2xl mx-auto text-slate-800">
+        <div className="w-full max-w-5xl p-8 bg-white rounded-2xl shadow-2xl mx-auto text-slate-800">
 
           {/* TÍTULO */}
-          <h2 className="text-2xl md:text-5xl font-extrabold text-center mb-4">
+          <h2 className="text-2xl md:text-5xl font-extrabold text-center mb-8">
             Os Passeios Mais Incríveis de <span className="text-orange-600">Jericoacoara</span> Começam Aqui
           </h2>
 
