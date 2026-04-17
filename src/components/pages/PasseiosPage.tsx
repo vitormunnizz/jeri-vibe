@@ -160,7 +160,7 @@ export default function PasseiosPage() {
           </div>
 
           {/* TÍTULO */}
-          <h2 className="text-2xl md:text-5xl font-extrabold text-center mb-8">
+          <h2 className="text-2xl md:text-5xl font-extrabold text-center mb-4">
             Os Passeios Mais Incríveis de <span className="text-orange-600">Jericoacoara</span> Começam Aqui
           </h2>
 
