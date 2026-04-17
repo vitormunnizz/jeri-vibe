@@ -1,6 +1,6 @@
-import { useState } from "react";
-import { MessageCircle } from "lucide-react";
 import { Image } from '@/components/ui/image';
+import { MessageCircle } from "lucide-react";
+import { useState } from "react";
 
 export default function TransferPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -99,19 +99,6 @@ export default function TransferPage() {
           >
             Reservar Agora
           </a>
-        </div>
-      </section>
-
-      {/* DESCRIÇÃO */}
-      <section className="bg-orange-600 py-16 px-6 text-white">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl font-black mb-4">
-            Viaje com Tranquilidade
-          </h2>
-
-          <p className="text-base md:text-lg leading-relaxed">
-            Viaje com tranquilidade do aeroporto ou hotel até Jeri, com motoristas experientes, veículos preparados e atendimento de confiança. Oferecemos as melhores opções de transfer para sua chegada confortável em Jericoacoara.
-          </p>
         </div>
       </section>
 
