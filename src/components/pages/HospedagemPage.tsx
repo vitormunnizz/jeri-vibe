@@ -8,7 +8,7 @@ export default function HospedagemPage() {
   const navItems = [
     { name: "Visão Geral", link: "#geralHospedagem" },
     { name: "Onde se Hospedar", link: "#localizacoes" },
-    { name: "Tipos de Hospedagem", link: "#tipos" },
+    { name: "Tipos", link: "#tipos" },
     { name: "Galeria", link: "#galeria" },
     { name: "Dúvidas", link: "#duvidaHospedagem" },
     { name: "Contato", link: "#contato" },
@@ -18,27 +18,27 @@ export default function HospedagemPage() {
     {
       question: "Qual a melhor região para se hospedar em Jericoacoara?",
       answer:
-        "O ideal é ficar próximo ao centrinho da vila para ter fácil acesso a restaurantes, lojas, praia e vida noturna.",
+        "A melhor região é próxima ao centrinho da vila, pois oferece fácil acesso à praia, restaurantes, comércio e aos passeios.",
     },
     {
       question: "É melhor ficar em pousada ou hotel?",
       answer:
-        "Pousadas são mais aconchegantes, enquanto hotéis oferecem mais estrutura.",
+        "Depende do seu perfil. Pousadas são mais aconchegantes, enquanto hotéis oferecem mais estrutura e comodidades.",
     },
     {
       question: "Preciso reservar com antecedência?",
       answer:
-        "Sim, principalmente em alta temporada para garantir melhores opções.",
+        "Sim, principalmente em alta temporada. Reservar antes garante melhores preços e localização.",
     },
     {
-      question: "Tem hospedagem para famílias?",
+      question: "Existem opções para famílias?",
       answer:
-        "Sim, existem diversas opções com quartos amplos e estrutura completa.",
+        "Sim, há hospedagens com quartos amplos e estrutura completa para famílias.",
     },
     {
       question: "Fica perto dos passeios?",
       answer:
-        "Sim, a maioria das hospedagens tem fácil acesso aos passeios.",
+        "Sim, a maioria das hospedagens está próxima aos pontos de saída dos passeios.",
     },
   ];
 
@@ -80,35 +80,46 @@ export default function HospedagemPage() {
           </div>
         )}
 
-        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center">
-          <span className="text-orange-600">Bem-vindo ao Destino Nº 1</span>
+        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
+          <span className="text-orange-600 mb-2">
+            Bem-vindo ao Destino Nº 1 do Ceará
+          </span>
 
-          <h1 className="text-5xl font-black italic my-4">
-            Jeri4xp: Sua conexão <br /> com o paraíso.
+          <h1 className="text-4xl md:text-6xl font-black italic mb-4">
+            Jeri4xp: Sua conexão <br /> com o paraíso
           </h1>
 
-          <a href="https://wa.me/5585999001339"
-            className="bg-orange-600 px-8 py-4 rounded-full">
+          <p className="max-w-xl mb-6">
+            Descubra as melhores opções de hospedagem para aproveitar Jericoacoara com conforto, praticidade e experiências inesquecíveis.
+          </p>
+
+          <a
+            href="https://wa.me/5585999001339"
+            className="bg-orange-600 px-8 py-4 rounded-full hover:bg-white hover:text-orange-600 transition"
+          >
             Reservar Agora
           </a>
         </div>
       </section>
 
-      {/* VISÃO GERAL */}
-      <section id="geralHospedagem" className="bg-orange-600 min-h-screen p-8 flex items-center justify-center">
-        <div className="max-w-5xl bg-white p-8 rounded-3xl text-slate-800">
-
-          <h1 className="text-4xl font-bold text-center mb-6">
+      {/* INTRO */}
+      <section id="geralHospedagem" className="bg-orange-600 min-h-screen flex items-center justify-center p-8">
+        <div className="max-w-4xl bg-white p-8 rounded-3xl text-slate-800">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-center">
             Encontre a Hospedagem Ideal para Aproveitar{" "}
             <span className="text-orange-600">Jericoacoara</span>
-          </h1>
+          </h2>
 
           <p className="mb-4">
-            Hospedar-se bem faz toda a diferença para aproveitar Jericoacoara com conforto e tranquilidade.
+            Escolher bem onde se hospedar faz toda a diferença para viver Jericoacoara da melhor forma. Mais do que apenas um lugar para dormir, sua hospedagem influencia diretamente no conforto, na praticidade e na qualidade da sua experiência.
+          </p>
+
+          <p className="mb-4">
+            A vila oferece opções para todos os estilos: pousadas aconchegantes, hotéis completos e experiências exclusivas cercadas por paisagens incríveis.
           </p>
 
           <p>
-            Seja para viagem romântica, em família ou amigos, escolha a melhor opção para sua experiência.
+            Seja em uma viagem romântica, em família ou entre amigos, a escolha certa transforma sua viagem em algo inesquecível.
           </p>
         </div>
       </section>
@@ -120,9 +131,27 @@ export default function HospedagemPage() {
         </h2>
 
         <div className="grid md:grid-cols-4 gap-6">
-          {["🏡 Pousadas", "💑 Casais", "👨‍👩‍👧‍👦 Famílias", "✨ Resorts"].map((item) => (
-            <div key={item} className="bg-orange-600 text-white p-6 rounded-xl">
-              {item}
+          {[
+            {
+              title: "Pousadas Econômicas",
+              desc: "Conforto e ótimo custo-benefício perto do centro.",
+            },
+            {
+              title: "Casais",
+              desc: "Ambientes românticos e aconchegantes.",
+            },
+            {
+              title: "Famílias",
+              desc: "Estrutura completa para grupos e crianças.",
+            },
+            {
+              title: "Resorts",
+              desc: "Experiência premium com mais conforto.",
+            },
+          ].map((item) => (
+            <div key={item.title} className="bg-orange-600 text-white p-6 rounded-xl">
+              <h3 className="font-bold mb-2">{item.title}</h3>
+              <p>{item.desc}</p>
             </div>
           ))}
         </div>
@@ -136,26 +165,44 @@ export default function HospedagemPage() {
 
         <div className="grid md:grid-cols-3 gap-6">
           <div className="bg-orange-600 text-white p-6 rounded-xl">
-            Jericoacoara
+            <h3 className="font-bold">Jericoacoara</h3>
+            <p>Perto de tudo: praia, restaurantes e vida noturna.</p>
           </div>
+
           <div className="bg-orange-600 text-white p-6 rounded-xl">
-            Preá
+            <h3 className="font-bold">Preá</h3>
+            <p>Mais tranquilo, perfeito para natureza e esportes.</p>
           </div>
+
           <div className="bg-orange-600 text-white p-6 rounded-xl">
-            Tatajuba
+            <h3 className="font-bold">Tatajuba</h3>
+            <p>Experiência exclusiva com paisagens naturais únicas.</p>
           </div>
         </div>
       </section>
 
       {/* GALERIA */}
       <section id="galeria" className="bg-orange-600 p-10 text-white text-center">
-        <h2 className="text-4xl font-bold mb-6">Galeria</h2>
+        <h2 className="text-4xl font-bold mb-6">
+          Inspire-se para sua estadia
+        </h2>
+
+        <p className="mb-8">
+          Veja ambientes incríveis e imagine sua experiência em Jericoacoara.
+        </p>
 
         <div className="grid md:grid-cols-4 gap-4">
           {Array(6).fill(0).map((_, i) => (
             <Image key={i} src="/logo_jeri4xp.png" className="rounded-xl" />
           ))}
         </div>
+
+        <a
+          href="https://wa.me/5585999001339"
+          className="inline-block mt-10 bg-white text-orange-600 px-8 py-4 rounded-full font-bold"
+        >
+          Falar com especialista
+        </a>
       </section>
 
       {/* FAQ */}
@@ -181,12 +228,12 @@ export default function HospedagemPage() {
       {/* CONTATO */}
       <section id="contato" className="bg-orange-600 text-white p-10 text-center">
         <h2 className="text-4xl font-bold mb-6">
-          Prepare sua próxima aventura em Jeri
+          Prepare sua próxima experiência em Jericoacoara
         </h2>
 
-        <p>WhatsApp: 85 9 9900-1339</p>
-        <p>Instagram: @jeri4xp</p>
-        <p>Email: jeri4xp@gmail.com</p>
+        <p className="mb-2">WhatsApp: 85 9 9900-1339</p>
+        <p className="mb-2">Instagram: @jeri4xp</p>
+        <p className="mb-2">Email: jeri4xp@gmail.com</p>
 
         <p className="mt-10">Jericoacoara • Ceará • Brasil</p>
       </section>
