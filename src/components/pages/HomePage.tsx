@@ -146,14 +146,6 @@ const JeriLandingPage = () => {
         </div>
       </section>
 
-      {/* --- FOOTER --- */}
-      <footer className="bg-white p-10 text-center border-t">
-        <h2 className="text-xl font-bold">Sua aventura em Jericoacoara começa aqui</h2>
-        <p className="mt-4 text-gray-500 max-w-2xl mx-auto italic">
-          Turismo com qualidade, aventuras personalizadas e memórias inesquecíveis em Jericoacoara.
-        </p>
-      </footer>
-
       {/* --- WHATSAPP FLOATING BUTTON (WhatsAppButton.vue) --- */}
       <a href="https://wa.me/5585999001339" target="_blank" rel="noreferrer"
          className="fixed bottom-6 right-6 z-50 bg-green-600 p-4 rounded-full shadow-2xl hover:scale-110 transition-transform">
