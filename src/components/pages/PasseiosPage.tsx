@@ -1,5 +1,5 @@
 import { Image } from '@/components/ui/image';
-import { ChevronLeft, ChevronRight, MessageCircle, Waves, Mountain, Compass } from "lucide-react";
+import { ChevronLeft, ChevronRight, MessageCircle } from "lucide-react";
 import { useState } from "react";
 import { motion } from "framer-motion";
 
@@ -100,7 +100,7 @@ export default function PasseiosPage() {
 
           <nav className="hidden md:flex gap-8 text-sm font-bold uppercase tracking-wider">
             {navItems.map((item) => (
-              <a key={item.name} href={item.link} className="hover:text-orange-600 transition">
+              <a key={item.name} href={item.link} className="hover:text-accent transition">
                 {item.name}
               </a>
             ))}
@@ -122,7 +122,7 @@ export default function PasseiosPage() {
                 key={item.name}
                 href={item.link}
                 onClick={() => setIsMenuOpen(false)}
-                className="text-xl font-black hover:text-orange-600"
+                className="text-xl font-black hover:text-accent"
               >
                 {item.name}
               </a>
@@ -133,7 +133,7 @@ export default function PasseiosPage() {
         <Image src="https://static.wixstatic.com/media/792b6b_f1a29dfb5f294176b121771875f4bafa~mv2.png?originWidth=1152&originHeight=576" className="absolute w-full h-full object-cover opacity-80" alt="Hero background" />
 
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
-          <span className="text-orange-600 mb-2 uppercase tracking-widest text-xs md:text-sm">
+          <span className="text-accent mb-2 uppercase tracking-widest text-xs md:text-sm">
             Bem-vindo ao Destino Nº 1
           </span>
 
@@ -145,7 +145,7 @@ export default function PasseiosPage() {
             href="https://wa.me/5585999001339"
             target="_blank"
             rel="noreferrer"
-            className="bg-orange-600 px-8 py-3 rounded-full text-xs font-bold hover:bg-white hover:text-orange-600 transition-all"
+            className="bg-accent px-8 py-3 rounded-full text-xs font-bold hover:bg-white hover:text-accent transition-all"
           >
             Reservar Agora
           </a>
@@ -153,7 +153,7 @@ export default function PasseiosPage() {
       </section>
 
       {/* VISÃO GERAL */}
-      <section id="geralPasseios" className="bg-white py-16 px-6 md:py-24">
+      <section id="geralPasseios" className="bg-background py-16 px-6 md:py-24">
         <div className="max-w-6xl mx-auto">
           {/* TÍTULO */}
           <motion.div 
@@ -163,71 +163,75 @@ export default function PasseiosPage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-4 leading-tight">
-              Hospedagem Perfeita para sua Aventura
+            <h2 className="text-3xl md:text-5xl font-black text-primary mb-4 leading-tight">
+              Passeios Inesquecíveis em Jericoacoara
             </h2>
-            <div className="h-1 w-24 bg-orange-600 mx-auto rounded-full"></div>
+            <div className="h-1 w-24 bg-accent mx-auto rounded-full"></div>
           </motion.div>
 
           {/* TEXTO DESCRITIVO */}
           <motion.div 
-            className="bg-orange-100 p-8 rounded-lg space-y-4"
+            className="bg-gradient-to-r from-primary/5 to-accent/5 p-8 md:p-12 rounded-2xl space-y-4 border border-primary/10"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <p className="text-base md:text-lg leading-relaxed text-gray-800">
-              Hospedar-se bem faz toda a diferença para aproveitar Jericoacoara com mais conforto, praticidade e tranquilidade. A vila oferece opções para todos os estilos de viagem, desde pousadas aconchegantes até hotéis com estrutura completa, sempre cercados pela beleza natural da região.
+            <p className="text-base md:text-lg leading-relaxed text-foreground">
+              Jericoacoara é um paraíso natural onde cada passeio revela paisagens de tirar o fôlego. Das dunas gigantes ao encontro de lagoas cristalinas, cada roteiro foi cuidadosamente planejado para oferecer a melhor experiência possível.
             </p>
-            <p className="text-base md:text-lg leading-relaxed text-gray-800">
-              Para quem busca praticidade, ficar próximo ao centrinho é uma ótima escolha. Assim, você terá fácil acesso a restaurantes, lojas, praia, vida noturna e aos principais pontos de saída dos passeios, tornando sua experiência muito mais confortável durante toda a estadia.
+            <p className="text-base md:text-lg leading-relaxed text-foreground">
+              Nossos passeios combinam aventura, conforto e segurança. Seja em buggy, quadriciclo, UTV ou 4x4, você terá acesso aos pontos mais incríveis da região, com guias experientes que conhecem cada detalhe do caminho.
             </p>
-            <p className="text-base md:text-lg leading-relaxed text-gray-800">
-              Se a ideia for relaxar e aproveitar momentos especiais, há opções mais reservadas e tranquilas, perfeitas para casais, famílias ou quem deseja descansar com mais privacidade. Também existem hospedagens com piscina, café da manhã, espaços amplos e serviços pensados para tornar sua viagem ainda melhor.
-            </p>
-            <p className="text-base md:text-lg leading-relaxed text-gray-800">
-              Seja para uma viagem romântica, em família ou entre amigos, escolher a hospedagem certa é o primeiro passo para viver Jericoacoara da melhor forma. A seguir, você vai encontrar opções que combinam com seu perfil e tornam sua experiência ainda mais inesquecível.
+            <p className="text-base md:text-lg leading-relaxed text-foreground">
+              Escolha entre o Lado Leste com suas lagoas paradisíacas, o Lado Oeste com dunas selvagens e mangues únicos, ou o Roteiro Extremo Leste para quem busca experiências ainda mais exclusivas. Cada roteiro é uma jornada única pela beleza natural do Ceará.
             </p>
           </motion.div>
         </div>
       </section>
 
       {/* VEÍCULOS */}
-      <section id="veiculos" className="py-20 px-6 bg-white">
+      <section id="veiculos" className="py-20 px-6 bg-background">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col items-center mb-12 text-center">
-            <span className="uppercase tracking-widest text-xs font-bold mb-2 text-orange-600">
+            <span className="uppercase tracking-widest text-xs font-bold mb-2 text-accent">
               Escolha seu Veículo
             </span>
-            <h2 className="text-3xl md:text-4xl font-black">
+            <h2 className="text-3xl md:text-4xl font-black text-primary">
               Escolha Como Você Quer Explorar Jeri
             </h2>
-            <div className="h-1 w-20 bg-orange-600 mt-4 rounded-full"></div>
+            <div className="h-1 w-20 bg-accent mt-4 rounded-full"></div>
           </div>
 
           <div className="grid md:grid-cols-4 gap-6">
             {vehicleTypes.map((v) => (
-              <div key={v.name} className="p-6 border-2 border-gray-200 rounded-xl hover:border-orange-600 transition hover:shadow-lg">
-                <h3 className="font-bold text-orange-600 text-lg mb-2">{v.name}</h3>
-                <p className="text-gray-600 text-sm">{v.description}</p>
-              </div>
+              <motion.div 
+                key={v.name} 
+                className="p-6 border-2 border-border rounded-xl hover:border-accent transition hover:shadow-lg bg-background"
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <h3 className="font-bold text-accent text-lg mb-2">{v.name}</h3>
+                <p className="text-foreground text-sm">{v.description}</p>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* PASSEIOS - CAROUSEL */}
-      <section id="passeios" className="py-20 px-6 bg-gray-50">
+      <section id="passeios" className="py-20 px-6 bg-muted">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col items-center mb-12 text-center">
-            <span className="uppercase tracking-widest text-xs font-bold mb-2 text-orange-600">
+            <span className="uppercase tracking-widest text-xs font-bold mb-2 text-accent">
               Nossos Roteiros
             </span>
-            <h2 className="text-3xl md:text-4xl font-black">
+            <h2 className="text-3xl md:text-4xl font-black text-primary">
               Conheça Nossos Passeios
             </h2>
-            <div className="h-1 w-20 bg-orange-600 mt-4 rounded-full"></div>
+            <div className="h-1 w-20 bg-accent mt-4 rounded-full"></div>
           </div>
 
           {/* CAROUSEL CONTAINER */}
@@ -235,14 +239,20 @@ export default function PasseiosPage() {
             {/* LEFT BUTTON - OUTSIDE CARD */}
             <button
               onClick={() => setCarouselIndex((prev) => (prev - 1 + passeios.length) % passeios.length)}
-              className="hidden md:flex bg-orange-600 hover:bg-orange-700 text-white p-3 rounded-full transition shadow-lg flex-shrink-0"
+              className="hidden md:flex bg-accent hover:bg-accent/90 text-white p-3 rounded-full transition shadow-lg flex-shrink-0"
               aria-label="Passeio anterior"
             >
               <ChevronLeft size={24} />
             </button>
 
             {/* CAROUSEL ITEM */}
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition relative flex-1 h-96 md:h-[500px]">
+            <motion.div 
+              className="bg-background rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition relative flex-1 h-96 md:h-[500px]"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+            >
               <div className="grid md:grid-cols-2 gap-0 h-full">
                 {/* IMAGEM */}
                 <div className="relative h-full">
@@ -256,19 +266,19 @@ export default function PasseiosPage() {
                 {/* CONTEÚDO */}
                 <div className="p-8 flex flex-col justify-between overflow-y-auto">
                   <div>
-                    <span className="inline-block px-4 py-1 bg-orange-100 text-orange-600 text-xs font-bold rounded-full mb-3 w-fit">
+                    <span className="inline-block px-4 py-1 bg-accent/10 text-accent text-xs font-bold rounded-full mb-3 w-fit">
                       {passeios[carouselIndex].badge}
                     </span>
 
-                    <h3 className="text-xl md:text-2xl font-black mb-2 text-gray-900 line-clamp-2">
+                    <h3 className="text-xl md:text-2xl font-black mb-2 text-primary line-clamp-2">
                       {passeios[carouselIndex].titulo}
                     </h3>
 
-                    <p className="text-gray-600 mb-3 text-sm line-clamp-2">
+                    <p className="text-foreground mb-3 text-sm line-clamp-2">
                       {passeios[carouselIndex].descricao}
                     </p>
 
-                    <div className="text-gray-700 space-y-1 mb-4">
+                    <div className="text-foreground space-y-1 mb-4">
                       {passeios[carouselIndex].texto.map((t, i) => (
                         <p key={i} className="text-xs line-clamp-1">{t}</p>
                       ))}
@@ -278,8 +288,8 @@ export default function PasseiosPage() {
                     <div className="grid grid-cols-2 gap-2">
                       {passeios[carouselIndex].itens.map(item => (
                         <div key={item} className="flex items-center gap-2">
-                          <span className="text-orange-600 font-bold flex-shrink-0">✓</span>
-                          <span className="text-xs text-gray-700 line-clamp-1">{item}</span>
+                          <span className="text-accent font-bold flex-shrink-0">✓</span>
+                          <span className="text-xs text-foreground line-clamp-1">{item}</span>
                         </div>
                       ))}
                     </div>
@@ -290,7 +300,7 @@ export default function PasseiosPage() {
                     href="https://wa.me/5585999001339"
                     target="_blank"
                     rel="noreferrer"
-                    className="bg-orange-600 hover:bg-orange-700 text-white font-bold px-6 py-2 rounded-xl transition w-fit text-sm mt-4"
+                    className="bg-accent hover:bg-accent/90 text-white font-bold px-6 py-2 rounded-xl transition w-fit text-sm mt-4"
                   >
                     Reservar Agora
                   </a>
@@ -298,11 +308,11 @@ export default function PasseiosPage() {
               </div>
 
               {/* MOBILE CAROUSEL CONTROLS - BOTTOM CENTER */}
-              <div className="md:hidden flex items-center justify-center gap-4 px-4 py-4 bg-gray-50">
+              <div className="md:hidden flex items-center justify-center gap-4 px-4 py-4 bg-muted">
                 {/* LEFT BUTTON */}
                 <button
                   onClick={() => setCarouselIndex((prev) => (prev - 1 + passeios.length) % passeios.length)}
-                  className="bg-orange-600 hover:bg-orange-700 text-white p-2 rounded-full transition shadow-lg"
+                  className="bg-accent hover:bg-accent/90 text-white p-2 rounded-full transition shadow-lg"
                   aria-label="Passeio anterior"
                 >
                   <ChevronLeft size={20} />
@@ -315,7 +325,7 @@ export default function PasseiosPage() {
                       key={index}
                       onClick={() => setCarouselIndex(index)}
                       className={`w-2 h-2 rounded-full transition ${
-                        index === carouselIndex ? 'bg-orange-600' : 'bg-gray-300'
+                        index === carouselIndex ? 'bg-accent' : 'bg-border'
                       }`}
                       aria-label={`Ir para passeio ${index + 1}`}
                     />
@@ -325,7 +335,7 @@ export default function PasseiosPage() {
                 {/* RIGHT BUTTON */}
                 <button
                   onClick={() => setCarouselIndex((prev) => (prev + 1) % passeios.length)}
-                  className="bg-orange-600 hover:bg-orange-700 text-white p-2 rounded-full transition shadow-lg"
+                  className="bg-accent hover:bg-accent/90 text-white p-2 rounded-full transition shadow-lg"
                   aria-label="Próximo passeio"
                 >
                   <ChevronRight size={20} />
@@ -333,24 +343,24 @@ export default function PasseiosPage() {
               </div>
 
               {/* DESKTOP INDICATORS - BOTTOM CENTER */}
-              <div className="hidden md:flex items-center justify-center gap-2 py-4 bg-gray-50">
+              <div className="hidden md:flex items-center justify-center gap-2 py-4 bg-muted">
                 {passeios.map((_, index) => (
                   <button
                     key={index}
                     onClick={() => setCarouselIndex(index)}
                     className={`w-2 h-2 rounded-full transition ${
-                      index === carouselIndex ? 'bg-orange-600' : 'bg-gray-300'
+                      index === carouselIndex ? 'bg-accent' : 'bg-border'
                     }`}
                     aria-label={`Ir para passeio ${index + 1}`}
                   />
                 ))}
               </div>
-            </div>
+            </motion.div>
 
             {/* RIGHT BUTTON - OUTSIDE CARD */}
             <button
               onClick={() => setCarouselIndex((prev) => (prev + 1) % passeios.length)}
-              className="hidden md:flex bg-orange-600 hover:bg-orange-700 text-white p-3 rounded-full transition shadow-lg flex-shrink-0"
+              className="hidden md:flex bg-accent hover:bg-accent/90 text-white p-3 rounded-full transition shadow-lg flex-shrink-0"
               aria-label="Próximo passeio"
             >
               <ChevronRight size={24} />
@@ -360,44 +370,51 @@ export default function PasseiosPage() {
       </section>
 
       {/* FAQ */}
-      <section id="duvidaPasseio" className="py-20 px-6 bg-white">
+      <section id="duvidaPasseio" className="py-20 px-6 bg-background">
         <div className="max-w-4xl mx-auto">
           <div className="flex flex-col items-center mb-12 text-center">
-            <span className="uppercase tracking-widest text-xs font-bold mb-2 text-orange-600">
+            <span className="uppercase tracking-widest text-xs font-bold mb-2 text-accent">
               Informações
             </span>
-            <h2 className="text-3xl md:text-4xl font-black text-gray-900">
+            <h2 className="text-3xl md:text-4xl font-black text-primary">
               Dúvidas Frequentes
             </h2>
-            <div className="h-1 w-20 bg-orange-600 mt-4 rounded-full"></div>
+            <div className="h-1 w-20 bg-accent mt-4 rounded-full"></div>
           </div>
 
           <div className="space-y-3">
             {faqs.map((faq, index) => (
-              <div key={index} className="border-2 border-gray-200 p-6 rounded-xl bg-white hover:border-orange-600 transition">
+              <motion.div 
+                key={index} 
+                className="border-2 border-border p-6 rounded-xl bg-background hover:border-accent transition"
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.05 }}
+                viewport={{ once: true }}
+              >
                 <button
                   onClick={() =>
                     setExpandedFaq(expandedFaq === index ? null : index)
                   }
-                  className="w-full text-left font-bold text-gray-900 flex justify-between items-center"
+                  className="w-full text-left font-bold text-primary flex justify-between items-center"
                 >
                   <span>{faq.question}</span>
-                  <span className="text-orange-600 text-xl">
+                  <span className="text-accent text-xl">
                     {expandedFaq === index ? '−' : '+'}
                   </span>
                 </button>
 
                 {expandedFaq === index && (
-                  <p className="mt-4 text-gray-600 leading-relaxed">{faq.answer}</p>
+                  <p className="mt-4 text-foreground leading-relaxed">{faq.answer}</p>
                 )}
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* CONTATO */}
-      <section id="contato" className="py-20 px-6 bg-orange-600 text-white">
+      <section id="contato" className="py-20 px-6 bg-primary text-white">
         <div className="text-center max-w-4xl mx-auto">
           <span className="inline-block px-4 py-1 bg-white/10 rounded-full text-xs uppercase mb-6 font-bold">
             Fale com a gente
@@ -408,33 +425,39 @@ export default function PasseiosPage() {
           </h2>
 
           <div className="grid md:grid-cols-3 gap-6">
-            <a
+            <motion.a
               href="https://wa.me/5585999001339"
               target="_blank"
               rel="noreferrer"
-              className="bg-white/10 p-6 rounded-2xl hover:bg-white hover:text-orange-600 transition text-sm md:text-base"
+              className="bg-white/10 p-6 rounded-2xl hover:bg-white hover:text-primary transition text-sm md:text-base"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
             >
               <div className="font-bold mb-2">WhatsApp</div>
               <div className="font-bold">85 9 9900-1339</div>
-            </a>
+            </motion.a>
 
-            <a
+            <motion.a
               href="https://instagram.com/jeri4xp"
               target="_blank"
               rel="noreferrer"
-              className="bg-white/10 p-6 rounded-2xl hover:bg-white hover:text-orange-600 transition text-sm md:text-base"
+              className="bg-white/10 p-6 rounded-2xl hover:bg-white hover:text-primary transition text-sm md:text-base"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
             >
               <div className="font-bold mb-2">Instagram</div>
               <div className="font-bold">@jeri4xp</div>
-            </a>
+            </motion.a>
 
-            <a
+            <motion.a
               href="mailto:jeri4xp@gmail.com"
-              className="bg-white/10 p-6 rounded-2xl hover:bg-white hover:text-orange-600 transition text-sm md:text-base"
+              className="bg-white/10 p-6 rounded-2xl hover:bg-white hover:text-primary transition text-sm md:text-base"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
             >
               <div className="font-bold mb-2">E-mail</div>
               <div className="font-bold">jeri4xp@gmail.com</div>
-            </a>
+            </motion.a>
           </div>
 
           <div className="mt-12">
