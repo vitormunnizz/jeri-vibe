@@ -1,6 +1,6 @@
-import { useState } from "react";
-import { MessageCircle, ChevronLeft, ChevronRight, Compass, Waves, Mountain, Zap } from "lucide-react";
 import { Image } from '@/components/ui/image';
+import { ChevronLeft, ChevronRight, MessageCircle } from "lucide-react";
+import { useState } from "react";
 
 export default function PasseiosPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -153,7 +153,7 @@ export default function PasseiosPage() {
 
       {/* VISÃO GERAL */}
       <section id="geralPasseios" className="bg-orange-600 min-h-screen p-8 flex items-center justify-center">
-        <div className="w-full max-w-5xl p-8 bg-white rounded-4xl shadow-2xl mx-auto text-slate-800">
+        <div className="w-full max-w-5xl p-8 bg-white rounded-full shadow-2xl mx-auto text-slate-800">
           {/* BARRA DECORATIVA */}
           <div className="flex justify-center mb-4">
             <div className="w-18 h-1 bg-orange-600 rounded-full"></div>
