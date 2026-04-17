@@ -213,10 +213,10 @@ export default function PasseiosPage() {
             </button>
 
             {/* CAROUSEL ITEM */}
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition relative flex-1">
-              <div className="grid md:grid-cols-2 gap-0">
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition relative flex-1 h-96 md:h-[500px]">
+              <div className="grid md:grid-cols-2 gap-0 h-full">
                 {/* IMAGEM */}
-                <div className="relative min-h-64 md:min-h-auto">
+                <div className="relative h-full">
                   <Image
                     src="https://static.wixstatic.com/media/792b6b_d4c5932b099c4552a2356fa26ce00f01~mv2.png?originWidth=576&originHeight=384"
                     alt={passeios[carouselIndex].titulo}
@@ -225,33 +225,35 @@ export default function PasseiosPage() {
                 </div>
 
                 {/* CONTEÚDO */}
-                <div className="p-8 flex flex-col justify-center">
-                  <span className="inline-block px-4 py-1 bg-orange-100 text-orange-600 text-xs font-bold rounded-full mb-3 w-fit">
-                    {passeios[carouselIndex].badge}
-                  </span>
+                <div className="p-8 flex flex-col justify-between overflow-y-auto">
+                  <div>
+                    <span className="inline-block px-4 py-1 bg-orange-100 text-orange-600 text-xs font-bold rounded-full mb-3 w-fit">
+                      {passeios[carouselIndex].badge}
+                    </span>
 
-                  <h3 className="text-2xl md:text-3xl font-black mb-3 text-gray-900">
-                    {passeios[carouselIndex].titulo}
-                  </h3>
+                    <h3 className="text-xl md:text-2xl font-black mb-2 text-gray-900 line-clamp-2">
+                      {passeios[carouselIndex].titulo}
+                    </h3>
 
-                  <p className="text-gray-600 mb-4">
-                    {passeios[carouselIndex].descricao}
-                  </p>
+                    <p className="text-gray-600 mb-3 text-sm line-clamp-2">
+                      {passeios[carouselIndex].descricao}
+                    </p>
 
-                  <div className="text-gray-700 space-y-2 mb-6">
-                    {passeios[carouselIndex].texto.map((t, i) => (
-                      <p key={i} className="text-sm">{t}</p>
-                    ))}
-                  </div>
+                    <div className="text-gray-700 space-y-1 mb-4">
+                      {passeios[carouselIndex].texto.map((t, i) => (
+                        <p key={i} className="text-xs line-clamp-1">{t}</p>
+                      ))}
+                    </div>
 
-                  {/* LISTA DE ATRAÇÕES */}
-                  <div className="grid grid-cols-2 gap-3 mb-6">
-                    {passeios[carouselIndex].itens.map(item => (
-                      <div key={item} className="flex items-center gap-2">
-                        <span className="text-orange-600 font-bold">✓</span>
-                        <span className="text-sm text-gray-700">{item}</span>
-                      </div>
-                    ))}
+                    {/* LISTA DE ATRAÇÕES */}
+                    <div className="grid grid-cols-2 gap-2">
+                      {passeios[carouselIndex].itens.map(item => (
+                        <div key={item} className="flex items-center gap-2">
+                          <span className="text-orange-600 font-bold flex-shrink-0">✓</span>
+                          <span className="text-xs text-gray-700 line-clamp-1">{item}</span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
 
                   {/* CTA */}
@@ -259,7 +261,7 @@ export default function PasseiosPage() {
                     href="https://wa.me/5585999001339"
                     target="_blank"
                     rel="noreferrer"
-                    className="bg-orange-600 hover:bg-orange-700 text-white font-bold px-6 py-3 rounded-xl transition w-fit"
+                    className="bg-orange-600 hover:bg-orange-700 text-white font-bold px-6 py-2 rounded-xl transition w-fit text-sm mt-4"
                   >
                     Reservar Agora
                   </a>
