@@ -1,0 +1,227 @@
+{
+  "id": "1fa1ab78-bcaf-4352-a3e0-7b1531f218bc",
+  "initialPrompt": "Create a website inspired by https://jeri4xp.vercel.app/",
+  "siteName": "jeri4xp.vercel.app",
+  "brandBook": {
+    "tones": [
+      "playful",
+      "adventurous",
+      "warm",
+      "inviting",
+      "enthusiastic"
+    ],
+    "designStyle": {
+      "primaryStyle": [
+        "playful",
+        "tropical",
+        "modern"
+      ],
+      "supportingStyles": [
+        "minimalist",
+        "organic",
+        "vibrant"
+      ]
+    },
+    "toneOfVoice": "Adventurous, warm, inviting, enthusiastic, and slightly playful.",
+    "graphicElements": {
+      "icons": "Clean, line-based icons with a consistent stroke weight, primarily in dark blue (#314158) or accent orange (#F54900) for interactive states.",
+      "stickers": "",
+      "illustrations": "Stylized, flat illustrations with rounded shapes and vibrant colors, depicting local flora, fauna, and activities in Jericoacoara. They should feel friendly and energetic."
+    },
+    "designSummary": "**The Sun-Kissed Explorer: A Playful Journey Through Jericoacoara**\n\nThe Vision: To capture the vibrant spirit of Jericoacoara, blending the thrill of adventure with the warmth of Brazilian hospitality. The design will evoke a sense of joyful discovery, using a palette inspired by the region's natural beauty and a layout that feels both organized and spontaneously delightful. It's about making users feel excited to explore, with every element designed to guide them effortlessly through the experience.\n\n**Execution Blueprint:**\n1. The Grid as a Canvas for Adventure: A flexible grid system will be employed, allowing for dynamic arrangements of imagery and text that mimic the organic flow of travel. Asymmetry will be used to create visual interest and a sense of playful exploration.\n2. Typography as a Welcoming Guide: Headlines will be bold and inviting, using a rounded, friendly sans-serif to convey approachability. Body text will be clear and legible, ensuring information is easily consumed. A playful accent font can be used sparingly for emphasis.\n3. Color Harmony of Sun, Sand, and Sea: The palette will draw directly from Jericoacoara's iconic landscapes – the deep blues of the ocean, the warm oranges of the sunset, and the sandy beiges, all grounded by a clean, bright background.\n4. Components with a Touch of Joy: Buttons and interactive elements will feature generous rounded corners and subtle, bouncy animations to enhance the playful and tactile feel, encouraging user engagement.",
+    "layout": {
+      "grid": {
+        "margins": "Generous margins around sections (e.g., 80px vertical) to create distinct content blocks.",
+        "padding": "Consistent padding within content containers (e.g., 24px or 32px) to ensure text and elements are well-contained.",
+        "compositionApproach": "Flexible 12-column grid with asymmetrical alignment and occasional element overlap.",
+        "spacing": {
+          "gaps": "Base unit: 8px. Grid gaps are 24px (3x base unit) for standard spacing, with larger gaps (e.g., 40px, 48px) for visual breathing room between major sections.",
+          "rows": "Section-based with variable row heights",
+          "columns": "12-column grid",
+          "compositionApproach": "Not specified"
+        }
+      },
+      "layoutDna": {
+        "contrastSpectrum": "High contrast between dark blues, vibrant orange, and white for clear hierarchy and visual appeal.",
+        "densitySpectrum": "Moderately spacious, with ample whitespace to highlight imagery and CTAs.",
+        "textVsImageEmphasis": "Strong emphasis on high-quality imagery of Jericoacoara, with text elements strategically placed to complement and guide the user.",
+        "complexitySpectrum": "Visually engaging but not overwhelming; a balance between structured sections and playful, organic arrangements.",
+        "gridAlignmentSpectrum": "Asymmetrical and dynamic, utilizing a flexible grid that allows elements to break boundaries and create visual interest.",
+        "negativeSpaceUsage": "Generous use of negative space to frame content, emphasize imagery, and create an airy, inviting feel."
+      },
+      "heroSectionLayout": "**The Sunset Welcome**\nComposition (Tailwind Spec): Full-screen container (`h-screen grid place-items-center relative overflow-hidden`). A background video or image of Jericoacoara's sunset/beach (`absolute inset-0 w-full h-full object-cover z-0`). Overlay container (`relative z-10 flex flex-col items-center text-center p-8`). Headline 'Discover Jericoacoara's Magic' (`text-7xl font-bold text-white mb-4`). Sub-headline 'Your unforgettable adventure starts here.' (`text-xl text-white mb-8`). Primary CTA button 'Book Your Trip Now' (`bg-accentOrange text-white px-12 py-4 rounded-full text-lg font-bold shadow-lg`).\nSignature Hook (Framer Motion Spec): Parent container uses `whileInView` with `animate={{ opacity: 1, y: 0 }}`. Headline and sub-headline use `variants` with `transition: { staggerChildren: 0.05 }`. Each letter/word in headline/sub-headline has a variant with `initial={{ opacity: 0, y: 30 }}` and `animate={{ opacity: 1, y: 0 }}`. Button has a `whileHover={{ scale: 1.05, y: -5 }}` effect."
+    },
+    "components": {
+      "images": "Layout Role: Hero images are full-bleed backgrounds. Gallery images are presented in a dynamic, asymmetrical grid or horizontal scroll carousels. | Gallery Type: Dynamic Masonry Grid: Images are arranged in a responsive grid that fills available space, with varying heights to create a visually rich mosaic. Overlap is used sparingly to add depth.",
+      "buttons": "Primary: background-color: #F54900, color: #FFFFFF, border-radius: 9999px (pill shape), padding: 16px 32px, font-weight: 700, shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1). Secondary: background-color: transparent, color: #314158, border: 2px solid #314158, border-radius: 9999px (pill shape), padding: 16px 32px, font-weight: 700.",
+      "containers": "Method: Whitespace and subtle background color variations. Style: Sections are visually separated by generous vertical margins (e.g., 80px) and occasional use of the muted sand background (#F5EEDC) for specific content blocks. Content within containers is padded (e.g., 24px or 32px)."
+    },
+    "palette": {
+      "colors": {
+        "customColors": [
+          {
+            "name": "accentOrange",
+            "value": "#F54900"
+          },
+          {
+            "name": "accentOrangeForeground",
+            "value": "#FFFFFF"
+          },
+          {
+            "name": "mutedSand",
+            "value": "#F5EEDC"
+          },
+          {
+            "name": "mutedSandForeground",
+            "value": "#314158"
+          },
+          {
+            "name": "destructive",
+            "value": "#dc3545"
+          },
+          {
+            "name": "destructiveForeground",
+            "value": "#FFFFFF"
+          }
+        ],
+        "background": "#FFFFFF",
+        "secondary": "#1E2939",
+        "foreground": "#314158",
+        "secondaryForeground": "#FFFFFF",
+        "primaryForeground": "#FFFFFF",
+        "primary": "#314158"
+      },
+      "paletteUsageGuide": "The primary dark blue (#314158) and secondary dark blue (#1E2939) establish a sophisticated yet grounded base. The vibrant accent orange (#F54900) is used for calls-to-action, links, and key highlights to draw attention and convey energy. A muted sand color (#F5EEDC) provides a warm, earthy contrast for backgrounds or secondary elements. White (#FFFFFF) serves as the primary background, ensuring a light and airy feel, while dark blue is used for primary text for readability. Ensure high contrast for all text elements.",
+      "paletteAccessibilityNotes": "The primary color (#314158) has sufficient contrast against the white background (#FFFFFF). The accent orange (#F54900) also maintains good contrast for CTAs. Ensure all text elements meet WCAG AA contrast ratios against their respective backgrounds. Avoid placing orange text on the dark blue backgrounds without careful contrast checks."
+    },
+    "typography": {
+      "headings": {
+        "font": {
+          "fontFamily": "poppins-v2",
+          "role": "headings",
+          "fontJustification": ""
+        },
+        "headingsAccessibilityNotes": "Ensure sufficient font size and weight for headings to be easily distinguishable from body text. Maintain consistent line height and letter spacing.",
+        "headingsSimilarFonts": [],
+        "headingsUsageGuide": "Use 'poppins-v2' for all headings (h1, h2, h3, etc.). Apply bold weights for primary headings and semi-bold for subheadings to create a clear hierarchy. Ensure generous line height for readability."
+      },
+      "paragraphs": {
+        "font": {
+          "fontFamily": "nunito sans",
+          "role": "paragraphs",
+          "fontJustification": ""
+        },
+        "paragraphsUsageGuide": "Use 'nunito sans' for all body text, descriptions, and longer content blocks. Employ regular or semi-bold weights for optimal readability. Maintain consistent line spacing and paragraph margins.",
+        "paragraphsSimilarFonts": [],
+        "paragraphsAccessibilityNotes": "Paragraph text should be at least 16px with adequate line height (1.5x font size) to ensure legibility for all users. Avoid justified text which can create uneven spacing."
+      },
+      "customFontFamilies": {},
+      "fontSizes": [
+        {
+          "name": "xs",
+          "size": "0.75rem",
+          "lineHeight": "1",
+          "letterSpacing": "0.05em",
+          "fontWeight": "400"
+        },
+        {
+          "name": "sm",
+          "size": "0.875rem",
+          "lineHeight": "1.25",
+          "letterSpacing": "0.05em",
+          "fontWeight": "400"
+        },
+        {
+          "name": "base",
+          "size": "1rem",
+          "lineHeight": "1.5",
+          "letterSpacing": "0.05em",
+          "fontWeight": "400"
+        },
+        {
+          "name": "lg",
+          "size": "1.125rem",
+          "lineHeight": "1.5",
+          "letterSpacing": "0.05em",
+          "fontWeight": "400"
+        },
+        {
+          "name": "xl",
+          "size": "1.25rem",
+          "lineHeight": "1.5",
+          "letterSpacing": "0.05em",
+          "fontWeight": "600"
+        },
+        {
+          "name": "2xl",
+          "size": "1.5rem",
+          "lineHeight": "1.5",
+          "letterSpacing": "0.05em",
+          "fontWeight": "600"
+        },
+        {
+          "name": "3xl",
+          "size": "1.875rem",
+          "lineHeight": "1.2",
+          "letterSpacing": "0.05em",
+          "fontWeight": "700"
+        },
+        {
+          "name": "4xl",
+          "size": "2.25rem",
+          "lineHeight": "1.2",
+          "letterSpacing": "0.05em",
+          "fontWeight": "700"
+        },
+        {
+          "name": "5xl",
+          "size": "3rem",
+          "lineHeight": "1.1",
+          "letterSpacing": "0.05em",
+          "fontWeight": "700"
+        },
+        {
+          "name": "6xl",
+          "size": "3.75rem",
+          "lineHeight": "1.1",
+          "letterSpacing": "0.05em",
+          "fontWeight": "700"
+        },
+        {
+          "name": "7xl",
+          "size": "4.5rem",
+          "lineHeight": "1.1",
+          "letterSpacing": "0.05em",
+          "fontWeight": "700"
+        },
+        {
+          "name": "8xl",
+          "size": "6rem",
+          "lineHeight": "1",
+          "letterSpacing": "0.05em",
+          "fontWeight": "700"
+        },
+        {
+          "name": "9xl",
+          "size": "8rem",
+          "lineHeight": "1",
+          "letterSpacing": "0.05em",
+          "fontWeight": "700"
+        }
+      ],
+      "welcomeSectionTypography": {
+        "placement": "Centered, prominent placement within the hero section.",
+        "implementation": "Large 'poppins-v2' font for the main headline, potentially with a subtle animation. Sub-headline in 'nunito sans' below, with clear spacing."
+      }
+    },
+    "originImagesUrls": []
+  },
+  "attachments": {
+    "contentImagesUrls": [],
+    "inspirationImagesUrls": [
+      "https://wixmp-c562ea68f10846b458285ce5.wixmp.com/scraped-screenshots/screenshot-1776424837921.webp"
+    ]
+  },
+  "status": "READY",
+  "plan": "\n\n```json\n{\n  \"sections\": [\n    {\n      \"id\": \"overview\",\n      \"title\": \"## Overview\",\n      \"content\": \"A travel service website showcasing Jericoacoara beach destination tours, accommodations, transfers, and lessons with customer testimonials.\"\n    },\n    {\n      \"id\": \"key-features\",\n      \"title\": \"## Key features\",\n      \"content\": \"- **View Tour Listing**: Browse available tours and experiences in Jericoacoara.\\n- **View Tour Details**: See detailed information about each tour including attractions and itinerary.\\n- **View Accommodation Listing**: Browse available accommodations in the area.\\n- **View Accommodation Details**: See detailed information about each accommodation option.\\n- **View Customer Testimonials**: Read reviews and feedback from previous customers.\\n- **Submit Contact Form**: Send inquiries and messages to Jeri4xp.\",\n      \"metadata\": [\n        { \"id\": \"view-tour-listing\", \"name\": \"View Tour Listing\" },\n        { \"id\": \"view-tour-details\", \"name\": \"View Tour Details\" },\n        { \"id\": \"view-accommodation-listing\", \"name\": \"View Accommodation Listing\" },\n        { \"id\": \"view-accommodation-details\", \"name\": \"View Accommodation Details\" },\n        { \"id\": \"view-customer-testimonials\", \"name\": \"View Customer Testimonials\" },\n        { \"id\": \"submit-contact-form\", \"name\": \"Submit Contact Form\" }\n      ]\n    },\n    {\n      \"id\": \"structure\",\n      \"title\": \"## Structure\",\n      \"content\": \"- **Header (Reusable)**: Contains site logo, navigation menu with links to Tours, Accommodations, About, and Contact pages.\\n- **Footer (Reusable)**: Contains contact information, social media links, and quick navigation links.\\n- **Home Page**: Features hero section highlighting Jericoacoara, overview of services (tours, accommodations, transfers, lessons), featured attractions (Pedra Furada, Duna do Pôr do Sol), and customer testimonials.\\n- **Tours Page**: Displays tour listing with filtering options and individual tour detail views showcasing attractions like Pedra Furada, lagoons, and Mangue Seco.\\n- **Accommodations Page**: Displays accommodation listing with filtering options and individual accommodation detail views.\\n- **About Page**: Provides information about Jericoacoara's history, National Park status, and the story behind Jeri4xp services.\\n- **Contact Page**: Features contact form for inquiries, contact details (email, phone), and location information.\"\n    }\n  ],\n  \"apps\": [\n    {\n      \"id\": \"wix-cms\",\n      \"keyFeatures\": [\n        { \"id\": \"view-tour-listing\", \"name\": \"View Tour Listing\" },\n        { \"id\": \"view-tour-details\", \"name\": \"View Tour Details\" },\n        { \"id\": \"view-accommodation-listing\", \"name\": \"View Accommodation Listing\" },\n        { \"id\": \"view-accommodation-details\", \"name\": \"View Accommodation Details\" },\n        { \"id\": \"view-customer-testimonials\", \"name\": \"View Customer Testimonials\" },\n        { \"id\": \"submit-contact-form\", \"name\": \"Submit Contact Form\" }\n      ]\n    }\n  ],\n  \"version\": \"4.0.1\"\n}\n```"
+}
