@@ -220,26 +220,101 @@ export default function Jeri4xp() {
         </div>
       </section>
 
-      {/* PASSEIOS */}
-      <section id="passeios" className="bg-orange-600 text-white p-10 text-center">
-        <h2 className="text-4xl font-bold mb-8">Passeios Disponíveis</h2>
+ return (
+    <Swiper
+      modules={[Navigation]}
+      navigation
+      loop={true}
+      className="w-full"
+    >
+      {passeios.map((passeio, index) => (
+        <SwiperSlide key={index}>
 
-        <div className="grid md:grid-cols-2 gap-6">
-          <div className="bg-white text-black p-6 rounded-xl">
-            <h3 className="text-2xl font-bold">Lado Leste</h3>
-            <p>
-              Águas cristalinas, Lagoa do Paraíso, Buraco Azul e Árvore da Preguiça.
-            </p>
-          </div>
+          <section className="relative bg-orange-600 min-h-screen w-full p-4 flex flex-col items-center justify-center">
 
-          <div className="bg-white text-black p-6 rounded-xl">
-            <h3 className="text-2xl font-bold">Lado Oeste</h3>
-            <p>
-              Mangue Seco, Rio Guriú, Tatajuba e Lagoa da Torta.
-            </p>
-          </div>
-        </div>
-      </section>
+            {/* HEADER */}
+            <div className="text-center mb-8 z-10">
+              <span className="inline-block px-5 py-1.5 rounded-full bg-white text-orange-600 text-sm font-black uppercase tracking-widest shadow-lg">
+                {passeio.badge}
+              </span>
+
+              <h2 className="text-white text-4xl md:text-5xl font-black mt-3">
+                {passeio.titulo}
+              </h2>
+
+              <p className="text-white mt-3 max-w-xl mx-auto">
+                {passeio.descricao}
+              </p>
+            </div>
+
+            {/* CARD */}
+            <div className="max-w-5xl w-full">
+              <div className={`bg-white rounded-3xl shadow-2xl flex flex-col ${passeio.reverse ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
+
+                {/* IMAGEM */}
+                <div className="md:w-5/12 relative min-h-64">
+                  <img
+                    src="/assets/jeri1.webp"
+                    alt="Passeio"
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                </div>
+
+                {/* TEXTO */}
+                <div className="md:w-7/12 p-8 flex flex-col justify-center">
+
+                  <h3 className="text-2xl md:text-3xl font-black mb-4 text-slate-800">
+                    O que esperar deste <span className="text-orange-600">Passeio</span>
+                  </h3>
+
+                  <div className="text-slate-600 space-y-4 mb-6">
+                    {passeio.texto.map((t, i) => (
+                      <p key={i}>{t}</p>
+                    ))}
+                  </div>
+
+                  {/* LISTA */}
+                  <div className="grid grid-cols-2 gap-3 mb-8">
+                    {passeio.itens.map(item => (
+                      <div key={item} className="flex items-center gap-2">
+                        <span className="text-orange-600">📍</span>
+                        <span className="font-bold text-sm text-slate-700">{item}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* CTA */}
+                  <div className="flex flex-col sm:flex-row items-center gap-6 pt-4 border-t">
+                    <a
+                      href="https://wa.me/5585999001339"
+                      target="_blank"
+                      className="bg-orange-600 hover:bg-slate-800 text-white font-black px-8 py-4 rounded-xl transition w-full sm:w-auto text-center"
+                    >
+                      Reservar agora
+                    </a>
+
+                    <div className="text-center sm:text-left">
+                      <span className="text-xs font-bold text-orange-600 block">
+                        Disponibilidade
+                      </span>
+                      <span className="text-sm font-black text-slate-800">
+                        Saídas Diárias
+                      </span>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+
+          </section>
+
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  );
+}
 
       {/* FAQ */}
       <section id="duvidaPasseio" className="p-10 text-center">
