@@ -159,13 +159,13 @@ export default function HomePage() {
 
       {/* EXPERIÊNCIAS SECTION */}
       <section className="py-24 md:py-32 bg-background">
-        <div className="container mx-auto px-4 max-w-6xl">
+        <div className="container mx-auto px-4 max-w-7xl">
           <motion.div 
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             variants={fadeInUp}
-            className="text-center mb-16"
+            className="text-center mb-20"
           >
             <p className="text-sm font-bold tracking-widest uppercase mb-2 text-accent font-paragraph">Descubra</p>
             <h2 className="text-4xl md:text-5xl font-heading font-bold text-secondary">
@@ -178,21 +178,21 @@ export default function HomePage() {
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             variants={staggerContainer}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6"
+            className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8"
           >
             {/* Passeios */}
             <motion.div variants={fadeInUp}>
               <Link to="/tours" className="block group h-full">
-                <Card className="relative h-[240px] md:h-[280px] overflow-hidden rounded-2xl border-0 shadow-md hover:shadow-xl transition-all duration-500 group-hover:-translate-y-2">
+                <Card className="relative h-[350px] md:h-[420px] overflow-hidden rounded-2xl border-0 shadow-md hover:shadow-xl transition-all duration-500 group-hover:-translate-y-2">
                   <Image 
                     src="https://jeri4xp.vercel.app/img/passeio.4d2eed74.webp"
                     alt="Passeios"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
-                  <div className="absolute bottom-0 left-0 p-6 w-full flex flex-col items-start justify-end h-full">
-                    <h3 className="text-2xl md:text-3xl font-heading font-bold text-white mb-3 uppercase tracking-wide">Passeios</h3>
-                    <Button className="bg-accent hover:bg-accent/90 text-white rounded-full px-5 py-2 h-auto font-bold text-xs md:text-sm transition-all duration-300 group-hover:translate-x-1">
+                  <div className="absolute bottom-0 left-0 p-8 w-full flex flex-col items-start justify-end h-full">
+                    <h3 className="text-3xl md:text-4xl font-heading font-bold text-white mb-4 uppercase tracking-wide">Passeios</h3>
+                    <Button className="bg-accent hover:bg-accent/90 text-white rounded-full px-6 py-3 h-auto font-bold text-sm md:text-base transition-all duration-300 group-hover:translate-x-1">
                       SAIBA MAIS
                     </Button>
                   </div>
@@ -203,16 +203,16 @@ export default function HomePage() {
             {/* Hospedagem */}
             <motion.div variants={fadeInUp}>
               <Link to="/accommodations" className="block group h-full">
-                <Card className="relative h-[240px] md:h-[280px] overflow-hidden rounded-2xl border-0 shadow-md hover:shadow-xl transition-all duration-500 group-hover:-translate-y-2">
+                <Card className="relative h-[350px] md:h-[420px] overflow-hidden rounded-2xl border-0 shadow-md hover:shadow-xl transition-all duration-500 group-hover:-translate-y-2">
                   <Image 
                     src="https://jeri4xp.vercel.app/img/hotel.a362b7ec.webp"
                     alt="Hospedagem"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
-                  <div className="absolute bottom-0 left-0 p-6 w-full flex flex-col items-start justify-end h-full">
-                    <h3 className="text-2xl md:text-3xl font-heading font-bold text-white mb-3 uppercase tracking-wide">Hospedagem</h3>
-                    <Button className="bg-accent hover:bg-accent/90 text-white rounded-full px-5 py-2 h-auto font-bold text-xs md:text-sm transition-all duration-300 group-hover:translate-x-1">
+                  <div className="absolute bottom-0 left-0 p-8 w-full flex flex-col items-start justify-end h-full">
+                    <h3 className="text-3xl md:text-4xl font-heading font-bold text-white mb-4 uppercase tracking-wide">Hospedagem</h3>
+                    <Button className="bg-accent hover:bg-accent/90 text-white rounded-full px-6 py-3 h-auto font-bold text-sm md:text-base transition-all duration-300 group-hover:translate-x-1">
                       SAIBA MAIS
                     </Button>
                   </div>
@@ -223,16 +223,16 @@ export default function HomePage() {
             {/* Transfer */}
             <motion.div variants={fadeInUp}>
               <Link to="/contact" className="block group h-full">
-                <Card className="relative h-[240px] md:h-[280px] overflow-hidden rounded-2xl border-0 shadow-md hover:shadow-xl transition-all duration-500 group-hover:-translate-y-2">
+                <Card className="relative h-[350px] md:h-[420px] overflow-hidden rounded-2xl border-0 shadow-md hover:shadow-xl transition-all duration-500 group-hover:-translate-y-2">
                   <Image 
                     src="https://jeri4xp.vercel.app/img/transfer.fb2f24b4.webp"
                     alt="Transfer"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
-                  <div className="absolute bottom-0 left-0 p-6 w-full flex flex-col items-start justify-end h-full">
-                    <h3 className="text-2xl md:text-3xl font-heading font-bold text-white mb-3 uppercase tracking-wide">Transfer</h3>
-                    <Button className="bg-accent hover:bg-accent/90 text-white rounded-full px-5 py-2 h-auto font-bold text-xs md:text-sm transition-all duration-300 group-hover:translate-x-1">
+                  <div className="absolute bottom-0 left-0 p-8 w-full flex flex-col items-start justify-end h-full">
+                    <h3 className="text-3xl md:text-4xl font-heading font-bold text-white mb-4 uppercase tracking-wide">Transfer</h3>
+                    <Button className="bg-accent hover:bg-accent/90 text-white rounded-full px-6 py-3 h-auto font-bold text-sm md:text-base transition-all duration-300 group-hover:translate-x-1">
                       SAIBA MAIS
                     </Button>
                   </div>
@@ -243,16 +243,16 @@ export default function HomePage() {
             {/* Aulas */}
             <motion.div variants={fadeInUp}>
               <Link to="/contact" className="block group h-full">
-                <Card className="relative h-[240px] md:h-[280px] overflow-hidden rounded-2xl border-0 shadow-md hover:shadow-xl transition-all duration-500 group-hover:-translate-y-2">
+                <Card className="relative h-[350px] md:h-[420px] overflow-hidden rounded-2xl border-0 shadow-md hover:shadow-xl transition-all duration-500 group-hover:-translate-y-2">
                   <Image 
                     src="https://jeri4xp.vercel.app/img/aula.208d909e.webp"
                     alt="Aulas"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
-                  <div className="absolute bottom-0 left-0 p-6 w-full flex flex-col items-start justify-end h-full">
-                    <h3 className="text-2xl md:text-3xl font-heading font-bold text-white mb-3 uppercase tracking-wide">Aulas</h3>
-                    <Button className="bg-accent hover:bg-accent/90 text-white rounded-full px-5 py-2 h-auto font-bold text-xs md:text-sm transition-all duration-300 group-hover:translate-x-1">
+                  <div className="absolute bottom-0 left-0 p-8 w-full flex flex-col items-start justify-end h-full">
+                    <h3 className="text-3xl md:text-4xl font-heading font-bold text-white mb-4 uppercase tracking-wide">Aulas</h3>
+                    <Button className="bg-accent hover:bg-accent/90 text-white rounded-full px-6 py-3 h-auto font-bold text-sm md:text-base transition-all duration-300 group-hover:translate-x-1">
                       SAIBA MAIS
                     </Button>
                   </div>
@@ -347,25 +347,28 @@ export default function HomePage() {
       </section>
 
       {/* CTA / CONTACT SECTION */}
-      <section className="h-screen bg-accent text-white relative overflow-hidden flex items-center">
+      <section className="py-24 md:py-32 bg-accent text-white relative overflow-hidden">
         {/* Decorative background elements */}
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
           <div className="absolute -top-24 -right-24 w-96 h-96 bg-white/5 rounded-full blur-3xl" />
           <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-black/5 rounded-full blur-3xl" />
         </div>
 
-        <div className="container mx-auto px-4 max-w-5xl relative z-10">
+        <div className="container mx-auto px-4 max-w-7xl relative z-10">
           <motion.div 
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={fadeInUp}
-            className="text-center mb-16"
+            className="text-center mb-20"
           >
             <p className="text-sm font-bold tracking-widest uppercase mb-2 opacity-80 font-paragraph">Fale com a gente</p>
-            <h2 className="text-4xl md:text-5xl font-heading font-bold">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">
               Prepare sua próxima<br />aventura em Jeri
             </h2>
+            <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto">
+              Entre em contato conosco através de qualquer um dos canais abaixo. Estamos prontos para ajudar você a planejar a experiência perfeita.
+            </p>
           </motion.div>
 
           <motion.div 
@@ -373,7 +376,7 @@ export default function HomePage() {
             whileInView="visible"
             viewport={{ once: true }}
             variants={staggerContainer}
-            className="grid md:grid-cols-3 gap-6 mb-16"
+            className="grid md:grid-cols-3 gap-8 mb-16"
           >
             {/* WhatsApp Card */}
             <motion.a 
@@ -381,14 +384,14 @@ export default function HomePage() {
               href="https://wa.me/5585999001339"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 flex flex-col items-center text-center hover:bg-white/20 transition-all duration-300 hover:-translate-y-2 group"
+              className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-10 flex flex-col items-center text-center hover:bg-white/20 transition-all duration-300 hover:-translate-y-3 group"
             >
-              <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <MessageCircle className="w-8 h-8 text-white" />
+              <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+                <MessageCircle className="w-10 h-10 text-white" />
               </div>
-              <h3 className="font-bold text-xl mb-2">WhatsApp</h3>
-              <p className="text-white/80 mb-4">85 9 9900-1339</p>
-              <span className="text-sm font-semibold flex items-center gap-2 opacity-80 group-hover:opacity-100">
+              <h3 className="font-bold text-2xl mb-3">WhatsApp</h3>
+              <p className="text-white/80 mb-6 text-lg font-semibold">85 9 9900-1339</p>
+              <span className="text-sm font-semibold flex items-center gap-2 opacity-80 group-hover:opacity-100 transition-opacity">
                 Clique para conversar <ArrowRight className="w-4 h-4" />
               </span>
             </motion.a>
@@ -399,14 +402,14 @@ export default function HomePage() {
               href="https://instagram.com/jeri4xp"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 flex flex-col items-center text-center hover:bg-white/20 transition-all duration-300 hover:-translate-y-2 group"
+              className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-10 flex flex-col items-center text-center hover:bg-white/20 transition-all duration-300 hover:-translate-y-3 group"
             >
-              <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <Instagram className="w-8 h-8 text-white" />
+              <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+                <Instagram className="w-10 h-10 text-white" />
               </div>
-              <h3 className="font-bold text-xl mb-2">Instagram</h3>
-              <p className="text-white/80 mb-4">@jeri4xp</p>
-              <span className="text-sm font-semibold flex items-center gap-2 opacity-80 group-hover:opacity-100">
+              <h3 className="font-bold text-2xl mb-3">Instagram</h3>
+              <p className="text-white/80 mb-6 text-lg font-semibold">@jeri4xp</p>
+              <span className="text-sm font-semibold flex items-center gap-2 opacity-80 group-hover:opacity-100 transition-opacity">
                 Acompanhe as aventuras <ArrowRight className="w-4 h-4" />
               </span>
             </motion.a>
@@ -415,14 +418,14 @@ export default function HomePage() {
             <motion.a 
               variants={fadeInUp}
               href="mailto:jeri4xp@gmail.com"
-              className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 flex flex-col items-center text-center hover:bg-white/20 transition-all duration-300 hover:-translate-y-2 group"
+              className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-10 flex flex-col items-center text-center hover:bg-white/20 transition-all duration-300 hover:-translate-y-3 group"
             >
-              <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <Mail className="w-8 h-8 text-white" />
+              <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+                <Mail className="w-10 h-10 text-white" />
               </div>
-              <h3 className="font-bold text-xl mb-2">E-mail</h3>
-              <p className="text-white/80 mb-4">jeri4xp@gmail.com</p>
-              <span className="text-sm font-semibold flex items-center gap-2 opacity-80 group-hover:opacity-100">
+              <h3 className="font-bold text-2xl mb-3">E-mail</h3>
+              <p className="text-white/80 mb-6 text-lg font-semibold">jeri4xp@gmail.com</p>
+              <span className="text-sm font-semibold flex items-center gap-2 opacity-80 group-hover:opacity-100 transition-opacity">
                 Envie sua mensagem <ArrowRight className="w-4 h-4" />
               </span>
             </motion.a>
@@ -435,11 +438,10 @@ export default function HomePage() {
             variants={fadeInUp}
             className="text-center"
           >
-            <p className="mb-8 text-white/80 tracking-widest uppercase text-sm">Jericoacoara • Ceará • Brasil</p>
+            <p className="mb-10 text-white/80 tracking-widest uppercase text-sm font-semibold">Jericoacoara • Ceará • Brasil</p>
             <Button 
               onClick={handleWhatsAppClick}
-              variant="outline"
-              className="border-2 border-white text-white hover:bg-white hover:text-accent rounded-full px-10 py-6 text-lg font-bold transition-all duration-300 bg-transparent"
+              className="bg-white text-accent hover:bg-white/90 rounded-full px-12 py-7 text-lg font-bold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
             >
               Falar no WhatsApp
             </Button>
