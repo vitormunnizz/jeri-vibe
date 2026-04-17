@@ -158,7 +158,7 @@ export default function HomePage() {
       </section>
 
       {/* EXPERIÊNCIAS SECTION */}
-      <section className="h-screen py-24 bg-background flex items-center">
+      <section className="py-24 md:py-32 bg-background">
         <div className="container mx-auto px-4 max-w-6xl">
           <motion.div 
             initial="hidden"
@@ -167,7 +167,8 @@ export default function HomePage() {
             variants={fadeInUp}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-heading font-bold uppercase tracking-wide text-secondary">
+            <p className="text-sm font-bold tracking-widest uppercase mb-2 text-accent font-paragraph">Descubra</p>
+            <h2 className="text-4xl md:text-5xl font-heading font-bold text-secondary">
               Nossas Experiências
             </h2>
           </motion.div>
@@ -177,21 +178,21 @@ export default function HomePage() {
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             variants={staggerContainer}
-            className="grid md:grid-cols-2 gap-6"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6"
           >
             {/* Passeios */}
             <motion.div variants={fadeInUp}>
-              <Link to="/tours" className="block group">
-                <Card className="relative h-[280px] md:h-[320px] overflow-hidden rounded-3xl border-0 shadow-md hover:shadow-2xl transition-all duration-500">
+              <Link to="/tours" className="block group h-full">
+                <Card className="relative h-[240px] md:h-[280px] overflow-hidden rounded-2xl border-0 shadow-md hover:shadow-xl transition-all duration-500 group-hover:-translate-y-2">
                   <Image 
                     src="https://jeri4xp.vercel.app/img/passeio.4d2eed74.webp"
                     alt="Passeios"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-                  <div className="absolute bottom-0 left-0 p-8 w-full flex flex-col items-start">
-                    <h3 className="text-3xl font-heading font-bold text-white mb-4 uppercase tracking-wider">Passeios</h3>
-                    <Button className="bg-accent hover:bg-accent/90 text-white rounded-full px-6 py-2 h-auto font-bold text-sm transition-transform group-hover:translate-x-2">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+                  <div className="absolute bottom-0 left-0 p-6 w-full flex flex-col items-start justify-end h-full">
+                    <h3 className="text-2xl md:text-3xl font-heading font-bold text-white mb-3 uppercase tracking-wide">Passeios</h3>
+                    <Button className="bg-accent hover:bg-accent/90 text-white rounded-full px-5 py-2 h-auto font-bold text-xs md:text-sm transition-all duration-300 group-hover:translate-x-1">
                       SAIBA MAIS
                     </Button>
                   </div>
@@ -201,17 +202,17 @@ export default function HomePage() {
 
             {/* Hospedagem */}
             <motion.div variants={fadeInUp}>
-              <Link to="/accommodations" className="block group">
-                <Card className="relative h-[280px] md:h-[320px] overflow-hidden rounded-3xl border-0 shadow-md hover:shadow-2xl transition-all duration-500">
+              <Link to="/accommodations" className="block group h-full">
+                <Card className="relative h-[240px] md:h-[280px] overflow-hidden rounded-2xl border-0 shadow-md hover:shadow-xl transition-all duration-500 group-hover:-translate-y-2">
                   <Image 
                     src="https://jeri4xp.vercel.app/img/hotel.a362b7ec.webp"
                     alt="Hospedagem"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-                  <div className="absolute bottom-0 left-0 p-8 w-full flex flex-col items-start">
-                    <h3 className="text-3xl font-heading font-bold text-white mb-4 uppercase tracking-wider">Hospedagem</h3>
-                    <Button className="bg-accent hover:bg-accent/90 text-white rounded-full px-6 py-2 h-auto font-bold text-sm transition-transform group-hover:translate-x-2">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+                  <div className="absolute bottom-0 left-0 p-6 w-full flex flex-col items-start justify-end h-full">
+                    <h3 className="text-2xl md:text-3xl font-heading font-bold text-white mb-3 uppercase tracking-wide">Hospedagem</h3>
+                    <Button className="bg-accent hover:bg-accent/90 text-white rounded-full px-5 py-2 h-auto font-bold text-xs md:text-sm transition-all duration-300 group-hover:translate-x-1">
                       SAIBA MAIS
                     </Button>
                   </div>
@@ -221,17 +222,17 @@ export default function HomePage() {
 
             {/* Transfer */}
             <motion.div variants={fadeInUp}>
-              <Link to="/contact" className="block group">
-                <Card className="relative h-[280px] md:h-[320px] overflow-hidden rounded-3xl border-0 shadow-md hover:shadow-2xl transition-all duration-500">
+              <Link to="/contact" className="block group h-full">
+                <Card className="relative h-[240px] md:h-[280px] overflow-hidden rounded-2xl border-0 shadow-md hover:shadow-xl transition-all duration-500 group-hover:-translate-y-2">
                   <Image 
                     src="https://jeri4xp.vercel.app/img/transfer.fb2f24b4.webp"
                     alt="Transfer"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-                  <div className="absolute bottom-0 left-0 p-8 w-full flex flex-col items-start">
-                    <h3 className="text-3xl font-heading font-bold text-white mb-4 uppercase tracking-wider">Transfer</h3>
-                    <Button className="bg-accent hover:bg-accent/90 text-white rounded-full px-6 py-2 h-auto font-bold text-sm transition-transform group-hover:translate-x-2">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+                  <div className="absolute bottom-0 left-0 p-6 w-full flex flex-col items-start justify-end h-full">
+                    <h3 className="text-2xl md:text-3xl font-heading font-bold text-white mb-3 uppercase tracking-wide">Transfer</h3>
+                    <Button className="bg-accent hover:bg-accent/90 text-white rounded-full px-5 py-2 h-auto font-bold text-xs md:text-sm transition-all duration-300 group-hover:translate-x-1">
                       SAIBA MAIS
                     </Button>
                   </div>
@@ -241,17 +242,17 @@ export default function HomePage() {
 
             {/* Aulas */}
             <motion.div variants={fadeInUp}>
-              <Link to="/contact" className="block group">
-                <Card className="relative h-[280px] md:h-[320px] overflow-hidden rounded-3xl border-0 shadow-md hover:shadow-2xl transition-all duration-500">
+              <Link to="/contact" className="block group h-full">
+                <Card className="relative h-[240px] md:h-[280px] overflow-hidden rounded-2xl border-0 shadow-md hover:shadow-xl transition-all duration-500 group-hover:-translate-y-2">
                   <Image 
                     src="https://jeri4xp.vercel.app/img/aula.208d909e.webp"
                     alt="Aulas"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-                  <div className="absolute bottom-0 left-0 p-8 w-full flex flex-col items-start">
-                    <h3 className="text-3xl font-heading font-bold text-white mb-4 uppercase tracking-wider">Aulas</h3>
-                    <Button className="bg-accent hover:bg-accent/90 text-white rounded-full px-6 py-2 h-auto font-bold text-sm transition-transform group-hover:translate-x-2">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+                  <div className="absolute bottom-0 left-0 p-6 w-full flex flex-col items-start justify-end h-full">
+                    <h3 className="text-2xl md:text-3xl font-heading font-bold text-white mb-3 uppercase tracking-wide">Aulas</h3>
+                    <Button className="bg-accent hover:bg-accent/90 text-white rounded-full px-5 py-2 h-auto font-bold text-xs md:text-sm transition-all duration-300 group-hover:translate-x-1">
                       SAIBA MAIS
                     </Button>
                   </div>
@@ -263,7 +264,7 @@ export default function HomePage() {
       </section>
 
       {/* TESTIMONIALS SECTION */}
-      <section className="h-screen py-24 bg-[#FAFAFA] flex items-center">
+      <section className="py-24 md:py-32 bg-[#FAFAFA]">
         <div className="container mx-auto px-4 max-w-6xl">
           <motion.div 
             initial="hidden"
@@ -272,64 +273,75 @@ export default function HomePage() {
             variants={fadeInUp}
             className="text-center mb-16"
           >
+            <p className="text-sm font-bold tracking-widest uppercase mb-2 text-accent font-paragraph">Avaliações</p>
             <h2 className="text-4xl md:text-5xl font-heading font-bold text-secondary">
               O que dizem sobre a Jeri 4XP
             </h2>
           </motion.div>
 
-          <div className="relative min-h-[300px]">
-            {/* Always render the container to prevent ref crashes, control visibility with CSS */}
-            <div className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${isLoading ? 'opacity-100 z-10' : 'opacity-0 -z-10'}`}>
+          <div className="relative min-h-[400px]">
+            {/* Loading state */}
+            <div className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${isLoading ? 'opacity-100 z-10' : 'opacity-0 -z-10 pointer-events-none'}`}>
               <LoadingSpinner className="w-10 h-10 text-accent" />
             </div>
 
-            <motion.div 
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-50px" }}
-              variants={staggerContainer}
-              className={`grid md:grid-cols-2 lg:grid-cols-3 gap-6 transition-opacity duration-500 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
-            >
-              {testimonials.map((testimonial) => (
-                <motion.div key={testimonial._id} variants={fadeInUp}>
-                  <Card className="p-8 h-full flex flex-col bg-white border-0 shadow-sm hover:shadow-xl transition-shadow duration-300 rounded-2xl">
-                    <div className="flex justify-between items-start mb-6">
-                      <span className="text-6xl text-accent/20 font-serif leading-none h-8">"</span>
-                      <div className="flex gap-1">
-                        {[...Array(5)].map((_, i) => (
-                          <Star 
-                            key={i} 
-                            className={`w-4 h-4 ${i < (testimonial.rating || 5) ? 'fill-accent text-accent' : 'text-muted'}`}
-                          />
-                        ))}
-                      </div>
-                    </div>
-                    
-                    <p className="text-foreground/80 italic mb-8 flex-grow text-sm leading-relaxed">
-                      {testimonial.reviewText}
-                    </p>
-                    
-                    <div className="flex items-center gap-4 mt-auto pt-4 border-t border-border/50">
-                      {testimonial.customerPhoto ? (
-                        <Image 
-                          src={testimonial.customerPhoto}
-                          alt={testimonial.customerName || 'Customer'}
-                          className="w-12 h-12 rounded-full object-cover border-2 border-accent/20"
-                        />
-                      ) : (
-                        <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center text-accent font-bold">
-                          {testimonial.customerName?.charAt(0) || 'C'}
+            {/* Empty state */}
+            {!isLoading && testimonials.length === 0 && (
+              <div className="flex items-center justify-center h-[400px]">
+                <p className="text-muted-foreground text-center">Nenhum depoimento disponível no momento.</p>
+              </div>
+            )}
+
+            {/* Testimonials grid */}
+            {!isLoading && testimonials.length > 0 && (
+              <motion.div 
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-50px" }}
+                variants={staggerContainer}
+                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+              >
+                {testimonials.map((testimonial) => (
+                  <motion.div key={testimonial._id} variants={fadeInUp}>
+                    <Card className="p-6 md:p-8 h-full flex flex-col bg-white border-0 shadow-sm hover:shadow-lg transition-all duration-300 rounded-2xl hover:-translate-y-1">
+                      <div className="flex justify-between items-start mb-4">
+                        <span className="text-5xl md:text-6xl text-accent/15 font-serif leading-none">"</span>
+                        <div className="flex gap-1">
+                          {[...Array(5)].map((_, i) => (
+                            <Star 
+                              key={i} 
+                              className={`w-4 h-4 ${i < (testimonial.rating || 5) ? 'fill-accent text-accent' : 'text-muted-foreground/30'}`}
+                            />
+                          ))}
                         </div>
-                      )}
-                      <div>
-                        <p className="font-bold text-secondary text-sm">{testimonial.customerName}</p>
-                        <p className="text-xs text-muted-foreground">{testimonial.customerLocation}</p>
                       </div>
-                    </div>
-                  </Card>
-                </motion.div>
-              ))}
-            </motion.div>
+                      
+                      <p className="text-foreground/75 italic mb-6 md:mb-8 flex-grow text-sm md:text-base leading-relaxed">
+                        {testimonial.reviewText}
+                      </p>
+                      
+                      <div className="flex items-center gap-3 md:gap-4 mt-auto pt-4 md:pt-6 border-t border-border/50">
+                        {testimonial.customerPhoto ? (
+                          <Image 
+                            src={testimonial.customerPhoto}
+                            alt={testimonial.customerName || 'Customer'}
+                            className="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover border-2 border-accent/20 flex-shrink-0"
+                          />
+                        ) : (
+                          <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-accent/10 flex items-center justify-center text-accent font-bold text-sm flex-shrink-0">
+                            {testimonial.customerName?.charAt(0) || 'C'}
+                          </div>
+                        )}
+                        <div className="min-w-0">
+                          <p className="font-bold text-secondary text-sm truncate">{testimonial.customerName}</p>
+                          <p className="text-xs text-muted-foreground truncate">{testimonial.customerLocation}</p>
+                        </div>
+                      </div>
+                    </Card>
+                  </motion.div>
+                ))}
+              </motion.div>
+            )}
           </div>
         </div>
       </section>
