@@ -1,6 +1,7 @@
 import { Image } from '@/components/ui/image';
 import { useState } from "react";
 
+
 export default function Jeri4xp() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [expandedFaq, setExpandedFaq] = useState(null);
