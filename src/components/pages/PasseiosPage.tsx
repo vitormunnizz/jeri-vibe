@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function JeriPasseios() {
+export default function Jeri4xp() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [expandedFaq, setExpandedFaq] = useState(null);
 
@@ -43,22 +43,27 @@ export default function JeriPasseios() {
     {
       question: "Qual o passeio mais procurado em Jericoacoara?",
       answer:
-        "Os passeios mais procurados são o Lado Leste, com paradas na Lagoa do Paraíso e Árvore da Preguiça, e o Lado Oeste, com Tatajuba e travessia de balsa. Ambos oferecem paisagens incríveis e experiências únicas.",
+        "Os passeios mais procurados são o Lado Leste, com paradas na Lagoa do Paraíso e Árvore da Preguiça, e o Lado Oeste, com Tatajuba e travessia de balsa.",
     },
     {
       question: "Quanto tempo dura o passeio?",
       answer:
-        "A maioria dos passeios dura entre 6 e 8 horas, dependendo do roteiro escolhido, do tempo de parada em cada atração e das condições do trajeto.",
+        "A maioria dos passeios dura entre 6 e 8 horas, dependendo do roteiro escolhido.",
     },
     {
       question: "Preciso reservar com antecedência?",
       answer:
-        "Sim, especialmente em finais de semana, feriados e alta temporada. Reservar antes garante sua vaga e melhores horários.",
+        "Sim, principalmente em alta temporada. Reservar antes garante sua vaga e melhores horários.",
     },
     {
-      question: "Passeios para família?",
+      question: "Passeios para famílias?",
       answer:
-        "Buggy ou 4x4 privativo são os mais indicados para famílias, pois oferecem mais conforto e segurança.",
+        "Buggy ou 4x4 privativo são ideais, pois oferecem mais conforto e segurança.",
+    },
+    {
+      question: "O que levar?",
+      answer:
+        "Protetor solar, roupa leve, óculos, água e celular carregado para fotos.",
     },
   ];
 
@@ -66,44 +71,48 @@ export default function JeriPasseios() {
     <div className="font-sans">
 
       {/* HERO */}
-      <section className="relative w-full h-screen text-white">
-        <header className="absolute w-full flex justify-between z-50 px-10 py-4">
+      <section className="relative h-screen text-white">
+        <img src="/jeri1.webp" className="absolute w-full h-full object-cover opacity-80" />
+
+        <header className="absolute w-full flex justify-between px-10 py-5 z-50">
           <img src="/logo_jeri4xp.png" className="w-24" />
 
           <nav className="hidden md:block">
-            <ul className="flex gap-10">
+            <ul className="flex gap-8">
               {navItems.map((item) => (
                 <li key={item.name}>
-                  <a href={item.link}>{item.name}</a>
+                  <a href={item.link} className="hover:text-orange-600">
+                    {item.name}
+                  </a>
                 </li>
               ))}
             </ul>
           </nav>
 
-          <button onClick={() => setIsMenuOpen(true)}>☰</button>
+          <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden text-3xl">
+            ☰
+          </button>
         </header>
 
         {isMenuOpen && (
-          <div className="fixed inset-0 bg-black flex flex-col items-center justify-center gap-6">
-            <button onClick={() => setIsMenuOpen(false)}>X</button>
+          <div className="fixed inset-0 bg-black flex flex-col items-center justify-center gap-6 z-50">
+            <button onClick={() => setIsMenuOpen(false)} className="absolute top-8 right-10 text-4xl">x</button>
             {navItems.map((item) => (
-              <a key={item.name} href={item.link}>
+              <a key={item.name} href={item.link} className="text-2xl">
                 {item.name}
               </a>
             ))}
           </div>
         )}
 
-        <img src="/jeri1.webp" className="w-full h-full object-cover" />
-
-        <div className="absolute inset-0 flex flex-col items-center justify-center">
-          <h1 className="text-5xl font-black">
-            Jeri4xp: Sua conexão com o paraíso
+        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center">
+          <span className="text-orange-600">Bem-vindo ao Destino Nº 1</span>
+          <h1 className="text-5xl font-black my-4">
+            Jeri4xp: Sua conexão <br /> com o paraíso.
           </h1>
-
           <a
             href="https://wa.me/5585999001339"
-            className="bg-orange-600 px-8 py-4 mt-6 rounded-full"
+            className="bg-orange-600 px-8 py-4 rounded-full"
           >
             Reservar Agora
           </a>
@@ -111,29 +120,31 @@ export default function JeriPasseios() {
       </section>
 
       {/* VISÃO GERAL */}
-      <section id="geralPasseios" className="bg-orange-600 p-10 text-white">
-        <h2 className="text-4xl font-bold text-center mb-6">
+      <section id="geralPasseios" className="bg-orange-600 p-10 text-white text-center">
+        <h2 className="text-4xl font-bold mb-6">
           Os Passeios Mais Incríveis de Jericoacoara Começam Aqui
         </h2>
 
-        <p className="max-w-3xl mx-auto text-center">
-          Jericoacoara é muito mais do que um destino turístico. Cada paisagem
-          surpreende e cada dia reserva uma nova experiência. Aqui você encontra
-          lagoas cristalinas, dunas e cenários únicos.
+        <p className="max-w-3xl mx-auto mb-4">
+          Jericoacoara é muito mais do que um destino turístico — é onde cada paisagem surpreende e cada dia reserva uma nova experiência.
+        </p>
+
+        <p className="max-w-3xl mx-auto">
+          Explore lagoas cristalinas, dunas imponentes e cenários únicos com total conforto e segurança.
         </p>
       </section>
 
       {/* VEÍCULOS */}
-      <section id="veiculos" className="p-10">
-        <h2 className="text-4xl text-center mb-10">
-          Escolha Como Explorar Jeri
+      <section id="veiculos" className="p-10 text-center">
+        <h2 className="text-4xl font-bold text-orange-600 mb-6">
+          Escolha Como Você Quer Explorar Jeri
         </h2>
 
         <div className="grid md:grid-cols-4 gap-6">
           {vehicleTypes.map((v) => (
-            <div key={v.name} className="border p-6 text-center rounded-xl">
+            <div key={v.name} className="p-6 border rounded-xl">
               <div className="text-4xl">{v.icon}</div>
-              <h3 className="font-bold mt-4">{v.name}</h3>
+              <h3 className="font-bold text-orange-600">{v.name}</h3>
               <p>{v.description}</p>
             </div>
           ))}
@@ -141,58 +152,62 @@ export default function JeriPasseios() {
       </section>
 
       {/* PASSEIOS */}
-      <section id="passeios" className="bg-orange-600 text-white p-10">
-        <h2 className="text-4xl mb-6 text-center">
-          Passeios Incríveis em Jeri
-        </h2>
+      <section id="passeios" className="bg-orange-600 text-white p-10 text-center">
+        <h2 className="text-4xl font-bold mb-8">Passeios Disponíveis</h2>
 
-        <p className="text-center max-w-2xl mx-auto">
-          Explore lagoas, dunas e paisagens únicas com roteiros completos e
-          experiências inesquecíveis.
-        </p>
+        <div className="grid md:grid-cols-2 gap-6">
+          <div className="bg-white text-black p-6 rounded-xl">
+            <h3 className="text-2xl font-bold">Lado Leste</h3>
+            <p>
+              Águas cristalinas, Lagoa do Paraíso, Buraco Azul e Árvore da Preguiça.
+            </p>
+          </div>
+
+          <div className="bg-white text-black p-6 rounded-xl">
+            <h3 className="text-2xl font-bold">Lado Oeste</h3>
+            <p>
+              Mangue Seco, Rio Guriú, Tatajuba e Lagoa da Torta.
+            </p>
+          </div>
+        </div>
       </section>
 
       {/* FAQ */}
-      <section id="duvidaPasseio" className="p-10">
-        <h2 className="text-4xl text-center mb-8">
+      <section id="duvidaPasseio" className="p-10 text-center">
+        <h2 className="text-4xl font-bold text-orange-600 mb-8">
           Dúvidas Frequentes
         </h2>
 
-        {faqs.map((faq, i) => (
-          <div key={i} className="border p-4 mb-4">
-            <button
-              onClick={() =>
-                setExpandedFaq(expandedFaq === i ? null : i)
-              }
-            >
-              {faq.question}
-            </button>
+        <div className="max-w-3xl mx-auto">
+          {faqs.map((faq, index) => (
+            <div key={index} className="border p-4 mb-3 rounded-lg">
+              <button
+                onClick={() =>
+                  setExpandedFaq(expandedFaq === index ? null : index)
+                }
+                className="font-bold"
+              >
+                {faq.question}
+              </button>
 
-            {expandedFaq === i && <p>{faq.answer}</p>}
-          </div>
-        ))}
+              {expandedFaq === index && <p className="mt-2">{faq.answer}</p>}
+            </div>
+          ))}
+        </div>
       </section>
 
       {/* CONTATO */}
       <section id="contato" className="bg-orange-600 text-white p-10 text-center">
-        <h2 className="text-4xl mb-6">
+        <h2 className="text-4xl font-bold mb-6">
           Prepare sua próxima aventura em Jeri
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-6">
-          <a href="https://wa.me/5585999001339">WhatsApp</a>
-          <a href="https://instagram.com/jeri4xp">Instagram</a>
-          <a href="mailto:jeri4xp@gmail.com">Email</a>
-        </div>
-      </section>
+        <p className="mb-4">WhatsApp: 85 9 9900-1339</p>
+        <p className="mb-4">Instagram: @jeri4xp</p>
+        <p className="mb-4">Email: jeri4xp@gmail.com</p>
 
-      {/* BOTÃO WHATSAPP FIXO */}
-      <a
-        href="https://wa.me/5585999001339"
-        className="fixed bottom-6 right-6 bg-green-600 text-white p-4 rounded-full"
-      >
-        Whats
-      </a>
+        <p className="mt-10">Jericoacoara • Ceará • Brasil</p>
+      </section>
     </div>
   );
 }
