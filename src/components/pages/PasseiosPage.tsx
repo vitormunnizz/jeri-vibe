@@ -125,10 +125,10 @@ export default function Jeri4xp() {
           Os Passeios Mais Incríveis de Jericoacoara Começam Aqui
         </h2>
 
-<div class="border-l-4 border-orange-600 pl-6">
-          <div class="space-y-4 text-md md:text-lg">
+<div className="border-l-4 border-orange-600 pl-6">
+          <div className="space-y-4 text-md md:text-lg">
 
-            <p class="first-letter:text-4xl first-letter:font-bold first-letter:text-orange-600 first-letter:mr-1 first-letter:float-left">
+            <p className="first-letter:text-4xl first-letter:font-bold first-letter:text-orange-600 first-letter:mr-1 first-letter:float-left">
               Jericoacoara é muito mais do que um destino turístico é onde cada paisagem
               surpreende e cada dia reserva uma nova experiência. Para realmente viver tudo o que Jeri
               tem a oferecer, os passeios são parte essencial da viagem, permitindo explorar desde os
