@@ -314,8 +314,6 @@ export default function Jeri4xp() {
       ))}
     </Swiper>
   );
-}
-
       {/* FAQ */}
       <section id="duvidaPasseio" className="p-10 text-center">
         <h2 className="text-4xl font-bold text-orange-600 mb-8">
