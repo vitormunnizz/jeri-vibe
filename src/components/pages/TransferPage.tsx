@@ -1,12 +1,14 @@
 import { useState } from "react";
+import { MessageCircle } from "lucide-react";
+import { Image } from '@/components/ui/image';
 
-export default function Transfer() {
+export default function TransferPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [expandedFaq, setExpandedFaq] = useState(null);
 
   const navItems = [
     { name: "Trajetos", link: "#trajetos" },
-    { name: "Dúvidas", link: "#duvidaTranfer" },
+    { name: "Dúvidas", link: "#duvidas" },
     { name: "Contato", link: "#contato" },
   ];
 
@@ -42,27 +44,27 @@ export default function Transfer() {
     <div className="font-sans">
 
       {/* HERO */}
-      <section className="min-h-screen w-full text-white relative">
-        <header className="absolute w-full flex justify-between px-10 py-4 z-50 items-center">
-          <img src="/logo_jeri4xp.png" className="w-24" />
+      <section className="min-h-screen w-full text-white relative overflow-hidden">
+        <header className="absolute w-full flex justify-between px-6 md:px-10 py-4 z-50 items-center">
+          <Image src="https://static.wixstatic.com/media/792b6b_db67302a203f42429486f97568002b88~mv2.png?originWidth=1152&originHeight=576" alt="Logo Jeri4xp" className="w-20 md:w-24" />
 
-          <nav className="hidden md:flex gap-10 text-lg uppercase font-bold">
+          <nav className="hidden md:flex gap-8 text-sm font-bold uppercase tracking-wider">
             {navItems.map((item) => (
-              <a key={item.name} href={item.link} className="hover:text-orange-600">
+              <a key={item.name} href={item.link} className="hover:text-orange-600 transition">
                 {item.name}
               </a>
             ))}
           </nav>
 
-          <button onClick={() => setIsMenuOpen(true)} className="md:hidden text-3xl">
+          <button onClick={() => setIsMenuOpen(true)} className="md:hidden text-2xl">
             ☰
           </button>
         </header>
 
         {isMenuOpen && (
-          <div className="fixed inset-0 bg-black flex flex-col items-center justify-center gap-8 z-50">
-            <button onClick={() => setIsMenuOpen(false)} className="absolute top-6 right-6 text-4xl">
-              x
+          <div className="fixed inset-0 bg-black flex flex-col items-center justify-center gap-8 z-50 font-bold">
+            <button onClick={() => setIsMenuOpen(false)} className="absolute top-8 right-10 text-3xl">
+              ✕
             </button>
 
             {navItems.map((item) => (
@@ -70,7 +72,7 @@ export default function Transfer() {
                 key={item.name}
                 href={item.link}
                 onClick={() => setIsMenuOpen(false)}
-                className="text-2xl font-bold hover:text-orange-600"
+                className="text-xl font-black hover:text-orange-600"
               >
                 {item.name}
               </a>
@@ -78,101 +80,138 @@ export default function Transfer() {
           </div>
         )}
 
-        <img src="/jeri1.webp" className="absolute w-full h-full object-cover opacity-85" />
+        <Image src="https://static.wixstatic.com/media/792b6b_f1a29dfb5f294176b121771875f4bafa~mv2.png?originWidth=1152&originHeight=576" className="absolute w-full h-full object-cover opacity-80" alt="Hero background" />
 
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-          <span className="text-orange-600 mb-2">Bem-vindo ao Destino Nº 1</span>
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
+          <span className="text-orange-600 mb-2 uppercase tracking-widest text-xs md:text-sm">
+            Bem-vindo ao Destino Nº 1
+          </span>
 
-          <h1 className="text-4xl md:text-6xl font-black italic mb-4">
-            Jeri4xp: Sua conexão <br /> com o paraíso.
+          <h1 className="text-3xl md:text-5xl font-black italic tracking-tighter mb-6">
+            Transfer Seguro <br /> para Jericoacoara
           </h1>
 
           <a
             href="https://wa.me/5585999001339"
             target="_blank"
-            className="bg-orange-600 px-10 py-4 rounded-full text-xs hover:bg-white hover:text-orange-600"
+            rel="noreferrer"
+            className="bg-orange-600 px-8 py-3 rounded-full text-xs font-bold hover:bg-white hover:text-orange-600 transition-all"
           >
             Reservar Agora
           </a>
         </div>
       </section>
 
-      {/* FOOTER TEXTO */}
-      <footer className="p-10 text-center">
-        <h2 className="text-2xl font-bold">
-          Transfer seguro e confortável para Jericoacoara
-        </h2>
-
-        <p className="mt-4 text-gray-600 italic max-w-2xl mx-auto">
-          Viaje com tranquilidade do aeroporto ou hotel até Jeri, com motoristas experientes, veículos preparados e atendimento de confiança.
-        </p>
-      </footer>
-
-      {/* TRAJETOS */}
-      <section id="trajetos" className="bg-orange-600 py-16 min-h-screen px-4 text-white">
-        <div className="max-w-6xl mx-auto">
-
-          <h2 className="text-3xl md:text-5xl font-extrabold text-center mb-4">
-            Sua chegada em Jeri começa aqui
+      {/* DESCRIÇÃO */}
+      <section className="bg-orange-600 py-16 px-6 text-white">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-2xl md:text-3xl font-black mb-4">
+            Viaje com Tranquilidade
           </h2>
 
-          <p className="text-center max-w-2xl mx-auto mb-12 text-lg">
+          <p className="text-base md:text-lg leading-relaxed">
+            Viaje com tranquilidade do aeroporto ou hotel até Jeri, com motoristas experientes, veículos preparados e atendimento de confiança. Oferecemos as melhores opções de transfer para sua chegada confortável em Jericoacoara.
+          </p>
+        </div>
+      </section>
+
+      {/* TRAJETOS */}
+      <section id="trajetos" className="py-20 px-6 bg-white">
+        <div className="max-w-6xl mx-auto">
+
+          <div className="flex flex-col items-center mb-12 text-center">
+            <span className="uppercase tracking-widest text-xs font-bold mb-2 text-orange-600">
+              Nossas Rotas
+            </span>
+            <h2 className="text-3xl md:text-4xl font-black">
+              Sua chegada em Jeri começa aqui
+            </h2>
+            <div className="h-1 w-20 bg-orange-600 mt-4 rounded-full"></div>
+          </div>
+
+          <p className="text-center max-w-2xl mx-auto mb-12 text-gray-600">
             Saídas confortáveis de Fortaleza e do Aeroporto de Cruz para você viajar com tranquilidade do início ao fim.
           </p>
 
           <div className="grid md:grid-cols-2 gap-8">
 
             {/* FORTALEZA */}
-            <div className="bg-white text-gray-800 p-6 rounded-2xl shadow">
-              <span className="bg-orange-100 text-orange-600 px-3 py-1 text-xs rounded-full">
+            <div className="bg-white border-2 border-orange-600 p-8 rounded-2xl shadow-lg hover:shadow-xl transition">
+              <span className="bg-orange-100 text-orange-600 px-4 py-2 text-xs font-bold rounded-full inline-block mb-4">
                 MAIS POPULAR
               </span>
 
-              <h3 className="text-2xl font-bold mt-4">
+              <Image src="https://static.wixstatic.com/media/792b6b_d4c5932b099c4552a2356fa26ce00f01~mv2.png?originWidth=576&originHeight=384" alt="Fortaleza Transfer" className="w-full h-48 object-cover rounded-xl mb-6" />
+
+              <h3 className="text-2xl font-black text-gray-900 mb-3">
                 Fortaleza → Jericoacoara
               </h3>
 
-              <p className="mt-4">
+              <p className="text-gray-600 mb-6">
                 Transfer completo saindo de Fortaleza com conforto, segurança e praticidade até a vila.
               </p>
 
-              <ul className="mt-4 space-y-2">
-                <li>🚐 Saída do hotel ou aeroporto</li>
-                <li>⏱️ Duração média de 5 a 6 horas</li>
-                <li>🏜️ Travessia em 4x4 incluída</li>
-                <li>👥 Opção compartilhada ou privada</li>
+              <ul className="space-y-3 mb-8 text-gray-700">
+                <li className="flex items-center gap-2">
+                  <span className="text-orange-600 font-bold">✓</span> Saída do hotel ou aeroporto
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-orange-600 font-bold">✓</span> Duração média de 5 a 6 horas
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-orange-600 font-bold">✓</span> Travessia em 4x4 incluída
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-orange-600 font-bold">✓</span> Opção compartilhada ou privada
+                </li>
               </ul>
 
               <a
-                href="https://wa.me/5588999999999?text=Olá! Quero reservar o transfer de Fortaleza para Jericoacoara."
+                href="https://wa.me/5585999001339?text=Olá! Quero reservar o transfer de Fortaleza para Jericoacoara."
                 target="_blank"
-                className="block mt-6 bg-orange-600 text-white py-3 text-center rounded-xl"
+                rel="noreferrer"
+                className="block w-full bg-orange-600 text-white py-3 text-center rounded-xl font-bold hover:bg-orange-700 transition"
               >
                 Reservar via WhatsApp
               </a>
             </div>
 
             {/* CRUZ */}
-            <div className="bg-white text-gray-800 p-6 rounded-2xl shadow">
-              <h3 className="text-2xl font-bold">
+            <div className="bg-white border-2 border-gray-200 p-8 rounded-2xl shadow-lg hover:shadow-xl transition">
+              <span className="text-gray-400 text-xs font-bold uppercase mb-4 inline-block">
+                MAIS RÁPIDO
+              </span>
+
+              <Image src="https://static.wixstatic.com/media/792b6b_d4c5932b099c4552a2356fa26ce00f01~mv2.png?originWidth=576&originHeight=384" alt="Aeroporto Cruz Transfer" className="w-full h-48 object-cover rounded-xl mb-6" />
+
+              <h3 className="text-2xl font-black text-gray-900 mb-3">
                 Aeroporto de Cruz → Jericoacoara
               </h3>
 
-              <p className="mt-4">
+              <p className="text-gray-600 mb-6">
                 Chegue em Jeri com rapidez, conforto e total comodidade saindo direto do aeroporto.
               </p>
 
-              <ul className="mt-4 space-y-2">
-                <li>✈️ Saída direto do aeroporto</li>
-                <li>⏱️ Duração média de 1h a 1h30</li>
-                <li>🏜️ Percurso em veículo 4x4</li>
-                <li>🚗 Mais rapidez e comodidade</li>
+              <ul className="space-y-3 mb-8 text-gray-700">
+                <li className="flex items-center gap-2">
+                  <span className="text-orange-600 font-bold">✓</span> Saída direto do aeroporto
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-orange-600 font-bold">✓</span> Duração média de 1h a 1h30
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-orange-600 font-bold">✓</span> Percurso em veículo 4x4
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-orange-600 font-bold">✓</span> Mais rapidez e comodidade
+                </li>
               </ul>
 
               <a
-                href="https://wa.me/5588999999999?text=Olá! Quero reservar o transfer do Aeroporto de Cruz para Jericoacoara."
+                href="https://wa.me/5585999001339?text=Olá! Quero reservar o transfer do Aeroporto de Cruz para Jericoacoara."
                 target="_blank"
-                className="block mt-6 bg-orange-600 text-white py-3 text-center rounded-xl"
+                rel="noreferrer"
+                className="block w-full bg-gray-900 text-white py-3 text-center rounded-xl font-bold hover:bg-gray-800 transition"
               >
                 Reservar via WhatsApp
               </a>
@@ -183,50 +222,106 @@ export default function Transfer() {
       </section>
 
       {/* FAQ */}
-      <section id="duvidaTranfer" className="bg-white min-h-screen p-6 flex items-center justify-center">
-        <div className="max-w-4xl w-full">
+      <section id="duvidas" className="py-20 px-6 bg-gray-50">
+        <div className="max-w-4xl mx-auto">
 
-          <h2 className="text-4xl font-bold text-center text-orange-600 mb-6">
-            Dúvidas Frequentes
-          </h2>
+          <div className="flex flex-col items-center mb-12 text-center">
+            <span className="uppercase tracking-widest text-xs font-bold mb-2 text-orange-600">
+              Informações
+            </span>
+            <h2 className="text-3xl md:text-4xl font-black text-gray-900">
+              Dúvidas Frequentes
+            </h2>
+            <div className="h-1 w-20 bg-orange-600 mt-4 rounded-full"></div>
+          </div>
 
-          <p className="text-center mb-10">
+          <p className="text-center text-gray-600 mb-10">
             Tire suas principais dúvidas antes de reservar.
           </p>
 
-          {faqs.map((faq, index) => (
-            <div key={index} className="border p-4 mb-3 rounded-xl">
-              <button
-                onClick={() =>
-                  setExpandedFaq(expandedFaq === index ? null : index)
-                }
-                className="w-full text-left font-semibold"
-              >
-                {faq.question}
-              </button>
+          <div className="space-y-3">
+            {faqs.map((faq, index) => (
+              <div key={index} className="border-2 border-gray-200 p-6 rounded-xl bg-white hover:border-orange-600 transition">
+                <button
+                  onClick={() =>
+                    setExpandedFaq(expandedFaq === index ? null : index)
+                  }
+                  className="w-full text-left font-bold text-gray-900 flex justify-between items-center"
+                >
+                  <span>{faq.question}</span>
+                  <span className="text-orange-600 text-xl">
+                    {expandedFaq === index ? '−' : '+'}
+                  </span>
+                </button>
 
-              {expandedFaq === index && (
-                <p className="mt-2 text-gray-600">{faq.answer}</p>
-              )}
-            </div>
-          ))}
+                {expandedFaq === index && (
+                  <p className="mt-4 text-gray-600 leading-relaxed">{faq.answer}</p>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* CONTATO */}
-      <section id="contato" className="min-h-screen flex items-center justify-center bg-orange-600 text-white p-10">
-        <div className="text-center">
-          <h1 className="text-4xl font-black mb-10">
+      <section id="contato" className="py-20 px-6 bg-orange-600 text-white">
+        <div className="text-center max-w-4xl mx-auto">
+          <span className="inline-block px-4 py-1 bg-white/10 rounded-full text-xs uppercase mb-6 font-bold">
+            Fale com a gente
+          </span>
+
+          <h2 className="text-3xl md:text-4xl font-black mb-12">
             Prepare sua próxima aventura em Jeri
-          </h1>
+          </h2>
 
           <div className="grid md:grid-cols-3 gap-6">
-            <a href="https://wa.me/5585999001339">WhatsApp</a>
-            <a href="https://instagram.com/jeri4xp">Instagram</a>
-            <a href="mailto:jeri4xp@gmail.com">E-mail</a>
+            <a
+              href="https://wa.me/5585999001339"
+              target="_blank"
+              rel="noreferrer"
+              className="bg-white/10 p-6 rounded-2xl hover:bg-white hover:text-orange-600 transition text-sm md:text-base"
+            >
+              <div className="font-bold mb-2">WhatsApp</div>
+              <div className="font-bold">85 9 9900-1339</div>
+            </a>
+
+            <a
+              href="https://instagram.com/jeri4xp"
+              target="_blank"
+              rel="noreferrer"
+              className="bg-white/10 p-6 rounded-2xl hover:bg-white hover:text-orange-600 transition text-sm md:text-base"
+            >
+              <div className="font-bold mb-2">Instagram</div>
+              <div className="font-bold">@jeri4xp</div>
+            </a>
+
+            <a
+              href="mailto:jeri4xp@gmail.com"
+              className="bg-white/10 p-6 rounded-2xl hover:bg-white hover:text-orange-600 transition text-sm md:text-base"
+            >
+              <div className="font-bold mb-2">E-mail</div>
+              <div className="font-bold">jeri4xp@gmail.com</div>
+            </a>
+          </div>
+
+          <div className="mt-12">
+            <p className="text-xs uppercase tracking-widest">
+              Jericoacoara • Ceará • Brasil
+            </p>
           </div>
         </div>
       </section>
+
+      {/* BOTÃO WHATSAPP FLUTUANTE */}
+      <a
+        href="https://wa.me/5585999001339"
+        target="_blank"
+        rel="noreferrer"
+        className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 p-4 rounded-full text-white shadow-lg transition z-40"
+        title="Enviar mensagem no WhatsApp"
+      >
+        <MessageCircle size={24} />
+      </a>
 
     </div>
   );
