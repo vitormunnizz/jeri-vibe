@@ -1,294 +1,254 @@
-import { motion } from 'framer-motion';
-import {
-  Instagram,
-  Mail,
-  MapPin,
-  MessageCircle,
-  Quote,
-  Star
-} from 'lucide-react';
-import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+// Se você estiver usando o ambiente completo da Wix (Velo/Wix IDE),
+// você pode importar os serviços de banco de dados aqui.
+// Caso contrário, mantivemos seus dados originais conforme o primeiro código.
 
-// Componentes da sua biblioteca UI no Wix
-import Footer from '@/components/Footer';
-import Header from '@/components/Header';
-import { Button } from '@/components/ui/button';
-import { Image } from '@/components/ui/image';
-import { LoadingSpinner } from '@/components/ui/loading-spinner';
+const JeriSite = () => {
+  // --- ESTADO PARA O MENU MOBILE (Funcionalidade) ---
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-// Integração de Dados
-import { CustomerTestimonials } from '@/entities';
-import { BaseCrudService } from '@/integrations';
+  // --- DADOS (Exatamente como no seu script setup original) ---
+  const navItems = [
+    { name: 'História', link: '#historia' },
+    { name: 'Experiências', link: '#experiencias' },
+    { name: 'Depoimentos', link: '#depoimentos' },
+    { name: 'Contato', link: '#contato' }
+  ];
 
-// Variantes de Animação
-const fadeInUp = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
-};
-
-export default function HomePage() {
-  const [testimonials, setTestimonials] = useState<CustomerTestimonials[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    loadData();
-  }, []);
-
-  const loadData = async () => {
-    setIsLoading(true);
-    try {
-      // Busca os depoimentos reais do seu banco de dados Wix
-      const result = await BaseCrudService.getAll<CustomerTestimonials>('testimonials', {}, { limit: 6 });
-      setTestimonials(result.items);
-    } catch (error) {
-      console.error('Erro ao carregar depoimentos:', error);
-    } finally {
-      setIsLoading(false);
+  const testimonials = [
+    {
+      id: 1,
+      name: 'Axelle Rulfi',
+      role: 'Suíça',
+      content: "I found out about Jeri 4XP through a friend's recommendation and it was all great. Kitesurfing and sightseeing, it was all perfect!",
+      avatar: 'https://i.pravatar.cc/150?u=axelle'
+    },
+    {
+      id: 2,
+      name: 'Remy Sanchez',
+      role: 'França',
+      content: "Service excellent, les prestations ont même dépassé mes attentes. J'ai testé le wingfoil et fait une excursion en quad dans les dunes, inoubliable!",
+      avatar: 'https://i.pravatar.cc/150?u=remy'
+    },
+    {
+      id: 3,
+      name: 'David Kennedy',
+      role: 'Londres, Reino Unido',
+      content: "I had the best experiences in Jericoacoara. Booking everything through Jeri 4XP was the best option.",
+      avatar: 'https://i.pravatar.cc/150?u=david'
+    },
+    {
+      id: 4,
+      name: 'Gabi',
+      role: 'Fortaleza, Brasil',
+      content: "Minha experiência com a Jeri 4XP foi fantástica! A equipe é super profissional e atenciosa, me dando todo o suporte necessário. Já quero voltar!",
+      avatar: 'https://i.pravatar.cc/150?u=gabi'
+    },
+    {
+      id: 5,
+      name: 'Lilian Maria',
+      role: 'São Paulo, Brasil',
+      content: "Maravilhoso atendimento, excelente, adorei o guia Adriano e Vinicius hyper atencioso. Os passeios foram incriveis, quadriciclo, jet ski e otimas lembranças.",
+      avatar: 'https://i.pravatar.cc/150?u=lilian'
+    },
+    {
+      id: 6,
+      name: 'Vitor Muniz',
+      role: 'Sobral, Brasil',
+      content: "Todas as vezes que for em jericoacoara, vou novamente com a Jeri4xp! Excelente atendimento por parte da equipe.",
+      avatar: 'https://i.pravatar.cc/150?u=vitor'
     }
-  };
-
-  const handleWhatsAppClick = () => {
-    window.open('https://wa.me/5585999001339', '_blank');
-  };
+  ];
 
   return (
-    <div className="min-h-screen bg-white font-sans text-slate-900 overflow-x-hidden">
-      <Header />
+    <div className="w-full">
 
-      {/* --- SEÇÃO HERO --- */}
-      <section className="relative w-full h-screen flex items-center justify-center overflow-hidden bg-black">
-        <div className="absolute inset-0 z-0">
-          <img
-            src="https://jeri4xp.vercel.app/img/jeri1.e05b0107.webp"
-            className="w-full h-full object-cover opacity-70"
-            alt="Jericoacoara"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/20" />
+      {/* --- SEÇÃO HERO / HEADER --- */}
+      <section className="min-h-screen w-full font-sans bg-white items-center justify-center text-center">
+        <div className="relative w-full h-[560px] md:h-[600px] overflow-hidden text-white uppercase font-bold tracking-widest">
+
+          <header className="absolute w-full flex justify-between z-50 px-10 py-2.5 md:items-center items-start">
+            <a href="/">
+              <img src="https://static.wixstatic.com/media/your-logo-link.png" alt="Logo Jeri4xp" className="w-25" />
+              {/* Nota: Substitua o src acima pelo link da imagem na Wix */}
+            </a>
+
+            <nav className="hidden md:block">
+              <ul className="flex gap-10 text-lg">
+                {navItems.map((item) => (
+                  <li key={item.name}>
+                    <a href={item.link} className="hover:text-orange-600 transition-colors">{item.name}</a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+
+            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden mt-2.5 text-3xl hover:cursor-pointer">☰</button>
+          </header>
+
+          {/* Menu Mobile */}
+          {isMenuOpen && (
+            <div className="fixed inset-0 z-[100] bg-black flex flex-col items-center justify-center gap-8 font-bold text-white">
+              <button onClick={() => setIsMenuOpen(false)} className="absolute top-8 right-10 text-4xl hover:cursor-pointer">x</button>
+              {navItems.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.link}
+                  onClick={() => setIsMenuOpen(false)}
+                  className="text-2xl font-black tracking-tighter hover:text-orange-600 transition-all hover:cursor-pointer"
+                >
+                  {item.name}
+                </a>
+              ))}
+            </div>
+          )}
+
+          <main className="flex h-full bg-black">
+            <img src="https://jeri4xp.vercel.app/img/jeri1.e05b0107.webp" className="w-full h-full object-cover opacity-85" alt="Hero" />
+            <div className="absolute inset-0 z-25 flex flex-col items-center justify-center px-4">
+              <span className="text-orange-600 mb-2">Bem-vindo ao Destino Nº 1</span>
+              <h1 className="text-4xl md:text-6xl font-black italic tracking-tighter mb-4 leading-tight">
+                Jeri4xp: Sua conexão <br /> com o paraíso.
+              </h1>
+              <a href="https://wa.me/5585999001339" target="_blank" rel="noreferrer"
+                className="bg-orange-600 px-10 py-4 rounded-full text-xs hover:bg-white hover:text-orange-600 transition-all shadow-lg">
+                Reservar Agora
+              </a>
+            </div>
+          </main>
         </div>
 
-        <div className="relative z-10 container mx-auto px-6 text-center text-white">
-          <motion.span
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-orange-500 font-bold tracking-[0.3em] uppercase mb-4 block text-sm"
-          >
-            Bem-vindo ao Destino Nº 1
-          </motion.span>
-
-          <motion.h1
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-black italic tracking-tighter mb-8 leading-tight uppercase"
-          >
-            Jeri4xp: Sua conexão <br /> com o paraíso.
-          </motion.h1>
-
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}>
-            <Button
-              onClick={handleWhatsAppClick}
-              className="bg-orange-600 hover:bg-white hover:text-orange-600 text-white rounded-full px-12 py-8 text-lg font-bold uppercase transition-all shadow-2xl border-none"
-            >
-              Reservar Agora
-            </Button>
-          </motion.div>
-        </div>
+        <footer className="p-10 text-gray-800 bg-white">
+          <h2 className="text-2xl font-bold">Sua aventura em Jericoacoara começa aqui</h2>
+          <p className="mt-4 text-gray-600 max-w-2xl mx-auto italic">
+            Turismo com qualidade, aventuras personalizadas e memórias inesquecíveis em Jericoacoara.
+          </p>
+        </footer>
       </section>
 
       {/* --- SEÇÃO HISTÓRIA --- */}
-      <section id="historia" className="py-24 bg-orange-600 text-white overflow-hidden">
-        <div className="container mx-auto px-6 max-w-6xl">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeInUp}
-            className="grid md:grid-cols-2 gap-16 items-center"
-          >
-            <div>
-              <span className="uppercase tracking-[0.2em] text-xs font-bold mb-4 block opacity-80">Descubra a Vila</span>
-              <h2 className="text-4xl md:text-6xl font-black italic uppercase tracking-tighter mb-8 leading-none">
-                História de Jericoacoara
-              </h2>
-              <div className="h-1 w-20 bg-white mb-10 rounded-full" />
+      <section id="historia" className="bg-orange-600 min-h-screen flex items-center justify-center py-20 px-6 relative font-sans text-white">
+        <div className="max-w-5xl w-full">
+          <div className="flex flex-col items-center mb-12">
+            <span className="uppercase tracking-widest text-xs font-bold mb-2">Descubra a Vila</span>
+            <h1 className="text-4xl md:text-6xl font-black text-center">História de Jericoacoara</h1>
+            <div className="h-1 w-24 bg-white mt-6 rounded-full"></div>
+          </div>
 
-              <div className="space-y-6 text-lg leading-relaxed">
-                <p className="text-xl md:text-2xl font-light leading-snug">
-                  <span className="text-7xl font-black float-left mr-3 mt-1 leading-[0.8]">J</span>
-                  ericoacoara, carinhosamente apelidada de Jeri, é um destino onde o tempo parece ditar o próprio ritmo através do movimento das marés e dos ventos.
-                </p>
-                <p className="opacity-90 border-l-2 border-white/20 pl-6 italic">
-                  Localizada no Ceará, a cerca de 300 km de Fortaleza, a vila transformou-se de uma isolada aldeia de pescadores em um refúgio de fama internacional.
-                </p>
-                <p>
-                  A essência rústica permanece intacta: as ruas continuam cobertas de areia e a iluminação pública é inexistente para preservar o brilho do céu estrelado.
-                </p>
-              </div>
+          <div className="grid md:grid-cols-2 gap-12 leading-relaxed">
+            <div className="space-y-6">
+              <p className="text-xl md:text-2xl font-light">
+                <span className="text-7xl font-black mr-3 float-left leading-[0.8]">J</span>
+                ericoacoara, carinhosamente apelidada de Jeri, é um destino onde o tempo parece ditar o próprio ritmo através do movimento das marés e dos ventos.
+              </p>
+              <p className="text-lg opacity-90 border-l-2 border-white/20 pl-6 italic">
+                Localizada no Ceará, a cerca de 300 km de Fortaleza, a vila transformou-se de uma isolada aldeia de pescadores em um refúgio de fama internacional.
+              </p>
+              <p className="text-lg">
+                A essência rústica permanece intacta: as ruas continuam cobertas de areia e a iluminação pública é inexistente para preservar o brilho do céu estrelado.
+              </p>
             </div>
-
-            <div className="relative group">
-              <div className="absolute -inset-4 bg-white/10 rounded-[3rem] blur-2xl group-hover:bg-white/20 transition-all" />
-              <Image
-                src="https://jeri4xp.vercel.app/img/jeri1.e05b0107.webp"
-                className="relative rounded-[2.5rem] shadow-2xl border-8 border-white/10 object-cover aspect-[4/5]"
-                alt="Jeri History"
-              />
+            <div className="space-y-6 text-lg">
+              <p>A história mudou drasticamente em 1984, quando o The Washington Post a elegeu como uma das dez praias mais bonitas do mundo.</p>
+              <p>Hoje, protegida como Parque Nacional, a jornada de contrastes começa pela icônica Pedra Furada e passa pela Duna do Pôr do Sol.</p>
+              <p>Para quem busca relaxamento, as famosas redes nas lagoas do Paraíso e Azul são paradas obrigatórias.</p>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* --- SEÇÃO EXPERIÊNCIAS --- */}
-      <section id="experiencias" className="py-24 bg-white">
-        <div className="container mx-auto px-6 max-w-7xl">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-black text-slate-900 italic uppercase tracking-tighter mb-4">Nossas Experiências</h2>
-            <div className="w-20 h-1.5 bg-orange-600 mx-auto rounded-full" />
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { title: 'Passeios', path: '/passeios', img: 'https://jeri4xp.vercel.app/img/passeio.4d2eed74.webp' },
-              { title: 'Hospedagem', path: '/hospedagem', img: 'https://jeri4xp.vercel.app/img/hotel.a362b7ec.webp' },
-              { title: 'Transfer', path: '/transfer', img: 'https://jeri4xp.vercel.app/img/transfer.fb2f24b4.webp' },
-              { title: 'Aulas', path: '/aulas', img: 'https://jeri4xp.vercel.app/img/aula.208d909e.webp' },
-            ].map((item, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <Link
-                  to={item.path}
-                  className="group relative h-[450px] rounded-[2.5rem] overflow-hidden shadow-xl hover:shadow-orange-200 transition-all block bg-slate-900"
-                >
-                  <Image
-                    src={item.img}
-                    className="w-full h-full object-cover opacity-80 group-hover:scale-110 group-hover:opacity-50 transition-transform duration-700"
-                    alt={item.title}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent" />
-                  <div className="absolute bottom-10 left-10 right-10 text-white">
-                    <h3 className="text-3xl font-black italic uppercase tracking-tighter mb-4">{item.title}</h3>
-                    <Button className="bg-orange-600 hover:bg-white hover:text-orange-600 text-white rounded-full text-xs font-bold uppercase tracking-widest px-6 transition-all">
-                      Saiba Mais
-                    </Button>
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
-          </div>
+      <section id="experiencias" className="min-h-screen w-full flex flex-col items-center justify-center bg-white p-5">
+        <h1 className="text-3xl md:text-4xl font-black tracking-tighter mb-12 uppercase text-gray-900 text-center">
+          Nossas Experiências
+        </h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-6xl">
+          {[
+            { title: 'Passeios', img: 'https://jeri4xp.vercel.app/img/passeio.4d2eed74.webp', link: '/passeios' },
+            { title: 'Hospedagem', img: 'https://jeri4xp.vercel.app/img/hotel.a362b7ec.webp', link: '/hospedagem' },
+            { title: 'Transfer', img: 'https://jeri4xp.vercel.app/img/transfer.fb2f24b4.webp', link: '/transfer' },
+            { title: 'Aulas', img: 'https://jeri4xp.vercel.app/img/aula.208d909e.webp', link: '/aulas' },
+          ].map((item) => (
+            <div key={item.title} className="group relative h-70 rounded-3xl flex flex-col justify-end items-start p-10 overflow-hidden bg-black shadow-xl">
+              <img src={item.img} className="absolute inset-0 w-full h-full object-cover opacity-70 transition-all duration-700 group-hover:scale-110 group-hover:opacity-50" alt={item.title} />
+              <div className="relative z-10">
+                <h2 className="text-white text-4xl font-black mb-4 uppercase italic tracking-tighter">{item.title}</h2>
+                <a href={item.link}>
+                  <button className="bg-orange-600 text-white py-3 px-8 rounded-full font-bold text-sm uppercase tracking-widest hover:bg-white hover:text-orange-600 hover:cursor-pointer transition-all duration-300">
+                    Saiba mais
+                  </button>
+                </a>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
       {/* --- SEÇÃO DEPOIMENTOS --- */}
-      <section id="depoimentos" className="py-24 bg-slate-50">
-        <div className="container mx-auto px-6 max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-black text-slate-900 italic uppercase tracking-tighter">O que dizem sobre nós</h2>
+      <section className="min-h-screen bg-white p-4 font-sans w-full" id="depoimentos">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-10">
+            <h2 className="text-2xl md:text-4xl font-black text-black uppercase italic">O que dizem sobre a Jeri 4XP</h2>
           </div>
 
-          {isLoading ? (
-            <LoadingSpinner className="mx-auto text-orange-600" />
-          ) : (
-            <div className="grid md:grid-cols-3 gap-8">
-              {testimonials.map((t, i) => (
-                <motion.div
-                  key={i}
-                  whileHover={{ y: -10 }}
-                  className="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 flex flex-col relative"
-                >
-                  <div className="flex justify-between mb-6">
-                    <Quote className="text-orange-600/20 w-10 h-10" />
-                    <div className="flex gap-0.5">
-                      {[...Array(5)].map((_, i) => <Star key={i} size={14} className="fill-orange-500 text-orange-500" />)}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 italic">
+            {testimonials.map((item) => (
+              <div key={item.id} className="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col">
+                <div className="flex justify-between items-start mb-2">
+                  <span className="text-orange-600 text-4xl font-serif leading-none">“</span>
+                  <div className="flex gap-1">
+                    {[...Array(5)].map((_, i) => (
+                      <svg key={i} className="w-4 h-4 text-orange-600 fill-current" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+                    ))}
+                  </div>
+                </div>
+                <p className="text-slate-700 text-lg leading-relaxed mb-6">{item.content}</p>
+                <div className="flex items-center gap-4 pt-6 mt-auto">
+                  <img src={item.avatar} alt={item.name} className="w-14 h-14 rounded-full object-cover border-2 border-orange-100" />
+                  <div className="not-italic">
+                    <h4 className="font-extrabold text-black leading-tight uppercase text-sm">{item.name}</h4>
+                    <div className="flex items-center text-slate-700 text-xs mt-1 font-bold">
+                      <span className="text-orange-600 mr-1">📍</span> {item.role}
                     </div>
                   </div>
-
-                  <p className="text-slate-700 italic leading-relaxed mb-8 flex-grow">
-                    "{t.reviewText}"
-                  </p>
-
-                  <div className="flex items-center gap-4 pt-6 border-t border-slate-50">
-                    <Image
-                      src={t.customerPhoto || `https://i.pravatar.cc/150?u=${i}`}
-                      className="w-14 h-14 rounded-full object-cover border-2 border-orange-100"
-                    />
-                    <div>
-                      <h4 className="font-extrabold text-slate-900 uppercase text-sm">{t.customerName}</h4>
-                      <div className="flex items-center text-[10px] text-slate-500 font-bold uppercase tracking-widest mt-1">
-                        <MapPin size={10} className="mr-1 text-orange-600" />
-                        {t.customerLocation}
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          )}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* --- SEÇÃO CONTATO --- */}
-      <section id="contato" className="py-24 bg-orange-600 text-white">
-        <div className="container mx-auto px-6 max-w-5xl text-center">
-          <motion.span
-             initial={{ opacity: 0 }}
-             whileInView={{ opacity: 1 }}
-             className="inline-block px-4 py-1 bg-white/10 backdrop-blur-md rounded-full text-xs uppercase tracking-widest font-bold mb-6"
-          >
+      <section id="contato" className="min-h-screen w-full flex items-center justify-center bg-orange-600 py-20 px-4">
+        <div className="max-w-4xl z-10 text-center text-white">
+          <span className="inline-block px-4 py-1 bg-white/10 backdrop-blur-md rounded-full text-xs uppercase tracking-widest font-bold mb-6">
             Fale com a gente
-          </motion.span>
+          </span>
+          <h1 className="text-4xl md:text-6xl font-black mb-12 drop-shadow-lg italic uppercase tracking-tighter">
+            Prepare sua próxima aventura em Jeri
+          </h1>
 
-          <h2 className="text-4xl md:text-7xl font-black mb-16 italic uppercase tracking-tighter leading-none">
-            Prepare sua próxima <br /> aventura em Jeri
-          </h2>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              { icon: <MessageCircle size={32} />, label: "WhatsApp", val: "85 9 9900-1339", link: "https://wa.me/5585999001339" },
-              { icon: <Instagram size={32} />, label: "Instagram", val: "@jeri4xp", link: "https://instagram.com/jeri4xp" },
-              { icon: <Mail size={32} />, label: "E-mail", val: "jeri4xp@gmail.com", link: "mailto:jeri4xp@gmail.com" }
-            ].map((item, i) => (
-              <a
-                key={i}
-                href={item.link}
-                target="_blank"
-                rel="noreferrer"
-                className="group bg-white/10 hover:bg-white hover:text-orange-600 p-10 rounded-[2.5rem] transition-all duration-500 border border-white/10 flex flex-col items-center shadow-xl hover:-translate-y-2"
-              >
-                <div className="mb-6 group-hover:scale-110 transition-transform">{item.icon}</div>
-                <p className="text-xs font-bold uppercase tracking-widest opacity-60 mb-2">{item.label}</p>
-                <p className="font-black italic text-lg">{item.val}</p>
-              </a>
-            ))}
-          </div>
-
-          <div className="mt-24 pt-10 border-t border-white/10 opacity-60 text-sm font-bold tracking-[0.3em] uppercase">
-            Jericoacoara • Ceará • Brasil
+          <div className="grid md:grid-cols-3 gap-8">
+            <a href="https://wa.me/5585999001339" target="_blank" rel="noreferrer" className="group bg-white/10 backdrop-blur-md p-8 rounded-3xl hover:bg-white hover:text-orange-600 transition-all duration-500 shadow-2xl">
+              <h3 className="font-bold text-xl mb-2 italic">WhatsApp</h3>
+              <span className="text-lg font-black block">85 9 9900-1339</span>
+            </a>
+            <a href="https://instagram.com/jeri4xp" target="_blank" rel="noreferrer" className="group bg-white/10 backdrop-blur-md p-8 rounded-3xl hover:bg-white hover:text-orange-600 transition-all duration-500 shadow-2xl">
+              <h3 className="font-bold text-xl mb-2 italic">Instagram</h3>
+              <span className="text-lg font-black block">@jeri4xp</span>
+            </a>
+            <a href="mailto:jeri4xp@gmail.com" className="group bg-white/10 backdrop-blur-md p-8 rounded-3xl hover:bg-white hover:text-orange-600 transition-all duration-500 shadow-2xl">
+              <h3 className="font-bold text-xl mb-2 italic">E-mail</h3>
+              <span className="text-lg font-black block break-all">jeri4xp@gmail.com</span>
+            </a>
           </div>
         </div>
       </section>
 
-      <Footer />
-
-      {/* BOTÃO FLUTUANTE WHATSAPP */}
-      <motion.button
-        onClick={handleWhatsAppClick}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        className="fixed bottom-8 right-8 z-[100] bg-[#25D366] text-white w-16 h-16 rounded-full shadow-2xl flex items-center justify-center group"
-      >
-        <span className="absolute inset-0 rounded-full bg-[#25D366] opacity-40 animate-ping" />
-        <MessageCircle size={32} strokeWidth={2.5} className="relative z-10" />
-
-        <span className="absolute right-full mr-4 bg-white text-slate-900 px-4 py-2 rounded-xl text-xs font-bold shadow-xl opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap border border-slate-100 pointer-events-none uppercase italic">
-          Reservar pelo WhatsApp
-        </span>
-      </motion.button>
     </div>
   );
-}
+};
+
+export default JeriSite;
