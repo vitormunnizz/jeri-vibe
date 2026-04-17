@@ -177,14 +177,24 @@ export default function HomePage() {
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           </section>
 
       {/* EXPERIÊNCIAS */}
-      <section id="experiencias" className="bg-orange-600 py-20 px-6 text-white">
+      <section id="experiencias" className="py-20 px-6 bg-gradient-to-b from-white to-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col items-center mb-16 text-center">
+            <span className="uppercase tracking-widest text-xs font-bold mb-2 text-orange-600">
+              Explore Jericoacoara
+            </span>
+            <h2 className="text-3xl md:text-4xl font-black text-gray-900">
+              Nossas Experiências
+            </h2>
+            <div className="h-1 w-20 bg-orange-600 mt-4 rounded-full"></div>
+          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {experiences.map((item) => (
               <a
                 key={item.name}
                 href={item.link}
-                className="group relative h-70 rounded-3xl flex flex-col justify-end items-start p-10 overflow-hidden bg-black shadow-xl"
+                className="group relative h-80 rounded-2xl flex flex-col justify-end items-start p-8 overflow-hidden bg-gray-900 shadow-lg hover:shadow-2xl transition-all duration-300"
               >
                 <Image
                   src={
@@ -197,19 +207,21 @@ export default function HomePage() {
                       : "https://static.wixstatic.com/media/792b6b_308bfaa4612a43949f0b088dfb2b0b83~mv2.png?originWidth=256&originHeight=256"
                   }
                   alt={item.name}
-                  className="absolute inset-0 w-full h-full object-cover opacity-70 transition-all duration-700 group-hover:scale-110 group-hover:opacity-50"
+                  className="absolute inset-0 w-full h-full object-cover opacity-60 transition-all duration-700 group-hover:scale-110 group-hover:opacity-40"
                 />
-                <div className="relative z-10">
-                  <h2 className="text-white text-4xl font-black mb-4 uppercase italic tracking-tighter">
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70 group-hover:opacity-60 transition-all duration-300"></div>
+                <div className="relative z-10 w-full">
+                  <h2 className="text-white text-3xl font-black mb-4 uppercase italic tracking-tighter">
                     {item.name}
                   </h2>
-                  <button className="bg-orange-600 text-white py-3 px-8 rounded-full font-bold text-sm uppercase tracking-widest hover:bg-white hover:text-orange-600 hover:cursor-pointer transition-all duration-300">
+                  <button className="bg-orange-600 text-white py-3 px-6 rounded-full font-bold text-sm uppercase tracking-widest hover:bg-white hover:text-orange-600 hover:cursor-pointer transition-all duration-300">
                     Saiba mais
                   </button>
                 </div>
               </a>
             ))}
           </div>
+        </div>
       </section>
 
       {/* DEPOIMENTOS */}
