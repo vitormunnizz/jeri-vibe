@@ -10,6 +10,7 @@ import {
   MessageCircle
 } from 'lucide-react';
 import { useState } from 'react';
+import { Image } from '@/components/ui/image';
 
 // Variantes de animação consistentes com a Home
 const fadeInUp = {
@@ -52,7 +53,7 @@ export default function LessonsPage() {
       {/* 1. HERO SECTION (Exatamente como o seu Main do Vue) */}
       <section className="relative w-full h-[85vh] md:h-screen overflow-hidden text-white uppercase font-bold tracking-widest">
         <div className="absolute inset-0 bg-black">
-          <img src="https://jeri4xp.vercel.app/img/jeri1.e05b0107.webp" className="w-full h-full object-cover opacity-70" alt="Hero" />
+          <Image src="https://jeri4xp.vercel.app/img/jeri1.e05b0107.webp" className="w-full h-full object-cover opacity-70" alt="Hero" />
         </div>
 
         <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-4">

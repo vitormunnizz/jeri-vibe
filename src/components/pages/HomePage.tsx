@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { MessageCircle } from "lucide-react";
+import { Image } from '@/components/ui/image';
 
-export default function Home() {
+export default function HomePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
@@ -61,31 +63,37 @@ export default function Home() {
     },
   ];
 
+  const experiences = [
+    { name: "Passeios", link: "/passeios" },
+    { name: "Hospedagem", link: "/hospedagem" },
+    { name: "Transfer", link: "/transfer" },
+    { name: "Aulas", link: "/aulas" },
+  ];
+
   return (
     <div className="font-sans">
-
       {/* HERO */}
-      <section className="min-h-screen w-full text-white relative">
-        <header className="absolute w-full flex justify-between px-10 py-4 z-50 items-center">
-          <img src="/logo_jeri4xp.png" alt="Logo Jeri4xp" className="w-24" />
+      <section className="min-h-screen w-full text-white relative overflow-hidden">
+        <header className="absolute w-full flex justify-between px-6 md:px-10 py-4 z-50 items-center">
+          <Image src="https://static.wixstatic.com/media/792b6b_db67302a203f42429486f97568002b88~mv2.png?originWidth=1152&originHeight=576" alt="Logo Jeri4xp" className="w-20 md:w-24" />
 
-          <nav className="hidden md:flex gap-10 text-lg font-bold uppercase tracking-wider">
+          <nav className="hidden md:flex gap-8 text-sm font-bold uppercase tracking-wider">
             {navItems.map((item) => (
-              <a key={item.name} href={item.link} className="hover:text-orange-600">
+              <a key={item.name} href={item.link} className="hover:text-orange-600 transition">
                 {item.name}
               </a>
             ))}
           </nav>
 
-          <button onClick={() => setIsMenuOpen(true)} className="md:hidden text-3xl">
+          <button onClick={() => setIsMenuOpen(true)} className="md:hidden text-2xl">
             ☰
           </button>
         </header>
 
         {isMenuOpen && (
           <div className="fixed inset-0 bg-black flex flex-col items-center justify-center gap-8 z-50 font-bold">
-            <button onClick={() => setIsMenuOpen(false)} className="absolute top-8 right-10 text-4xl">
-              x
+            <button onClick={() => setIsMenuOpen(false)} className="absolute top-8 right-10 text-3xl">
+              ✕
             </button>
 
             {navItems.map((item) => (
@@ -93,7 +101,7 @@ export default function Home() {
                 key={item.name}
                 href={item.link}
                 onClick={() => setIsMenuOpen(false)}
-                className="text-2xl font-black hover:text-orange-600"
+                className="text-xl font-black hover:text-orange-600"
               >
                 {item.name}
               </a>
@@ -101,14 +109,14 @@ export default function Home() {
           </div>
         )}
 
-        <img src="/jeri1.webp" className="absolute w-full h-full object-cover opacity-85" />
+        <Image src="https://static.wixstatic.com/media/792b6b_f1a29dfb5f294176b121771875f4bafa~mv2.png?originWidth=1152&originHeight=576" className="absolute w-full h-full object-cover opacity-80" alt="Hero background" />
 
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-          <span className="text-orange-600 mb-2 uppercase tracking-widest">
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
+          <span className="text-orange-600 mb-2 uppercase tracking-widest text-xs md:text-sm">
             Bem-vindo ao Destino Nº 1
           </span>
 
-          <h1 className="text-4xl md:text-6xl font-black italic tracking-tighter mb-4">
+          <h1 className="text-3xl md:text-5xl font-black italic tracking-tighter mb-6">
             Jeri4xp: Sua conexão <br /> com o paraíso.
           </h1>
 
@@ -116,7 +124,7 @@ export default function Home() {
             href="https://wa.me/5585999001339"
             target="_blank"
             rel="noreferrer"
-            className="bg-orange-600 px-10 py-4 rounded-full text-xs hover:bg-white hover:text-orange-600 transition-all shadow-lg"
+            className="bg-orange-600 px-8 py-3 rounded-full text-xs font-bold hover:bg-white hover:text-orange-600 transition-all"
           >
             Reservar Agora
           </a>
@@ -124,87 +132,89 @@ export default function Home() {
       </section>
 
       {/* HISTÓRIA */}
-      <section id="historia" className="bg-orange-600 min-h-screen flex items-center justify-center py-20 px-6 text-white">
-        <div className="max-w-5xl w-full">
-
+      <section id="historia" className="bg-orange-600 py-20 px-6 text-white">
+        <div className="max-w-5xl mx-auto">
           <div className="flex flex-col items-center mb-12 text-center">
             <span className="uppercase tracking-widest text-xs font-bold mb-2">
               Descubra a Vila
             </span>
-            <h1 className="text-4xl md:text-6xl font-black">
+            <h2 className="text-3xl md:text-4xl font-black">
               História de Jericoacoara
-            </h1>
-            <div className="h-1 w-24 bg-white mt-6 rounded-full"></div>
+            </h2>
+            <div className="h-1 w-20 bg-white mt-4 rounded-full"></div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 leading-relaxed text-lg">
-
-            <div className="space-y-6">
-              <p className="text-xl">
-                Jericoacoara, carinhosamente apelidada de Jeri, é um destino onde o tempo parece ditar o próprio ritmo através do movimento das marés e dos ventos.
-              </p>
-
-              <p className="italic border-l-2 border-white/20 pl-6">
-                Localizada no Ceará, a cerca de 300 km de Fortaleza, a vila transformou-se de uma isolada aldeia de pescadores em um refúgio de fama internacional.
-              </p>
-
+          <div className="grid md:grid-cols-2 gap-10 leading-relaxed text-base md:text-lg">
+            <div className="space-y-5">
               <p>
+                Jericoacoara, carinhosamente apelidada de Jeri, é um destino onde o tempo parece ditar o próprio ritmo através do movimento das marés e dos ventos. Localizada no Ceará, a cerca de 300 km de Fortaleza, a vila transformou-se de uma isolada aldeia de pescadores em um refúgio de fama internacional.
+              </p>
+
+              <p className="italic border-l-2 border-white/30 pl-5">
                 A essência rústica permanece intacta: as ruas continuam cobertas de areia e a iluminação pública é inexistente para preservar o brilho do céu estrelado, criando uma conexão única com o cosmos.
               </p>
-            </div>
-
-            <div className="space-y-6">
-              <p>
-                A história mudou drasticamente em 1984, quando o The Washington Post a elegeu como uma das dez praias mais bonitas do mundo.
-              </p>
 
               <p>
-                Hoje, protegida como Parque Nacional, a jornada de contrastes começa pela icônica Pedra Furada e passa pela Duna do Pôr do Sol.
-              </p>
-
-              <p>
-                Para quem busca relaxamento, as famosas redes nas lagoas do Paraíso e Azul são paradas obrigatórias. Já o lado oeste revela a beleza crua do Mangue Seco e a travessia do Rio Guriú, onde a natureza se manifesta em raízes expostas e águas calmas.
+                Desde tempos imemoriais, Jeri tem sido um ponto de encontro entre o mar e a terra, onde a natureza bruta se encontra com a hospitalidade calorosa de seu povo. Os pescadores locais ainda mantêm suas tradições ancestrais, enquanto a vila evolui para receber visitantes de todo o mundo.
               </p>
             </div>
 
+            <div className="space-y-5">
+              <p>
+                A história mudou drasticamente em 1984, quando o The Washington Post a elegeu como uma das dez praias mais bonitas do mundo. Este reconhecimento internacional transformou Jeri em um destino procurado por aventureiros, artistas e buscadores de paz.
+              </p>
+
+              <p>
+                Hoje, protegida como Parque Nacional, a jornada de contrastes começa pela icônica Pedra Furada e passa pela Duna do Pôr do Sol, oferecendo vistas que parecem saídas de um sonho. Para quem busca relaxamento, as famosas redes nas lagoas do Paraíso e Azul são paradas obrigatórias.
+              </p>
+
+              <p>
+                Já o lado oeste revela a beleza crua do Mangue Seco e a travessia do Rio Guriú, onde a natureza se manifesta em raízes expostas e águas calmas. Cada canto de Jeri conta uma história, cada praia oferece uma experiência única, e cada pôr do sol é uma promessa de que voltaremos.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* EXPERIÊNCIAS */}
-      <section id="experiencias" className="min-h-screen w-full flex flex-col items-center justify-center bg-white p-5">
-        <h1 className="text-3xl md:text-4xl font-black tracking-tighter mb-12 uppercase text-gray-900 text-center">
-          Nossas Experiências
-        </h1>
+      <section id="experiencias" className="py-20 px-6 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-black tracking-tighter mb-12 uppercase text-gray-900 text-center">
+            Nossas Experiências
+          </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-6xl">
-
-          {["Passeios", "Hospedagem", "Transfer", "Aulas"].map((item) => (
-            <div key={item} className="relative h-72 rounded-3xl flex items-end p-10 bg-black text-white text-3xl font-black italic">
-              {item}
-            </div>
-          ))}
-
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {experiences.map((item) => (
+              <a
+                key={item.name}
+                href={item.link}
+                className="relative h-64 rounded-2xl flex items-end p-8 bg-gradient-to-br from-gray-800 to-black text-white text-2xl font-black hover:shadow-lg transition overflow-hidden group"
+              >
+                <Image src="https://static.wixstatic.com/media/792b6b_d4c5932b099c4552a2356fa26ce00f01~mv2.png?originWidth=576&originHeight=384" alt={item.name} className="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-30 transition" />
+                <span className="relative z-10">{item.name}</span>
+              </a>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* DEPOIMENTOS */}
-      <section id="depoimentos" className="min-h-screen bg-white p-6">
+      <section id="depoimentos" className="py-20 px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-black text-center mb-10">
+          <h2 className="text-3xl md:text-4xl font-black text-center mb-12 text-gray-900">
             O que dizem sobre a Jeri 4XP
           </h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {testimonials.map((item) => (
-              <div key={item.id} className="p-6 rounded-3xl shadow hover:shadow-xl transition flex flex-col">
-                <p className="italic mb-4">{item.content}</p>
+              <div key={item.id} className="p-6 rounded-2xl bg-white shadow hover:shadow-md transition flex flex-col">
+                <p className="italic text-gray-700 mb-4 text-sm leading-relaxed">{item.content}</p>
 
-                <div className="flex items-center gap-4 mt-auto">
-                  <img src={item.avatar} className="w-14 h-14 rounded-full" />
+                <div className="flex items-center gap-3 mt-auto">
+                  <Image src={item.avatar} alt={item.name} className="w-12 h-12 rounded-full" />
                   <div>
-                    <h4 className="font-bold">{item.name}</h4>
-                    <span className="text-sm text-gray-500">{item.role}</span>
+                    <h4 className="font-bold text-sm text-gray-900">{item.name}</h4>
+                    <span className="text-xs text-gray-500">{item.role}</span>
                   </div>
                 </div>
               </div>
@@ -214,53 +224,64 @@ export default function Home() {
       </section>
 
       {/* CONTATO */}
-      <section id="contato" className="min-h-screen flex items-center justify-center bg-orange-600 p-10 text-white">
-        <div className="text-center max-w-4xl">
-
-          <span className="inline-block px-4 py-1 bg-white/10 rounded-full text-xs uppercase mb-6">
+      <section id="contato" className="py-20 px-6 bg-orange-600 text-white">
+        <div className="text-center max-w-4xl mx-auto">
+          <span className="inline-block px-4 py-1 bg-white/10 rounded-full text-xs uppercase mb-6 font-bold">
             Fale com a gente
           </span>
 
-          <h1 className="text-4xl md:text-6xl font-black mb-12">
+          <h2 className="text-3xl md:text-4xl font-black mb-12">
             Prepare sua próxima aventura em Jeri
-          </h1>
+          </h2>
 
-          <div className="grid md:grid-cols-3 gap-8">
-
-            <a href="https://wa.me/5585999001339" target="_blank" className="bg-white/10 p-8 rounded-3xl hover:bg-white hover:text-orange-600">
-              WhatsApp<br />
-              <strong>85 9 9900-1339</strong>
+          <div className="grid md:grid-cols-3 gap-6">
+            <a
+              href="https://wa.me/5585999001339"
+              target="_blank"
+              rel="noreferrer"
+              className="bg-white/10 p-6 rounded-2xl hover:bg-white hover:text-orange-600 transition text-sm md:text-base"
+            >
+              <div className="font-bold mb-2">WhatsApp</div>
+              <div className="font-bold">85 9 9900-1339</div>
             </a>
 
-            <a href="https://instagram.com/jeri4xp" target="_blank" className="bg-white/10 p-8 rounded-3xl hover:bg-white hover:text-orange-600">
-              Instagram<br />
-              <strong>@jeri4xp</strong>
+            <a
+              href="https://instagram.com/jeri4xp"
+              target="_blank"
+              rel="noreferrer"
+              className="bg-white/10 p-6 rounded-2xl hover:bg-white hover:text-orange-600 transition text-sm md:text-base"
+            >
+              <div className="font-bold mb-2">Instagram</div>
+              <div className="font-bold">@jeri4xp</div>
             </a>
 
-            <a href="mailto:jeri4xp@gmail.com" className="bg-white/10 p-8 rounded-3xl hover:bg-white hover:text-orange-600">
-              E-mail<br />
-              <strong>jeri4xp@gmail.com</strong>
+            <a
+              href="mailto:jeri4xp@gmail.com"
+              className="bg-white/10 p-6 rounded-2xl hover:bg-white hover:text-orange-600 transition text-sm md:text-base"
+            >
+              <div className="font-bold mb-2">E-mail</div>
+              <div className="font-bold">jeri4xp@gmail.com</div>
             </a>
-
           </div>
 
-          <div className="mt-20">
-            <p className="text-sm uppercase">
+          <div className="mt-12">
+            <p className="text-xs uppercase tracking-widest">
               Jericoacoara • Ceará • Brasil
             </p>
           </div>
         </div>
       </section>
 
-      {/* BOTÃO WHATSAPP */}
+      {/* BOTÃO WHATSAPP FLUTUANTE */}
       <a
         href="https://wa.me/5585999001339"
         target="_blank"
-        className="fixed bottom-6 right-6 bg-green-600 p-4 rounded-full text-white text-xl"
+        rel="noreferrer"
+        className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 p-4 rounded-full text-white shadow-lg transition z-40"
+        title="Enviar mensagem no WhatsApp"
       >
-        💬
+        <MessageCircle size={24} />
       </a>
-
     </div>
   );
 }
