@@ -152,42 +152,28 @@ export default function PasseiosPage() {
       </section>
 
       {/* VISÃO GERAL */}
-      <section id="geralPasseios" className="bg-gradient-to-b from-orange-600 to-orange-500 py-20 px-6 md:py-32">
+      <section id="geralPasseios" className="bg-white py-16 px-6 md:py-24">
         <div className="max-w-4xl mx-auto">
           {/* TÍTULO */}
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white mb-4 leading-tight">
-              Os Passeios Mais Incríveis de <br className="hidden md:block" />
-              <span className="text-white drop-shadow-lg">Jericoacoara</span> Começam Aqui
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-4 leading-tight">
+              Os Passeios Mais Incríveis de Jericoacoara Começam Aqui
             </h2>
-            <div className="h-1 w-24 bg-white mx-auto rounded-full mt-6"></div>
           </div>
 
           {/* CONTEÚDO */}
-          <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12 text-slate-800">
-            <div className="space-y-6">
-              <p className="text-lg md:text-xl leading-relaxed font-medium">
-                Jericoacoara é muito mais do que um destino turístico — é onde cada paisagem surpreende e cada dia reserva uma nova experiência. Para realmente viver tudo o que Jeri tem a oferecer, os passeios são parte essencial da viagem, permitindo explorar desde os cenários mais famosos até cantos que só quem conhece a região sabe chegar.
-              </p>
+          <div className="space-y-6 text-gray-700">
+            <p className="text-base md:text-lg leading-relaxed">
+              Jericoacoara é muito mais do que um destino turístico — é onde cada paisagem surpreende e cada dia reserva uma nova experiência. Para realmente viver tudo o que Jeri tem a oferecer, os passeios são parte essencial da viagem, permitindo explorar desde os cenários mais famosos até cantos que só quem conhece a região sabe chegar.
+            </p>
 
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="border-l-4 border-orange-600 pl-6">
-                  <p className="text-base md:text-lg leading-relaxed">
-                    Ao longo desses roteiros, você vai se deparar com lagoas de águas cristalinas, dunas imponentes, travessias entre mangues e vistas que transformam qualquer momento em algo memorável. Tudo isso com o suporte de quem entende da região, garantindo mais segurança, conforto e uma experiência muito mais completa.
-                  </p>
-                </div>
+            <p className="text-base md:text-lg leading-relaxed">
+              Ao longo desses roteiros, você vai se deparar com lagoas de águas cristalinas, dunas imponentes, travessias entre mangues e vistas que transformam qualquer momento em algo memorável. Tudo isso com o suporte de quem entende da região, garantindo mais segurança, conforto e uma experiência muito mais completa.
+            </p>
 
-                <div className="border-l-4 border-orange-600 pl-6">
-                  <p className="text-base md:text-lg leading-relaxed">
-                    Cada passeio oferece uma proposta diferente: alguns são perfeitos para relaxar e aproveitar a tranquilidade das lagoas, enquanto outros são ideais para quem busca emoção e aventura nas dunas. Essa variedade faz com que cada escolha traga uma nova forma de conhecer Jericoacoara.
-                  </p>
-                </div>
-              </div>
-
-              <p className="text-base md:text-lg leading-relaxed text-center font-medium text-orange-600">
-                A seguir, você vai encontrar os principais passeios disponíveis, com todos os detalhes necessários para escolher a experiência ideal para o seu perfil e transformar sua viagem em algo verdadeiramente inesquecível.
-              </p>
-            </div>
+            <p className="text-base md:text-lg leading-relaxed">
+              Cada passeio oferece uma proposta diferente: alguns são perfeitos para relaxar e aproveitar a tranquilidade das lagoas, enquanto outros são ideais para quem busca emoção e aventura nas dunas. Essa variedade faz com que cada escolha traga uma nova forma de conhecer Jericoacoara.
+            </p>
           </div>
         </div>
       </section>
