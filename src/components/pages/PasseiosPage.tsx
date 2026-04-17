@@ -1,50 +1,8 @@
-import { Image } from '@/components/ui/image';
 import { useState } from "react";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
+import { MessageCircle } from "lucide-react";
+import { Image } from '@/components/ui/image';
 
-import 'swiper/css';
-import 'swiper/css/navigation';
-
-export default function Passeios() {
-
-  const passeios = [
-    {
-      badge: "Roteiro Lado Leste",
-      titulo: <>Águas <span className="text-slate-800">Cristalinas</span> & Redes no <span className="text-slate-800">Paraíso</span></>,
-      descricao: "Das esculturas naturais da Árvore da Preguiça ao mergulho inesquecível no Buraco Azul.",
-      texto: [
-        "Nosso roteiro começa com a Árvore da Preguiça e segue até a Praia do Preá.",
-        "Depois visitamos o Buraco Azul, Lagoa do Paraíso e Lagoa Azul."
-      ],
-      itens: ['Árvore da Preguiça', 'Lagoa do Paraíso', 'Buraco Azul', 'Lagoa Azul'],
-      reverse: false
-    },
-    {
-      badge: "Roteiro Lado Oeste",
-      titulo: <>Dunas <span className="text-slate-800">Gigantes</span> & Mangue <span className="text-slate-800">Selvagem</span></>,
-      descricao: "Dos cavalos-marinhos no Rio Guriú ao relaxo total nas redes da Lagoa da Torta.",
-      texto: [
-        "Explore o Rio Guriú e o Mangue Seco.",
-        "Finalize nas redes da Lagoa da Torta."
-      ],
-      itens: ['Mangue Seco', 'Rio Guriú', 'Dunas de Tatajuba', 'Lagoa da Torta'],
-      reverse: true
-    },
-    {
-      badge: "Roteiro Extremo Leste",
-      titulo: <>Dunas de <span className="text-slate-800">Cristal</span> & Vila de <span className="text-slate-800">Barrinha</span></>,
-      descricao: "A beleza intocada da vila de pescadores e o pôr do sol mais espetacular da região.",
-      texto: [
-        "Conheça a vila de Barrinha e suas dunas gigantes.",
-        "Explore a Lagoa do Coração e finalize com experiência gastronômica."
-      ],
-      itens: ['Vila da Barrinha', 'Lagoa do Coração', 'Dunas Vermelhas', 'Coqueirais'],
-      reverse: false
-    }
-  ];
-
-export default function Jeri4xp() {
+export default function PasseiosPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [expandedFaq, setExpandedFaq] = useState(null);
 
@@ -56,107 +14,136 @@ export default function Jeri4xp() {
     { name: "Contato", link: "#contato" },
   ];
 
+  const passeios = [
+    {
+      badge: "Roteiro Lado Leste",
+      titulo: "Águas Cristalinas & Redes no Paraíso",
+      descricao: "Das esculturas naturais da Árvore da Preguiça ao mergulho inesquecível no Buraco Azul.",
+      texto: [
+        "Nosso roteiro começa com a Árvore da Preguiça e segue até a Praia do Preá.",
+        "Depois visitamos o Buraco Azul, Lagoa do Paraíso e Lagoa Azul."
+      ],
+      itens: ['Árvore da Preguiça', 'Lagoa do Paraíso', 'Buraco Azul', 'Lagoa Azul'],
+    },
+    {
+      badge: "Roteiro Lado Oeste",
+      titulo: "Dunas Gigantes & Mangue Selvagem",
+      descricao: "Dos cavalos-marinhos no Rio Guriú ao relaxo total nas redes da Lagoa da Torta.",
+      texto: [
+        "Explore o Rio Guriú e o Mangue Seco.",
+        "Finalize nas redes da Lagoa da Torta."
+      ],
+      itens: ['Mangue Seco', 'Rio Guriú', 'Dunas de Tatajuba', 'Lagoa da Torta'],
+    },
+    {
+      badge: "Roteiro Extremo Leste",
+      titulo: "Dunas de Cristal & Vila de Barrinha",
+      descricao: "A beleza intocada da vila de pescadores e o pôr do sol mais espetacular da região.",
+      texto: [
+        "Conheça a vila de Barrinha e suas dunas gigantes.",
+        "Explore a Lagoa do Coração e finalize com experiência gastronômica."
+      ],
+      itens: ['Vila da Barrinha', 'Lagoa do Coração', 'Dunas Vermelhas', 'Coqueirais'],
+    }
+  ];
+
   const vehicleTypes = [
     {
       name: "Buggy",
-      description:
-        "O clássico de Jericoacoara. Ideal para quem busca conforto, segurança e um passeio completo pelas principais atrações.",
-      icon: "🚙",
+      description: "O clássico de Jericoacoara. Ideal para quem busca conforto, segurança e um passeio completo pelas principais atrações.",
     },
     {
       name: "Quadriciclo",
-      description:
-        "Perfeito para quem quer mais liberdade e aventura, pilotando seu próprio veículo pelas dunas e trilhas.",
-      icon: "🏍️",
+      description: "Perfeito para quem quer mais liberdade e aventura, pilotando seu próprio veículo pelas dunas e trilhas.",
     },
     {
       name: "UTV",
-      description:
-        "Uma experiência moderna e mais robusta, combinando conforto com adrenalina em terrenos variados.",
-      icon: "🚗",
+      description: "Uma experiência moderna e mais robusta, combinando conforto com adrenalina em terrenos variados.",
     },
     {
       name: "4x4",
-      description:
-        "Opção ideal para grupos ou famílias, oferecendo espaço, estabilidade e muito conforto durante todo o passeio.",
-      icon: "🛻",
+      description: "Opção ideal para grupos ou famílias, oferecendo espaço, estabilidade e muito conforto durante todo o passeio.",
     },
   ];
 
   const faqs = [
     {
       question: "Qual o passeio mais procurado em Jericoacoara?",
-      answer:
-        "Os passeios mais procurados são o Lado Leste, com paradas na Lagoa do Paraíso e Árvore da Preguiça, e o Lado Oeste, com Tatajuba e travessia de balsa.",
+      answer: "Os passeios mais procurados são o Lado Leste, com paradas na Lagoa do Paraíso e Árvore da Preguiça, e o Lado Oeste, com Tatajuba e travessia de balsa.",
     },
     {
       question: "Quanto tempo dura o passeio?",
-      answer:
-        "A maioria dos passeios dura entre 6 e 8 horas, dependendo do roteiro escolhido.",
+      answer: "A maioria dos passeios dura entre 6 e 8 horas, dependendo do roteiro escolhido.",
     },
     {
       question: "Preciso reservar com antecedência?",
-      answer:
-        "Sim, principalmente em alta temporada. Reservar antes garante sua vaga e melhores horários.",
+      answer: "Sim, principalmente em alta temporada. Reservar antes garante sua vaga e melhores horários.",
     },
     {
       question: "Passeios para famílias?",
-      answer:
-        "Buggy ou 4x4 privativo são ideais, pois oferecem mais conforto e segurança.",
+      answer: "Buggy ou 4x4 privativo são ideais, pois oferecem mais conforto e segurança.",
     },
     {
       question: "O que levar?",
-      answer:
-        "Protetor solar, roupa leve, óculos, água e celular carregado para fotos.",
+      answer: "Protetor solar, roupa leve, óculos, água e celular carregado para fotos.",
     },
   ];
 
   return (
     <div className="font-sans">
-
       {/* HERO */}
-      <section className="relative h-screen text-white">
-        <Image src="/jeri1.webp" className="absolute w-full h-full object-cover opacity-80" />
+      <section className="min-h-screen w-full text-white relative overflow-hidden">
+        <header className="absolute w-full flex justify-between px-6 md:px-10 py-4 z-50 items-center">
+          <Image src="https://static.wixstatic.com/media/792b6b_db67302a203f42429486f97568002b88~mv2.png?originWidth=1152&originHeight=576" alt="Logo Jeri4xp" className="w-20 md:w-24" />
 
-        <header className="absolute w-full flex justify-between px-10 py-5 z-50">
-          <Image src="/logo_jeri4xp.png" className="w-24" />
-
-          <nav className="hidden md:block">
-            <ul className="flex gap-8">
-              {navItems.map((item) => (
-                <li key={item.name}>
-                  <a href={item.link} className="hover:text-orange-600">
-                    {item.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
+          <nav className="hidden md:flex gap-8 text-sm font-bold uppercase tracking-wider">
+            {navItems.map((item) => (
+              <a key={item.name} href={item.link} className="hover:text-orange-600 transition">
+                {item.name}
+              </a>
+            ))}
           </nav>
 
-          <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden text-3xl">
+          <button onClick={() => setIsMenuOpen(true)} className="md:hidden text-2xl">
             ☰
           </button>
         </header>
 
         {isMenuOpen && (
-          <div className="fixed inset-0 bg-black flex flex-col items-center justify-center gap-6 z-50">
-            <button onClick={() => setIsMenuOpen(false)} className="absolute top-8 right-10 text-4xl">x</button>
+          <div className="fixed inset-0 bg-black flex flex-col items-center justify-center gap-8 z-50 font-bold">
+            <button onClick={() => setIsMenuOpen(false)} className="absolute top-8 right-10 text-3xl">
+              ✕
+            </button>
+
             {navItems.map((item) => (
-              <a key={item.name} href={item.link} className="text-2xl">
+              <a
+                key={item.name}
+                href={item.link}
+                onClick={() => setIsMenuOpen(false)}
+                className="text-xl font-black hover:text-orange-600"
+              >
                 {item.name}
               </a>
             ))}
           </div>
         )}
 
-        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center">
-          <span className="text-orange-600">Bem-vindo ao Destino Nº 1</span>
-          <h1 className="text-5xl font-black my-4">
-            Jeri4xp: Sua conexão <br /> com o paraíso.
+        <Image src="https://static.wixstatic.com/media/792b6b_f1a29dfb5f294176b121771875f4bafa~mv2.png?originWidth=1152&originHeight=576" className="absolute w-full h-full object-cover opacity-80" alt="Hero background" />
+
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
+          <span className="text-orange-600 mb-2 uppercase tracking-widest text-xs md:text-sm">
+            Bem-vindo ao Destino Nº 1
+          </span>
+
+          <h1 className="text-3xl md:text-5xl font-black italic tracking-tighter mb-6">
+            Passeios Incríveis <br /> em Jericoacoara
           </h1>
+
           <a
             href="https://wa.me/5585999001339"
-            className="bg-orange-600 px-8 py-4 rounded-full"
+            target="_blank"
+            rel="noreferrer"
+            className="bg-orange-600 px-8 py-3 rounded-full text-xs font-bold hover:bg-white hover:text-orange-600 transition-all"
           >
             Reservar Agora
           </a>
@@ -164,192 +151,211 @@ export default function Jeri4xp() {
       </section>
 
       {/* VISÃO GERAL */}
-      <section id="geralPasseios" className="bg-orange-600 p-10 text-white text-center">
-        <h2 className="text-4xl font-bold mb-6">
-          Os Passeios Mais Incríveis de Jericoacoara Começam Aqui
-        </h2>
+      <section id="geralPasseios" className="bg-orange-600 py-16 px-6 text-white">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-2xl md:text-3xl font-black mb-4">
+            Os Passeios Mais Incríveis de Jericoacoara Começam Aqui
+          </h2>
 
-        <div className="border-l-4 border-orange-600 pl-6">
-          <div className="space-y-4 text-md md:text-lg">
-
-            <p className="first-letter:text-4xl first-letter:font-bold first-letter:text-orange-600 first-letter:mr-1 first-letter:float-left">
-              Jericoacoara é muito mais do que um destino turístico é onde cada paisagem
-              surpreende e cada dia reserva uma nova experiência. Para realmente viver tudo o que Jeri
-              tem a oferecer, os passeios são parte essencial da viagem, permitindo explorar desde os
-              cenários mais famosos até cantos que só quem conhece a região sabe chegar.
-            </p>
-
-            <p>
-              Ao longo desses roteiros, você vai se deparar com lagoas de águas cristalinas, dunas
-              imponentes, travessias entre mangues e vistas que transformam qualquer momento em algo
-              memorável. Tudo isso com o suporte de quem entende da região, garantindo mais segurança,
-              conforto e uma experiência muito mais completa.
-            </p>
-
-            <p>
-              Cada passeio oferece uma proposta diferente: alguns são perfeitos para relaxar e aproveitar
-              a tranquilidade das lagoas, enquanto outros são ideais para quem busca emoção e aventura
-              nas dunas. Essa variedade faz com que cada escolha traga uma nova forma de conhecer
-              Jericoacoara.
-            </p>
-
-            <p>
-              A seguir, você vai encontrar os principais passeios disponíveis, com todos os detalhes
-              necessários para escolher a experiência ideal para o seu perfil e transformar sua viagem
-              em algo verdadeiramente inesquecível.
-            </p>
-
-          </div>
-          </div>
-      </section>
-
-      {/* VEÍCULOS */}
-      <section id="veiculos" className="p-10 text-center">
-        <h2 className="text-4xl font-bold text-orange-600 mb-6">
-          Escolha Como Você Quer Explorar Jeri
-        </h2>
-
-        <div className="grid md:grid-cols-4 gap-6">
-          {vehicleTypes.map((v) => (
-            <div key={v.name} className="p-6 border rounded-xl">
-              <div className="text-4xl">{v.icon}</div>
-              <h3 className="font-bold text-orange-600">{v.name}</h3>
-              <p>{v.description}</p>
-            </div>
-          ))}
+          <p className="text-base md:text-lg leading-relaxed">
+            Jericoacoara é muito mais do que um destino turístico - é onde cada paisagem surpreende e cada dia reserva uma nova experiência. Para realmente viver tudo o que Jeri tem a oferecer, os passeios são parte essencial da viagem, permitindo explorar desde os cenários mais famosos até cantos que só quem conhece a região sabe chegar.
+          </p>
         </div>
       </section>
 
- return (
-    <Swiper
-      modules={[Navigation]}
-      navigation
-      loop={true}
-      className="w-full"
-    >
-      {passeios.map((passeio, index) => (
-        <SwiperSlide key={index}>
+      {/* VEÍCULOS */}
+      <section id="veiculos" className="py-20 px-6 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex flex-col items-center mb-12 text-center">
+            <span className="uppercase tracking-widest text-xs font-bold mb-2 text-orange-600">
+              Escolha seu Veículo
+            </span>
+            <h2 className="text-3xl md:text-4xl font-black">
+              Escolha Como Você Quer Explorar Jeri
+            </h2>
+            <div className="h-1 w-20 bg-orange-600 mt-4 rounded-full"></div>
+          </div>
 
-          <section className="relative bg-orange-600 min-h-screen w-full p-4 flex flex-col items-center justify-center">
+          <div className="grid md:grid-cols-4 gap-6">
+            {vehicleTypes.map((v) => (
+              <div key={v.name} className="p-6 border-2 border-gray-200 rounded-xl hover:border-orange-600 transition">
+                <h3 className="font-bold text-orange-600 text-lg mb-2">{v.name}</h3>
+                <p className="text-gray-600 text-sm">{v.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-            {/* HEADER */}
-            <div className="text-center mb-8 z-10">
-              <span className="inline-block px-5 py-1.5 rounded-full bg-white text-orange-600 text-sm font-black uppercase tracking-widest shadow-lg">
-                {passeio.badge}
-              </span>
+      {/* PASSEIOS */}
+      <section id="passeios" className="py-20 px-6 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex flex-col items-center mb-12 text-center">
+            <span className="uppercase tracking-widest text-xs font-bold mb-2 text-orange-600">
+              Nossos Roteiros
+            </span>
+            <h2 className="text-3xl md:text-4xl font-black">
+              Conheça Nossos Passeios
+            </h2>
+            <div className="h-1 w-20 bg-orange-600 mt-4 rounded-full"></div>
+          </div>
 
-              <h2 className="text-white text-4xl md:text-5xl font-black mt-3">
-                {passeio.titulo}
-              </h2>
-
-              <p className="text-white mt-3 max-w-xl mx-auto">
-                {passeio.descricao}
-              </p>
-            </div>
-
-            {/* CARD */}
-            <div className="max-w-5xl w-full">
-              <div className={`bg-white rounded-3xl shadow-2xl flex flex-col ${passeio.reverse ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
-
-                {/* IMAGEM */}
-                <div className="md:w-5/12 relative min-h-64">
-                  <img
-                    src="/assets/jeri1.webp"
-                    alt="Passeio"
-                    className="absolute inset-0 w-full h-full object-cover"
-                  />
-                </div>
-
-                {/* TEXTO */}
-                <div className="md:w-7/12 p-8 flex flex-col justify-center">
-
-                  <h3 className="text-2xl md:text-3xl font-black mb-4 text-slate-800">
-                    O que esperar deste <span className="text-orange-600">Passeio</span>
-                  </h3>
-
-                  <div className="text-slate-600 space-y-4 mb-6">
-                    {passeio.texto.map((t, i) => (
-                      <p key={i}>{t}</p>
-                    ))}
+          <div className="space-y-12">
+            {passeios.map((passeio, index) => (
+              <div key={index} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition">
+                <div className="grid md:grid-cols-2 gap-0">
+                  {/* IMAGEM */}
+                  <div className="relative min-h-64 md:min-h-auto">
+                    <Image
+                      src="https://static.wixstatic.com/media/792b6b_d4c5932b099c4552a2356fa26ce00f01~mv2.png?originWidth=576&originHeight=384"
+                      alt={passeio.titulo}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
 
-                  {/* LISTA */}
-                  <div className="grid grid-cols-2 gap-3 mb-8">
-                    {passeio.itens.map(item => (
-                      <div key={item} className="flex items-center gap-2">
-                        <span className="text-orange-600">📍</span>
-                        <span className="font-bold text-sm text-slate-700">{item}</span>
-                      </div>
-                    ))}
-                  </div>
+                  {/* CONTEÚDO */}
+                  <div className="p-8 flex flex-col justify-center">
+                    <span className="inline-block px-4 py-1 bg-orange-100 text-orange-600 text-xs font-bold rounded-full mb-3 w-fit">
+                      {passeio.badge}
+                    </span>
 
-                  {/* CTA */}
-                  <div className="flex flex-col sm:flex-row items-center gap-6 pt-4 border-t">
+                    <h3 className="text-2xl md:text-3xl font-black mb-3 text-gray-900">
+                      {passeio.titulo}
+                    </h3>
+
+                    <p className="text-gray-600 mb-4">
+                      {passeio.descricao}
+                    </p>
+
+                    <div className="text-gray-700 space-y-2 mb-6">
+                      {passeio.texto.map((t, i) => (
+                        <p key={i} className="text-sm">{t}</p>
+                      ))}
+                    </div>
+
+                    {/* LISTA DE ATRAÇÕES */}
+                    <div className="grid grid-cols-2 gap-3 mb-6">
+                      {passeio.itens.map(item => (
+                        <div key={item} className="flex items-center gap-2">
+                          <span className="text-orange-600 font-bold">✓</span>
+                          <span className="text-sm text-gray-700">{item}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* CTA */}
                     <a
                       href="https://wa.me/5585999001339"
                       target="_blank"
-                      className="bg-orange-600 hover:bg-slate-800 text-white font-black px-8 py-4 rounded-xl transition w-full sm:w-auto text-center"
+                      rel="noreferrer"
+                      className="bg-orange-600 hover:bg-orange-700 text-white font-bold px-6 py-3 rounded-xl transition w-fit"
                     >
-                      Reservar agora
+                      Reservar Agora
                     </a>
-
-                    <div className="text-center sm:text-left">
-                      <span className="text-xs font-bold text-orange-600 block">
-                        Disponibilidade
-                      </span>
-                      <span className="text-sm font-black text-slate-800">
-                        Saídas Diárias
-                      </span>
-                    </div>
                   </div>
-
                 </div>
-
               </div>
-            </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-          </section>
-
-        </SwiperSlide>
-      ))}
-    </Swiper>
-  );
       {/* FAQ */}
-      <section id="duvidaPasseio" className="p-10 text-center">
-        <h2 className="text-4xl font-bold text-orange-600 mb-8">
-          Dúvidas Frequentes
-        </h2>
+      <section id="duvidaPasseio" className="py-20 px-6 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <div className="flex flex-col items-center mb-12 text-center">
+            <span className="uppercase tracking-widest text-xs font-bold mb-2 text-orange-600">
+              Informações
+            </span>
+            <h2 className="text-3xl md:text-4xl font-black text-gray-900">
+              Dúvidas Frequentes
+            </h2>
+            <div className="h-1 w-20 bg-orange-600 mt-4 rounded-full"></div>
+          </div>
 
-        <div className="max-w-3xl mx-auto">
-          {faqs.map((faq, index) => (
-            <div key={index} className="border p-4 mb-3 rounded-lg">
-              <button
-                onClick={() =>
-                  setExpandedFaq(expandedFaq === index ? null : index)
-                }
-                className="font-bold"
-              >
-                {faq.question}
-              </button>
+          <div className="space-y-3">
+            {faqs.map((faq, index) => (
+              <div key={index} className="border-2 border-gray-200 p-6 rounded-xl bg-white hover:border-orange-600 transition">
+                <button
+                  onClick={() =>
+                    setExpandedFaq(expandedFaq === index ? null : index)
+                  }
+                  className="w-full text-left font-bold text-gray-900 flex justify-between items-center"
+                >
+                  <span>{faq.question}</span>
+                  <span className="text-orange-600 text-xl">
+                    {expandedFaq === index ? '−' : '+'}
+                  </span>
+                </button>
 
-              {expandedFaq === index && <p className="mt-2">{faq.answer}</p>}
-            </div>
-          ))}
+                {expandedFaq === index && (
+                  <p className="mt-4 text-gray-600 leading-relaxed">{faq.answer}</p>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* CONTATO */}
-      <section id="contato" className="bg-orange-600 text-white p-10 text-center">
-        <h2 className="text-4xl font-bold mb-6">
-          Prepare sua próxima aventura em Jeri
-        </h2>
+      <section id="contato" className="py-20 px-6 bg-orange-600 text-white">
+        <div className="text-center max-w-4xl mx-auto">
+          <span className="inline-block px-4 py-1 bg-white/10 rounded-full text-xs uppercase mb-6 font-bold">
+            Fale com a gente
+          </span>
 
-        <p className="mb-4">WhatsApp: 85 9 9900-1339</p>
-        <p className="mb-4">Instagram: @jeri4xp</p>
-        <p className="mb-4">Email: jeri4xp@gmail.com</p>
+          <h2 className="text-3xl md:text-4xl font-black mb-12">
+            Prepare sua próxima aventura em Jeri
+          </h2>
 
-        <p className="mt-10">Jericoacoara • Ceará • Brasil</p>
+          <div className="grid md:grid-cols-3 gap-6">
+            <a
+              href="https://wa.me/5585999001339"
+              target="_blank"
+              rel="noreferrer"
+              className="bg-white/10 p-6 rounded-2xl hover:bg-white hover:text-orange-600 transition text-sm md:text-base"
+            >
+              <div className="font-bold mb-2">WhatsApp</div>
+              <div className="font-bold">85 9 9900-1339</div>
+            </a>
+
+            <a
+              href="https://instagram.com/jeri4xp"
+              target="_blank"
+              rel="noreferrer"
+              className="bg-white/10 p-6 rounded-2xl hover:bg-white hover:text-orange-600 transition text-sm md:text-base"
+            >
+              <div className="font-bold mb-2">Instagram</div>
+              <div className="font-bold">@jeri4xp</div>
+            </a>
+
+            <a
+              href="mailto:jeri4xp@gmail.com"
+              className="bg-white/10 p-6 rounded-2xl hover:bg-white hover:text-orange-600 transition text-sm md:text-base"
+            >
+              <div className="font-bold mb-2">E-mail</div>
+              <div className="font-bold">jeri4xp@gmail.com</div>
+            </a>
+          </div>
+
+          <div className="mt-12">
+            <p className="text-xs uppercase tracking-widest">
+              Jericoacoara • Ceará • Brasil
+            </p>
+          </div>
+        </div>
       </section>
+
+      {/* BOTÃO WHATSAPP FLUTUANTE */}
+      <a
+        href="https://wa.me/5585999001339"
+        target="_blank"
+        rel="noreferrer"
+        className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 p-4 rounded-full text-white shadow-lg transition z-40"
+        title="Enviar mensagem no WhatsApp"
+      >
+        <MessageCircle size={24} />
+      </a>
     </div>
   );
 }
