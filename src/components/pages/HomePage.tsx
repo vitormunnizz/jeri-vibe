@@ -9,7 +9,6 @@ import { BaseCrudService } from '@/integrations';
 import { motion } from 'framer-motion';
 import {
   ChevronRight,
-  Instagram,
   Mail,
   MessageCircle,
   Quote
