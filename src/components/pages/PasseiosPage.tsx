@@ -164,66 +164,30 @@ export default function PasseiosPage() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-4 leading-tight">
-              Os Passeios Mais Incríveis de Jericoacoara Começam Aqui
+              Hospedagem Perfeita para sua Aventura
             </h2>
             <div className="h-1 w-24 bg-orange-600 mx-auto rounded-full"></div>
           </motion.div>
 
-          {/* CONTEÚDO COM CARDS SIMPLES */}
-          <div className="grid md:grid-cols-3 gap-6 mb-12">
-            <motion.div 
-              className="p-6 bg-orange-50 rounded-lg border-l-4 border-orange-600"
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              viewport={{ once: true }}
-            >
-              <h3 className="font-bold text-orange-600 mb-2 text-lg">Lagoas Cristalinas</h3>
-              <p className="text-sm text-gray-700 leading-relaxed">
-                Jericoacoara é muito mais do que um destino turístico — é onde cada paisagem surpreende e cada dia reserva uma nova experiência.
-              </p>
-            </motion.div>
-
-            <motion.div 
-              className="p-6 bg-orange-50 rounded-lg border-l-4 border-orange-600"
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              <h3 className="font-bold text-orange-600 mb-2 text-lg">Dunas Imponentes</h3>
-              <p className="text-sm text-gray-700 leading-relaxed">
-                Ao longo desses roteiros, você vai se deparar com lagoas de águas cristalinas, dunas imponentes e vistas memoráveis.
-              </p>
-            </motion.div>
-
-            <motion.div 
-              className="p-6 bg-orange-50 rounded-lg border-l-4 border-orange-600"
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              viewport={{ once: true }}
-            >
-              <h3 className="font-bold text-orange-600 mb-2 text-lg">Experiências Únicas</h3>
-              <p className="text-sm text-gray-700 leading-relaxed">
-                Cada passeio oferece uma proposta diferente, desde relaxo nas lagoas até emoção e aventura nas dunas.
-              </p>
-            </motion.div>
-          </div>
-
           {/* TEXTO DESCRITIVO */}
           <motion.div 
-            className="bg-orange-100 p-8 rounded-lg"
+            className="bg-orange-100 p-8 rounded-lg space-y-4"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <p className="text-base md:text-lg leading-relaxed text-gray-800 mb-4">
-              Para realmente viver tudo o que Jeri tem a oferecer, os passeios são parte essencial da viagem, permitindo explorar desde os cenários mais famosos até cantos que só quem conhece a região sabe chegar.
+            <p className="text-base md:text-lg leading-relaxed text-gray-800">
+              Hospedar-se bem faz toda a diferença para aproveitar Jericoacoara com mais conforto, praticidade e tranquilidade. A vila oferece opções para todos os estilos de viagem, desde pousadas aconchegantes até hotéis com estrutura completa, sempre cercados pela beleza natural da região.
             </p>
             <p className="text-base md:text-lg leading-relaxed text-gray-800">
-              Tudo isso com o suporte de quem entende da região, garantindo mais segurança, conforto e uma experiência muito mais completa. Essa variedade faz com que cada escolha traga uma nova forma de conhecer Jericoacoara.
+              Para quem busca praticidade, ficar próximo ao centrinho é uma ótima escolha. Assim, você terá fácil acesso a restaurantes, lojas, praia, vida noturna e aos principais pontos de saída dos passeios, tornando sua experiência muito mais confortável durante toda a estadia.
+            </p>
+            <p className="text-base md:text-lg leading-relaxed text-gray-800">
+              Se a ideia for relaxar e aproveitar momentos especiais, há opções mais reservadas e tranquilas, perfeitas para casais, famílias ou quem deseja descansar com mais privacidade. Também existem hospedagens com piscina, café da manhã, espaços amplos e serviços pensados para tornar sua viagem ainda melhor.
+            </p>
+            <p className="text-base md:text-lg leading-relaxed text-gray-800">
+              Seja para uma viagem romântica, em família ou entre amigos, escolher a hospedagem certa é o primeiro passo para viver Jericoacoara da melhor forma. A seguir, você vai encontrar opções que combinam com seu perfil e tornam sua experiência ainda mais inesquecível.
             </p>
           </motion.div>
         </div>
