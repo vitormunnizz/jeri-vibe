@@ -237,17 +237,6 @@ export default function Home() {
           ))}
         </div>
       </section>
-
-      {/* FOOTER */}
-      <footer className="p-10 text-center">
-        <h2 className="text-2xl font-bold">
-          Sua aventura em Jericoacoara começa aqui
-        </h2>
-
-        <p className="mt-4 text-gray-600 italic max-w-xl mx-auto">
-          Turismo com qualidade, aventuras personalizadas e memórias inesquecíveis em Jericoacoara.
-        </p>
-      </footer>
     </div>
   );
 }
