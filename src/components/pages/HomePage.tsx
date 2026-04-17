@@ -3,409 +3,324 @@ import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import { Button } from '@/components/ui/button';
 import { LoadingSpinner } from '@/components/ui/loading-spinner';
-import { Accommodations, CustomerTestimonials, Tours } from '@/entities';
+import { CustomerTestimonials } from '@/entities';
 import { BaseCrudService } from '@/integrations';
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import {
-  ChevronRight,
+  ArrowUpRight,
   Instagram,
   Mail,
-  MapPin,
   MessageCircle,
-  Quote,
-  Star
+  Navigation,
+  Quote
 } from 'lucide-react';
-import { useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-
-// --- Variantes de Animação ---
-const fadeInUp = {
-  hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
-};
-
-const staggerContainer = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { staggerChildren: 0.2 } }
-};
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function HomePage() {
-  const navigate = useNavigate();
-  const [tours, setTours] = useState<Tours[]>([]);
-  const [accommodations, setAccommodations] = useState<Accommodations[]>([]);
   const [testimonials, setTestimonials] = useState<CustomerTestimonials[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+
+  // Efeito de Parallax para o Hero
+  const { scrollY } = useScroll();
+  const y1 = useTransform(scrollY, [0, 500], [0, 200]);
+  const opacityHero = useTransform(scrollY, [0, 300], [1, 0]);
 
   useEffect(() => {
     loadData();
   }, []);
 
   const loadData = async () => {
-    setIsLoading(true);
     try {
-      const [toursResult, accommodationsResult, testimonialsResult] = await Promise.all([
-        BaseCrudService.getAll<Tours>('tours', {}, { limit: 4 }),
-        BaseCrudService.getAll<Accommodations>('accommodations', {}, { limit: 4 }),
-        BaseCrudService.getAll<CustomerTestimonials>('testimonials', {}, { limit: 6 })
-      ]);
-      setTours(toursResult.items);
-      setAccommodations(accommodationsResult.items);
-      setTestimonials(testimonialsResult.items);
+      const res = await BaseCrudService.getAll<CustomerTestimonials>('testimonials', {}, { limit: 6 });
+      setTestimonials(res.items);
     } catch (error) {
-      console.error('Error loading data:', error);
+      console.error(error);
     } finally {
       setIsLoading(false);
     }
   };
 
-  const handleWhatsAppClick = () => {
-    window.open('https://wa.me/5585999001339', '_blank');
-  };
-
   return (
-    <div className="min-h-screen bg-white font-paragraph text-foreground overflow-x-hidden">
+    <div className="min-h-screen bg-[#FDFCFB] font-paragraph text-[#1A1A1A] overflow-x-hidden selection:bg-accent selection:text-white">
       <Header />
 
-      {/* HERO SECTION */}
-      <section className="relative w-full h-screen flex flex-col items-center justify-center overflow-hidden">
-        {/* Background Image */}
-        <div
-          className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: 'url(https://jeri4xp.vercel.app/img/jeri1.e05b0107.webp)' }}
-        >
-          <div className="absolute inset-0 bg-black/40" />
-        </div>
+      {/* --- HERO SECTION: CINEMATIC & MINIMALIST --- */}
+      <section className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-black">
+        <motion.div style={{ y: y1, opacity: opacityHero }} className="absolute inset-0 z-0">
+          <img
+            src="https://jeri4xp.vercel.app/img/jeri1.e05b0107.webp"
+            className="w-full h-full object-cover scale-110"
+            alt="Jeri Landscape"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-[#FDFCFB]" />
+        </motion.div>
 
-        {/* Content */}
-        <div className="relative z-10 container mx-auto px-4 flex flex-col items-center text-center text-white">
-          <motion.span
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-accent font-bold tracking-[0.4em] uppercase mb-4 text-sm md:text-base"
+        <div className="relative z-10 container mx-auto px-6 text-center">
+          <motion.div
+            initial={{ opacity: 0, letterSpacing: "0.2em" }}
+            animate={{ opacity: 1, letterSpacing: "0.5em" }}
+            transition={{ duration: 1 }}
+            className="text-accent font-bold uppercase text-xs md:text-sm mb-6 flex items-center justify-center gap-4"
           >
-            Bem-vindo ao Destino Nº 1
-          </motion.span>
+            <span className="h-[1px] w-8 bg-accent" /> Explore o Inexplorado <span className="h-[1px] w-8 bg-accent" />
+          </motion.div>
 
           <motion.h1
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-black italic tracking-tighter mb-8 leading-[0.9] uppercase drop-shadow-2xl"
+            initial={{ y: 50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="text-6xl md:text-9xl font-black italic tracking-tighter leading-none text-white uppercase"
           >
-            JERI4XP: SUA CONEXÃO<br />COM O PARAÍSO.
+            Jeri<span className="text-accent text-outline">4</span>XP
           </motion.h1>
 
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.6 }}
+            className="text-white/80 text-lg md:text-2xl mt-4 font-light italic"
+          >
+            A elegância do rústico. A adrenalina do paraíso.
+          </motion.p>
+
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
+             initial={{ scale: 0.8, opacity: 0 }}
+             animate={{ scale: 1, opacity: 1 }}
+             transition={{ delay: 0.8 }}
+             className="mt-12"
           >
             <Button
-              onClick={handleWhatsAppClick}
-              className="bg-accent hover:bg-white hover:text-accent text-white rounded-full px-12 py-8 text-xl font-black italic uppercase tracking-widest transition-all duration-300 shadow-2xl"
+              onClick={() => window.open('https://wa.me/5585999001339')}
+              className="bg-white text-black hover:bg-accent hover:text-white rounded-none px-12 py-8 text-sm font-bold tracking-[0.2em] transition-all duration-500 shadow-2xl group"
             >
-              RESERVAR AGORA
+              PLANEJAR JORNADA
+              <ArrowUpRight className="ml-2 w-4 h-4 group-hover:rotate-45 transition-transform" />
             </Button>
           </motion.div>
         </div>
-      </section>
 
-      {/* INTRO SECTION */}
-      <section className="py-24 bg-white text-center px-6">
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-black text-secondary mb-6 italic uppercase tracking-tighter leading-tight">
-            Sua aventura em Jericoacoara começa aqui
-          </h2>
-          <div className="w-20 h-1.5 bg-accent mx-auto mb-8 rounded-full" />
-          <p className="text-gray-500 text-xl md:text-2xl max-w-2xl mx-auto italic leading-relaxed">
-            "Turismo com qualidade, aventuras personalizadas e memórias inesquecíveis em Jericoacoara."
-          </p>
+        {/* Scroll Indicator */}
+        <motion.div
+          animate={{ y: [0, 10, 0] }}
+          transition={{ repeat: Infinity, duration: 2 }}
+          className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/50 flex flex-col items-center gap-2"
+        >
+          <span className="text-[10px] uppercase tracking-[0.3em]">Scroll</span>
+          <div className="w-[1px] h-12 bg-gradient-to-b from-white/50 to-transparent" />
         </motion.div>
       </section>
 
-      {/* HISTÓRIA SECTION */}
-      <section id="historia" className="py-24 md:py-32 bg-accent text-white relative z-20 flex items-center overflow-hidden">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeInUp}
-            className="text-center mb-16"
-          >
-            <span className="text-sm font-bold tracking-[0.3em] uppercase mb-2 block opacity-80 font-paragraph">Descubra a Vila</span>
-            <h2 className="text-5xl md:text-7xl font-black italic tracking-tighter uppercase leading-none">História de Jericoacoara</h2>
-            <div className="h-1.5 w-24 bg-white mt-8 mx-auto rounded-full" />
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 gap-12 md:gap-16 text-lg leading-relaxed font-paragraph">
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="space-y-6">
-              <p className="text-xl md:text-2xl font-light first-letter:text-7xl first-letter:font-black first-letter:mr-3 first-letter:float-left first-letter:leading-none first-letter:mt-2">
-                Jericoacoara, carinhosamente apelidada de Jeri, é um destino onde o tempo parece ditar o próprio ritmo através do movimento das marés e dos ventos.
-              </p>
-              <p className="opacity-90 border-l-4 border-white/20 pl-6 italic">
-                Localizada no Ceará, a cerca de 300 km de Fortaleza, a vila transformou-se de uma isolada aldeia de pescadores em um refúgio de fama internacional.
-              </p>
-            </motion.div>
-
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="space-y-6">
-              <p>
-                A história mudou drasticamente em 1984, quando o <span className="font-bold underline decoration-white/30">The Washington Post</span> a elegeu como uma das dez praias mais bonitas do mundo.
-              </p>
-              <div className="p-8 bg-white/10 backdrop-blur-md rounded-[2rem] border border-white/10 shadow-xl">
-                <p>
-                  Para quem busca relaxamento, as famosas redes nas lagoas do Paraíso e Azul são paradas obrigatórias. Já o lado oeste revela a beleza crua do Mangue Seco e a travessia do Rio Guriú.
-                </p>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* EXPERIÊNCIAS SECTION */}
-      <section id="experiencias" className="py-24 md:py-32 bg-white">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <motion.h2
-            initial="hidden"
-            whileInView="visible"
-            variants={fadeInUp}
-            className="text-4xl md:text-6xl font-black tracking-tighter uppercase text-secondary italic text-center mb-16"
-          >
-            Nossas Experiências
-          </motion.h2>
-
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            variants={staggerContainer}
-            className="grid grid-cols-1 md:grid-cols-2 gap-8"
-          >
-            {/* Passeios */}
-            <motion.div variants={fadeInUp}>
-              <Link to="/passeios" className="group block relative h-[350px] rounded-[2.5rem] overflow-hidden bg-black shadow-2xl">
-                <img
-                  src="https://jeri4xp.vercel.app/img/passeio.4d2eed74.webp"
-                  className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:scale-110 group-hover:opacity-50 transition-all duration-700"
-                  alt="Passeios"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent" />
-                <div className="relative z-10 h-full flex flex-col justify-end p-10">
-                  <h3 className="text-white text-5xl font-black mb-6 uppercase italic tracking-tighter leading-none">Passeios</h3>
-                  <Button className="w-fit bg-accent text-white px-8 py-6 rounded-full font-black uppercase tracking-widest hover:bg-white hover:text-accent transition-all">
-                    Saiba mais <ChevronRight className="ml-2" />
-                  </Button>
-                </div>
-              </Link>
-            </motion.div>
-
-            {/* Hospedagem */}
-            <motion.div variants={fadeInUp}>
-              <Link to="/hospedagem" className="group block relative h-[350px] rounded-[2.5rem] overflow-hidden bg-black shadow-2xl">
-                <img
-                  src="https://jeri4xp.vercel.app/img/hotel.a362b7ec.webp"
-                  className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:scale-110 group-hover:opacity-50 transition-all duration-700"
-                  alt="Hospedagem"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent" />
-                <div className="relative z-10 h-full flex flex-col justify-end p-10">
-                  <h3 className="text-white text-5xl font-black mb-6 uppercase italic tracking-tighter leading-none">Hospedagem</h3>
-                  <Button className="w-fit bg-accent text-white px-8 py-6 rounded-full font-black uppercase tracking-widest hover:bg-white hover:text-accent transition-all">
-                    Saiba mais <ChevronRight className="ml-2" />
-                  </Button>
-                </div>
-              </Link>
-            </motion.div>
-
-            {/* Transfer */}
-            <motion.div variants={fadeInUp}>
-              <Link to="/transfer" className="group block relative h-[350px] rounded-[2.5rem] overflow-hidden bg-black shadow-2xl">
-                <img
-                  src="https://jeri4xp.vercel.app/img/transfer.fb2f24b4.webp"
-                  className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:scale-110 group-hover:opacity-50 transition-all duration-700"
-                  alt="Transfer"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent" />
-                <div className="relative z-10 h-full flex flex-col justify-end p-10">
-                  <h3 className="text-white text-5xl font-black mb-6 uppercase italic tracking-tighter leading-none">Transfer</h3>
-                  <Button className="w-fit bg-accent text-white px-8 py-6 rounded-full font-black uppercase tracking-widest hover:bg-white hover:text-accent transition-all">
-                    Saiba mais <ChevronRight className="ml-2" />
-                  </Button>
-                </div>
-              </Link>
-            </motion.div>
-
-            {/* Aulas */}
-            <motion.div variants={fadeInUp}>
-              <Link to="/aulas" className="group block relative h-[350px] rounded-[2.5rem] overflow-hidden bg-black shadow-2xl">
-                <img
-                  src="https://jeri4xp.vercel.app/img/aula.208d909e.webp"
-                  className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:scale-110 group-hover:opacity-50 transition-all duration-700"
-                  alt="Aulas"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent" />
-                <div className="relative z-10 h-full flex flex-col justify-end p-10">
-                  <h3 className="text-white text-5xl font-black mb-6 uppercase italic tracking-tighter leading-none">Aulas</h3>
-                  <Button className="w-fit bg-accent text-white px-8 py-6 rounded-full font-black uppercase tracking-widest hover:bg-white hover:text-accent transition-all">
-                    Saiba mais <ChevronRight className="ml-2" />
-                  </Button>
-                </div>
-              </Link>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* TESTIMONIALS SECTION */}
-      <section id="depoimentos" className="py-24 bg-[#FAFAFA]">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <motion.h2
-            initial="hidden"
-            whileInView="visible"
-            variants={fadeInUp}
-            className="text-3xl md:text-5xl font-black text-center italic uppercase tracking-tighter mb-16"
-          >
-            O que dizem sobre a Jeri 4XP
-          </motion.h2>
-
-          <div className="relative min-h-[400px]">
-            {isLoading ? (
-              <div className="flex items-center justify-center h-[400px]">
-                <LoadingSpinner className="w-10 h-10 text-accent" />
-              </div>
-            ) : (
-              <motion.div
-                initial="hidden"
-                whileInView="visible"
-                variants={staggerContainer}
-                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-              >
-                {testimonials.map((testimonial, i) => (
-                  <motion.div key={testimonial._id || i} variants={fadeInUp}>
-                    <div className="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 flex flex-col h-full group">
-                      <div className="flex justify-between items-start mb-6">
-                        <Quote className="w-10 h-10 text-accent opacity-20 group-hover:opacity-100 transition-opacity duration-500" />
-                        <div className="flex gap-1">
-                          {[...Array(5)].map((_, starI) => (
-                            <Star
-                              key={starI}
-                              className={`w-4 h-4 ${starI < (testimonial.rating || 5) ? 'fill-accent text-accent' : 'text-slate-200'}`}
-                            />
-                          ))}
-                        </div>
-                      </div>
-
-                      <p className="text-slate-700 text-lg leading-relaxed mb-8 italic flex-grow">
-                        "{testimonial.reviewText}"
-                      </p>
-
-                      <div className="flex items-center gap-4 pt-6 mt-auto border-t border-slate-50">
-                        <img
-                          src={testimonial.customerPhoto || `https://i.pravatar.cc/150?u=${i}`}
-                          className="w-14 h-14 rounded-full object-cover ring-2 ring-accent/10 group-hover:ring-accent/50 transition-all"
-                          alt={testimonial.customerName}
-                        />
-                        <div>
-                          <h4 className="font-black text-secondary leading-tight uppercase tracking-tighter">
-                            {testimonial.customerName}
-                          </h4>
-                          <div className="flex items-center text-slate-500 text-xs mt-1 font-bold">
-                            <MapPin className="w-3 h-3 mr-1 text-accent" />
-                            {testimonial.customerLocation}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
-              </motion.div>
-            )}
-          </div>
-        </div>
-      </section>
-
-      {/* CONTACT SECTION */}
-      <section id="contato" className="min-h-screen bg-accent py-24 px-4 flex items-center justify-center relative overflow-hidden">
-        {/* Background blobs */}
-        <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
-          <div className="absolute -top-24 -right-24 w-96 h-96 bg-white/10 rounded-full blur-3xl" />
-          <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-black/10 rounded-full blur-3xl" />
-        </div>
-
-        <div className="max-w-5xl w-full text-center text-white z-10 relative">
-          <motion.div initial="hidden" whileInView="visible" variants={fadeInUp}>
-            <span className="inline-block px-6 py-2 bg-white/10 backdrop-blur-md rounded-full text-xs uppercase tracking-widest font-bold mb-8 border border-white/20">
-              Fale com a gente
-            </span>
-            <h2 className="text-5xl md:text-7xl lg:text-8xl font-black mb-16 italic uppercase tracking-tighter leading-[0.9] drop-shadow-2xl">
-              Prepare sua próxima<br />aventura em Jeri
-            </h2>
-          </motion.div>
-
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            variants={staggerContainer}
-            className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20"
-          >
-            {[
-              { icon: <MessageCircle size={40} />, title: "WhatsApp", value: "85 9 9900-1339", link: "https://wa.me/5585999001339", note: "Clique para conversar" },
-              { icon: <Instagram size={40} />, title: "Instagram", value: "@jeri4xp", link: "https://instagram.com/jeri4xp", note: "Acompanhe as aventuras" },
-              { icon: <Mail size={40} />, title: "E-mail", value: "jeri4xp@gmail.com", link: "mailto:jeri4xp@gmail.com", note: "Envie sua mensagem" }
-            ].map((item, i) => (
-              <motion.a
-                key={i}
-                href={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                variants={fadeInUp}
-                className="group bg-white/10 backdrop-blur-md p-10 rounded-[2.5rem] hover:bg-white transition-all duration-500 shadow-2xl hover:-translate-y-3 border border-white/10 flex flex-col items-center"
-              >
-                <div className="bg-white/20 group-hover:bg-accent group-hover:text-white w-20 h-20 rounded-2xl flex items-center justify-center mb-6 transition-all group-hover:rotate-6 shadow-inner">
-                  {item.icon}
-                </div>
-                <h3 className="font-bold text-2xl mb-2 italic group-hover:text-secondary transition-colors">{item.title}</h3>
-                <span className="text-xl font-black block group-hover:text-accent transition-colors break-all leading-tight">{item.value}</span>
-                <p className="text-xs mt-6 opacity-60 uppercase tracking-widest font-bold group-hover:text-secondary">{item.note}</p>
-              </motion.a>
-            ))}
-          </motion.div>
-
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            variants={fadeInUp}
-            className="flex flex-col items-center"
-          >
-            <div className="flex items-center gap-2 text-sm font-bold tracking-[0.4em] uppercase opacity-80 mb-4">
-              <MapPin size={16} />
-              Jericoacoara • Ceará • Brasil
+      {/* --- BENTO GRID: EXPERIÊNCIAS --- */}
+      <section id="experiencias" className="py-32 px-6">
+        <div className="container mx-auto max-w-7xl">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-6">
+            <div className="max-w-xl">
+              <h2 className="text-5xl md:text-7xl font-black italic uppercase tracking-tighter leading-none text-secondary">
+                Curadoria <br /> <span className="text-accent">de Aventuras</span>
+              </h2>
             </div>
-            <div className="w-12 h-0.5 bg-white/30 rounded-full" />
-          </motion.div>
+            <p className="text-gray-400 max-w-xs text-sm uppercase tracking-widest leading-relaxed">
+              De passeios selvagens a estadias exclusivas. Escolha sua forma de viver Jeri.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 h-[1000px] md:h-[700px]">
+            {/* Main Card: Passeios */}
+            <ExperienceCard
+              span="md:col-span-8 md:row-span-2"
+              title="Passeios"
+              img="https://jeri4xp.vercel.app/img/passeio.4d2eed74.webp"
+              link="/passeios"
+              desc="Explore dunas e lagoas secretas com guias especialistas."
+            />
+            {/* Side Card: Hospedagem */}
+            <ExperienceCard
+              span="md:col-span-4 md:row-span-1"
+              title="Hospedagem"
+              img="https://jeri4xp.vercel.app/img/hotel.a362b7ec.webp"
+              link="/hospedagem"
+              desc="Onde o luxo encontra o pé na areia."
+            />
+            {/* Bottom Card: Transfer */}
+            <ExperienceCard
+              span="md:col-span-4 md:row-span-1"
+              title="Transfer"
+              img="https://jeri4xp.vercel.app/img/transfer.fb2f24b4.webp"
+              link="/transfer"
+              desc="Conforto do aeroporto ao paraíso."
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* --- HISTÓRIA: EDITORIAL STYLE --- */}
+      <section id="historia" className="bg-secondary py-32 text-white relative overflow-hidden">
+        <div className="absolute top-0 right-0 opacity-5 pointer-events-none">
+           <Navigation size={600} strokeWidth={0.5} />
+        </div>
+
+        <div className="container mx-auto px-6 max-w-6xl relative z-10">
+          <div className="grid md:grid-cols-2 gap-20 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              className="relative"
+            >
+              <img
+                src="https://jeri4xp.vercel.app/img/jeri1.e05b0107.webp"
+                className="w-full aspect-[4/5] object-cover grayscale hover:grayscale-0 transition-all duration-700 rounded-sm shadow-2xl"
+                alt="História"
+              />
+              <div className="absolute -bottom-10 -right-10 bg-accent p-12 hidden md:block">
+                 <p className="text-5xl font-black italic">1984</p>
+                 <p className="text-xs uppercase tracking-widest mt-2">O ano em que o <br/>mundo descobriu Jeri</p>
+              </div>
+            </motion.div>
+
+            <div className="space-y-8">
+              <span className="text-accent font-bold tracking-[0.3em] uppercase text-sm">Nossa Essência</span>
+              <h3 className="text-5xl md:text-7xl font-black italic tracking-tighter uppercase leading-none">
+                Onde o tempo <br/> <span className="text-outline-white">não tem pressa</span>
+              </h3>
+              <p className="text-white/60 text-lg leading-relaxed font-light italic">
+                Jericoacoara não é apenas um destino, é um estado de espírito. As ruas de areia e a ausência de postes preservam o que há de mais luxuoso na terra: a natureza intocada e o céu estrelado.
+              </p>
+              <div className="pt-8 border-t border-white/10 flex gap-12">
+                 <div>
+                    <p className="text-3xl font-bold">300km</p>
+                    <p className="text-[10px] text-white/40 uppercase mt-1">De Fortaleza</p>
+                 </div>
+                 <div>
+                    <p className="text-3xl font-bold">Parque</p>
+                    <p className="text-[10px] text-white/40 uppercase mt-1">Nacional Protegido</p>
+                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* --- DEPOIMENTOS: FLOATING BUBBLES --- */}
+      <section id="depoimentos" className="py-32 bg-[#FDFCFB]">
+        <div className="container mx-auto px-6 text-center mb-20">
+          <h2 className="text-4xl md:text-6xl font-black italic text-secondary uppercase tracking-tighter">Vozes de Jeri</h2>
+        </div>
+
+        <div className="container mx-auto px-6">
+          {isLoading ? (
+            <LoadingSpinner className="mx-auto text-accent" />
+          ) : (
+            <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+              {testimonials.map((t, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  className="break-inside-avoid bg-white p-8 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-500 relative group"
+                >
+                  <Quote className="absolute top-4 right-4 text-accent opacity-10 group-hover:opacity-100 transition-opacity" size={40} />
+                  <p className="text-gray-600 italic leading-relaxed mb-8">"{t.reviewText}"</p>
+                  <div className="flex items-center gap-4">
+                    <img src={t.customerPhoto || `https://i.pravatar.cc/150?u=${i}`} className="w-12 h-12 rounded-full grayscale hover:grayscale-0 transition-all duration-500" alt={t.customerName}/>
+                    <div className="text-left">
+                      <p className="font-bold text-sm uppercase">{t.customerName}</p>
+                      <p className="text-[10px] text-gray-400 uppercase tracking-widest">{t.customerLocation}</p>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* --- CONTACT: MINIMALIST DARK --- */}
+      <section id="contato" className="bg-secondary py-32 px-6">
+        <div className="container mx-auto max-w-5xl text-center">
+          <h2 className="text-5xl md:text-8xl font-black italic text-white uppercase tracking-tighter leading-none mb-12">
+            Vamos criar sua <br/> <span className="text-accent text-outline-white">próxima memória?</span>
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/10 border border-white/10">
+            <ContactLink icon={<MessageCircle />} label="WhatsApp" value="85 9 9900.1339" href="https://wa.me/5585999001339" />
+            <ContactLink icon={<Instagram />} label="Instagram" value="@jeri4xp" href="https://instagram.com/jeri4xp" />
+            <ContactLink icon={<Mail />} label="E-mail" value="jeri4xp@gmail.com" href="mailto:jeri4xp@gmail.com" />
+          </div>
+
+          <div className="mt-20 flex flex-col items-center">
+             <div className="w-px h-24 bg-gradient-to-b from-accent to-transparent" />
+             <p className="mt-8 text-white/40 text-[10px] uppercase tracking-[0.5em]">Jericoacoara • Ceará • Brasil</p>
+          </div>
         </div>
       </section>
 
       <Footer />
 
-      {/* FLOATING WHATSAPP BUTTON */}
-      <motion.a
-        href="https://wa.me/5585999001339"
-        target="_blank"
-        rel="noopener noreferrer"
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
-        transition={{ delay: 1 }}
-        className="fixed bottom-8 right-8 z-[60] group flex items-center justify-center"
-        aria-label="Falar no WhatsApp"
+      {/* Floating Action Button - Minimalist */}
+      <motion.button
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        onClick={() => window.open('https://wa.me/5585999001339')}
+        className="fixed bottom-10 right-10 z-[100] bg-accent text-white p-5 rounded-none shadow-2xl flex items-center justify-center hover:bg-black transition-colors"
       >
-        <span className="absolute right-full mr-4 bg-white text-secondary px-4 py-2 rounded-xl text-sm font-black shadow-xl opacity-0 group-hover:opacity-100 transition-all pointer-events-none whitespace-nowrap border border-slate-100 uppercase italic tracking-tighter">
-          Fale conosco agora!
-        </span>
-        <span className="absolute inset-0 rounded-full bg-[#25D366] opacity-40 animate-ping group-hover:animate-none" />
-        <div className="bg-[#25D366] p-5 rounded-full shadow-2xl relative z-10 text-white hover:scale-110 transition-transform">
-          <MessageCircle size={32} />
-        </div>
-      </motion.a>
+        <MessageCircle size={28} />
+      </motion.button>
     </div>
+  );
+}
+
+// --- SUBCOMPONENTES AUXILIARES ---
+
+function ExperienceCard({ span, title, img, link, desc }: { span: string, title: string, img: string, link: string, desc: string }) {
+  return (
+    <motion.div
+      whileHover="hover"
+      className={`${span} relative overflow-hidden group bg-black`}
+    >
+      <motion.img
+        variants={{ hover: { scale: 1.1 } }}
+        transition={{ duration: 0.8 }}
+        src={img}
+        className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-40 transition-opacity"
+        alt={title}
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+      <div className="absolute inset-0 p-10 flex flex-col justify-end">
+        <motion.div
+          variants={{ hover: { y: -10 } }}
+          className="space-y-4"
+        >
+          <h3 className="text-white text-4xl md:text-5xl font-black italic uppercase tracking-tighter leading-none">{title}</h3>
+          <p className="text-white/60 text-xs uppercase tracking-widest max-w-xs opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            {desc}
+          </p>
+          <Link to={link}>
+            <Button className="bg-white text-black text-[10px] font-bold uppercase tracking-widest px-6 py-2 rounded-none mt-4 hover:bg-accent hover:text-white transition-all">
+              Ver detalhes
+            </Button>
+          </Link>
+        </motion.div>
+      </div>
+    </motion.div>
+  );
+}
+
+function ContactLink({ icon, label, value, href }: { icon: React.ReactNode, label: string, value: string, href: string }) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noreferrer"
+      className="bg-secondary p-12 flex flex-col items-center gap-4 hover:bg-white hover:text-secondary transition-all duration-500 group"
+    >
+      <div className="text-accent group-hover:scale-110 transition-transform">
+        {React.cloneElement(icon as React.ReactElement, { size: 32 })}
+      </div>
+      <div>
+        <p className="text-[10px] uppercase tracking-[0.3em] text-white/40 group-hover:text-secondary/40 mb-1">{label}</p>
+        <p className="text-xl font-bold italic tracking-tighter text-white group-hover:text-secondary">{value}</p>
+      </div>
+    </a>
   );
 }
