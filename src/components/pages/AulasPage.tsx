@@ -1,4 +1,6 @@
-import { MessageCircle } from "lucide-react"; // Import opcional para o ícone do zap
+import { Image } from '@/components/ui/image';
+import { motion } from 'framer-motion';
+import { MessageCircle } from 'lucide-react';
 import { useState } from 'react';
 
 export default function AulasPage() {
@@ -15,319 +17,333 @@ export default function AulasPage() {
 
   const etapas = [
     {
-      titulo: "Escolha da Modalidade",
-      descricao: "Escolha entre kitesurf, windsurf, surf ou stand up paddle. Nossa equipe pode ajudar você a definir a melhor opção de acordo com seu perfil e objetivo.",
+      titulo: 'Escolha da Modalidade',
+      descricao: 'Escolha entre kitesurf, windsurf, surf ou stand up paddle. Nossa equipe pode ajudar você a definir a melhor opção de acordo com seu perfil e objetivo.',
     },
     {
-      titulo: "Agendamento da Aula",
-      descricao: "Definimos o melhor horário considerando vento, maré e clima para garantir a melhor experiência.",
+      titulo: 'Agendamento da Aula',
+      descricao: 'Definimos o melhor horário considerando vento, maré e clima para garantir a melhor experiência.',
     },
     {
-      titulo: "Avaliação e Planejamento",
-      descricao: "O instrutor avalia seu nível e adapta a aula para garantir aprendizado seguro e eficiente.",
+      titulo: 'Avaliação e Planejamento',
+      descricao: 'O instrutor avalia seu nível e adapta a aula para garantir aprendizado seguro e eficiente.',
     },
     {
-      titulo: "Estrutura Completa",
-      descricao: "Equipamentos inclusos e revisados, com orientações completas para sua segurança.",
+      titulo: 'Estrutura Completa',
+      descricao: 'Equipamentos inclusos e revisados, com orientações completas para sua segurança.',
     },
     {
-      titulo: "Prática e Evolução",
-      descricao: "Prática com acompanhamento próximo para evolução contínua e mais confiança.",
+      titulo: 'Prática e Evolução',
+      descricao: 'Prática com acompanhamento próximo para evolução contínua e mais confiança.',
     },
   ];
 
   const faqs = [
     {
       question: 'Preciso ter experiência para fazer aulas de esportes na praia?',
-      answer: 'Não. As aulas são indicadas tanto para iniciantes quanto para quem já pratica e quer evoluir. Os instrutores adaptam o ritmo conforme seu nível.'
+      answer: 'Não. As aulas são indicadas tanto para iniciantes quanto para quem já pratica e quer evoluir. Os instrutores adaptam o ritmo conforme seu nível.',
     },
     {
       question: 'Quais esportes posso aprender em Jericoacoara?',
-      answer: 'As modalidades mais procuradas são kitesurf, windsurf, surf e stand up paddle. Jericoacoara tem condições ideais de vento e mar para aprender com segurança.'
+      answer: 'As modalidades mais procuradas são kitesurf, windsurf, surf e stand up paddle. Jericoacoara tem condições ideais de vento e mar para aprender com segurança.',
     },
     {
       question: 'Quanto tempo dura uma aula?',
-      answer: 'A duração varia conforme a modalidade. Aulas avulsas costumam durar de 1 a 3 horas, enquanto cursos completos de kitesurf geralmente acontecem em 3 dias, com cerca de 3 horas por dia.'
+      answer: 'A duração varia conforme a modalidade. Aulas avulsas costumam durar de 1 a 3 horas, enquanto cursos completos de kitesurf geralmente acontecem em 3 dias, com cerca de 3 horas por dia.',
     },
     {
       question: 'Os equipamentos estão inclusos na aula?',
-      answer: 'Na maioria das escolas, sim. Os equipamentos de segurança e prática costumam estar inclusos, garantindo mais conforto para quem está começando.'
+      answer: 'Na maioria das escolas, sim. Os equipamentos de segurança e prática costumam estar inclusos, garantindo mais conforto para quem está começando.',
     },
     {
       question: 'As aulas são seguras?',
-      answer: 'Sim. As aulas são acompanhadas por instrutores experientes, com foco em segurança, teoria básica, uso correto dos equipamentos e adaptação às condições do mar e do vento.'
-    }
+      answer: 'Sim. As aulas são acompanhadas por instrutores experientes, com foco em segurança, teoria básica, uso correto dos equipamentos e adaptação às condições do mar e do vento.',
+    },
   ];
 
   return (
     <div className="font-sans">
-      {/* SEÇÃO HERO */}
-      <section className="min-h-screen w-full bg-white items-center justify-center text-center">
-        <div className="relative w-full h-140 overflow-hidden text-white uppercase font-bold tracking-widest text-shadow-md">
-          <header className="absolute w-full flex justify-between z-50 px-10 py-2.5 md:items-center items-start">
-            <a href="/">
-              <img src="/logo_jeri4xp.png" alt="Logo Jeri4xp" className="w-25" />
-            </a>
+      {/* HERO */}
+      <section className="min-h-screen w-full text-white relative overflow-hidden">
+        <header className="absolute w-full flex justify-between px-6 md:px-10 py-4 z-50 items-center">
+          <Image src="https://static.wixstatic.com/media/792b6b_db67302a203f42429486f97568002b88~mv2.png?originWidth=1152&originHeight=576" alt="Logo Jeri4xp" className="w-20 md:w-24" />
 
-            <nav className="hidden md:block">
-              <ul className="flex gap-10 text-lg">
-                {navItems.map((item) => (
-                  <li key={item.name}>
-                    <a href={item.link} className="hover:text-orange-600 transition-colors">
-                      {item.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden mt-2.5 text-3xl hover:cursor-pointer"
-            >
-              ☰
-            </button>
-          </header>
-
-          {/* MENU MOBILE */}
-          {isMenuOpen && (
-            <div className="fixed inset-0 z-50 bg-black flex flex-col items-center justify-center gap-8 font-bold">
-              <button
-                onClick={() => setIsMenuOpen(false)}
-                className="absolute top-8 right-10 text-4xl hover:cursor-pointer"
-              >
-                x
-              </button>
-
-              {navItems.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.link}
-                  onClick={() => setIsMenuOpen(false)}
-                  className="text-2xl font-black tracking-tighter hover:text-orange-600 transition-all"
-                >
-                  {item.name}
-                </a>
-              ))}
-            </div>
-          )}
-
-          <main className="flex h-full bg-black">
-            <img src="/jeri1.webp" className="w-full h-full object-cover opacity-85" alt="Background" />
-
-            <div className="absolute inset-0 z-25 flex flex-col items-center justify-center">
-              <span className="text-orange-600 mb-2">
-                Bem-vindo ao Destino Nº 1
-              </span>
-
-              <h1 className="text-4xl md:text-6xl font-black italic tracking-tighter mb-4">
-                Jeri4xp: Sua conexão <br /> com o paraíso.
-              </h1>
-
-              <a
-                href="https://wa.me/5585999001339"
-                target="_blank"
-                rel="noreferrer"
-                className="bg-orange-600 px-10 py-4 rounded-full text-xs hover:bg-white hover:text-orange-600 transition-all shadow-lg"
-              >
-                Reservar Agora
+          <nav className="hidden md:flex gap-8 text-sm font-bold uppercase tracking-wider">
+            {navItems.map((item) => (
+              <a key={item.name} href={item.link} className="hover:text-accent transition">
+                {item.name}
               </a>
-            </div>
-          </main>
-        </div>
+            ))}
+          </nav>
 
-        <footer className="p-10 text-gray-800">
-          <h2 className="text-2xl font-bold">Descubra os Melhores Passeios em Jericoacoara</h2>
-          <p className="mt-4 text-gray-600 max-w-2xl mx-auto italic">
-            Explore lagoas cristalinas, dunas impressionantes e paisagens únicas com total conforto e segurança.
-          </p>
-        </footer>
-      </section>
+          <button onClick={() => setIsMenuOpen(true)} className="md:hidden text-2xl">
+            ☰
+          </button>
+        </header>
 
-      {/* SEÇÃO ESPORTES (O TEXTO LONGO) */}
-      <section id="esportesJeri" className="bg-orange-600 min-h-screen p-8 flex items-center justify-center">
-        <div className="w-full max-w-5xl p-8 bg-white rounded-4xl shadow-2xl mx-auto text-slate-800">
-          <div className="flex justify-center mb-4">
-            <div className="w-18 h-1 bg-orange-600 rounded-full"></div>
+        {isMenuOpen && (
+          <div className="fixed inset-0 bg-black flex flex-col items-center justify-center gap-8 z-50 font-bold">
+            <button onClick={() => setIsMenuOpen(false)} className="absolute top-8 right-10 text-3xl">
+              ✕
+            </button>
+
+            {navItems.map((item) => (
+              <a
+                key={item.name}
+                href={item.link}
+                onClick={() => setIsMenuOpen(false)}
+                className="text-xl font-black hover:text-accent"
+              >
+                {item.name}
+              </a>
+            ))}
           </div>
+        )}
 
-          <h1 className="text-2xl md:text-4xl font-extrabold text-center mb-8">
-            Viva a Experiência dos Esportes em <span className="text-orange-600">Jericoacoara</span>
+        <Image src="https://static.wixstatic.com/media/792b6b_f1a29dfb5f294176b121771875f4bafa~mv2.png?originWidth=1152&originHeight=576" className="absolute w-full h-full object-cover opacity-80" alt="Hero background" />
+
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
+          <span className="text-accent mb-2 uppercase tracking-widest text-xs md:text-sm">
+            Bem-vindo ao Destino Nº 1
+          </span>
+
+          <h1 className="text-3xl md:text-5xl font-black italic tracking-tighter mb-6">
+            Aulas de Esportes <br /> em Jericoacoara
           </h1>
 
-          <div className="border-l-4 border-orange-600 pl-6">
-            <div className="space-y-4 text-md md:text-lg">
-              <p className="first-letter:text-4xl first-letter:font-bold first-letter:text-orange-600 first-letter:mr-1 first-letter:float-left">
-                Explorar os esportes em Jericoacoara é uma das formas mais intensas de viver o destino.
-                Com ventos constantes, mar favorável e clima ideal durante quase todo o ano, a região
-                se torna perfeita tanto para iniciantes quanto para quem já tem experiência.
+          <a
+            href="https://wa.me/5585999001339"
+            target="_blank"
+            rel="noreferrer"
+            className="bg-accent px-8 py-3 rounded-full text-xs font-bold hover:bg-white hover:text-accent transition-all"
+          >
+            Reservar Agora
+          </a>
+        </div>
+      </section>
+
+      {/* VISÃO GERAL */}
+      <section id="geralAulas" className="bg-accent py-20 px-6 text-white">
+        <div className="max-w-5xl mx-auto">
+          <div className="flex flex-col items-center mb-12 text-center">
+            <span className="uppercase tracking-widest text-xs font-bold mb-2">
+              Descubra a Experiência
+            </span>
+            <h2 className="text-3xl md:text-4xl font-black">
+              Aulas de Esportes em Jericoacoara
+            </h2>
+            <div className="h-1 w-20 bg-white mt-4 rounded-full"></div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-10 leading-relaxed text-base md:text-lg">
+            <div className="space-y-5">
+              <p>
+                Explorar os esportes em Jericoacoara é uma das formas mais intensas de viver o destino. Com ventos constantes, mar favorável e clima ideal durante quase todo o ano, a região se torna perfeita tanto para iniciantes quanto para quem já tem experiência.
               </p>
               <p>
-                Entre as principais modalidades estão o kitesurf, windsurf, surf e stand up paddle,
-                cada uma oferecendo uma conexão única com o mar e a natureza.
+                Entre as principais modalidades estão o kitesurf, windsurf, surf e stand up paddle, cada uma oferecendo uma conexão única com o mar e a natureza.
+              </p>
+            </div>
+
+            <div className="space-y-5">
+              <p>
+                As aulas são acompanhadas por instrutores experientes, que orientam cada etapa do aprendizado com segurança e atenção.
               </p>
               <p>
-                As aulas são acompanhadas por instrutores experientes, que orientam cada etapa do
-                aprendizado com segurança e atenção.
-              </p>
-              <p>
-                Outro diferencial está na estrutura: equipamentos de qualidade, materiais de segurança
-                e suporte completo para que você aproveite cada momento sem preocupação.
-              </p>
-              <p>
-                Mais do que aprender um novo esporte, essa experiência proporciona conexão com a
-                natureza, superação de desafios e a criação de memórias únicas.
-              </p>
-              <p>
-                Seja para sua primeira aula ou para evoluir no esporte, Jericoacoara oferece o cenário
-                perfeito para transformar sua viagem em algo ainda mais intenso.
+                Outro diferencial está na estrutura: equipamentos de qualidade, materiais de segurança e suporte completo para que você aproveite cada momento sem preocupação.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* SEÇÃO AULAS (OS CARDS) */}
-      <section id="aulas" className="bg-white min-h-screen p-8 flex items-center justify-center">
+      {/* AULAS */}
+      <section id="aulas" className="py-20 px-6 bg-background">
         <div className="max-w-6xl mx-auto">
-          <h1 className="text-3xl md:text-5xl font-extrabold text-center mb-4 text-orange-600">
-            Escolha sua experiência na água
-          </h1>
-          <p className="text-center text-gray-600 max-w-2xl mx-auto mb-12 text-lg">
-            Aulas para iniciantes e praticantes com instrutores experientes, equipamentos inclusos e total segurança.
-          </p>
+          <div className="flex flex-col items-center mb-12 text-center">
+            <span className="uppercase tracking-widest text-xs font-bold mb-2 text-accent">
+              Escolha sua Experiência
+            </span>
+            <h2 className="text-3xl md:text-4xl font-black text-primary">
+              Escolha sua Modalidade
+            </h2>
+            <div className="h-1 w-20 bg-accent mt-4 rounded-full"></div>
+          </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { emoji: "🪁", titulo: "Kitesurf", desc: "Aprenda desde o básico até técnicas avançadas com aulas práticas e suporte completo.", msg: "Olá! Quero agendar uma aula de Kitesurf." },
-              { emoji: "🌬️", titulo: "Windsurf", desc: "Viva a emoção de velejar com vento perfeito e aulas adaptadas ao seu nível.", msg: "Olá! Quero agendar uma aula de Windsurf." },
-              { emoji: "🏄", titulo: "Surf", desc: "Aulas para iniciantes e intermediários com foco em equilíbrio, técnica e diversão.", msg: "Olá! Quero agendar uma aula de Surf." },
-              { emoji: "🌊", titulo: "Stand Up Paddle", desc: "Explore águas calmas e belas paisagens com aulas leves e perfeitas para relaxar.", msg: "Olá! Quero agendar uma aula de Stand Up Paddle." }
+              { emoji: '🪁', titulo: 'Kitesurf', desc: 'Aprenda desde o básico até técnicas avançadas com aulas práticas e suporte completo.', msg: 'Olá! Quero agendar uma aula de Kitesurf.' },
+              { emoji: '🌬️', titulo: 'Windsurf', desc: 'Viva a emoção de velejar com vento perfeito e aulas adaptadas ao seu nível.', msg: 'Olá! Quero agendar uma aula de Windsurf.' },
+              { emoji: '🏄', titulo: 'Surf', desc: 'Aulas para iniciantes e intermediários com foco em equilíbrio, técnica e diversão.', msg: 'Olá! Quero agendar uma aula de Surf.' },
+              { emoji: '🌊', titulo: 'Stand Up Paddle', desc: 'Explore águas calmas e belas paisagens com aulas leves e perfeitas para relaxar.', msg: 'Olá! Quero agendar uma aula de Stand Up Paddle.' },
             ].map((item) => (
-              <div key={item.titulo} className="flex flex-col justify-between bg-orange-600 text-white rounded-4xl p-8 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+              <motion.div
+                key={item.titulo}
+                className="flex flex-col justify-between bg-accent text-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition hover:border-2 border-accent"
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
                 <div>
                   <div className="text-4xl mb-4">{item.emoji}</div>
-                  <h2 className="text-3xl font-bold mb-4">{item.titulo}</h2>
-                  <p className="text-md">{item.desc}</p>
+                  <h3 className="text-2xl font-black mb-3">{item.titulo}</h3>
+                  <p className="text-sm">{item.desc}</p>
                 </div>
                 <a
                   href={`https://wa.me/5585999001339?text=${item.msg}`}
                   target="_blank"
                   rel="noreferrer"
-                  className="mt-6 bg-white text-orange-600 py-3 rounded-xl font-semibold text-center hover:bg-slate-800 hover:text-white transition-all duration-300"
+                  className="mt-6 bg-white text-accent py-2 rounded-xl font-bold text-center hover:bg-accent/90 hover:text-white transition text-sm"
                 >
                   Agendar Aula
                 </a>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* SEÇÃO FUNCIONAMENTO (ETAPAS) */}
-      <section id="funcionamento" className="bg-orange-600 min-h-screen p-8 flex items-center justify-center text-white">
-        <div className="max-w-5xl mx-auto w-full">
-          <h1 className="text-3xl md:text-5xl font-extrabold mb-12 text-center">
-            Como Funcionam as Aulas
-          </h1>
-          <div className="grid grid-cols-1 gap-5">
+      {/* FUNCIONAMENTO */}
+      <section id="funcionamento" className="py-20 px-6 bg-accent text-white">
+        <div className="max-w-5xl mx-auto">
+          <div className="flex flex-col items-center mb-12 text-center">
+            <span className="uppercase tracking-widest text-xs font-bold mb-2">
+              Processo
+            </span>
+            <h2 className="text-3xl md:text-4xl font-black">
+              Como Funcionam as Aulas
+            </h2>
+            <div className="h-1 w-20 bg-white mt-4 rounded-full"></div>
+          </div>
+
+          <div className="grid grid-cols-1 gap-4">
             {etapas.map((item, index) => (
-              <div key={index} className="flex gap-5 bg-white rounded-2xl p-4 shadow-md items-center hover:shadow-xl transition">
-                <div className="w-14 h-14 flex-shrink-0 flex items-center justify-center rounded-full bg-orange-600 text-white text-xl font-bold">
+              <motion.div
+                key={index}
+                className="flex gap-4 bg-white rounded-xl p-4 shadow-md items-center"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center rounded-full bg-accent text-white text-lg font-bold">
                   {index + 1}
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-800 mb-1.5">{item.titulo}</h3>
-                  <p className="text-gray-800 text-sm">{item.descricao}</p>
+                  <h3 className="text-lg font-bold text-primary mb-1">{item.titulo}</h3>
+                  <p className="text-primary text-sm">{item.descricao}</p>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* SEÇÃO DÚVIDAS (FAQ) */}
-      <section id="duvidaAulas" className="bg-white min-h-screen p-4 flex items-center justify-center">
-        <div className="max-w-4xl mx-auto w-full">
-          <h2 className="text-3xl md:text-5xl font-extrabold text-center mb-4 text-orange-600">
-            Dúvidas Frequentes
-          </h2>
-          <p className="text-center text-gray-600 max-w-2xl mx-auto mb-12 text-lg">
-            Tire suas principais dúvidas antes de reservar e aproveite sua experiência em Jericoacoara com total tranquilidade.
-          </p>
+      {/* FAQ */}
+      <section id="duvidaAulas" className="py-20 px-6 bg-background">
+        <div className="max-w-4xl mx-auto">
+          <div className="flex flex-col items-center mb-12 text-center">
+            <span className="uppercase tracking-widest text-xs font-bold mb-2 text-accent">
+              Informações
+            </span>
+            <h2 className="text-3xl md:text-4xl font-black text-primary">
+              Dúvidas Frequentes
+            </h2>
+            <div className="h-1 w-20 bg-accent mt-4 rounded-full"></div>
+          </div>
 
-          <div className="space-y-4">
+          <div className="space-y-3">
             {faqs.map((faq, index) => (
-              <div key={index} className="group bg-white rounded-2xl shadow-sm border border-orange-100 overflow-hidden transition-all duration-300 hover:shadow-md">
+              <motion.div
+                key={index}
+                className="border-2 border-border p-6 rounded-xl bg-background hover:border-accent transition"
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.05 }}
+                viewport={{ once: true }}
+              >
                 <button
                   onClick={() => setExpandedFaq(expandedFaq === index ? null : index)}
-                  className="w-full px-6 py-5 flex items-center justify-between text-left"
+                  className="w-full text-left font-bold text-primary flex justify-between items-center"
                 >
-                  <span className="font-semibold text-gray-800 group-hover:text-orange-600 transition">
-                    {faq.question}
+                  <span>{faq.question}</span>
+                  <span className="text-accent text-xl">
+                    {expandedFaq === index ? '−' : '+'}
                   </span>
-                  <svg
-                    className={`w-5 h-5 text-orange-600 transition-transform duration-300 ${expandedFaq === index ? 'rotate-180' : ''}`}
-                    fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"/>
-                  </svg>
                 </button>
+
                 {expandedFaq === index && (
-                  <div className="px-6 pb-5 text-gray-600 leading-relaxed">
-                    {faq.answer}
-                  </div>
+                  <p className="mt-4 text-foreground leading-relaxed text-sm">{faq.answer}</p>
                 )}
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* SEÇÃO CONTATO */}
-      <section id="contato" className="min-h-screen w-full flex items-center justify-center bg-orange-600 py-20 px-4">
-        <div className="max-w-4xl z-10 text-center text-white">
-          <span className="inline-block px-4 py-1 bg-white/10 backdrop-blur-md rounded-full text-xs uppercase tracking-widest font-bold mb-6">
+      {/* CONTATO */}
+      <section id="contato" className="py-20 px-6 bg-primary text-white">
+        <div className="text-center max-w-4xl mx-auto">
+          <span className="inline-block px-4 py-1 bg-white/10 rounded-full text-xs uppercase mb-6 font-bold">
             Fale com a gente
           </span>
-          <h1 className="text-4xl md:text-6xl font-black mb-12 drop-shadow-lg">
+
+          <h2 className="text-3xl md:text-4xl font-black mb-12">
             Prepare sua próxima aventura em Jeri
-          </h1>
+          </h2>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <a href="https://wa.me/5585999001339" target="_blank" rel="noreferrer"
-               className="group bg-white/10 backdrop-blur-md p-8 rounded-3xl hover:bg-white hover:text-orange-600 transition-all duration-500 shadow-2xl hover:-translate-y-2">
-              <h3 className="font-bold text-xl mb-2 italic">WhatsApp</h3>
-              <span className="text-lg font-black block">85 9 9900-1339</span>
-            </a>
+          <div className="grid md:grid-cols-3 gap-6">
+            <motion.a
+              href="https://wa.me/5585999001339"
+              target="_blank"
+              rel="noreferrer"
+              className="bg-white/10 p-6 rounded-2xl hover:bg-white hover:text-primary transition text-sm md:text-base"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
+            >
+              <div className="font-bold mb-2">WhatsApp</div>
+              <div className="font-bold">85 9 9900-1339</div>
+            </motion.a>
 
-            <a href="https://instagram.com/jeri4xp" target="_blank" rel="noreferrer"
-               className="group bg-white/10 backdrop-blur-md p-8 rounded-3xl hover:bg-white hover:text-orange-600 transition-all duration-500 shadow-2xl hover:-translate-y-2">
-              <h3 className="font-bold text-xl mb-2 italic">Instagram</h3>
-              <span className="text-lg font-black block">@jeri4xp</span>
-            </a>
+            <motion.a
+              href="https://instagram.com/jeri4xp"
+              target="_blank"
+              rel="noreferrer"
+              className="bg-white/10 p-6 rounded-2xl hover:bg-white hover:text-primary transition text-sm md:text-base"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
+            >
+              <div className="font-bold mb-2">Instagram</div>
+              <div className="font-bold">@jeri4xp</div>
+            </motion.a>
 
-            <a href="mailto:jeri4xp@gmail.com"
-               className="group bg-white/10 backdrop-blur-md p-8 rounded-3xl hover:bg-white hover:text-orange-600 transition-all duration-500 shadow-2xl hover:-translate-y-2">
-              <h3 className="font-bold text-xl mb-2 italic">E-mail</h3>
-              <span className="text-lg font-black block break-all leading-tight">jeri4xp@gmail.com</span>
-            </a>
+            <motion.a
+              href="mailto:jeri4xp@gmail.com"
+              className="bg-white/10 p-6 rounded-2xl hover:bg-white hover:text-primary transition text-sm md:text-base"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
+            >
+              <div className="font-bold mb-2">E-mail</div>
+              <div className="font-bold">jeri4xp@gmail.com</div>
+            </motion.a>
           </div>
 
-          <div className="mt-20">
-            <p className="text-sm font-medium tracking-widest uppercase">
+          <div className="mt-12">
+            <p className="text-xs uppercase tracking-widest">
               Jericoacoara • Ceará • Brasil
             </p>
           </div>
         </div>
       </section>
 
-      {/* BOTÃO FLUTUANTE */}
+      {/* BOTÃO WHATSAPP FLUTUANTE */}
       <a
         href="https://wa.me/5585999001339"
         target="_blank"
         rel="noreferrer"
         className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 p-4 rounded-full text-white shadow-lg transition z-40"
+        title="Enviar mensagem no WhatsApp"
       >
         <MessageCircle size={24} />
       </a>
