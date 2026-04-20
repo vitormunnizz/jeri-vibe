@@ -1,7 +1,7 @@
 import { Image } from '@/components/ui/image';
+import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, MessageCircle } from "lucide-react";
 import { useState } from "react";
-import { motion } from "framer-motion";
 
 export default function PasseiosPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -153,8 +153,7 @@ export default function PasseiosPage() {
       </section>
 
       {/* VISÃO GERAL */}
-      <section id="geralPasseios" className="bg-background py-16 px-6 md:py-24">
-<section id="historia" className="bg-orange-600 py-20 px-6 text-white">
+<section id="geralPasseios" className="bg-orange-600 py-20 px-6 text-white">
 	<div className="max-w-5xl mx-auto">
         <div className="flex flex-col items-center mb-12 text-center">
         <span className="uppercase tracking-widest text-xs font-bold mb-2">		Descubra a Vila
