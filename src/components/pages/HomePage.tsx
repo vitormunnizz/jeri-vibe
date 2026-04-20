@@ -132,49 +132,49 @@ export default function HomePage() {
       </section>
 
       {/* HISTÓRIA */}
-            <section id="historia" className="bg-orange-600 py-20 px-6 text-white">
-                    <div className="max-w-5xl mx-auto">
-                              <div className="flex flex-col items-center mb-12 text-center">
-                                          <span className="uppercase tracking-widest text-xs font-bold mb-2">
-                                                        Descubra a Vila
-                                                                    </span>
-                                                                                <h2 className="text-3xl md:text-4xl font-black">
-                                                                                              História de Jericoacoara
-                                                                                                          </h2>
-                                                                                                                      <div className="h-1 w-20 bg-white mt-4 rounded-full"></div>
-                                                                                                                                </div>
+      <section id="historia" className="bg-orange-600 py-20 px-6 text-white">
+        <div className="max-w-5xl mx-auto">
+          <div className="flex flex-col items-center mb-12 text-center">
+            <span className="uppercase tracking-widest text-xs font-bold mb-2">
+              Descubra a Vila
+            </span>
+            <h2 className="text-3xl md:text-4xl font-black">
+              História de Jericoacoara
+            </h2>
+            <div className="h-1 w-20 bg-white mt-4 rounded-full"></div>
+          </div>
 
-                                                                                                                                          <div className="grid md:grid-cols-2 gap-10 leading-relaxed text-base md:text-lg">
-                                                                                                                                                      <div className="space-y-5">
-                                                                                                                                                                    <p>
-                                                                                                                                                                                    Jericoacoara, carinhosamente apelidada de Jeri, é um destino onde o tempo parece ditar o próprio ritmo através do movimento das marés e dos ventos. Localizada no Ceará, a cerca de 300 km de Fortaleza, a vila transformou-se de uma isolada aldeia de pescadores em um refúgio de fama internacional.
-                                                                                                                                                                                                  </p>
+          <div className="grid md:grid-cols-2 gap-10 leading-relaxed text-base md:text-lg">
+            <div className="space-y-5">
+              <p>
+                Jericoacoara, carinhosamente apelidada de Jeri, é um destino onde o tempo parece ditar o próprio ritmo através do movimento das marés e dos ventos. Localizada no Ceará, a cerca de 300 km de Fortaleza, a vila transformou-se de uma isolada aldeia de pescadores em um refúgio de fama internacional.
+              </p>
 
-                                                                                                                                                                                                                <p className="italic border-l-2 border-white/30 pl-5">
-                                                                                                                                                                                                                                A essência rústica permanece intacta: as ruas continuam cobertas de areia e a iluminação pública é inexistente para preservar o brilho do céu estrelado, criando uma conexão única com o cosmos.
-                                                                                                                                                                                                                                              </p>
+              <p className="italic border-l-2 border-white/30 pl-5">
+                A essência rústica permanece intacta: as ruas continuam cobertas de areia e a iluminação pública é inexistente para preservar o brilho do céu estrelado, criando uma conexão única com o cosmos.
+              </p>
 
-                                                                                                                                                                                                                                                            <p>
-                                                                                                                                                                                                                                                                            Desde tempos imemoriais, Jeri tem sido um ponto de encontro entre o mar e a terra, onde a natureza bruta se encontra com a hospitalidade calorosa de seu povo. Os pescadores locais ainda mantêm suas tradições ancestrais, enquanto a vila evolui para receber visitantes de todo o mundo.
-                                                                                                                                                                                                                                                                                          </p>
-                                                                                                                                                                                                                                                                                                      </div>
+              <p>
+                Desde tempos imemoriais, Jeri tem sido um ponto de encontro entre o mar e a terra, onde a natureza bruta se encontra com a hospitalidade calorosa de seu povo. Os pescadores locais ainda mantêm suas tradições ancestrais, enquanto a vila evolui para receber visitantes de todo o mundo.
+              </p>
+            </div>
 
-                                                                                                                                                                                                                                                                                                                  <div className="space-y-5">
-                                                                                                                                                                                                                                                                                                                                <p>
-                                                                                                                                                                                                                                                                                                                                                A história mudou drasticamente em 1984, quando o The Washington Post a elegeu como uma das dez praias mais bonitas do mundo. Este reconhecimento internacional transformou Jeri em um destino procurado por aventureiros, artistas e buscadores de paz.
-                                                                                                                                                                                                                                                                                                                                                              </p>
+            <div className="space-y-5">
+              <p>
+                A história mudou drasticamente em 1984, quando o The Washington Post a elegeu como uma das dez praias mais bonitas do mundo. Este reconhecimento internacional transformou Jeri em um destino procurado por aventureiros, artistas e buscadores de paz.
+              </p>
 
-                                                                                                                                                                                                                                                                                                                                                                            <p>
-                                                                                                                                                                                                                                                                                                                                                                                            Hoje, protegida como Parque Nacional, a jornada de contrastes começa pela icônica Pedra Furada e passa pela Duna do Pôr do Sol, oferecendo vistas que parecem saídas de um sonho. Para quem busca relaxamento, as famosas redes nas lagoas do Paraíso e Azul são paradas obrigatórias.
-                                                                                                                                                                                                                                                                                                                                                                                                          </p>
+              <p>
+                Hoje, protegida como Parque Nacional, a jornada de contrastes começa pela icônica Pedra Furada e passa pela Duna do Pôr do Sol, oferecendo vistas que parecem saídas de um sonho. Para quem busca relaxamento, as famosas redes nas lagoas do Paraíso e Azul são paradas obrigatórias.
+              </p>
 
-                                                                                                                                                                                                                                                                                                                                                                                                                        <p>
-                                                                                                                                                                                                                                                                                                                                                                                                                                        Já o lado oeste revela a beleza crua do Mangue Seco e a travessia do Rio Guriú, onde a natureza se manifesta em raízes expostas e águas calmas. Cada canto de Jeri conta uma história, cada praia oferece uma experiência única, e cada pôr do sol é uma promessa de que voltaremos.
-                                                                                                                                                                                                                                                                                                                                                                                                                                                      </p>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                  </div>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </div>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </div>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          </section>
+              <p>
+                Já o lado oeste revela a beleza crua do Mangue Seco e a travessia do Rio Guriú, onde a natureza se manifesta em raízes expostas e águas calmas. Cada canto de Jeri conta uma história, cada praia oferece uma experiência única, e cada pôr do sol é uma promessa de que voltaremos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* EXPERIÊNCIAS */}
       <section id="experiencias" className="py-20 px-6 bg-gradient-to-b from-white to-gray-50">
@@ -201,10 +201,10 @@ export default function HomePage() {
                     item.name === "Passeios"
                       ? "https://static.wixstatic.com/media/792b6b_4f20f630624849c0af228c95edd905b7~mv2.png?originWidth=256&originHeight=256"
                       : item.name === "Hospedagem"
-                      ? "https://static.wixstatic.com/media/792b6b_ea2817bcd0de4f6e8d235353decd6caf~mv2.png?originWidth=256&originHeight=256"
-                      : item.name === "Transfer"
-                      ? "https://static.wixstatic.com/media/792b6b_24b85beb673d4e1bbd945bb5e3412cd4~mv2.png?originWidth=256&originHeight=256"
-                      : "https://static.wixstatic.com/media/792b6b_308bfaa4612a43949f0b088dfb2b0b83~mv2.png?originWidth=256&originHeight=256"
+                        ? "https://static.wixstatic.com/media/792b6b_ea2817bcd0de4f6e8d235353decd6caf~mv2.png?originWidth=256&originHeight=256"
+                        : item.name === "Transfer"
+                          ? "https://static.wixstatic.com/media/792b6b_24b85beb673d4e1bbd945bb5e3412cd4~mv2.png?originWidth=256&originHeight=256"
+                          : "https://static.wixstatic.com/media/792b6b_308bfaa4612a43949f0b088dfb2b0b83~mv2.png?originWidth=256&originHeight=256"
                   }
                   alt={item.name}
                   className="absolute inset-0 w-full h-full object-cover opacity-60 transition-all duration-700 group-hover:scale-110 group-hover:opacity-40"

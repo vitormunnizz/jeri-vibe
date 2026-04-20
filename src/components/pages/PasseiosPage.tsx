@@ -153,28 +153,28 @@ export default function PasseiosPage() {
       </section>
 
       {/* VISÃO GERAL */}
-<section id="geralPasseios" className="bg-orange-600 py-20 px-6 text-white">
-	<div className="max-w-5xl mx-auto">
-        <div className="flex flex-col items-center mb-12 text-center">
-        <span className="uppercase tracking-widest text-xs font-bold mb-2">		Descubra a Vila
-        </span>
-                                                                                	<h2 className="text-3xl md:text-4xl font-black">
-	Os Passeios Mais Incríveis de Jericoacoara Começam Aqui                                                                                                  	</h2>
-	<div className="h-1 w-20 bg-white mt-4 rounded-full"></div>
-	</div>
-<div className="grid md:grid-cols-2 gap-10 leading-relaxed text-base md:text-lg">
-<div className="space-y-5">
-<p>Jericoacoara é muito mais do que um destino turístico é onde cada paisagem surpreende e cada dia reserva uma nova experiência. Para realmente viver tudo o que Jeri tem a oferecer, os passeios são parte essencial da viagem, permitindo explorar desde os cenários mais famosos até cantos que só quem conhece a região sabe chegar.</p>
-<p className="italic border-l-2 border-white/30 pl-5">
-Ao longo desses roteiros, você vai se deparar com lagoas de águas cristalinas, dunas imponentes, travessias entre mangues e vistas que transformam qualquer momento em algo memorável. Tudo isso com o suporte de quem entende da região, garantindo mais segurança, conforto e uma experiência muito mais completa.</p>
-<p>Cada passeio oferece uma proposta diferente: alguns são perfeitos para relaxar e aproveitar a tranquilidade das lagoas, enquanto outros são ideais para quem busca emoção e aventura nas dunas. Essa variedade faz com que cada escolha traga uma nova forma de conhecer Jericoacoara.</p>
-</div>
-<div className="space-y-5">
-<p>
-A seguir, você vai encontrar os principais passeios disponíveis, com todos os detalhes necessários para escolher a experiência ideal para o seu perfil e transformar sua viagem em algo verdadeiramente inesquecível.</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                  </div>
-</div>
-</div>
-</section>
+      <section id="geralPasseios" className="bg-orange-600 py-20 px-6 text-white">
+        <div className="max-w-5xl mx-auto">
+          <div className="flex flex-col items-center mb-12 text-center">
+            <span className="uppercase tracking-widest text-xs font-bold mb-2">		Descubra a Vila
+            </span>
+            <h2 className="text-3xl md:text-4xl font-black">
+              Os Passeios Mais Incríveis de Jericoacoara Começam Aqui                                                                                                  	</h2>
+            <div className="h-1 w-20 bg-white mt-4 rounded-full"></div>
+          </div>
+          <div className="grid md:grid-cols-2 gap-10 leading-relaxed text-base md:text-lg">
+            <div className="space-y-5">
+              <p>Jericoacoara é muito mais do que um destino turístico é onde cada paisagem surpreende e cada dia reserva uma nova experiência. Para realmente viver tudo o que Jeri tem a oferecer, os passeios são parte essencial da viagem, permitindo explorar desde os cenários mais famosos até cantos que só quem conhece a região sabe chegar.</p>
+              <p className="italic border-l-2 border-white/30 pl-5">
+                Ao longo desses roteiros, você vai se deparar com lagoas de águas cristalinas, dunas imponentes, travessias entre mangues e vistas que transformam qualquer momento em algo memorável. Tudo isso com o suporte de quem entende da região, garantindo mais segurança, conforto e uma experiência muito mais completa.</p>
+              <p>Cada passeio oferece uma proposta diferente: alguns são perfeitos para relaxar e aproveitar a tranquilidade das lagoas, enquanto outros são ideais para quem busca emoção e aventura nas dunas. Essa variedade faz com que cada escolha traga uma nova forma de conhecer Jericoacoara.</p>
+            </div>
+            <div className="space-y-5">
+              <p>
+                A seguir, você vai encontrar os principais passeios disponíveis, com todos os detalhes necessários para escolher a experiência ideal para o seu perfil e transformar sua viagem em algo verdadeiramente inesquecível.</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                  </div>
+          </div>
+        </div>
+      </section>
 
 
       {/* VEÍCULOS */}
@@ -311,9 +311,8 @@ A seguir, você vai encontrar os principais passeios disponíveis, com todos os 
                     <button
                       key={index}
                       onClick={() => setCarouselIndex(index)}
-                      className={`w-2 h-2 rounded-full transition ${
-                        index === carouselIndex ? 'bg-accent' : 'bg-border'
-                      }`}
+                      className={`w-2 h-2 rounded-full transition ${index === carouselIndex ? 'bg-accent' : 'bg-border'
+                        }`}
                       aria-label={`Ir para passeio ${index + 1}`}
                     />
                   ))}
@@ -335,9 +334,8 @@ A seguir, você vai encontrar os principais passeios disponíveis, com todos os 
                   <button
                     key={index}
                     onClick={() => setCarouselIndex(index)}
-                    className={`w-2 h-2 rounded-full transition ${
-                      index === carouselIndex ? 'bg-accent' : 'bg-border'
-                    }`}
+                    className={`w-2 h-2 rounded-full transition ${index === carouselIndex ? 'bg-accent' : 'bg-border'
+                      }`}
                     aria-label={`Ir para passeio ${index + 1}`}
                   />
                 ))}
