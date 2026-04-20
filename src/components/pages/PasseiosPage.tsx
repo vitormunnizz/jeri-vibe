@@ -154,41 +154,29 @@ export default function PasseiosPage() {
 
       {/* VISÃO GERAL */}
       <section id="geralPasseios" className="bg-background py-16 px-6 md:py-24">
-        <div className="max-w-6xl mx-auto">
-          {/* TÍTULO */}
-          <motion.div 
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-5xl font-black text-primary mb-4 leading-tight">
-              Passeios Inesquecíveis em Jericoacoara
-            </h2>
-            <div className="h-1 w-24 bg-accent mx-auto rounded-full"></div>
-          </motion.div>
+<section id="historia" className="bg-orange-600 py-20 px-6 text-white">
+	<div className="max-w-5xl mx-auto">
+        <div className="flex flex-col items-center mb-12 text-center">
+        <span className="uppercase tracking-widest text-xs font-bold mb-2">		Descubra a Vila
+        </span>
+                                                                                	<h2 className="text-3xl md:text-4xl font-black">
+	Os Passeios Mais Incríveis de Jericoacoara Começam Aqui                                                                                                  	</h2>
+	<div className="h-1 w-20 bg-white mt-4 rounded-full"></div>
+	</div>
+<div className="grid md:grid-cols-2 gap-10 leading-relaxed text-base md:text-lg">
+<div className="space-y-5">
+<p>Jericoacoara é muito mais do que um destino turístico é onde cada paisagem surpreende e cada dia reserva uma nova experiência. Para realmente viver tudo o que Jeri tem a oferecer, os passeios são parte essencial da viagem, permitindo explorar desde os cenários mais famosos até cantos que só quem conhece a região sabe chegar.</p>
+<p className="italic border-l-2 border-white/30 pl-5">
+Ao longo desses roteiros, você vai se deparar com lagoas de águas cristalinas, dunas imponentes, travessias entre mangues e vistas que transformam qualquer momento em algo memorável. Tudo isso com o suporte de quem entende da região, garantindo mais segurança, conforto e uma experiência muito mais completa.</p>
+<p>Cada passeio oferece uma proposta diferente: alguns são perfeitos para relaxar e aproveitar a tranquilidade das lagoas, enquanto outros são ideais para quem busca emoção e aventura nas dunas. Essa variedade faz com que cada escolha traga uma nova forma de conhecer Jericoacoara.</p>
+</div>
+<div className="space-y-5">
+<p>
+A seguir, você vai encontrar os principais passeios disponíveis, com todos os detalhes necessários para escolher a experiência ideal para o seu perfil e transformar sua viagem em algo verdadeiramente inesquecível.</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                  </div>
+</div>
+</div>
+</section>
 
-          {/* TEXTO DESCRITIVO */}
-          <motion.div 
-            className="bg-gradient-to-r from-primary/5 to-accent/5 p-8 md:p-12 rounded-2xl space-y-4 border border-primary/10"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
-            <p className="text-base md:text-lg leading-relaxed text-foreground">
-              Jericoacoara é um paraíso natural onde cada passeio revela paisagens de tirar o fôlego. Das dunas gigantes ao encontro de lagoas cristalinas, cada roteiro foi cuidadosamente planejado para oferecer a melhor experiência possível.
-            </p>
-            <p className="text-base md:text-lg leading-relaxed text-foreground">
-              Nossos passeios combinam aventura, conforto e segurança. Seja em buggy, quadriciclo, UTV ou 4x4, você terá acesso aos pontos mais incríveis da região, com guias experientes que conhecem cada detalhe do caminho.
-            </p>
-            <p className="text-base md:text-lg leading-relaxed text-foreground">
-              Escolha entre o Lado Leste com suas lagoas paradisíacas, o Lado Oeste com dunas selvagens e mangues únicos, ou o Roteiro Extremo Leste para quem busca experiências ainda mais exclusivas. Cada roteiro é uma jornada única pela beleza natural do Ceará.
-            </p>
-          </motion.div>
-        </div>
-      </section>
 
       {/* VEÍCULOS */}
       <section id="veiculos" className="py-20 px-6 bg-background">
@@ -205,8 +193,8 @@ export default function PasseiosPage() {
 
           <div className="grid md:grid-cols-4 gap-6">
             {vehicleTypes.map((v) => (
-              <motion.div 
-                key={v.name} 
+              <motion.div
+                key={v.name}
                 className="p-6 border-2 border-border rounded-xl hover:border-accent transition hover:shadow-lg bg-background"
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -246,7 +234,7 @@ export default function PasseiosPage() {
             </button>
 
             {/* CAROUSEL ITEM */}
-            <motion.div 
+            <motion.div
               className="bg-background rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition relative flex-1 h-96 md:h-[500px]"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -384,8 +372,8 @@ export default function PasseiosPage() {
 
           <div className="space-y-3">
             {faqs.map((faq, index) => (
-              <motion.div 
-                key={index} 
+              <motion.div
+                key={index}
                 className="border-2 border-border p-6 rounded-xl bg-background hover:border-accent transition"
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
