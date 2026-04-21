@@ -152,7 +152,7 @@ export default function AulasPage() {
           </div>
         )}
 
-        <Image src="https://static.wixstatic.com/media/792b6b_f1a29dfb5f294176b121771875f4bafa~mv2.png?originWidth=1152&originHeight=576" className="absolute w-full h-full object-cover opacity-80" alt="Hero background" />
+        <Image src="https://static.wixstatic.com/media/792b6b_6fccfcc639634ffb866c533270bda3b9~mv2.png" className="absolute w-full h-full object-cover opacity-80" alt="Hero background" />
 
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
           <span className="text-accent mb-2 uppercase tracking-widest text-xs md:text-sm">
