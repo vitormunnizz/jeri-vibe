@@ -17,10 +17,54 @@ export default function AulasPage() {
   ];
 
   const aulas = [
-    { emoji: '🪁', titulo: 'Kitesurf', desc: 'Aprenda kitesurf no Preá, um dos melhores destinos do mundo para iniciantes, com ventos constantes que aceleram seu aprendizado do básico ao avançado.', msg: 'Olá! Quero agendar uma aula de Kitesurf.' },
-    { emoji: '🌬️', titulo: 'Windsurf', desc: 'Descubra o Windsurf em Jericoacoara e aprenda a dominar o vento com aulas práticas que desenvolvem equilíbrio, controle e técnica de forma progressiva.', msg: 'Olá! Quero agendar uma aula de Windsurf.' },
-    { emoji: '🏄', titulo: 'Surf', desc: 'Aprenda a surfar em Jericoacoara com aulas pensadas para iniciantes, aproveitando ondas ideais e um ambiente perfeito para evolução rápida e segura.', msg: 'Olá! Quero agendar uma aula de Surf.' },
-    { emoji: '🌊', titulo: 'Wing Foil', desc: 'Experimente o Wing Foil em Jericoacoara, o esporte que mais cresce no mundo, com aulas completas para você aprender a voar sobre a água com segurança.', msg: 'Olá! Quero agendar uma aula de Wing Foil.' },
+    {
+      image: 'https://static.wixstatic.com/media/792b6b_8422e221a25f4714825deac834453cb3~mv2.png?originWidth=768&originHeight=448',
+      titulo: 'Kitesurf',
+      desc: 'Aprenda kitesurf no Preá, um dos melhores destinos do mundo para iniciantes, com ventos constantes que aceleram seu aprendizado do básico ao avançado. As aulas começam com técnica de controle da pipa na areia e evoluem para a água, desenvolvendo equilíbrio, direção e manobras progressivas.',
+      beneficios: [
+        'Pipas de diferentes tamanhos (7m, 9m, 12m)',
+        'Pranchas bidirecionais para iniciantes',
+        'Coletes de flutuação e leash de segurança',
+        'Instrutores certificados internacionalmente'
+      ],
+      msg: 'Olá! Quero agendar uma aula de Kitesurf.'
+    },
+    {
+      image: 'https://static.wixstatic.com/media/792b6b_6c8eafd808e4465f8481472f77bfb76e~mv2.png?originWidth=768&originHeight=448',
+      titulo: 'Windsurf',
+      desc: 'Descubra o Windsurf em Jericoacoara e aprenda a dominar o vento com aulas práticas que desenvolvem equilíbrio, controle e técnica de forma progressiva. As aulas começam com posicionamento correto na prancha e evoluem para manobras e mudanças de direção.',
+      beneficios: [
+        'Pranchas de alto volume para iniciantes',
+        'Velas de diferentes tamanhos (2.5m a 4.5m)',
+        'Mastros e booms ajustáveis',
+        'Coletes de segurança inclusos'
+      ],
+      msg: 'Olá! Quero agendar uma aula de Windsurf.'
+    },
+    {
+      image: 'https://static.wixstatic.com/media/792b6b_2fab59f071e54e1ba72c8513563d5e41~mv2.png?originWidth=768&originHeight=448',
+      titulo: 'Surf',
+      desc: 'Aprenda a surfar em Jericoacoara com aulas pensadas para iniciantes, aproveitando ondas ideais e um ambiente perfeito para evolução rápida e segura. As aulas focam em remada, posicionamento, pop-up e leitura das ondas.',
+      beneficios: [
+        'Pranchas soft-top de diferentes volumes',
+        'Leash de segurança para todas as aulas',
+        'Orientação sobre segurança no mar',
+        'Aulas em grupos pequenos e personalizadas'
+      ],
+      msg: 'Olá! Quero agendar uma aula de Surf.'
+    },
+    {
+      image: 'https://static.wixstatic.com/media/792b6b_54cbbf0d83184de8904ab7160600cc23~mv2.png?originWidth=768&originHeight=448',
+      titulo: 'Wing Foil',
+      desc: 'O Wing Foil é um esporte que combina uma asa inflável (wing) com uma prancha equipada com foil, permitindo que você se eleve acima da água e deslize com pouca resistência. As aulas em Jericoacoara começam com controle da wing na areia e evoluem para a água, trabalhando equilíbrio, direção e ganho de estabilidade. As condições de vento da região facilitam o aprendizado desde as primeiras sessões.',
+      beneficios: [
+        'Pranchas de alto volume para iniciantes + pranchas menores para evolução',
+        'Foil (mastro, fuselagem e asas) ajustado para estabilidade e controle',
+        'Wings de diferentes tamanhos conforme intensidade do vento',
+        'Uso de leash de segurança e colete durante toda a aula'
+      ],
+      msg: 'Olá! Quero agendar uma aula de Wing Foil.'
+    },
   ];
 
   const etapas = [
@@ -201,9 +245,13 @@ export default function AulasPage() {
               viewport={{ once: true }}
             >
               <div className="grid md:grid-cols-2 gap-0 h-full">
-                {/* IMAGEM - PLACEHOLDER */}
-                <div className="relative h-full bg-gradient-to-br from-accent to-accent/80 flex items-center justify-center">
-                  <div className="text-8xl">{aulas[carouselIndex].emoji}</div>
+                {/* IMAGEM */}
+                <div className="relative h-full bg-gradient-to-br from-accent to-accent/80 flex items-center justify-center overflow-hidden">
+                  <Image
+                    src={aulas[carouselIndex].image}
+                    alt={aulas[carouselIndex].titulo}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
 
                 {/* CONTEÚDO */}
@@ -223,18 +271,12 @@ export default function AulasPage() {
 
                     {/* BENEFÍCIOS */}
                     <div className="space-y-2">
-                      <div className="flex items-center gap-2">
-                        <span className="text-accent font-bold flex-shrink-0">✓</span>
-                        <span className="text-xs text-foreground">Instrutores experientes</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <span className="text-accent font-bold flex-shrink-0">✓</span>
-                        <span className="text-xs text-foreground">Equipamento incluso</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <span className="text-accent font-bold flex-shrink-0">✓</span>
-                        <span className="text-xs text-foreground">Aulas adaptadas ao seu nível</span>
-                      </div>
+                      {aulas[carouselIndex].beneficios.map((beneficio, idx) => (
+                        <div key={idx} className="flex items-start gap-2">
+                          <span className="text-accent font-bold flex-shrink-0 mt-0.5">✓</span>
+                          <span className="text-xs text-foreground">{beneficio}</span>
+                        </div>
+                      ))}
                     </div>
                   </div>
 
