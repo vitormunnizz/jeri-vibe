@@ -156,11 +156,11 @@ export default function AulasPage() {
 
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
           <span className="text-accent mb-2 uppercase tracking-widest text-xs md:text-sm">
-            Bem-vindo ao Destino Nº 1
+            Aprenda com segurança nas melhores condições do Ceará
           </span>
 
           <h1 className="text-3xl md:text-5xl font-black italic tracking-tighter mb-6">
-            Aulas de Esportes <br /> em Jericoacoara
+            Aulas de Kitesurf no Preá e <br /> Esportes Aquáticos em Jericoacoara
           </h1>
 
           <a
