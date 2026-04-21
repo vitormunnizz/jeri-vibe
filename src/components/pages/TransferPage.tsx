@@ -1,6 +1,7 @@
 import { Image } from '@/components/ui/image';
 import { MessageCircle } from "lucide-react";
 import { useState } from "react";
+import { images } from '@/assets/images';
 
 export default function TransferPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -46,7 +47,7 @@ export default function TransferPage() {
       {/* HERO */}
       <section className="min-h-screen w-full text-white relative overflow-hidden">
         <header className="absolute w-full flex justify-between px-6 md:px-10 py-4 z-50 items-center">
-          <Image src="https://static.wixstatic.com/media/792b6b_db67302a203f42429486f97568002b88~mv2.png?originWidth=1152&originHeight=576" alt="Logo Jeri4xp" className="w-20 md:w-24" />
+          <Image src={images.logo} alt="Logo Jeri4xp" className="w-20 md:w-24" />
 
           <nav className="hidden md:flex gap-8 text-sm font-bold uppercase tracking-wider">
             {navItems.map((item) => (
@@ -80,7 +81,7 @@ export default function TransferPage() {
           </div>
         )}
 
-        <Image src="https://static.wixstatic.com/media/792b6b_f1a29dfb5f294176b121771875f4bafa~mv2.png?originWidth=1152&originHeight=576" className="absolute w-full h-full object-cover opacity-80" alt="Hero background" />
+        <Image src={images.heroPasseios} className="absolute w-full h-full object-cover opacity-80" alt="Hero background" />
 
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
           <span className="text-orange-600 mb-2 uppercase tracking-widest text-xs md:text-sm">
@@ -128,7 +129,7 @@ export default function TransferPage() {
                 MAIS POPULAR
               </span>
 
-              <Image src="https://static.wixstatic.com/media/792b6b_d4c5932b099c4552a2356fa26ce00f01~mv2.png?originWidth=576&originHeight=384" alt="Fortaleza Transfer" className="w-full h-48 object-cover rounded-xl mb-6" />
+              <Image src={images.transferFortaleza} alt="Fortaleza Transfer" className="w-full h-48 object-cover rounded-xl mb-6" />
 
               <h3 className="text-2xl font-black text-gray-900 mb-3">
                 Fortaleza → Jericoacoara
@@ -169,7 +170,7 @@ export default function TransferPage() {
                 MAIS RÁPIDO
               </span>
 
-              <Image src="https://static.wixstatic.com/media/792b6b_d4c5932b099c4552a2356fa26ce00f01~mv2.png?originWidth=576&originHeight=384" alt="Aeroporto Cruz Transfer" className="w-full h-48 object-cover rounded-xl mb-6" />
+              <Image src={images.transferCruz} alt="Aeroporto Cruz Transfer" className="w-full h-48 object-cover rounded-xl mb-6" />
 
               <h3 className="text-2xl font-black text-gray-900 mb-3">
                 Aeroporto de Cruz → Jericoacoara

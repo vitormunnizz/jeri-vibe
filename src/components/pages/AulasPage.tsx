@@ -18,7 +18,7 @@ export default function AulasPage() {
 
   const aulas = [
     {
-      image: 'https://static.wixstatic.com/media/792b6b_8422e221a25f4714825deac834453cb3~mv2.png?originWidth=768&originHeight=448',
+      image: images.aulasKitesurf,
       titulo: 'Kitesurf',
       desc: 'Aprenda kitesurf no Preá, um dos melhores destinos do mundo para iniciantes, com ventos constantes que aceleram seu aprendizado do básico ao avançado. As aulas começam com técnica de controle da pipa na areia e evoluem para a água, desenvolvendo equilíbrio, direção e manobras progressivas.',
       beneficios: [
@@ -30,7 +30,7 @@ export default function AulasPage() {
       msg: 'Olá! Quero agendar uma aula de Kitesurf.'
     },
     {
-      image: 'https://static.wixstatic.com/media/792b6b_6c8eafd808e4465f8481472f77bfb76e~mv2.png?originWidth=768&originHeight=448',
+      image: images.aulasWindsurf,
       titulo: 'Windsurf',
       desc: 'Descubra o Windsurf em Jericoacoara e aprenda a dominar o vento com aulas práticas que desenvolvem equilíbrio, controle e técnica de forma progressiva. As aulas começam com posicionamento correto na prancha e evoluem para manobras e mudanças de direção.',
       beneficios: [
@@ -42,7 +42,7 @@ export default function AulasPage() {
       msg: 'Olá! Quero agendar uma aula de Windsurf.'
     },
     {
-      image: 'https://static.wixstatic.com/media/792b6b_2fab59f071e54e1ba72c8513563d5e41~mv2.png?originWidth=768&originHeight=448',
+      image: images.aulasSurf,
       titulo: 'Surf',
       desc: 'Aprenda a surfar em Jericoacoara com aulas pensadas para iniciantes, aproveitando ondas ideais e um ambiente perfeito para evolução rápida e segura. As aulas focam em remada, posicionamento, pop-up e leitura das ondas.',
       beneficios: [
@@ -54,7 +54,7 @@ export default function AulasPage() {
       msg: 'Olá! Quero agendar uma aula de Surf.'
     },
     {
-      image: 'https://static.wixstatic.com/media/792b6b_54cbbf0d83184de8904ab7160600cc23~mv2.png?originWidth=768&originHeight=448',
+      image: images.aulasWingFoil,
       titulo: 'Wing Foil',
       desc: 'O Wing Foil é um esporte que combina uma asa inflável (wing) com uma prancha equipada com foil, permitindo que você se eleve acima da água e deslize com pouca resistência. As aulas em Jericoacoara começam com controle da wing na areia e evoluem para a água, trabalhando equilíbrio, direção e ganho de estabilidade. As condições de vento da região facilitam o aprendizado desde as primeiras sessões.',
       beneficios: [
@@ -118,7 +118,7 @@ export default function AulasPage() {
       {/* HERO */}
       <section className="min-h-screen w-full text-white relative overflow-hidden">
         <header className="absolute w-full flex justify-between px-6 md:px-10 py-4 z-50 items-center">
-          <Image src="https://static.wixstatic.com/media/792b6b_db67302a203f42429486f97568002b88~mv2.png?originWidth=1152&originHeight=576" alt="Logo Jeri4xp" className="w-20 md:w-24" />
+          <Image src={images.logo} alt="Logo Jeri4xp" className="w-20 md:w-24" />
 
           <nav className="hidden md:flex gap-8 text-sm font-bold uppercase tracking-wider">
             {navItems.map((item) => (
@@ -152,7 +152,7 @@ export default function AulasPage() {
           </div>
         )}
 
-        <Image src="https://static.wixstatic.com/media/792b6b_6fccfcc639634ffb866c533270bda3b9~mv2.png" className="absolute w-full h-full object-cover opacity-80" alt="Hero background" />
+        <Image src={images.heroAulas} className="absolute w-full h-full object-cover opacity-80" alt="Hero background" />
 
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
           <span className="text-accent mb-2 uppercase tracking-widest text-xs md:text-sm">

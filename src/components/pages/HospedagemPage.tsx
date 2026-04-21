@@ -97,7 +97,7 @@ export default function HospedagemPage() {
       {/* HERO */}
       <section className="min-h-screen w-full text-white relative overflow-hidden">
         <header className="absolute w-full flex justify-between px-6 md:px-10 py-4 z-50 items-center">
-          <Image src="https://static.wixstatic.com/media/792b6b_db67302a203f42429486f97568002b88~mv2.png?originWidth=1152&originHeight=576" alt="Logo Jeri4xp" className="w-20 md:w-24" />
+          <Image src={images.logo} alt="Logo Jeri4xp" className="w-20 md:w-24" />
 
           <nav className="hidden md:flex gap-8 text-sm font-bold uppercase tracking-wider">
             {navItems.map((item) => (
@@ -131,7 +131,7 @@ export default function HospedagemPage() {
           </div>
         )}
 
-        <Image src="/jeri1.webp" className="absolute w-full h-full object-cover opacity-80" alt="Hospedagem Jeri" />
+        <Image src={images.heroHospedagem} className="absolute w-full h-full object-cover opacity-80" alt="Hospedagem Jeri" />
 
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
           <span className="text-accent mb-2 uppercase tracking-widest text-xs md:text-sm">
@@ -246,7 +246,7 @@ export default function HospedagemPage() {
               <div className="grid md:grid-cols-2 gap-0 h-full">
                 <div className="relative h-full">
                   <Image
-                    src="/logo_jeri4xp.png"
+                    src={images.carouselHospedagem}
                     alt={tiposHospedagem[carouselIndex].titulo}
                     className="w-full h-full object-cover"
                   />
