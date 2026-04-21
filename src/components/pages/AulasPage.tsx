@@ -56,7 +56,7 @@ export default function AulasPage() {
       answer: 'Em média, entre 6 a 15 horas de aulas.O Preá possui ventos mais fortes e constantes, sendo considerado um dos melhores lugares do mundo para aprender kitesurf. Isso garante mais segurança e evolução rápida durante as aulas.',
     },
     {
-      question: 'As aulas são seguras?',
+      question: '🛟 As aulas são seguras?',
       answer: 'Sim. As aulas são acompanhadas por instrutores experientes, com foco em segurança, teoria básica, uso correto dos equipamentos e adaptação às condições do mar e do vento.',
     },
   ];
