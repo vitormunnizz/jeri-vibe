@@ -49,7 +49,7 @@ export default function AulasPage() {
         'Instrutores locais experientes',
         'Equipamento incluso nas aulas',
         'Orientação sobre segurança no mar',
-        'Aulas personalizadas'
+        'Aulas personalizadas, perfeito para quem está começando'
       ],
       msg: 'Olá! Quero agendar uma aula de Surf.'
     },
