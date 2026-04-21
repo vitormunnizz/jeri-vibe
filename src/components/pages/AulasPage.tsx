@@ -53,7 +53,7 @@ export default function AulasPage() {
     },
     {
       question: '🏄‍♂️ Quanto tempo leva para aprender kitesurf no Preá?',
-      answer: 'Em média, entre 6 a 15 horas de aula. No Preá, devido aos ventos constantes e condições ideais, muitos alunos conseguem começar a andar com a prancha em poucos dias de prática.O Preá possui ventos mais fortes e constantes, sendo considerado um dos melhores lugares do mundo para aprender kitesurf. Isso garante mais segurança e evolução rápida durante as aulas.',
+      answer: 'Em média, entre 6 a 15 horas de aula.O Preá possui ventos mais fortes e constantes, sendo considerado um dos melhores lugares do mundo para aprender kitesurf. Isso garante mais segurança e evolução rápida durante as aulas.',
     },
     {
       question: 'As aulas são seguras?',
