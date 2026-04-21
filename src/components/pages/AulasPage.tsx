@@ -45,7 +45,7 @@ export default function AulasPage() {
     },
     {
       question: 'Quais esportes posso aprender em Jericoacoara?',
-      answer: 'As modalidades mais procuradas são kitesurf, windsurf, surf e stand up paddle. Jericoacoara tem condições ideais de vento e mar para aprender com segurança.',
+      answer: 'As modalidades mais procuradas são kitesurf, windsurf, surf e wing foil. Jericoacoara tem condições ideais de vento e mar para aprender com segurança.',
     },
     {
       question: 'Quanto tempo dura uma aula?',
