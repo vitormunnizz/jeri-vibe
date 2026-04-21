@@ -1,6 +1,6 @@
 import { Image } from '@/components/ui/image';
 import { motion } from 'framer-motion';
-import { ChevronLeft, ChevronRight, Instagram, Mail, MessageCircle, MessageCircle as WhatsApp } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Instagram, Mail, MessageCircle } from 'lucide-react';
 import { useState } from 'react';
 
 export default function AulasPage() {
@@ -455,7 +455,7 @@ export default function AulasPage() {
               transition={{ duration: 0.3 }}
             >
               <div className="mb-4 bg-orange-600 p-4 rounded-2xl">
-                <WhatsApp size={40} className="text-white" />
+                <MessageCircle size={40} className="text-white" />
               </div>
               <h3 className="text-lg font-black mb-2">WhatsApp</h3>
               <p className="font-bold text-base mb-1">(85) 9 9900-1339</p>
