@@ -48,8 +48,8 @@ export default function AulasPage() {
       answer: 'As aulas de kitesurf acontecem no Preá, localizado a poucos minutos de Jericoacoara, devido às condições ideais de vento. Já as aulas de wing foil, windsurf e surf são realizadas em Jericoacoara.',
     },
     {
-      question: 'Quanto tempo dura uma aula?',
-      answer: 'A duração varia conforme a modalidade. Aulas avulsas costumam durar de 1 a 3 horas, enquanto cursos completos de kitesurf geralmente acontecem em 5 dias, com cerca de 3 horas por dia.',
+      question: '📅 Qual o melhor período para fazer aulas de esportes aquáticos na região?',
+      answer: 'A melhor época para kitesurf no Preá é de julho a janeiro, quando os ventos são mais intensos. Já o surf, wing foil e windsurf em Jericoacoara podem ser praticados durante praticamente todo o ano, dependendo das condições do mar.',
     },
     {
       question: 'Os equipamentos estão inclusos na aula?',
