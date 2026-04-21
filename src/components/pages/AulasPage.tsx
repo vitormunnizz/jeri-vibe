@@ -23,8 +23,8 @@ export default function AulasPage() {
       desc: 'Aprenda kitesurf no Preá, um dos melhores destinos do mundo para iniciantes, com ventos constantes que aceleram seu aprendizado do básico ao avançado. As aulas começam com técnica de controle da pipa na areia e evoluem para a água, desenvolvendo equilíbrio, direção e manobras progressivas.',
       beneficios: [
         'Equipamento completo incluso nas aulas',
-        'Pranchas bidirecionais para iniciantes',
-        'Aulas no Preá com condições ideais de vento',
+        '',
+        'Coletes de flutuação e leash de segurança',
         'Instrutores certificados e experientes.'
       ],
       msg: 'Olá! Quero agendar uma aula de Kitesurf.'
