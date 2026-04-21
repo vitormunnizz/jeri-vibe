@@ -431,23 +431,34 @@ export default function AulasPage() {
       </section>
 
       {/* CONTATO */}
-      <section id="contato" className="py-16 px-6 bg-orange-600">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-6">
+      <section id="contato" className="py-20 px-6 bg-accent">
+        <div className="max-w-5xl mx-auto">
+          {/* HEADER */}
+          <div className="text-center mb-16">
+            <p className="text-xs uppercase tracking-widest text-white font-bold mb-3">
+              Fale com a gente
+            </p>
+            <h2 className="text-3xl md:text-5xl font-black text-white mb-4">
+              Prepare sua próxima aventura em Jeri
+            </h2>
+          </div>
+
+          {/* CONTACT CARDS */}
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
             {/* WhatsApp Card */}
             <motion.a
               href="https://wa.me/5585999001339"
               target="_blank"
               rel="noreferrer"
-              className="bg-orange-600 border-2 border-white p-8 rounded-3xl hover:bg-orange-700 hover:shadow-xl transition flex flex-col items-center justify-center text-center font-heading text-white"
+              className="bg-orange-700 hover:bg-orange-800 p-8 rounded-3xl transition flex flex-col items-center justify-center text-center text-white"
               whileHover={{ scale: 1.05, y: -5 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="mb-4">
-                <WhatsApp size={48} className="text-white" />
+              <div className="mb-4 bg-orange-600 p-4 rounded-2xl">
+                <WhatsApp size={40} className="text-white" />
               </div>
-              <h3 className="text-xl font-black mb-2">WhatsApp</h3>
-              <p className="font-bold text-lg mb-1">(85) 9 9900-1339</p>
+              <h3 className="text-lg font-black mb-2">WhatsApp</h3>
+              <p className="font-bold text-base mb-1">(85) 9 9900-1339</p>
               <p className="text-xs uppercase tracking-widest">Clique para conversar</p>
             </motion.a>
 
@@ -456,36 +467,37 @@ export default function AulasPage() {
               href="https://instagram.com/jeri4xp"
               target="_blank"
               rel="noreferrer"
-              className="bg-orange-600 border-2 border-white p-8 rounded-3xl hover:bg-orange-700 hover:shadow-xl transition flex flex-col items-center justify-center text-center font-heading text-white"
+              className="bg-orange-700 hover:bg-orange-800 p-8 rounded-3xl transition flex flex-col items-center justify-center text-center text-white"
               whileHover={{ scale: 1.05, y: -5 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="bg-white/20 p-4 rounded-2xl mb-4">
-                <Instagram size={32} className="text-white" />
+              <div className="mb-4 bg-orange-600 p-4 rounded-2xl">
+                <Instagram size={40} className="text-white" />
               </div>
-              <h3 className="text-xl font-black mb-2">Instagram</h3>
-              <p className="font-bold text-lg mb-1">@jeri4xp</p>
+              <h3 className="text-lg font-black mb-2">Instagram</h3>
+              <p className="font-bold text-base mb-1">@jeri4xp</p>
               <p className="text-xs uppercase tracking-widest">Acompanhe as aventuras</p>
             </motion.a>
 
             {/* E-mail Card */}
             <motion.a
               href="mailto:jeri4xp@gmail.com"
-              className="bg-orange-600 border-2 border-white p-8 rounded-3xl hover:bg-orange-700 hover:shadow-xl transition flex flex-col items-center justify-center text-center font-heading text-white"
+              className="bg-orange-700 hover:bg-orange-800 p-8 rounded-3xl transition flex flex-col items-center justify-center text-center text-white"
               whileHover={{ scale: 1.05, y: -5 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="bg-white/20 p-4 rounded-2xl mb-4">
-                <Mail size={32} className="text-white" />
+              <div className="mb-4 bg-orange-600 p-4 rounded-2xl">
+                <Mail size={40} className="text-white" />
               </div>
-              <h3 className="text-xl font-black mb-2">E-mail</h3>
-              <p className="font-bold text-lg mb-1">jeri4xp@gmail.com</p>
+              <h3 className="text-lg font-black mb-2">E-mail</h3>
+              <p className="font-bold text-base mb-1">jeri4xp@gmail.com</p>
               <p className="text-xs uppercase tracking-widest">Envie sua mensagem</p>
             </motion.a>
           </div>
 
-          <div className="mt-12 text-center">
-            <p className="text-xs uppercase tracking-widest text-white font-heading">
+          {/* LOCATION */}
+          <div className="text-center">
+            <p className="text-xs uppercase tracking-widest text-white font-bold">
               Jericoacoara • Ceará • Brasil
             </p>
           </div>
