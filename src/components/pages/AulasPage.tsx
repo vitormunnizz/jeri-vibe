@@ -153,7 +153,7 @@ export default function AulasPage() {
                 Seja para aprender kitesurf no Preá ou fazer aulas de surf, wing foil e windsurf em Jericoacoara, você terá acesso às melhores condições do Ceará, com suporte completo e orientação profissional.
               </p>
               <p>
-
+                Fale agora pelo WhatsApp e agende sua aula de esporte aquático em Jericoacoara e região.
               </p>
             </div>
           </div>
