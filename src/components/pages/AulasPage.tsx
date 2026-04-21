@@ -25,7 +25,7 @@ export default function AulasPage() {
         'Pipas de diferentes tamanhos (7m, 9m, 12m)',
         'Pranchas bidirecionais para iniciantes',
         'Coletes de flutuação e leash de segurança',
-        'Instrutores certificados internacionalmente'
+        'Instrutores certificados e experientes.'
       ],
       msg: 'Olá! Quero agendar uma aula de Kitesurf.'
     },
