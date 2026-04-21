@@ -44,7 +44,7 @@ export default function AulasPage() {
       answer: 'Não. As aulas são indicadas tanto para iniciantes quanto para quem já pratica e quer evoluir. Os instrutores adaptam o ritmo conforme seu nível.',
     },
     {
-      question: 'Quais esportes posso aprender em Jericoacoara?',
+      question: '',
       answer: 'As modalidades mais procuradas são kitesurf, windsurf, surf e wing foil. Jericoacoara tem condições ideais de vento e mar para aprender com segurança.',
     },
     {
