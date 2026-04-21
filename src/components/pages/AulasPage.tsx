@@ -40,8 +40,8 @@ export default function AulasPage() {
 
   const faqs = [
     {
-      question: 'Preciso ter experiência para fazer aulas de esportes na praia?',
-      answer: 'Não. As aulas são indicadas tanto para iniciantes quanto para quem já pratica e quer evoluir. Os instrutores adaptam o ritmo conforme seu nível.',
+      question: '🏄‍♂️ Preciso ter experiência e o equipamento está incluso nas aulas de esportes aquáticos?',
+      answer: '',
     },
     {
       question: '📍 Onde acontecem as aulas de kitesurf, wing foil, windsurf e surf?',
