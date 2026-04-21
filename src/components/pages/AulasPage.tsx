@@ -49,7 +49,7 @@ export default function AulasPage() {
     },
     {
       question: 'Quanto tempo dura uma aula?',
-      answer: 'A duração varia conforme a modalidade. Aulas avulsas costumam durar de 1 a 3 horas, enquanto cursos completos de kitesurf geralmente acontecem em 3 dias, com cerca de 3 horas por dia.',
+      answer: 'A duração varia conforme a modalidade. Aulas avulsas costumam durar de 1 a 3 horas, enquanto cursos completos de kitesurf geralmente acontecem em 5 dias, com cerca de 3 horas por dia.',
     },
     {
       question: 'Os equipamentos estão inclusos na aula?',
