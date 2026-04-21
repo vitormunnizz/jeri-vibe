@@ -76,7 +76,7 @@ export default function HomePage() {
       {/* HERO */}
       <section className="min-h-screen w-full text-white relative overflow-hidden">
         <header className="absolute w-full flex justify-between px-6 md:px-10 py-4 z-50 items-center">
-          <Image src="C:\Users\vitor\OneDrive\Documentos\Web\jeri-vibe\src\assets\kitePrea.png" alt="Logo Jeri4xp" className="w-20 md:w-24" />
+          <Image src="../src/assets/kitePrea.png" alt="Logo Jeri4xp" className="w-20 md:w-24" />
 
           <nav className="hidden md:flex gap-8 text-sm font-bold uppercase tracking-wider">
             {navItems.map((item) => (
