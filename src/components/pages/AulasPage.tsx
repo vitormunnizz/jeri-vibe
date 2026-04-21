@@ -46,8 +46,8 @@ export default function AulasPage() {
       titulo: 'Surf',
       desc: 'Aprenda a surfar em Jericoacoara com aulas pensadas para iniciantes, aproveitando ondas ideais e um ambiente perfeito para evolução rápida e segura. As aulas focam em remada, posicionamento, pop-up e leitura das ondas.',
       beneficios: [
+        'Instrutores locais experientes',
         '',
-        'Leash de segurança para todas as aulas',
         'Orientação sobre segurança no mar',
         'Aulas em grupos pequenos e personalizadas'
       ],
