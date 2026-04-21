@@ -1,6 +1,6 @@
 import { Image } from '@/components/ui/image';
 import { motion } from 'framer-motion';
-import { ChevronLeft, ChevronRight, MessageCircle, Instagram, Mail } from 'lucide-react';
+import { ChevronLeft, ChevronRight, MessageCircle, Instagram, Mail, MessageCircle as WhatsAppIcon } from 'lucide-react';
 import { useState } from 'react';
 
 export default function AulasPage() {
@@ -431,7 +431,7 @@ export default function AulasPage() {
       </section>
 
       {/* CONTATO */}
-      <section id="contato" className="py-16 px-6 bg-white">
+      <section id="contato" className="py-16 px-6 bg-orange-600">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-3 gap-6">
             {/* WhatsApp Card */}
@@ -439,20 +439,16 @@ export default function AulasPage() {
               href="https://wa.me/5585999001339"
               target="_blank"
               rel="noreferrer"
-              className="bg-white border-2 border-accent p-8 rounded-3xl hover:bg-accent hover:text-white hover:shadow-xl transition flex flex-col items-center justify-center text-center font-heading"
+              className="bg-orange-600 border-2 border-white p-8 rounded-3xl hover:bg-orange-700 hover:shadow-xl transition flex flex-col items-center justify-center text-center font-heading text-white"
               whileHover={{ scale: 1.05, y: -5 }}
               transition={{ duration: 0.3 }}
             >
               <div className="mb-4">
-                <Image 
-                  src="https://static.wixstatic.com/media/792b6b_whatsapp_logo.png?originWidth=200&originHeight=200" 
-                  alt="WhatsApp Logo" 
-                  className="w-12 h-12"
-                />
+                <WhatsAppIcon size={48} className="text-white" />
               </div>
-              <h3 className="text-xl font-black mb-2 text-accent hover:text-white">WhatsApp</h3>
-              <p className="font-bold text-lg mb-1 text-accent hover:text-white">85 9 9900-1339</p>
-              <p className="text-xs uppercase tracking-widest text-accent hover:text-white">Clique para conversar</p>
+              <h3 className="text-xl font-black mb-2">WhatsApp</h3>
+              <p className="font-bold text-lg mb-1">85 9 9900-1339</p>
+              <p className="text-xs uppercase tracking-widest">Clique para conversar</p>
             </motion.a>
 
             {/* Instagram Card */}
@@ -460,36 +456,36 @@ export default function AulasPage() {
               href="https://instagram.com/jeri4xp"
               target="_blank"
               rel="noreferrer"
-              className="bg-white border-2 border-accent p-8 rounded-3xl hover:bg-accent hover:text-white hover:shadow-xl transition flex flex-col items-center justify-center text-center font-heading"
+              className="bg-orange-600 border-2 border-white p-8 rounded-3xl hover:bg-orange-700 hover:shadow-xl transition flex flex-col items-center justify-center text-center font-heading text-white"
               whileHover={{ scale: 1.05, y: -5 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="bg-accent/10 p-4 rounded-2xl mb-4">
-                <Instagram size={32} className="text-accent hover:text-white" />
+              <div className="bg-white/20 p-4 rounded-2xl mb-4">
+                <Instagram size={32} className="text-white" />
               </div>
-              <h3 className="text-xl font-black mb-2 text-accent hover:text-white">Instagram</h3>
-              <p className="font-bold text-lg mb-1 text-accent hover:text-white">@jeri4xp</p>
-              <p className="text-xs uppercase tracking-widest text-accent hover:text-white">Acompanhe as aventuras</p>
+              <h3 className="text-xl font-black mb-2">Instagram</h3>
+              <p className="font-bold text-lg mb-1">@jeri4xp</p>
+              <p className="text-xs uppercase tracking-widest">Acompanhe as aventuras</p>
             </motion.a>
 
             {/* E-mail Card */}
             <motion.a
               href="mailto:jeri4xp@gmail.com"
-              className="bg-white border-2 border-accent p-8 rounded-3xl hover:bg-accent hover:text-white hover:shadow-xl transition flex flex-col items-center justify-center text-center font-heading"
+              className="bg-orange-600 border-2 border-white p-8 rounded-3xl hover:bg-orange-700 hover:shadow-xl transition flex flex-col items-center justify-center text-center font-heading text-white"
               whileHover={{ scale: 1.05, y: -5 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="bg-accent/10 p-4 rounded-2xl mb-4">
-                <Mail size={32} className="text-accent hover:text-white" />
+              <div className="bg-white/20 p-4 rounded-2xl mb-4">
+                <Mail size={32} className="text-white" />
               </div>
-              <h3 className="text-xl font-black mb-2 text-accent hover:text-white">E-mail</h3>
-              <p className="font-bold text-lg mb-1 text-accent hover:text-white">jeri4xp@gmail.com</p>
-              <p className="text-xs uppercase tracking-widest text-accent hover:text-white">Envie sua mensagem</p>
+              <h3 className="text-xl font-black mb-2">E-mail</h3>
+              <p className="font-bold text-lg mb-1">jeri4xp@gmail.com</p>
+              <p className="text-xs uppercase tracking-widest">Envie sua mensagem</p>
             </motion.a>
           </div>
 
           <div className="mt-12 text-center">
-            <p className="text-xs uppercase tracking-widest text-accent font-heading">
+            <p className="text-xs uppercase tracking-widest text-white font-heading">
               Jericoacoara • Ceará • Brasil
             </p>
           </div>
