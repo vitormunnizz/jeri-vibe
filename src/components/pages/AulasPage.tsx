@@ -41,7 +41,7 @@ export default function AulasPage() {
   const faqs = [
     {
       question: '🏄‍♂️ Preciso ter experiência e o equipamento está incluso nas aulas de esportes aquáticos?',
-      answer: 'Não é necessário ter experiência. As aulas são indicadas tanto para iniciantes quanto para quem já pratica e deseja evoluir, com instrutores adaptando o ensino ao seu nível.',
+      answer: 'Não é necessário ter experiência. As aulas são indicadas tanto para iniciantes quanto para quem já pratica e deseja evoluir, com instrutores adaptando o ensino ao seu nível. Além disso, todo o equipamento necessário está incluso durante as horas de aula, garantindo segurança e praticidade para você focar totalmente na experiência.',
     },
     {
       question: '📍 Onde acontecem as aulas de kitesurf, wing foil, windsurf e surf?',
