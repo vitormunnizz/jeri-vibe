@@ -217,7 +217,7 @@ export default function AulasPage() {
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col items-center mb-12 text-center">
             <span className="uppercase tracking-widest text-xs font-bold mb-2 text-accent">
-              Escolha sua Experiência
+              Modalidades
             </span>
             <h2 className="text-3xl md:text-4xl font-black text-primary">
               Escolha sua Modalidade
