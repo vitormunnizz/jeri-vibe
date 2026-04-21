@@ -130,7 +130,7 @@ export default function AulasPage() {
               Descubra a Experiência
             </span>
             <h2 className="text-3xl md:text-4xl font-black">
-              Aulas de Esportes Aquáticos em Jericoacoara e Kitesurf no Preá
+              Aulas de Esportes Aquáticos em Jeri e Kitesurf no Preá
             </h2>
             <div className="h-1 w-20 bg-white mt-4 rounded-full"></div>
           </div>
