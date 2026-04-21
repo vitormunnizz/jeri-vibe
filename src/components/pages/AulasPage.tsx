@@ -53,7 +53,7 @@ export default function AulasPage() {
     },
     {
       question: 'Os equipamentos estão inclusos na aula?',
-      answer: 'Na maioria das escolas, sim. Os equipamentos de segurança e prática costumam estar inclusos, garantindo mais conforto para quem está começando.',
+      answer: 'Sim. Os equipamentos de segurança e prática estão inclusos, garantindo mais conforto para quem está começando.',
     },
     {
       question: 'As aulas são seguras?',
