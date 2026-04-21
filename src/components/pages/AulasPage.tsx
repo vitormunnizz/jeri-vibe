@@ -59,8 +59,8 @@ export default function AulasPage() {
       desc: 'O Wing Foil é um esporte que combina uma asa inflável (wing) com uma prancha equipada com foil, permitindo que você se eleve acima da água e deslize com pouca resistência. As aulas em Jericoacoara começam com controle da wing na areia e evoluem para a água, trabalhando equilíbrio, direção e ganho de estabilidade. As condições de vento da região facilitam o aprendizado desde as primeiras sessões.',
       beneficios: [
         'Pranchas de alto volume para iniciantes + pranchas menores para evolução',
-        'Foil (mastro, fuselagem e asas) ajustado para estabilidade e controle',
-        'Wings de diferentes tamanhos conforme intensidade do vento',
+        'Aulas adaptadas para seu nivel',
+        'E',
         'Uso de leash de segurança e colete durante toda a aula'
       ],
       msg: 'Olá! Quero agendar uma aula de Wing Foil.'
