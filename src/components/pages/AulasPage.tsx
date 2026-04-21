@@ -1,6 +1,6 @@
 import { Image } from '@/components/ui/image';
 import { motion } from 'framer-motion';
-import { ChevronLeft, ChevronRight, MessageCircle, Instagram } from 'lucide-react';
+import { ChevronLeft, ChevronRight, MessageCircle, Instagram, Mail } from 'lucide-react';
 import { useState } from 'react';
 
 export default function AulasPage() {
@@ -431,57 +431,61 @@ export default function AulasPage() {
       </section>
 
       {/* CONTATO */}
-      <section id="contato" className="py-20 px-6 bg-primary text-white">
-        <div className="text-center max-w-4xl mx-auto">
-          <span className="inline-block px-4 py-1 bg-white/10 rounded-full text-xs uppercase mb-6 font-bold">
-            Fale com a gente
-          </span>
-
-          <h2 className="text-3xl md:text-4xl font-black mb-12">
-            Prepare sua próxima aventura em Jeri
-          </h2>
-
+      <section id="contato" className="py-16 px-6 bg-accent text-white">
+        <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-3 gap-6">
+            {/* WhatsApp Card */}
             <motion.a
               href="https://wa.me/5585999001339"
               target="_blank"
               rel="noreferrer"
-              className="bg-white/10 p-6 rounded-2xl hover:bg-white hover:text-primary transition text-sm md:text-base"
-              whileHover={{ scale: 1.05 }}
+              className="bg-gradient-to-br from-accent to-accent/90 p-8 rounded-3xl hover:shadow-xl transition flex flex-col items-center justify-center text-center"
+              whileHover={{ scale: 1.05, y: -5 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="font-bold mb-2">WhatsApp</div>
-              <div className="font-bold">85 9 9900-1339</div>
+              <div className="bg-white/20 p-4 rounded-2xl mb-4 backdrop-blur-sm">
+                <MessageCircle size={32} className="text-white" />
+              </div>
+              <h3 className="text-xl font-black mb-2">WhatsApp</h3>
+              <p className="font-bold text-lg mb-1">85 9 9900-1339</p>
+              <p className="text-xs uppercase tracking-widest opacity-90">Clique para conversar</p>
             </motion.a>
 
+            {/* Instagram Card */}
             <motion.a
               href="https://instagram.com/jeri4xp"
               target="_blank"
               rel="noreferrer"
-              className="bg-white/10 p-6 rounded-2xl hover:bg-white hover:text-primary transition text-sm md:text-base"
-              whileHover={{ scale: 1.05 }}
+              className="bg-gradient-to-br from-accent to-accent/90 p-8 rounded-3xl hover:shadow-xl transition flex flex-col items-center justify-center text-center"
+              whileHover={{ scale: 1.05, y: -5 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="font-bold mb-2 flex items-center gap-2">
-                <Instagram size={20} />
-                Instagram
+              <div className="bg-white/20 p-4 rounded-2xl mb-4 backdrop-blur-sm">
+                <Instagram size={32} className="text-white" />
               </div>
-              <div className="font-bold">@jeri4xp</div>
+              <h3 className="text-xl font-black mb-2">Instagram</h3>
+              <p className="font-bold text-lg mb-1">@jeri4xp</p>
+              <p className="text-xs uppercase tracking-widest opacity-90">Acompanhe as aventuras</p>
             </motion.a>
 
+            {/* E-mail Card */}
             <motion.a
               href="mailto:jeri4xp@gmail.com"
-              className="bg-white/10 p-6 rounded-2xl hover:bg-white hover:text-primary transition text-sm md:text-base"
-              whileHover={{ scale: 1.05 }}
+              className="bg-gradient-to-br from-accent to-accent/90 p-8 rounded-3xl hover:shadow-xl transition flex flex-col items-center justify-center text-center"
+              whileHover={{ scale: 1.05, y: -5 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="font-bold mb-2">E-mail</div>
-              <div className="font-bold">jeri4xp@gmail.com</div>
+              <div className="bg-white/20 p-4 rounded-2xl mb-4 backdrop-blur-sm">
+                <Mail size={32} className="text-white" />
+              </div>
+              <h3 className="text-xl font-black mb-2">E-mail</h3>
+              <p className="font-bold text-lg mb-1">jeri4xp@gmail.com</p>
+              <p className="text-xs uppercase tracking-widest opacity-90">Envie sua mensagem</p>
             </motion.a>
           </div>
 
-          <div className="mt-12">
-            <p className="text-xs uppercase tracking-widest">
+          <div className="mt-12 text-center">
+            <p className="text-xs uppercase tracking-widest opacity-90">
               Jericoacoara • Ceará • Brasil
             </p>
           </div>
