@@ -1,11 +1,12 @@
 import { Image } from '@/components/ui/image';
 import { motion } from 'framer-motion';
-import { MessageCircle } from 'lucide-react';
+import { ChevronLeft, ChevronRight, MessageCircle } from 'lucide-react';
 import { useState } from 'react';
 
 export default function AulasPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [expandedFaq, setExpandedFaq] = useState(null);
+  const [carouselIndex, setCarouselIndex] = useState(0);
 
   const navItems = [
     { name: 'Visão Geral', link: '#geralAulas' },
@@ -13,6 +14,13 @@ export default function AulasPage() {
     { name: 'Funcionamento', link: '#funcionamento' },
     { name: 'Dúvidas', link: '#duvidaAulas' },
     { name: 'Contato', link: '#contato' },
+  ];
+
+  const aulas = [
+    { emoji: '🪁', titulo: 'Kitesurf', desc: 'Aprenda desde o básico até técnicas avançadas com aulas práticas e suporte completo.', msg: 'Olá! Quero agendar uma aula de Kitesurf.' },
+    { emoji: '🌬️', titulo: 'Windsurf', desc: 'Viva a emoção de velejar com vento perfeito e aulas adaptadas ao seu nível.', msg: 'Olá! Quero agendar uma aula de Windsurf.' },
+    { emoji: '🏄', titulo: 'Surf', desc: 'Aulas para iniciantes e intermediários com foco em equilíbrio, técnica e diversão.', msg: 'Olá! Quero agendar uma aula de Surf.' },
+    { emoji: '🌊', titulo: 'Stand Up Paddle', desc: 'Explore águas calmas e belas paisagens com aulas leves e perfeitas para relaxar.', msg: 'Olá! Quero agendar uma aula de Stand Up Paddle.' },
   ];
 
   const etapas = [
@@ -53,7 +61,7 @@ export default function AulasPage() {
     },
     {
       question: '🏄‍♂️ Quanto tempo leva para aprender kitesurf no Preá?',
-      answer: 'Em média, entre 6 a 15 horas de aulas.O Preá possui ventos mais fortes e constantes, sendo considerado um dos melhores lugares do mundo para aprender kitesurf. Isso garante mais segurança e evolução rápida durante as aulas.',
+      answer: 'Em média, entre 6 a 15 horas de aulas. O Preá possui ventos mais fortes e constantes, sendo considerado um dos melhores lugares do mundo para aprender kitesurf. Isso garante mais segurança e evolução rápida durante as aulas.',
     },
     {
       question: '🛟 As aulas são seguras?',
@@ -160,8 +168,8 @@ export default function AulasPage() {
         </div>
       </section>
 
-      {/* AULAS */}
-      <section id="aulas" className="py-20 px-6 bg-background">
+      {/* AULAS - CAROUSEL */}
+      <section id="aulas" className="py-20 px-6 bg-muted">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col items-center mb-12 text-center">
             <span className="uppercase tracking-widest text-xs font-bold mb-2 text-accent">
@@ -173,36 +181,131 @@ export default function AulasPage() {
             <div className="h-1 w-20 bg-accent mt-4 rounded-full"></div>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { emoji: '🪁', titulo: 'Kitesurf', desc: 'Aprenda desde o básico até técnicas avançadas com aulas práticas e suporte completo.', msg: 'Olá! Quero agendar uma aula de Kitesurf.' },
-              { emoji: '🌬️', titulo: 'Windsurf', desc: 'Viva a emoção de velejar com vento perfeito e aulas adaptadas ao seu nível.', msg: 'Olá! Quero agendar uma aula de Windsurf.' },
-              { emoji: '🏄', titulo: 'Surf', desc: 'Aulas para iniciantes e intermediários com foco em equilíbrio, técnica e diversão.', msg: 'Olá! Quero agendar uma aula de Surf.' },
-              { emoji: '🌊', titulo: 'Stand Up Paddle', desc: 'Explore águas calmas e belas paisagens com aulas leves e perfeitas para relaxar.', msg: 'Olá! Quero agendar uma aula de Stand Up Paddle.' },
-            ].map((item) => (
-              <motion.div
-                key={item.titulo}
-                className="flex flex-col justify-between bg-accent text-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition hover:border-2 border-accent"
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-              >
-                <div>
-                  <div className="text-4xl mb-4">{item.emoji}</div>
-                  <h3 className="text-2xl font-black mb-3">{item.titulo}</h3>
-                  <p className="text-sm">{item.desc}</p>
+          {/* CAROUSEL CONTAINER */}
+          <div className="relative flex items-center gap-4">
+            {/* LEFT BUTTON - OUTSIDE CARD */}
+            <button
+              onClick={() => setCarouselIndex((prev) => (prev - 1 + aulas.length) % aulas.length)}
+              className="hidden md:flex bg-accent hover:bg-accent/90 text-white p-3 rounded-full transition shadow-lg flex-shrink-0"
+              aria-label="Aula anterior"
+            >
+              <ChevronLeft size={24} />
+            </button>
+
+            {/* CAROUSEL ITEM */}
+            <motion.div
+              className="bg-background rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition relative flex-1 h-96 md:h-[500px]"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+            >
+              <div className="grid md:grid-cols-2 gap-0 h-full">
+                {/* IMAGEM - PLACEHOLDER */}
+                <div className="relative h-full bg-gradient-to-br from-accent to-accent/80 flex items-center justify-center">
+                  <div className="text-8xl">{aulas[carouselIndex].emoji}</div>
                 </div>
-                <a
-                  href={`https://wa.me/5585999001339?text=${item.msg}`}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="mt-6 bg-white text-accent py-2 rounded-xl font-bold text-center hover:bg-accent/90 hover:text-white transition text-sm"
+
+                {/* CONTEÚDO */}
+                <div className="p-8 flex flex-col justify-between overflow-y-auto">
+                  <div>
+                    <span className="inline-block px-4 py-1 bg-accent/10 text-accent text-xs font-bold rounded-full mb-3 w-fit">
+                      Modalidade
+                    </span>
+
+                    <h3 className="text-xl md:text-2xl font-black mb-2 text-primary line-clamp-2">
+                      {aulas[carouselIndex].titulo}
+                    </h3>
+
+                    <p className="text-foreground mb-3 text-sm">
+                      {aulas[carouselIndex].desc}
+                    </p>
+
+                    {/* BENEFÍCIOS */}
+                    <div className="space-y-2">
+                      <div className="flex items-center gap-2">
+                        <span className="text-accent font-bold flex-shrink-0">✓</span>
+                        <span className="text-xs text-foreground">Instrutores experientes</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span className="text-accent font-bold flex-shrink-0">✓</span>
+                        <span className="text-xs text-foreground">Equipamento incluso</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span className="text-accent font-bold flex-shrink-0">✓</span>
+                        <span className="text-xs text-foreground">Aulas adaptadas ao seu nível</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* CTA */}
+                  <a
+                    href={`https://wa.me/5585999001339?text=${aulas[carouselIndex].msg}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="bg-accent hover:bg-accent/90 text-white font-bold px-6 py-2 rounded-xl transition w-fit text-sm mt-4"
+                  >
+                    Agendar Aula
+                  </a>
+                </div>
+              </div>
+
+              {/* MOBILE CAROUSEL CONTROLS - BOTTOM CENTER */}
+              <div className="md:hidden flex items-center justify-center gap-4 px-4 py-4 bg-muted">
+                {/* LEFT BUTTON */}
+                <button
+                  onClick={() => setCarouselIndex((prev) => (prev - 1 + aulas.length) % aulas.length)}
+                  className="bg-accent hover:bg-accent/90 text-white p-2 rounded-full transition shadow-lg"
+                  aria-label="Aula anterior"
                 >
-                  Agendar Aula
-                </a>
-              </motion.div>
-            ))}
+                  <ChevronLeft size={20} />
+                </button>
+
+                {/* INDICATORS */}
+                <div className="flex gap-2">
+                  {aulas.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCarouselIndex(index)}
+                      className={`w-2 h-2 rounded-full transition ${index === carouselIndex ? 'bg-accent' : 'bg-border'
+                        }`}
+                      aria-label={`Ir para aula ${index + 1}`}
+                    />
+                  ))}
+                </div>
+
+                {/* RIGHT BUTTON */}
+                <button
+                  onClick={() => setCarouselIndex((prev) => (prev + 1) % aulas.length)}
+                  className="bg-accent hover:bg-accent/90 text-white p-2 rounded-full transition shadow-lg"
+                  aria-label="Próxima aula"
+                >
+                  <ChevronRight size={20} />
+                </button>
+              </div>
+
+              {/* DESKTOP INDICATORS - BOTTOM CENTER */}
+              <div className="hidden md:flex items-center justify-center gap-2 py-4 bg-muted">
+                {aulas.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCarouselIndex(index)}
+                    className={`w-2 h-2 rounded-full transition ${index === carouselIndex ? 'bg-accent' : 'bg-border'
+                      }`}
+                    aria-label={`Ir para aula ${index + 1}`}
+                  />
+                ))}
+              </div>
+            </motion.div>
+
+            {/* RIGHT BUTTON - OUTSIDE CARD */}
+            <button
+              onClick={() => setCarouselIndex((prev) => (prev + 1) % aulas.length)}
+              className="hidden md:flex bg-accent hover:bg-accent/90 text-white p-3 rounded-full transition shadow-lg flex-shrink-0"
+              aria-label="Próxima aula"
+            >
+              <ChevronRight size={24} />
+            </button>
           </div>
         </div>
       </section>
