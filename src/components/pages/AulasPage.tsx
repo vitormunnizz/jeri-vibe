@@ -1,6 +1,6 @@
 import { Image } from '@/components/ui/image';
 import { motion } from 'framer-motion';
-import { ChevronLeft, ChevronRight, MessageCircle } from 'lucide-react';
+import { ChevronLeft, ChevronRight, MessageCircle, Instagram } from 'lucide-react';
 import { useState } from 'react';
 
 export default function AulasPage() {
@@ -462,7 +462,10 @@ export default function AulasPage() {
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="font-bold mb-2">Instagram</div>
+              <div className="font-bold mb-2 flex items-center gap-2">
+                <Instagram size={20} />
+                Instagram
+              </div>
               <div className="font-bold">@jeri4xp</div>
             </motion.a>
 
