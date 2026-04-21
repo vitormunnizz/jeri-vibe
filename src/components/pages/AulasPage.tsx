@@ -167,7 +167,7 @@ export default function AulasPage() {
             href="https://wa.me/5585999001339"
             target="_blank"
             rel="noreferrer"
-            className="bg-accent px-8 py-3 rounded-full text-xs font-bold hover:bg-white hover:text-accent transition-all"
+            className="bg-accent px-10 py-4 rounded-full text-sm font-bold hover:bg-white hover:text-accent transition-all"
           >
             Reservar Agora
           </a>
