@@ -37,7 +37,7 @@ export default function AulasPage() {
         'Pranchas de alto volume para iniciantes',
         'Velas de diferentes tamanhos (2.5m a 4.5m)',
         'Equipamentos inclusos durante as aulas',
-        'Coletes de segurança inclusos'
+        'Ideal para iniciantes e evolução técnica'
       ],
       msg: 'Olá! Quero agendar uma aula de Windsurf.'
     },
