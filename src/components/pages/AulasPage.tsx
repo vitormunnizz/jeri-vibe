@@ -52,7 +52,7 @@ export default function AulasPage() {
       answer: 'A melhor época para kitesurf no Preá é de julho a janeiro, quando os ventos são mais intensos. Já o surf, wing foil e windsurf em Jericoacoara podem ser praticados durante praticamente todo o ano, dependendo das condições do mar.',
     },
     {
-      question: 'Os equipamentos estão inclusos na aula?',
+      question: ',
       answer: 'Sim. Os equipamentos de segurança e prática estão inclusos, garantindo mais conforto para quem está começando.',
     },
     {
