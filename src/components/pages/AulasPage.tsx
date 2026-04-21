@@ -44,8 +44,8 @@ export default function AulasPage() {
       answer: 'Não. As aulas são indicadas tanto para iniciantes quanto para quem já pratica e quer evoluir. Os instrutores adaptam o ritmo conforme seu nível.',
     },
     {
-      question: '',
-      answer: 'As modalidades mais procuradas são kitesurf, windsurf, surf e wing foil. Jericoacoara tem condições ideais de vento e mar para aprender com segurança.',
+      question: 'Onde acontecem as aulas de kitesurf, wing foil, windsurf e surf?',
+      answer: 'As aulas de kitesurf acontecem no Preá, localizado a poucos minutos de Jericoacoara, devido às condições ideais de vento. Já as aulas de wing foil, windsurf e surf são realizadas em Jericoacoara.',
     },
     {
       question: 'Quanto tempo dura uma aula?',
