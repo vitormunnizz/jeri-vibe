@@ -18,7 +18,7 @@ export default function AulasPage() {
   const etapas = [
     {
       titulo: 'Escolha da Modalidade',
-      descricao: 'Escolha entre kitesurf, windsurf, surf ou stand up paddle. Nossa equipe pode ajudar você a definir a melhor opção de acordo com seu perfil e objetivo.',
+      descricao: 'Escolha entre kitesurf, windsurf, surf ou windsurf. Nossa equipe pode ajudar você a definir a melhor opção de acordo com seu perfil e objetivo.',
     },
     {
       titulo: 'Agendamento da Aula',
