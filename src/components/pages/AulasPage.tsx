@@ -34,7 +34,7 @@ export default function AulasPage() {
       titulo: 'Windsurf',
       desc: 'Descubra o Windsurf em Jericoacoara e aprenda a dominar o vento com aulas práticas que desenvolvem equilíbrio, controle e técnica de forma progressiva. As aulas começam com posicionamento correto na prancha e evoluem para manobras e mudanças de direção.',
       beneficios: [
-        'Pranchas de alto volume para iniciantes',
+        'Instrutores qualificados',
         'Velas de diferentes tamanhos (2.5m a 4.5m)',
         'Equipamentos inclusos durante as aulas',
         'Ideal para iniciantes e evolução técnica'
