@@ -138,19 +138,22 @@ export default function AulasPage() {
           <div className="grid md:grid-cols-2 gap-10 leading-relaxed text-base md:text-lg">
             <div className="space-y-5">
               <p>
-                Explorar os esportes em Jericoacoara é uma das formas mais intensas de viver o destino. Com ventos constantes, mar favorável e clima ideal durante quase todo o ano, a região se torna perfeita tanto para iniciantes quanto para quem já tem experiência.
+                Viva uma experiência completa com aulas de esportes aquáticos em Jericoacoara, um dos destinos mais procurados do Brasil para quem deseja aprender ou evoluir no mar. Com condições naturais privilegiadas, a região oferece o cenário ideal para a prática de surf, windsurf e wing foil, atendendo desde iniciantes até praticantes avançados.
               </p>
               <p>
-                Entre as principais modalidades estão o kitesurf, windsurf, surf e wing foil, cada uma oferecendo uma conexão única com o mar e a natureza.
+                Para quem deseja aprender kitesurf, as aulas são realizadas no Preá, localizado a poucos minutos de Jericoacoara. A região é reconhecida mundialmente pelos ventos fortes e constantes, proporcionando um aprendizado mais rápido, seguro e eficiente, especialmente para quem está começando.
               </p>
             </div>
 
             <div className="space-y-5">
               <p>
-                As aulas são acompanhadas por instrutores experientes, que orientam cada etapa do aprendizado com segurança e atenção.
+                As aulas são conduzidas por instrutores experientes, com acompanhamento passo a passo, garantindo segurança, evolução e confiança durante todo o processo. Todo o equipamento necessário está incluso, permitindo que você foque totalmente na experiência.
               </p>
               <p>
-                Outro diferencial está na estrutura: equipamentos de qualidade, materiais de segurança e suporte completo para que você aproveite cada momento sem preocupação.
+                Seja para aprender kitesurf no Preá ou fazer aulas de surf, wing foil e windsurf em Jericoacoara, você terá acesso às melhores condições do Ceará, com suporte completo e orientação profissional.
+              </p>
+              <p>
+
               </p>
             </div>
           </div>
