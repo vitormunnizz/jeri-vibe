@@ -125,7 +125,7 @@ export default function HomePage() {
             href="https://wa.me/5585999001339"
             target="_blank"
             rel="noreferrer"
-            className="bg-orange-600 px-8 py-3 rounded-full text-xs font-bold hover:bg-white hover:text-orange-600 transition-all"
+            className="bg-orange-600 px-6 py-3 rounded-full text-xs font-bold hover:bg-white hover:text-orange-600 transition-all"
           >
             Reservar Agora
           </a>
