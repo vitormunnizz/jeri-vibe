@@ -24,7 +24,7 @@ export default function AulasPage() {
       beneficios: [
         'Equipamento completo incluso nas aulas',
         'Pranchas bidirecionais para iniciantes',
-        'Coletes de flutuação e leash de segurança',
+        'Aulas no Preá com condições ideais de vento',
         'Instrutores certificados e experientes.'
       ],
       msg: 'Olá! Quero agendar uma aula de Kitesurf.'
