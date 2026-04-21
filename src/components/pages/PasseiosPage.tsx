@@ -2,6 +2,7 @@ import { Image } from '@/components/ui/image';
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, MessageCircle } from "lucide-react";
 import { useState } from "react";
+import { images } from '@/assets/images';
 
 export default function PasseiosPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

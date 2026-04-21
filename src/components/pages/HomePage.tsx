@@ -1,6 +1,7 @@
 import { Image } from '@/components/ui/image';
 import { MessageCircle } from "lucide-react";
 import { useState } from "react";
+import { images } from '@/assets/images';
 
 export default function HomePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,7 +20,7 @@ export default function HomePage() {
       role: "Suíça",
       content:
         "I found out about Jeri 4XP through a friend's recommendation and it was all great. Kitesurfing and sightseeing, it was all perfect!",
-      avatar: "https://i.pravatar.cc/150?u=axelle",
+      avatar: images.avatarPlaceholder("axelle"),
     },
     {
       id: 2,
@@ -27,7 +28,7 @@ export default function HomePage() {
       role: "França",
       content:
         "Service excellent, les prestations ont même dépassé mes attentes. J'ai testé le wingfoil et fait une excursion en quad dans les dunes, inoubliable!",
-      avatar: "https://i.pravatar.cc/150?u=remy",
+      avatar: images.avatarPlaceholder("remy"),
     },
     {
       id: 3,
@@ -35,7 +36,7 @@ export default function HomePage() {
       role: "Londres, Reino Unido",
       content:
         "I had the best experiences in Jericoacoara. Booking everything through Jeri 4XP was the best option.",
-      avatar: "https://i.pravatar.cc/150?u=david",
+      avatar: images.avatarPlaceholder("david"),
     },
     {
       id: 4,
@@ -43,7 +44,7 @@ export default function HomePage() {
       role: "Fortaleza, Brasil",
       content:
         "Minha experiência com a Jeri 4XP foi fantástica! A equipe é super profissional e atenciosa, me dando todo o suporte necessário. Já quero voltar!",
-      avatar: "https://i.pravatar.cc/150?u=gabi",
+      avatar: images.avatarPlaceholder("gabi"),
     },
     {
       id: 5,
@@ -51,7 +52,7 @@ export default function HomePage() {
       role: "São Paulo, Brasil",
       content:
         "Maravilhoso atendimento, excelente, adorei o guia Adriano e Vinicius hyper atencioso. Os passeios foram incriveis, quadriciclo, jet ski e otimas lembranças.",
-      avatar: "https://i.pravatar.cc/150?u=lilian",
+      avatar: images.avatarPlaceholder("lilian"),
     },
     {
       id: 6,
@@ -59,7 +60,7 @@ export default function HomePage() {
       role: "Sobral, Brasil",
       content:
         "Todas as vezes que for em jericoacoara, vou novamente com a Jeri4xp! Excelente atendimento por parte da equipe.",
-      avatar: "https://i.pravatar.cc/150?u=vitor",
+      avatar: images.avatarPlaceholder("vitor"),
     },
   ];
 
@@ -109,7 +110,7 @@ export default function HomePage() {
           </div>
         )}
 
-        <Image src="https://static.wixstatic.com/media/792b6b_3bd32de2fa6b4a9496517e7ce9c1b3d7~mv2.png" className="absolute w-full h-full object-cover opacity-80" alt="Hero background" />
+        <Image src={images.heroHome} className="absolute w-full h-full object-cover opacity-80" alt="Hero background" />
 
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
           <span className="text-orange-600 mb-2 uppercase tracking-widest text-xs md:text-sm">
@@ -199,12 +200,12 @@ export default function HomePage() {
                 <Image
                   src={
                     item.name === "Passeios"
-                      ? "https://static.wixstatic.com/media/792b6b_4f20f630624849c0af228c95edd905b7~mv2.png?originWidth=256&originHeight=256"
+                      ? images.experiencePasseios
                       : item.name === "Hospedagem"
-                        ? "https://static.wixstatic.com/media/792b6b_ea2817bcd0de4f6e8d235353decd6caf~mv2.png?originWidth=256&originHeight=256"
+                        ? images.experienceHospedagem
                         : item.name === "Transfer"
-                          ? "https://static.wixstatic.com/media/792b6b_24b85beb673d4e1bbd945bb5e3412cd4~mv2.png?originWidth=256&originHeight=256"
-                          : "https://static.wixstatic.com/media/792b6b_308bfaa4612a43949f0b088dfb2b0b83~mv2.png?originWidth=256&originHeight=256"
+                          ? images.experienceTransfer
+                          : images.experienceAulas
                   }
                   alt={item.name}
                   className="absolute inset-0 w-full h-full object-cover opacity-60 transition-all duration-700 group-hover:scale-110 group-hover:opacity-40"
