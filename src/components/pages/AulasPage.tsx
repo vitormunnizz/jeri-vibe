@@ -19,7 +19,7 @@ export default function AulasPage() {
   const aulas = [
     { emoji: '🪁', titulo: 'Kitesurf', desc: 'Aprenda kitesurf no Preá, um dos melhores destinos do mundo para iniciantes, com ventos constantes que aceleram seu aprendizado do básico ao avançado.', msg: 'Olá! Quero agendar uma aula de Kitesurf.' },
     { emoji: '🌬️', titulo: 'Windsurf', desc: 'Descubra o Windsurf em Jericoacoara e aprenda a dominar o vento com aulas práticas que desenvolvem equilíbrio, controle e técnica de forma progressiva.', msg: 'Olá! Quero agendar uma aula de Windsurf.' },
-    { emoji: '🏄', titulo: 'Surf', desc: 'Aulas para iniciantes e intermediários com foco em equilíbrio, técnica e diversão.', msg: 'Olá! Quero agendar uma aula de Surf.' },
+    { emoji: '🏄', titulo: 'Surf', desc: 'Aprenda a surfar em Jericoacoara com aulas pensadas para iniciantes, aproveitando ondas ideais e um ambiente perfeito para evolução rápida e segura.', msg: 'Olá! Quero agendar uma aula de Surf.' },
     { emoji: '🌊', titulo: 'Stand Up Paddle', desc: 'Explore águas calmas e belas paisagens com aulas leves e perfeitas para relaxar.', msg: 'Olá! Quero agendar uma aula de Stand Up Paddle.' },
   ];
 
