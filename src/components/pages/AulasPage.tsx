@@ -45,7 +45,7 @@ export default function AulasPage() {
     },
     {
       question: '📍 Onde acontecem as aulas? ',
-      answer: 'As aulas de kitesurf acontecem no Preá, localizado a poucos minutos de Jericoacoara, devido às condições ideais de vento. Já as aulas de wing foil, windsurf e surf são realizadas em Jericoacoara.',
+      answer: 'As aulas de kitesurf acontecem no Preá, localizado a poucos minutos de Jeri, devido às condições ideais de vento. Já as aulas de wing foil, windsurf e surf são realizadas em Jericoacoara.',
     },
     {
       question: '📅 Qual o melhor período para fazer aulas de esportes aquáticos na região?',
