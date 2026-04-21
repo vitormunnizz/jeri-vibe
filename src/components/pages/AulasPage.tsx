@@ -141,7 +141,7 @@ export default function AulasPage() {
                 Explorar os esportes em Jericoacoara é uma das formas mais intensas de viver o destino. Com ventos constantes, mar favorável e clima ideal durante quase todo o ano, a região se torna perfeita tanto para iniciantes quanto para quem já tem experiência.
               </p>
               <p>
-                Entre as principais modalidades estão o kitesurf, windsurf, surf e stand up paddle, cada uma oferecendo uma conexão única com o mar e a natureza.
+                Entre as principais modalidades estão o kitesurf, windsurf, surf e wing foil, cada uma oferecendo uma conexão única com o mar e a natureza.
               </p>
             </div>
 
