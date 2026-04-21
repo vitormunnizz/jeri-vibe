@@ -60,7 +60,7 @@ export default function AulasPage() {
       beneficios: [
         'Pranchas de alto volume para iniciantes + pranchas menores para evolução',
         'Aulas adaptadas para seu nivel',
-        'E',
+        'Equipamentos inclusos',
         'Uso de leash de segurança e colete durante toda a aula'
       ],
       msg: 'Olá! Quero agendar uma aula de Wing Foil.'
