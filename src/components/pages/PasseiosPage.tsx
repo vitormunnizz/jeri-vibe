@@ -62,7 +62,7 @@ export default function PasseiosPage() {
     },
     {
       name: "UTV",
-      description: "Uma experiência moderna e mais robusta, combinando conforto com adrenalina em terrenos variadosO UTV combina aventura com conforto Você também pilota, mas com mais controle e comodidade, ideal para quem quer emoção sem abrir mão de segurança..",
+      description: "O UTV combina aventura com conforto. Você também pilota, mas com mais controle e comodidade, ideal para quem quer emoção sem abrir mão de segurança..",
     },
     {
       name: "Jardineira 4x4",
