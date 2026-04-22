@@ -25,9 +25,9 @@ export default function TransferPage() {
         "O transfer entre Fortaleza e Jericoacoara dura, em média, entre 5h e 6h, dependendo do trânsito e horário. Esse é um dos trajetos mais procurados por turistas que desejam chegar a Jericoacoara com comodidade e sem preocupação.",
     },
     {
-      question: "O transfer busca no hotel ou aeroporto?",
+      question: "Existe transfer do aeroporto de Jericoacoara para o centro de Jeri?
       answer:
-        "Sim, o serviço geralmente inclui busca no hotel em Fortaleza ou diretamente no aeroporto, oferecendo mais comodidade para o viajante.",
+        "Sim. O transfer do aeroporto de Jericoacoara até a vila é uma opção rápida e segura para quem chega de avião. O serviço leva o passageiro diretamente até a hospedagem, evitando filas e facilitando a chegada ao destino.",
     },
     {
       question: "O transfer é compartilhado ou privativo?",
