@@ -75,7 +75,7 @@ export default function PasseiosPage() {
       answer: "Os passeios mais procurados em Jericoacoara são o lado leste e lado oeste, que reúnem os principais pontos turísticos da região. No lado leste você visita a famosa Lagoa do Paraíso, Lagoa Azul e alguns Beach Clubes na praia do Preá. Já no lado oeste, o roteiro é de aventura, com cenários de praia e dunas imponentes que garantem a diversão e adrenalina. São experiências imperdíveis para quem busca o que fazer em Jericoacoara.",
     },
     {
-      question: "Quanto tempo dura o passeio?",
+      question: "Qual é melhor: lado leste ou oeste em Jericoacoara?",
       answer: "A maioria dos passeios dura entre 6 e 8 horas, dependendo do roteiro escolhido.",
     },
     {
