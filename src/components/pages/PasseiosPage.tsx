@@ -54,7 +54,7 @@ export default function PasseiosPage() {
   const vehicleTypes = [
     {
       name: "Buggy",
-      description: "O clássico de Jericoacoara. Ideal para quem busca conforto, segurança e um passeio completo pelas principais atrações.",
+      description: "O buggy é a opção mais procurada em Jericoacoara, ideal para quem busca conforto, segurança e praticidade. O passeio é feito com motorista experiente, permitindo que você aproveite o visual sem se preocupar em dirigir.",
     },
     {
       name: "Quadriciclo",
