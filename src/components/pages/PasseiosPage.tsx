@@ -24,8 +24,8 @@ export default function PasseiosPage() {
       descricao: "Das esculturas naturais da Árvore da Preguiça ao mergulho inesquecível no Buraco Azul.",
       texto: [
         "Nosso roteiro começa com a Árvore da Preguiça e segue até a Praia",
-        "do Preá."
-        "Depois visitamos o Buraco Azul, Lagun Beach, Lagoa do Paraíso, Lagoa Azul e Lagoa do Amâncio."
+        "do Preá.Depois visitamos o Buraco Azul, Lagun Beach, Lagoa do Paraíso,",
+        "Lagoa Azul e Lagoa do Amâncio."
       ],
       itens: ['Árvore da Preguiça', 'Praia do Preá', 'Buraco Azul', 'Lagun Beach', 'Lagoa do Paraíso', 'Lagoa Azul', 'Lagoa do Amâncio'],
     },
