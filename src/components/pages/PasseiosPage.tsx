@@ -58,11 +58,11 @@ export default function PasseiosPage() {
     },
     {
       name: "Quadriciclo",
-      description: "Perfeito para quem quer mais liberdade e aventura, pilotando seu próprio veículo pelas dunas e trilhas.",
+      description: "O quadriciclo é perfeito para quem quer uma experiência mais aventureira, pois você mesmo pilota o veículo, seguindo um guia durante todo o trajeto. É uma forma divertida e dinâmica de explorar os cenários de Jeri.",
     },
     {
       name: "UTV",
-      description: "O UTV combina aventura com conforto. Você também pilota, mas com mais controle e comodidade, ideal para quem quer emoção sem abrir mão de segurança..",
+      description: "O UTV combina aventura com conforto. Você também pilota, mas com mais controle e comodidade, ideal para quem quer emoção sem abrir mão de segurança.",
     },
     {
       name: "Jardineira 4x4",
