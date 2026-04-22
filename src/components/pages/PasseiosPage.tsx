@@ -33,7 +33,7 @@ export default function PasseiosPage() {
       titulo: "Dunas Gigantes & Mangue Selvagem",
       descricao: "Dos cavalos-marinhos no Rio Guriú ao relaxo total nas redes do Lago Grande.",
       texto: [
-        "Explore o Rio Guriú e o off-road nas Dunas de Tatajuba.",
+        "Explore o Rio Guriú e aventurisse com off-road nas Dunas de Tatajuba.",
         "Finalize nas redes do Lago Grande."
       ],
       itens: ['Passeio Ecológico', 'Trilha do Mangue Seco', 'Dunas de Tatajuba', 'Lago Grande'],
