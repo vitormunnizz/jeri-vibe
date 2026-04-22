@@ -72,7 +72,7 @@ export default function PasseiosPage() {
   const faqs = [
     {
       question: "Quais são os principais passeios em Jericoacoara?",
-      answer: "Os passeios mais procurados em Jericoacoara são o lado leste e lado oeste, que reúnem os principais pontos turísticos da região. No lado leste você visita a famosa Lagoa do Paraíso, Lagoa Azul e beach clubes. Já no lado oeste, o roteiro é mais exclusivo, com travessia de balsa e cenários mais selvagens. São experiências imperdíveis para quem busca o que fazer em Jericoacoara.",
+      answer: "Os passeios mais procurados em Jericoacoara são o lado leste e lado oeste, que reúnem os principais pontos turísticos da região. No lado leste você visita a famosa Lagoa do Paraíso, Lagoa Azul e alguns Beach Clubes na praia do Preá. Já no lado oeste, o roteiro é mais exclusivo, com travessia de balsa e cenários mais selvagens. São experiências imperdíveis para quem busca o que fazer em Jericoacoara.",
     },
     {
       question: "Quanto tempo dura o passeio?",
