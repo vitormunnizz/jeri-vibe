@@ -80,7 +80,7 @@ export default function PasseiosPage() {
     },
     {
       question: "Vale mais a pena buggy ou quadriciclo em Jericoacoara?",
-      answer: "Sim, principalmente em alta temporada. Reservar antes garante sua vaga e melhores horários.",
+      answer: "Se você quer conforto e tranquilidade, o buggy com motorista é a melhor escolha. Agora, se prefere aventura, o quadriciclo é pilotado por você, seguindo um guia. Ambos são muito procurados, e a decisão depende do tipo de experiência que você quer viver em Jericoacoara.",
     },
     {
       question: "Quanto custa um passeio de buggy em Jericoacoara?",
