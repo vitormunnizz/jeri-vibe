@@ -89,7 +89,7 @@ export default function TransferPage() {
           </span>
 
           <h1 className="text-3xl md:text-5xl font-black italic tracking-tighter mb-6">
-            Transfer Seguro <br /> para Jericoacoara
+            Transfer para <br /> para Jericoacoara
           </h1>
 
           <a
