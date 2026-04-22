@@ -36,11 +36,11 @@ export default function PasseiosPage() {
         "Explore o Rio Guriú e o Mangue Seco.",
         "Finalize nas redes do Lago Grande."
       ],
-      itens: ['Passeio Ecológico', 'Trilha do Mangue Seco', 'Dunas de Tatajuba', 'Lagoa da Torta'],
+      itens: ['Passeio Ecológico', 'Trilha do Mangue Seco', 'Dunas de Tatajuba', 'Lago Grande'],
     },
     {
       badge: "Roteiro Extremo Leste",
-      titulo: "Dunas de Cristal & Vila de Barrinha",
+      titulo: "Dunas de Cristal & Praia de Barrinha",
       descricao: "A beleza intocada da vila de pescadores e o pôr do sol mais espetacular da região.",
       texto: [
         "Conheça a vila de Barrinha e suas dunas gigantes.",
