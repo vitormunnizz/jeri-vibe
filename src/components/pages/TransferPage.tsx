@@ -32,7 +32,7 @@ export default function TransferPage() {
     {
       question: "Como ir de Jericoacoara para Barreirinhas?",
       answer:
-        "Existem as duas opções. O compartilhado é mais econômico, enquanto o privativo oferece mais conforto, flexibilidade de horários e exclusividade.",
+        "O transfer entre Jericoacoara e Barreirinhas é muito procurado por quem faz a rota turística entre o Ceará e os Lençóis Maranhenses. O percurso é realizado por veículos preparados para viagens longas, garantindo conforto durante todo o trajeto.Existem as duas opções. O compartilhado é mais econômico, enquanto o privativo oferece mais conforto, flexibilidade de horários e exclusividade.",
     },
     {
       question: "O transfer é compartilhado ou privativo?",
