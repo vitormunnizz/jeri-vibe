@@ -37,7 +37,7 @@ export default function TransferPage() {
     {
       question: "O transfer é compartilhado ou privativo?",
       answer:
-        "Sim, os transfers operam diariamente, com horários programados. É importante reservar com antecedência para garantir disponibilidade.Existem as duas opções. O compartilhado é mais econômico, enquanto o privativo oferece mais conforto, flexibilidade de horários e exclusividade",
+        "Sim, os transfers operam diariamente, com horários programados. É importante reservar com antecedência para garantir disponibilidade. Existem as duas opções. O compartilhado é mais econômico, enquanto o privativo oferece mais conforto, flexibilidade de horários e exclusividade",
     },
   ];
 
