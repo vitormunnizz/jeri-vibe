@@ -35,7 +35,7 @@ export default function PasseiosPage() {
       descricao: "Dos cavalos-marinhos no Rio Guriú ao relaxo total nas redes do Lago Grande.",
       texto: [
         "Explore o Rio Guriú e aventurisse com off-road nas Dunas de Tatajuba.",
-        "Finalize nas redes do Lago Grande."
+        "Finalize nas redes do Lago Grande. Ideal para explorar um lado diferente dos passeios em Jericoacoara."
       ],
       itens: ['Passeio Ecológico', 'Trilha do Mangue Seco', 'Dunas de Tatajuba', 'Lago Grande'],
     },
