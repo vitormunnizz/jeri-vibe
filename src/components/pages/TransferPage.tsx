@@ -89,7 +89,7 @@ export default function TransferPage() {
           </span>
 
           <h1 className="text-3xl md:text-5xl font-black italic tracking-tighter mb-6">
-            ericoacoara <br /> Como Chegar em Jericoacoara com Transfer Seguro e Confortável
+            Como Chegar em Jericoacoara com <br /> Transfer Seguro e Confortável
           </h1>
 
           <a
