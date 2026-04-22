@@ -23,7 +23,7 @@ export default function PasseiosPage() {
       titulo: "Águas Cristalinas & Redes no Paraíso",
       descricao: "Das esculturas naturais da Árvore da Preguiça ao mergulho inesquecível no Buraco Azul.",
       texto: [
-        "Nosso roteiro começa com a Árvore da Preguiça e segue até a Praia do Preá. Depois visitamos o Buraco Azul, Lagoa do Paraíso e Lagoa Azul.",
+        "Nosso roteiro começa com a Árvore da Preguiça e segue até a Praia do Preá.",
         "Depois visitamos o Buraco Azul, Lagoa do Paraíso e Lagoa Azul."
       ],
       itens: ['Árvore da Preguiça', 'Praia do Preá', 'Buraco Azul', 'Lagun Beach', 'Lagoa do Paraíso', 'Lagoa Azul', 'Lagoa do Amâncio'],
