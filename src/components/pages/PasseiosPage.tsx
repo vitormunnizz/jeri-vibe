@@ -76,7 +76,7 @@ export default function PasseiosPage() {
     },
     {
       question: "Qual é melhor: lado leste ou oeste em Jericoacoara?",
-      answer: "A maioria dos passeios dura entre 6 e 8 horas, dependendo do roteiro escolhido.",
+      answer: "O lado leste é o mais famoso, ideal para quem quer lagoas cristalinas e relaxar em redes dentro d’água.",
     },
     {
       question: "Preciso reservar com antecedência?",
