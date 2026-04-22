@@ -269,7 +269,7 @@ export default function PasseiosPage() {
                       {passeios[carouselIndex].titulo}
                     </h3>
 
-                    <p className="text-foreground mb-3 text-sm line-clamp-2">
+                    <p className="text-foreground mb-3 text-base line-clamp-2">
                       {passeios[carouselIndex].descricao}
                     </p>
 
