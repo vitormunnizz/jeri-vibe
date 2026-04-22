@@ -71,7 +71,7 @@ export default function PasseiosPage() {
 
   const faqs = [
     {
-      question: "Qual o passeio mais procurado em Jericoacoara?",
+      question: "Quais são os principais passeios em Jericoacoara?",
       answer: "Os passeios mais procurados são o Lado Leste, com paradas na Lagoa do Paraíso e Árvore da Preguiça, e o Lado Oeste, com Tatajuba e travessia de balsa.",
     },
     {
