@@ -79,7 +79,7 @@ export default function PasseiosPage() {
       answer: "O lado leste é o mais famoso, ideal para quem quer lagoas cristalinas e relaxar em redes dentro d’água. Já o lado oeste é mais rústico e exclusivo, tendo como principal atração as dunas e experiências diferentes do tradicional, ideal para quem gosta de aventura. Se quiser viver o melhor dos passeios em Jericoacoara, o ideal é fazer os dois roteiros.",
     },
     {
-      question: "Preciso reservar com antecedência?",
+      question: "Vale mais a pena buggy ou quadriciclo em Jericoacoara?",
       answer: "Sim, principalmente em alta temporada. Reservar antes garante sua vaga e melhores horários.",
     },
     {
