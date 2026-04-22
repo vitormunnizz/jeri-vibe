@@ -26,7 +26,7 @@ export default function PasseiosPage() {
         "Nosso roteiro começa com a Árvore da Preguiça e segue até a Praia do Preá. Depois visitamos o Buraco Azul, Lagoa do Paraíso e Lagoa Azul.",
         "Depois visitamos o Buraco Azul, Lagoa do Paraíso e Lagoa Azul."
       ],
-      itens: ['Árvore da Preguiça', 'Lagoa do Paraíso', 'Buraco Azul', 'Lagoa Azul'],
+      itens: ['Árvore da Preguiça', 'Praia do Preá', 'Buraco Azul', 'Lagon Azul'],
     },
     {
       badge: "Roteiro Lado Oeste",
