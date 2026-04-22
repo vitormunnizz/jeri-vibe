@@ -31,10 +31,10 @@ export default function PasseiosPage() {
     {
       badge: "Roteiro Lado Oeste",
       titulo: "Dunas Gigantes & Mangue Selvagem",
-      descricao: "Dos cavalos-marinhos no Rio Guriú ao relaxo total nas redes da Lagoa da Torta.",
+      descricao: "Dos cavalos-marinhos no Rio Guriú ao relaxo total nas redes do Lago Grande.",
       texto: [
         "Explore o Rio Guriú e o Mangue Seco.",
-        "Finalize nas redes da Lagoa da Torta."
+        "Finalize nas redes do Lago Grande."
       ],
       itens: ['Mangue Seco', 'Rio Guriú', 'Dunas de Tatajuba', 'Lagoa da Torta'],
     },
