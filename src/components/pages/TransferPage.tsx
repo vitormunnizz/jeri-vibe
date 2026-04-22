@@ -30,7 +30,7 @@ export default function TransferPage() {
         "Sim. O transfer do aeroporto de Jericoacoara até a vila é uma opção rápida e segura para quem chega de avião. O serviço leva o passageiro diretamente até a hospedagem, evitando filas e facilitando a chegada ao destino.",
     },
     {
-      question: "O transfer é compartilhado ou privativo?",
+      question: "Como ir de Jericoacoara para Barreirinhas?",
       answer:
         "Existem as duas opções. O compartilhado é mais econômico, enquanto o privativo oferece mais conforto, flexibilidade de horários e exclusividade.",
     },
