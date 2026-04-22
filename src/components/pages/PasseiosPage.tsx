@@ -66,7 +66,7 @@ export default function PasseiosPage() {
     },
     {
       name: "4x4",
-      description: "Opção ideal para grupos ou famílias, oferecendo espaço, estabilidade e muito conforto durante todo o passeio.",
+      description: "A jardineira é um veículo maior, usado para grupos, oferecendo uma experiência mais econômica e compartilhada. É uma ótima opção para quem quer conhecer os pontos turísticos gastando menos..",
     },
   ];
 
