@@ -9,6 +9,7 @@ export const images = {
   heroHome: 'https://static.wixstatic.com/media/792b6b_3bd32de2fa6b4a9496517e7ce9c1b3d7~mv2.png',
   heroPasseios: 'https://static.wixstatic.com/media/792b6b_f1a29dfb5f294176b121771875f4bafa~mv2.png?originWidth=1152&originHeight=576',
   heroHospedagem: '/jeri1.webp',
+  heroTransfer: 'https://static.wixstatic.com/media/792b6b_c183b922ef4d44088189659bc81a1704~mv2.png',
   heroAulas: 'https://static.wixstatic.com/media/792b6b_6fccfcc639634ffb866c533270bda3b9~mv2.png',
 
   // Experience cards
