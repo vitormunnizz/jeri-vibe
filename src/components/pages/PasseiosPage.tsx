@@ -76,7 +76,7 @@ export default function PasseiosPage() {
     },
     {
       question: "Qual é melhor: lado leste ou oeste em Jericoacoara?",
-      answer: "O lado leste é o mais famoso, ideal para quem quer lagoas cristalinas e relaxar em redes dentro d’água. Já o lado oeste é mais rústico e exclusivo, tendo como principal atração as dunas e experiências diferentes do tradicional, ideal para quem gosta de aventura.",
+      answer: "O lado leste é o mais famoso, ideal para quem quer lagoas cristalinas e relaxar em redes dentro d’água. Já o lado oeste é mais rústico e exclusivo, tendo como principal atração as dunas e experiências diferentes do tradicional, ideal para quem gosta de aventura. Se quiser viver o melhor dos passeios em Jericoacoara, o ideal é fazer os dois roteiros.",
     },
     {
       question: "Preciso reservar com antecedência?",
