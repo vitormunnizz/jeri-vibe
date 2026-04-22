@@ -44,7 +44,7 @@ export default function PasseiosPage() {
       descricao: "A beleza intocada da vila de pescadores e o pôr do sol mais espetacular da região.",
       texto: [
         "Conheça a vila de Barrinha e suas dunas paradisíacas.",
-        "Explore a Lagoa do Coração e finalize com experiência gastronômica."
+        "Explore a Praia da Barrinha e finalize com experiência gastronômica."
       ],
       itens: ['Beira dágua Beach Clube', 'Praia de Barrinha', 'Dunas da Barrinha'],
     }
