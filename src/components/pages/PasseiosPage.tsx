@@ -36,7 +36,7 @@ export default function PasseiosPage() {
         "Explore o Rio Guriú e o Mangue Seco.",
         "Finalize nas redes do Lago Grande."
       ],
-      itens: ['Mangue Seco', 'Rio Guriú', 'Dunas de Tatajuba', 'Lagoa da Torta'],
+      itens: ['Passeio Ecológico', 'Trilha do Mangue Seco', 'Dunas de Tatajuba', 'Lagoa da Torta'],
     },
     {
       badge: "Roteiro Extremo Leste",
