@@ -83,7 +83,7 @@ export default function PasseiosPage() {
       answer: "Sim, principalmente em alta temporada. Reservar antes garante sua vaga e melhores horários.",
     },
     {
-      question: "Passeios para famílias?",
+      question: "Quanto custa um passeio de buggy em Jericoacoara?",
       answer: "Buggy ou 4x4 privativo são ideais, pois oferecem mais conforto e segurança.",
     },
     {
