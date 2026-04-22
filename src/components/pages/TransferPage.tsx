@@ -17,9 +17,7 @@ export default function TransferPage() {
     {
       question: "Como funciona o transfer de Fortaleza para Jericoacoara?"
       answer:
-        "Como funciona o transfer de Fortaleza para Jericoacoara?
-
-O transfer de Fortaleza para Jericoacoara busca o passageiro no aeroporto, hotel ou endereço combinado e segue até Jeri com conforto e segurança. O trajeto inclui veículos apropriados para a região e é uma das formas mais práticas para quem busca como chegar em Jericoacoara saindo de Fortaleza..",
+        "O transfer de Fortaleza para Jericoacoara busca o passageiro no aeroporto, hotel ou endereço combinado e segue até Jeri com conforto e segurança. O trajeto inclui veículos 4apropriados para a região e é uma das formas mais práticas para quem busca como chegar em Jericoacoara saindo de Fortaleza.",
     },
     {
       question: "Quanto tempo dura o transfer até Jericoacoara?",
