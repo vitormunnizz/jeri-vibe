@@ -88,7 +88,7 @@ export default function PasseiosPage() {
     },
     {
       question: "O que está incluso nos passeios em Jericoacoara?",
-      answer: "Protetor solar, roupa leve, óculos, água e celular carregado para fotos.",
+      answer: "Os passeios incluem transporte, guia experiente e paradas nos principais pontos turísticos. Durante o trajeto, você terá tempo para fotos, banho nas lagoas e parada para almoço. É a forma mais prática e segura de aproveitar ao máximo os passeios em Jericoacoara.",
     },
   ];
 
