@@ -65,8 +65,8 @@ export default function PasseiosPage() {
       description: "Uma experiência moderna e mais robusta, combinando conforto com adrenalina em terrenos variados.",
     },
     {
-      name: "4x4",
-      description: "A jardineira é um veículo maior, usado para grupos, oferecendo uma experiência mais econômica e compartilhada. É uma ótima opção para quem quer conhecer os pontos turísticos gastando menos..",
+      name: "Jardineira 4x4",
+      description: "A jardineira é um veículo maior, usado para grupos, oferecendo uma experiência mais econômica e compartilhada. É uma ótima opção para quem quer conhecer os pontos turísticos gastando menos.",
     },
   ];
 
