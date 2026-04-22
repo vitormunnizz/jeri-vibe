@@ -46,7 +46,7 @@ export default function PasseiosPage() {
         "Conheça a vila de Barrinha e suas dunas gigantes.",
         "Explore a Lagoa do Coração e finalize com experiência gastronômica."
       ],
-      itens: ['Vila da Barrinha', 'Lagoa do Coração', 'Dunas Vermelhas', 'Coqueirais'],
+      itens: ['Beira dágua Beach Clube', 'Praia de Barrinha', 'Dunas da Barrinha'],
     }
   ];
 
