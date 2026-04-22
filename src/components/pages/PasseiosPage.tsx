@@ -21,10 +21,10 @@ export default function PasseiosPage() {
     {
       badge: "Roteiro Lado Leste",
       titulo: "Águas Cristalinas & Redes no Paraíso",
-      descricao: "Das esculturas naturais da Árvore da Preguiça ao mergulho inesquecível no Buraco Azul.",
+      descricao: "Ideal para quem busca o que fazer em Jericoacoara com conforto e paisagens incríveis.",
       texto: [
         "Nosso roteiro começa com a Árvore da Preguiça e segue até a Praia",
-        "do Preá.Depois visitamos o Buraco Azul, Lagun Beach, Lagoa do Paraíso,",
+        "do Preá. Depois visitamos o Buraco Azul, Lagun Beach, Lagoa do Paraíso,",
         "Lagoa Azul e Lagoa do Amâncio."
       ],
       itens: ['Árvore da Preguiça', 'Praia do Preá', 'Buraco Azul', 'Lagun Beach', 'Lagoa do Paraíso', 'Lagoa Azul', 'Lagoa do Amâncio'],
