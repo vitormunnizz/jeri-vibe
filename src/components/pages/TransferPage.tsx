@@ -1,7 +1,7 @@
+import { images } from '@/assets/images';
 import { Image } from '@/components/ui/image';
 import { MessageCircle } from "lucide-react";
 import { useState } from "react";
-import { images } from '@/assets/images';
 
 export default function TransferPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,7 +20,7 @@ export default function TransferPage() {
         "O transfer de Fortaleza para Jericoacoara busca o passageiro no aeroporto, hotel ou endereço combinado e segue até Jeri com conforto e segurança. O trajeto inclui veículos 4x4 apropriados para a região e é uma das formas mais práticas para quem busca como chegar em Jericoacoara saindo de Fortaleza.",
     },
     {
-      question: "Quanto tempo dura o transfer até Jericoacoara?",
+      question: "Quanto tempo dura o transfer de Fortaleza para Jericoacoara?",
       answer:
         "O trajeto dura em média de 5 a 6 horas saindo de Fortaleza e cerca de 1 hora saindo do Aeroporto de Cruz.",
     },
