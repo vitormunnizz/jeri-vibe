@@ -22,7 +22,7 @@ export default function TransferPage() {
     {
       question: "Quanto tempo dura o transfer de Fortaleza para Jericoacoara?",
       answer:
-        "O transfer entre Fortaleza e Jericoacoara dura, em média, entre 4h30 e 6h, dependendo do trânsito, horário e tipo de transporte escolhido. Esse é um dos trajetos mais procurados por turistas que desejam chegar a Jericoacoara com comodidade e sem preocupação.",
+        "O transfer entre Fortaleza e Jericoacoara dura, em média, entre 5h e 6h, dependendo do trânsito, horário. Esse é um dos trajetos mais procurados por turistas que desejam chegar a Jericoacoara com comodidade e sem preocupação.",
     },
     {
       question: "O transfer busca no hotel ou aeroporto?",
