@@ -87,7 +87,7 @@ export default function PasseiosPage() {
       answer: "O passeio de buggy em Jericoacoara tem um excelente custo-benefício, pois o valor pode ser dividido por até 4 pessoas. Os preços variam conforme o roteiro e duração, mas é uma das opções mais buscadas por oferecer conforto, segurança e motorista experiente. Entre todos, é o passeio mais escolhido por quem visita Jeri.",
     },
     {
-      question: "O que levar?",
+      question: "O que está incluso nos passeios em Jericoacoara?",
       answer: "Protetor solar, roupa leve, óculos, água e celular carregado para fotos.",
     },
   ];
