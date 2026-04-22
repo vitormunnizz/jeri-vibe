@@ -139,7 +139,7 @@ export default function PasseiosPage() {
           </span>
 
           <h1 className="text-3xl md:text-5xl font-black italic tracking-tighter mb-6">
-            Os melhores passeios em Jericoacoara com conforto e segurança <br /> em Jericoacoara
+            Os melhores passeios em Jericoacoara com conforto e segurança
           </h1>
 
           <a
