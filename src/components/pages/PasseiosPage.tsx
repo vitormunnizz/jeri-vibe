@@ -84,7 +84,7 @@ export default function PasseiosPage() {
     },
     {
       question: "Quanto custa um passeio de buggy em Jericoacoara?",
-      answer: "Buggy ou 4x4 privativo são ideais, pois oferecem mais conforto e segurança.",
+      answer: "O passeio de buggy em Jericoacoara tem um excelente custo-benefício, pois o valor é dividido por até 4 pessoas. Os preços variam conforme o roteiro e duração, mas é uma das opções mais buscadas por oferecer conforto, segurança e motorista experiente. Entre todos, é o passeio mais escolhido por quem visita Jeri.",
     },
     {
       question: "O que levar?",
