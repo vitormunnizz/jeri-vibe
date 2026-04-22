@@ -40,7 +40,7 @@ export default function PasseiosPage() {
     },
     {
       badge: "Roteiro Extremo Leste",
-      titulo: "Dunas de Cristal & Praia de Barrinha",
+      titulo: "Praia de Barrinha & Dunas de Cristal",
       descricao: "A beleza intocada da vila de pescadores e o pôr do sol mais espetacular da região.",
       texto: [
         "Conheça a vila de Barrinha e suas dunas paradisíacas.",
