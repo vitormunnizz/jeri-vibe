@@ -84,9 +84,6 @@ export default function TransferPage() {
         <Image src={images.hero} className="absolute w-full h-full object-cover opacity-80" alt="Hero background" />
 
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
-          <span className="text-orange-600 mb-2 uppercase tracking-widest text-xs md:text-sm">
-            Transfers privativos e compartilhados entre Fortaleza, Aeroporto, Jericoacoara e Barreirinhas com atendimento rápido e reserva antecipada.
-          </span>
 
           <h1 className="text-3xl md:text-5xl font-black italic tracking-tighter mb-6">
             Como Chegar em Jericoacoara com <br /> Transfer Seguro e Confortável
