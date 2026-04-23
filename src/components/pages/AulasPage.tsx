@@ -1,8 +1,8 @@
+import { images } from '@/assets/images';
 import { Image } from '@/components/ui/image';
 import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Mail, MessageCircle } from 'lucide-react';
 import { useState } from 'react';
-import { images } from '@/assets/images';
 
 export default function AulasPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -447,11 +447,11 @@ export default function AulasPage() {
           {/* CONTACT CARDS */}
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {/* WhatsApp Card */}
-            <motion.a
+            <a
               href="https://wa.me/5585999001339"
               target="_blank"
               rel="noreferrer"
-              className="bg-white hover:bg-slate-800 p-8 rounded-3xl transition flex flex-col items-center justify-center text-center text-orange-600 hover:text-white"
+              className="bg-orange-600 hover:bg-white border border-white p-8 rounded-3xl transition flex flex-col items-center justify-center text-center text-white hover:text-orange-600"
             >
               <div className="mb-4 bg-orange-600 hover:bg-white hover:text-slate-800 p-4 rounded-2xl">
                 <MessageCircle size={40} className="text-white" />
@@ -459,7 +459,7 @@ export default function AulasPage() {
               <h3 className="text-lg font-black mb-2">WhatsApp</h3>
               <p className="font-bold text-base mb-1">(85) 9 9900-1339</p>
               <p className="text-xs uppercase tracking-widest">Clique para conversar</p>
-            </motion.a>
+            </a>
 
             {/* Instagram Card */}
             <motion.a
