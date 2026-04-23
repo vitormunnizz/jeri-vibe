@@ -223,10 +223,6 @@ export default function TransferPage() {
             <div className="h-1 w-20 bg-orange-600 mt-4 rounded-full"></div>
           </div>
 
-          <p className="text-center text-gray-600 mb-10">
-            Tire suas principais dúvidas antes de reservar.
-          </p>
-
           <div className="space-y-3">
             {faqs.map((faq, index) => (
               <div key={index} className="border-2 border-gray-200 p-6 rounded-xl bg-white hover:border-orange-600 transition">
