@@ -93,23 +93,23 @@ export default function AulasPage() {
 
   const faqs = [
     {
-      question: '🏄‍♂️ Preciso ter experiência e o equipamento está incluso nas aulas de esportes aquáticos?',
+      question: 'Preciso ter experiência e o equipamento está incluso nas aulas de esportes aquáticos?',
       answer: 'Não é necessário ter experiência. As aulas são indicadas tanto para iniciantes quanto para quem já pratica e deseja evoluir, com instrutores adaptando o ensino ao seu nível. Além disso, todo o equipamento necessário está incluso durante as horas de aula, garantindo segurança e praticidade para você focar totalmente na experiência.',
     },
     {
-      question: '📍 Onde acontecem as aulas? ',
+      question: 'Onde acontecem as aulas? ',
       answer: 'As aulas de kitesurf acontecem no Preá, localizado a poucos minutos de Jeri, devido às condições ideais de vento. Já as aulas de wing foil, windsurf e surf são realizadas em Jericoacoara.',
     },
     {
-      question: '📅 Qual o melhor período para fazer aulas de esportes aquáticos na região?',
+      question: 'Qual o melhor período para fazer aulas de esportes aquáticos na região?',
       answer: 'A melhor época para kitesurf no Preá é de julho a janeiro, quando os ventos são mais intensos. Já o surf, wing foil e windsurf em Jericoacoara podem ser praticados durante praticamente todo o ano, dependendo das condições do mar.',
     },
     {
-      question: '🏄‍♂️ Quanto tempo leva para aprender kitesurf no Preá?',
+      question: 'Quanto tempo leva para aprender kitesurf no Preá?',
       answer: 'Em média, entre 6 a 15 horas de aulas. O Preá possui ventos mais fortes e constantes, sendo considerado um dos melhores lugares do mundo para aprender kitesurf. Isso garante mais segurança e evolução rápida durante as aulas.',
     },
     {
-      question: '🛟 As aulas são seguras?',
+      question: 'As aulas são seguras?',
       answer: 'Sim. As aulas são acompanhadas por instrutores experientes, com foco em segurança, teoria básica, uso correto dos equipamentos e adaptação às condições do mar e do vento.',
     },
   ];
