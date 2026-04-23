@@ -11,10 +11,10 @@ export const images = {
   hero: "../src/assets/hero.png",
 
   // Experience cards
-  experiencePasseios: kitePreaPath,
-  experienceHospedagem: kitePreaPath,
-  experienceTransfer: kitePreaPath,
-  experienceAulas: kitePreaPath,
+  experiencePasseios:  "../src/assets/passeiosHome.png",
+  experienceHospedagem:  "../src/assets/hospedagemHome.png",
+  experienceTransfer: "../src/assets/transferHome.png",
+  experienceAulas: "../src/assets/aulasHome.png",
 
   // Carousel images
   carouselPasseios: kitePreaPath,
