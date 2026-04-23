@@ -30,6 +30,11 @@ export const images = {
   aulasSurf: kitePreaPath,
   aulasWingFoil: kitePreaPath,
 
-  // Avatar placeholders
+  // Avatar
+  avatarVitor: kitePreaPath,
+  avatarVitor: kitePreaPath,
+  avatarVitor: kitePreaPath,
+  avatarVitor: kitePreaPath,
+  avatarVitor: kitePreaPath,
   avatarVitor: kitePreaPath,
 };
