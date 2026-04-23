@@ -22,7 +22,7 @@ export const images = {
   PasseiosExtremo: "../src/assets/extremo.png",
 
   // Carousel hospedagem
-  carouselHospedagem: "../src/assets/leste.png",
+  carouselEconomicas: "../src/assets/leste.png",
   carouselHospedagem: "../src/assets/leste.png",
   carouselHospedagem: "../src/assets/leste.png",
 
