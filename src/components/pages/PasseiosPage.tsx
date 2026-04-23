@@ -408,54 +408,58 @@ export default function PasseiosPage() {
       </section>
 
       {/* CONTATO */}
-      <section id="contato" className="py-20 px-6 bg-primary text-white">
-        <div className="text-center max-w-4xl mx-auto">
-          <span className="inline-block px-4 py-1 bg-white/10 rounded-full text-xs uppercase mb-6 font-bold">
-            Fale com a gente
-          </span>
+      <section id="contato" className="py-20 px-6 bg-orange-600">
+        <div className="max-w-5xl mx-auto">
+          {/* HEADER */}
+          <div className="text-center mb-16">
+            <p className="text-xs uppercase tracking-widest text-white font-bold mb-3">
+              Fale com a gente
+            </p>
+            <h2 className="text-3xl md:text-5xl font-black text-white mb-4">
+              Prepare sua próxima aventura em Jeri
+            </h2>
+          </div>
 
-          <h2 className="text-3xl md:text-4xl font-black mb-12">
-            Prepare sua próxima aventura em Jeri
-          </h2>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            <motion.a
+          {/* CONTACT CARDS */}
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            {/* WhatsApp Card */}
+            <a
               href="https://wa.me/5585999001339"
               target="_blank"
               rel="noreferrer"
-              className="bg-white/10 p-6 rounded-2xl hover:bg-white hover:text-primary transition text-sm md:text-base"
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.3 }}
+              className="bg-orange-600 hover:bg-white border border-white p-8 rounded-3xl transition flex flex-col items-center justify-center text-center text-white hover:text-orange-600"
             >
-              <div className="font-bold mb-2">WhatsApp</div>
-              <div className="font-bold">85 9 9900-1339</div>
-            </motion.a>
+              <h3 className="text-lg font-black mb-2">WhatsApp</h3>
+              <p className="font-bold text-base mb-1">(85) 9 9900-1339</p>
+              <p className="text-xs uppercase tracking-widest">Clique para conversar</p>
+            </a>
 
-            <motion.a
+            {/* Instagram Card */}
+            <a
               href="https://instagram.com/jeri4xp"
               target="_blank"
               rel="noreferrer"
-              className="bg-white/10 p-6 rounded-2xl hover:bg-white hover:text-primary transition text-sm md:text-base"
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.3 }}
+              className="bg-orange-600 hover:bg-white border border-white p-8 rounded-3xl transition flex flex-col items-center justify-center text-center text-white hover:text-orange-600"
             >
-              <div className="font-bold mb-2">Instagram</div>
-              <div className="font-bold">@jeri4xp</div>
-            </motion.a>
+              <h3 className="text-lg font-black mb-2">Instagram</h3>
+              <p className="font-bold text-base mb-1">@jeri4xp</p>
+              <p className="text-xs uppercase tracking-widest">Acompanhe as aventuras</p>
+            </a>
 
-            <motion.a
+            {/* E-mail Card */}
+            <a
               href="mailto:jeri4xp@gmail.com"
-              className="bg-white/10 p-6 rounded-2xl hover:bg-white hover:text-primary transition text-sm md:text-base"
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.3 }}
+              className="bg-orange-600 hover:bg-white border border-white p-8 rounded-3xl transition flex flex-col items-center justify-center text-center text-white hover:text-orange-600"
             >
-              <div className="font-bold mb-2">E-mail</div>
-              <div className="font-bold">jeri4xp@gmail.com</div>
-            </motion.a>
+              <h3 className="text-lg font-black mb-2">E-mail</h3>
+              <p className="font-bold text-base mb-1">jeri4xp@gmail.com</p>
+              <p className="text-xs uppercase tracking-widest">Envie sua mensagem</p>
+            </a>
           </div>
 
-          <div className="mt-12">
-            <p className="text-xs uppercase tracking-widest">
+          {/* LOCATION */}
+          <div className="text-center">
+            <p className="text-xs uppercase tracking-widest text-white font-bold">
               Jericoacoara • Ceará • Brasil
             </p>
           </div>
