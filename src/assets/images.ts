@@ -8,11 +8,7 @@ export const images = {
   logo: "../src/assets/logo.png",
 
   // Hero backgrounds
-  heroHome: kitePreaPath,
-  heroPasseios: kitePreaPath,
-  heroHospedagem: kitePreaPath,
-  heroTransfer: kitePreaPath,
-  heroAulas: kitePreaPath,
+  hero: "../src/assets/kitePrea.png",
 
   // Experience cards
   experiencePasseios: kitePreaPath,

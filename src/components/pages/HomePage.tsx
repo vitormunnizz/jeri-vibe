@@ -110,7 +110,7 @@ export default function HomePage() {
           </div>
         )}
 
-        <Image src={images.heroHome} className="absolute w-full h-full object-cover opacity-80" alt="Hero background" />
+        <Image src={images.hero} className="absolute w-full h-full object-cover opacity-80" alt="Hero background" />
 
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
 

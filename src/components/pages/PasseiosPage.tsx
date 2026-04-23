@@ -132,7 +132,7 @@ export default function PasseiosPage() {
           </div>
         )}
 
-        <Image src={images.heroPasseios} className="absolute w-full h-full object-cover opacity-80" alt="Hero background" />
+        <Image src={images.hero} className="absolute w-full h-full object-cover opacity-80" alt="Hero background" />
 
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
           <span className="text-accent mb-2 uppercase tracking-widest text-xs md:text-sm">
