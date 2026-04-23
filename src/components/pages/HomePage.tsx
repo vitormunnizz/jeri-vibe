@@ -68,7 +68,7 @@ const experiences = [
   {
     name: "Passeios",
     link: "/passeios",
-    image: images.experiencePasseioss,
+    image: images.experiencePasseios,
   },
   {
     name: "Hospedagem",

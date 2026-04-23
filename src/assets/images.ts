@@ -11,8 +11,7 @@ export const images = {
   hero: "../src/assets/hero.png",
 
   // Experience cards
-  experiencePasseioss: "../src/assets/passeiosHome.png",
-
+  experiencePasseios: "../src/assets/passeiosHome.png",
   experienceHospedagem:  "../src/assets/hospedagemHome.png",
   experienceTransfer: "../src/assets/transferHome.png",
   experienceAulas: "../src/assets/aulasHome.png",
