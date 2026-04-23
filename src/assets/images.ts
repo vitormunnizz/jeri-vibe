@@ -20,7 +20,6 @@ export const images = {
   PasseiosLeste: "../src/assets/leste.png",
   PasseiosOeste: "../src/assets/oeste.webp",
   PasseiosExtremo: "../src/assets/extremo.jpg",
-  carouselPasseios: kitePreaPath,
   carouselHospedagem: kitePreaPath,
 
   // Transfer images
