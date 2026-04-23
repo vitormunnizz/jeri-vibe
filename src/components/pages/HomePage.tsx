@@ -20,7 +20,7 @@ export default function HomePage() {
       role: "Suíça",
       content:
         "I found out about Jeri 4XP through a friend's recommendation and it was all great. Kitesurfing and sightseeing, it was all perfect!",
-      avatar: images.avatarVitor,
+      avatar: images.avatarAxelle,
     },
     {
       id: 2,
@@ -28,7 +28,7 @@ export default function HomePage() {
       role: "França",
       content:
         "Service excellent, les prestations ont même dépassé mes attentes. J'ai testé le wingfoil et fait une excursion en quad dans les dunes, inoubliable!",
-      avatar: images.avatarVitor,
+      avatar: images.avatarRemy,
     },
     {
       id: 3,
@@ -36,7 +36,7 @@ export default function HomePage() {
       role: "Londres, Reino Unido",
       content:
         "I had the best experiences in Jericoacoara. Booking everything through Jeri 4XP was the best option.",
-      avatar: images.avatarVitor,
+      avatar: images.avatarDavid,
     },
     {
       id: 4,
@@ -44,7 +44,7 @@ export default function HomePage() {
       role: "Fortaleza, Brasil",
       content:
         "Minha experiência com a Jeri 4XP foi fantástica! A equipe é super profissional e atenciosa, me dando todo o suporte necessário. Já quero voltar!",
-      avatar: images.avatarVitor,
+      avatar: images.avatarGabi,
     },
     {
       id: 5,
@@ -52,7 +52,7 @@ export default function HomePage() {
       role: "São Paulo, Brasil",
       content:
         "Maravilhoso atendimento, excelente, adorei o guia Adriano e Vinicius hyper atencioso. Os passeios foram incriveis, quadriciclo, jet ski e otimas lembranças.",
-      avatar: images.avatarVitor,
+      avatar: images.avatarLilian,
     },
     {
       id: 6,
