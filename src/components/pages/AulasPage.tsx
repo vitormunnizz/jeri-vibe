@@ -432,7 +432,7 @@ export default function AulasPage() {
       </section>
 
       {/* CONTATO */}
-      <section id="contato" className="py-20 px-6 bg-accent">
+      <section id="contato" className="py-20 px-6 bg-orange-600">
         <div className="max-w-5xl mx-auto">
           {/* HEADER */}
           <div className="text-center mb-16">
@@ -451,9 +451,7 @@ export default function AulasPage() {
               href="https://wa.me/5585999001339"
               target="_blank"
               rel="noreferrer"
-              className="bg-orange-700 hover:bg-orange-800 p-8 rounded-3xl transition flex flex-col items-center justify-center text-center text-white"
-              whileHover={{ scale: 1.05, y: -5 }}
-              transition={{ duration: 0.3 }}
+              className="bg-white hover:bg-slate-800 p-8 rounded-3xl transition flex flex-col items-center justify-center text-center text-orange-600 hover:text-white"
             >
               <div className="mb-4 bg-orange-600 p-4 rounded-2xl">
                 <MessageCircle size={40} className="text-white" />
