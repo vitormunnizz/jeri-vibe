@@ -176,7 +176,7 @@ export default function HomePage() {
 
       {/* EXPERIÊNCIAS */}
       <section id="experiencias" className="py-20 px-6 bg-white">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="flex flex-col items-center mb-16 text-center">
             <span className="uppercase tracking-widest text-xs font-bold mb-2 text-orange-600">
               Explore Jericoacoara
@@ -207,7 +207,7 @@ export default function HomePage() {
                   alt={item.name}
                   className="absolute inset-0 w-full h-full object-cover opacity-60 transition-all duration-700 group-hover:scale-110 group-hover:opacity-40"
                 />
-                
+
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70 group-hover:opacity-60 transition-all duration-300"></div>
                 <div className="relative z-10 w-full">
                   <h2 className="text-white text-3xl font-black mb-4 uppercase italic tracking-tighter">
