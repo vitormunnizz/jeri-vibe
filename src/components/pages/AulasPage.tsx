@@ -1,7 +1,7 @@
 import { images } from '@/assets/images';
 import { Image } from '@/components/ui/image';
 import { motion } from 'framer-motion';
-import { ChevronLeft, ChevronRight, Mail, MessageCircle } from 'lucide-react';
+import { ChevronLeft, ChevronRight, MessageCircle } from 'lucide-react';
 import { useState } from 'react';
 
 export default function AulasPage() {
@@ -471,19 +471,15 @@ export default function AulasPage() {
             </a>
 
             {/* E-mail Card */}
-            <motion.a
+            <a
               href="mailto:jeri4xp@gmail.com"
               className="bg-orange-700 hover:bg-orange-800 p-8 rounded-3xl transition flex flex-col items-center justify-center text-center text-white"
-              whileHover={{ scale: 1.05, y: -5 }}
-              transition={{ duration: 0.3 }}
+
             >
-              <div className="mb-4 bg-orange-600 p-4 rounded-2xl">
-                <Mail size={40} className="text-white" />
-              </div>
               <h3 className="text-lg font-black mb-2">E-mail</h3>
               <p className="font-bold text-base mb-1">jeri4xp@gmail.com</p>
               <p className="text-xs uppercase tracking-widest">Envie sua mensagem</p>
-            </motion.a>
+            </a>
           </div>
 
           {/* LOCATION */}
