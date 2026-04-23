@@ -119,7 +119,7 @@ export default function AulasPage() {
       {/* HERO */}
       <section className="min-h-screen w-full text-white relative overflow-hidden">
         <header className="absolute w-full flex justify-between px-6 md:px-10 py-4 z-50 items-center">
-        <a href="/"><Image src={images.logo} alt="Logo Jeri4xp" className="w-20 md:w-24" /></a>
+          <a href="/"><Image src={images.logo} alt="Logo Jeri4xp" className="w-20 md:w-24" /></a>
 
           <nav className="hidden md:flex gap-8 text-sm font-bold uppercase tracking-wider">
             {navItems.map((item) => (
