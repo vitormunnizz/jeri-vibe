@@ -31,10 +31,10 @@ export const images = {
   aulasWingFoil: kitePreaPath,
 
   // Avatar
-  avatarVitor: kitePreaPath,
-  avatarVitor: kitePreaPath,
-  avatarVitor: kitePreaPath,
-  avatarVitor: kitePreaPath,
-  avatarVitor: kitePreaPath,
-  avatarVitor: kitePreaPath,
+  avatarAxelle: "../src/assets/passeiosHome.png",
+  avatarRemy: "../src/assets/passeiosHome.png",
+  avatarDavid: "../src/assets/passeiosHome.png",
+  avatarGabi: "../src/assets/passeiosHome.png",
+  avatarLilian: "../src/assets/passeiosHome.png",
+  avatarVitor: "../src/assets/passeiosHome.png",
 };
