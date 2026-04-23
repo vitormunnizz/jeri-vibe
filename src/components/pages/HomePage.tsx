@@ -192,7 +192,7 @@ export default function HomePage() {
               <a
                 key={item.name}
                 href={item.link}
-                className="group relative h-80 rounded-2xl flex flex-col justify-end items-start p-8 overflow-hidden bg-gray-900 shadow-lg hover:shadow-2xl transition-all duration-300"
+                className="group relative h-60 rounded-2xl flex flex-col justify-end items-start p-8 overflow-hidden bg-gray-900 shadow-lg hover:shadow-2xl transition-all duration-300"
               >
                 <Image
                   src={
@@ -207,6 +207,7 @@ export default function HomePage() {
                   alt={item.name}
                   className="absolute inset-0 w-full h-full object-cover opacity-60 transition-all duration-700 group-hover:scale-110 group-hover:opacity-40"
                 />
+                
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70 group-hover:opacity-60 transition-all duration-300"></div>
                 <div className="relative z-10 w-full">
                   <h2 className="text-white text-3xl font-black mb-4 uppercase italic tracking-tighter">
