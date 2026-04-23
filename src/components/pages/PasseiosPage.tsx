@@ -135,9 +135,6 @@ export default function PasseiosPage() {
         <Image src={images.hero} className="absolute w-full h-full object-cover opacity-80" alt="Hero background" />
 
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
-          <span className="text-accent mb-2 uppercase tracking-widest text-xs md:text-sm">
-            Explore o lado leste e oeste de Jericoacoara com buggy, quadriciclo ou UTV e viva uma experiência inesquecível
-          </span>
 
           <h1 className="text-3xl md:text-5xl font-black italic tracking-tighter mb-6">
             Os melhores passeios em Jericoacoara com conforto e segurança
