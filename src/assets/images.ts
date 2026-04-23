@@ -27,10 +27,10 @@ export const images = {
   transferCruz: "../src/assets/cruz.webp",
 
   // Aulas images
-  aulasKitesurf: kitePreaPath,
-  aulasWindsurf: kitePreaPath,
-  aulasSurf: kitePreaPath,
-  aulasWingFoil: kitePreaPath,
+  aulasKitesurf: "../src/assets/kite.png",
+  aulasWindsurf: "../src/assets/fortal.png",
+  aulasSurf: "../src/assets/fortal.png",
+  aulasWingFoil: "../src/assets/fortal.png",
 
   // Avatar
   avatarAxelle: "../src/assets/axelle.jpeg",
