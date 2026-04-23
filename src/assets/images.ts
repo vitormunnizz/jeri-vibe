@@ -1,20 +1,20 @@
 // Image exports for the Jeri4xp website
 // All images are centralized here for easy management
 
-const kitePreaPath = '../src/assets/kitePrea.png';
+const kitePreaPath = './kitePrea.png';
 
 export const images = {
   // Logo
-  logo: "../src/assets/logo.png",
+  logo: "./logo.png",
 
   // Hero backgrounds
-  hero: "../src/assets/hero.png",
+  hero: "./hero.png",
 
   // Experience cards
-  experiencePasseios:  "../src/assets/passeiosHome.png",
-  experienceHospedagem:  "../src/assets/hospedagemHome.png",
-  experienceTransfer: "../src/assets/transferHome.png",
-  experienceAulas: "../src/assets/aulasHome.png",
+  experiencePasseios:  "./PasseiosHome.png",
+  experienceHospedagem:  "./hospedagemHome.png",
+  experienceTransfer: "./transferHome.png",
+  experienceAulas: "./aulasHome.png",
 
   // Carousel images
   carouselPasseios: kitePreaPath,
