@@ -243,7 +243,13 @@ export default function HospedagemPage() {
               <div className="grid md:grid-cols-2 gap-0 h-full">
                 <div className="relative h-full">
                   <Image
-                    src={images.carouselHospedagem}
+                    src={
+                      carouselIndex === 0
+                        ? images.carouselEconomico
+                        : carouselIndex === 1
+                        ? images.carouselFamilia
+                        : images.carouselLuxo
+                    }
                     alt={tiposHospedagem[carouselIndex].titulo}
                     className="w-full h-full object-cover"
                   />
