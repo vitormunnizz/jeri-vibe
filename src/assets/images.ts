@@ -36,5 +36,5 @@ export const images = {
   avatarDavid: "../src/assets/passeiosHome.png",
   avatarGabi: "../src/assets/passeiosHome.png",
   avatarLilian: "../src/assets/passeiosHome.png",
-  avatarVitor: "../src/assets/passeiosHome.png",
+  avatarVitor: "../src/assets/vitor.jpeg",
 };
