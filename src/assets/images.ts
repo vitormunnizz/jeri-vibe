@@ -33,7 +33,7 @@ export const images = {
   // Avatar
   avatarAxelle: "../src/assets/passeiosHome.png",
   avatarRemy: "../src/assets/passeiosHome.png",
-  avatarDavid: "../src/assets/passeiosHome.png",
+  avatarDavid: "../src/assets/david.png",
   avatarGabi: "../src/assets/gabi.png",
   avatarLilian: "../src/assets/lilian.png",
   avatarVitor: "../src/assets/vitor.jpeg",
