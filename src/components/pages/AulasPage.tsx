@@ -453,7 +453,7 @@ export default function AulasPage() {
               rel="noreferrer"
               className="bg-white hover:bg-slate-800 p-8 rounded-3xl transition flex flex-col items-center justify-center text-center text-orange-600 hover:text-white"
             >
-              <div className="mb-4 bg-orange-600 p-4 rounded-2xl">
+              <div className="mb-4 bg-orange-600 hover:bg-white hover:text-slate-800 p-4 rounded-2xl">
                 <MessageCircle size={40} className="text-white" />
               </div>
               <h3 className="text-lg font-black mb-2">WhatsApp</h3>
