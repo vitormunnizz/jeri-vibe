@@ -31,10 +31,10 @@ export const images = {
   aulasWingFoil: kitePreaPath,
 
   // Avatar
-  avatarAxelle: "../src/assets/passeiosHome.png",
-  avatarRemy: "../src/assets/passeiosHome.png",
-  avatarDavid: "../src/assets/david.png",
-  avatarGabi: "../src/assets/gabi.png",
-  avatarLilian: "../src/assets/lilian.png",
+  avatarAxelle: "../src/assets/axelle.jpeg",
+  avatarRemy: "../src/assets/remy.jpeg",
+  avatarDavid: "../src/assets/david.jpeg",
+  avatarGabi: "../src/assets/gabi.jpeg",
+  avatarLilian: "../src/assets/lilian.jpeg",
   avatarVitor: "../src/assets/vitor.jpeg",
 };
