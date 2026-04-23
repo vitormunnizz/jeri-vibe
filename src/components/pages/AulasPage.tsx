@@ -463,7 +463,7 @@ export default function AulasPage() {
               href="https://instagram.com/jeri4xp"
               target="_blank"
               rel="noreferrer"
-              className="bg-orange-700 hover:bg-orange-800 p-8 rounded-3xl transition flex flex-col items-center justify-center text-center text-white"
+              className="bg-orange-600 hover:bg-white border border-white p-8 rounded-3xl transition flex flex-col items-center justify-center text-center text-white hover:text-orange-600"
             >
               <h3 className="text-lg font-black mb-2">Instagram</h3>
               <p className="font-bold text-base mb-1">@jeri4xp</p>
@@ -473,8 +473,7 @@ export default function AulasPage() {
             {/* E-mail Card */}
             <a
               href="mailto:jeri4xp@gmail.com"
-              className="bg-orange-700 hover:bg-orange-800 p-8 rounded-3xl transition flex flex-col items-center justify-center text-center text-white"
-
+              className="bg-orange-600 hover:bg-white border border-white p-8 rounded-3xl transition flex flex-col items-center justify-center text-center text-white hover:text-orange-600"
             >
               <h3 className="text-lg font-black mb-2">E-mail</h3>
               <p className="font-bold text-base mb-1">jeri4xp@gmail.com</p>
