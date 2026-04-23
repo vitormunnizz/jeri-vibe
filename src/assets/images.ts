@@ -23,8 +23,8 @@ export const images = {
 
   // Carousel hospedagem
   carouselEconomico: "../src/assets/economico.jpg",
-  carouselFamilia: "../src/assets/leste.png",
-  carouselHospedagem: "../src/assets/leste.png",
+  carouselFamilia: "../src/assets/familia.webp",
+  carouselLuxo: "../src/assets/leste.png",
 
   // Transfer images
   transferFortaleza: "../src/assets/fortal.png",
