@@ -25,7 +25,7 @@ export default function HomePage() {
     {
       id: 2,
       name: "Remy Sanchez",
-      role: "França",
+      role: "Anglet, França",
       content:
         "Service excellent, les prestations ont même dépassé mes attentes. J'ai testé le wingfoil et fait une excursion en quad dans les dunes, inoubliable!",
       avatar: images.avatarRemy,
