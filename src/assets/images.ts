@@ -5,7 +5,7 @@ const kitePreaPath = '../src/assets/kitePrea.png';
 
 export const images = {
   // Logo
-  logo: kitePreaPath,
+  logo: "../src/assets/logo.png",
 
   // Hero backgrounds
   heroHome: kitePreaPath,
