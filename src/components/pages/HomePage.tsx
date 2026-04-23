@@ -197,7 +197,7 @@ export default function HomePage() {
                 <Image
                   src={
                     item.name === "Passeios"
-                      ? images.experiencePasseios
+                      ? images.experiencePasseio
                       : item.name === "Hospedagem"
                         ? images.experienceHospedagem
                         : item.name === "Transfer"
