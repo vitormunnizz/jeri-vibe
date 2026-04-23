@@ -1,13 +1,13 @@
 // Image exports for the Jeri4xp website
 // All images are centralized here for easy management
 
-import logoImg from './logo.png';
-import heroImg from './hero.png';
-import passeiosImg from './PasseiosHome.png';
-import hospedagemImg from './hospedagemHome.png';
-import transferImg from './transferHome.png';
-import aulasImg from './aulasHome.png';
-import kitePreaImg from './kitePrea.png';
+import aulasImg from '../src/assets/aulasHome.png';
+import heroImg from '../src/assets/hero.png';
+import hospedagemImg from '../src/assets/hospedagemHome.png';
+import kitePreaImg from '../src/assets/kitePrea.png';
+import logoImg from '../src/assets/logo.png';
+import passeiosImg from '../src/assets/PasseiosHome.png';
+import transferImg from '../src/assets/transferHome.png';
 
 export const images = {
   // Logo
