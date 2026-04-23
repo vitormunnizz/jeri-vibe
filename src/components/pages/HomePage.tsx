@@ -187,38 +187,33 @@ export default function HomePage() {
             <div className="h-1 w-20 bg-orange-600 mt-4 rounded-full"></div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {experiences.map((item) => (
-              <a
-                key={item.name}
-                href={item.link}
-                className="group relative h-80 rounded-2xl flex flex-col justify-end items-start p-8 overflow-hidden bg-gray-900 shadow-lg hover:shadow-2xl transition-all duration-300"
-              >
-                <Image
-                  src={
-images.experiencePasseio
-                      : item.name === "Hospedagem"
-                        ? images.experienceHospedagem
-                        : item.name === "Transfer"
-                          ? images.experienceTransfer
-                          : images.experienceAulas
-                  }
-                  alt={item.name}
-                  className="absolute inset-0 w-full h-full object-cover opacity-60 transition-all duration-700 group-hover:scale-110 group-hover:opacity-40"
-                />
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+  {experiences.map((item) => (
+    <a
+      key={item.name}
+      href={item.link}
+      className="group relative h-80 rounded-2xl flex flex-col justify-end items-start p-8 overflow-hidden bg-gray-900 shadow-lg hover:shadow-2xl transition-all duration-300"
+    >
+      <Image
+        src={item.image}
+        alt={item.name}
+        className="absolute inset-0 w-full h-full object-cover opacity-60 transition-all duration-700 group-hover:scale-110 group-hover:opacity-40"
+      />
 
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70 group-hover:opacity-60 transition-all duration-300"></div>
-                <div className="relative z-10 w-full">
-                  <h2 className="text-white text-3xl font-black mb-4 uppercase italic tracking-tighter">
-                    {item.name}
-                  </h2>
-                  <button className="bg-orange-600 text-white py-3 px-6 rounded-full font-bold text-sm uppercase tracking-widest hover:bg-white hover:text-orange-600 hover:cursor-pointer transition-all duration-300">
-                    Saiba mais
-                  </button>
-                </div>
-              </a>
-            ))}
-          </div>
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70 group-hover:opacity-60 transition-all duration-300"></div>
+
+      <div className="relative z-10 w-full">
+        <h2 className="text-white text-3xl font-black mb-4 uppercase italic tracking-tighter">
+          {item.name}
+        </h2>
+
+        <button className="bg-orange-600 text-white py-3 px-6 rounded-full font-bold text-sm uppercase tracking-widest hover:bg-white hover:text-orange-600 hover:cursor-pointer transition-all duration-300">
+          Saiba mais
+        </button>
+      </div>
+    </a>
+  ))}
+</div>
         </div>
       </section>
 
