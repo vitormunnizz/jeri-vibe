@@ -28,8 +28,8 @@ export const images = {
 
   // Aulas images
   aulasKitesurf: "../src/assets/kite.png",
-  aulasWindsurf: "../src/assets/fortal.png",
-  aulasSurf: "../src/assets/fortal.png",
+  aulasWindsurf: "../src/assets/wind.png",
+  aulasSurf: "../src/assets/surf.png",
   aulasWingFoil: "../src/assets/fortal.png",
 
   // Avatar
