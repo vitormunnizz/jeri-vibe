@@ -39,7 +39,7 @@ export default function HospedagemPage() {
       itens: ['Vista Mar', 'Piscina Privativa', 'Decoração Especial', 'Paz & Sossego'],
     },
     {
-      badge: "Famílias e Resorts",
+      badge: "Hoteis e Resorts",
       titulo: "Estrutura Completa & Lazer",
       descricao: "Espaços amplos com área de lazer para crianças e serviços de hotelaria premium.",
       texto: [
