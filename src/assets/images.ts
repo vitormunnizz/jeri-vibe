@@ -1,69 +1,45 @@
 // Image exports for the Jeri4xp website
 // All images are centralized here for easy management
-
-import logoImg from './logo.png';
-import heroImg from './hero.png';
-import passeiosHomeImg from './passeiosHome.png';
-import hospedagemHomeImg from './hospedagemHome.png';
-import transferHomeImg from './transferHome.png';
-import aulasHomeImg from './aulasHome.png';
-import lesteImg from './leste.png';
-import oesteImg from './oeste.webp';
-import extremoImg from './extremo.png';
-import economicoImg from './economico.jpg';
-import familiaImg from './familia.webp';
-import luxoImg from './luxo.jpg';
-import fortalImg from './fortal.png';
-import cruzImg from './cruz.webp';
-import kiteImg from './kite.png';
-import windImg from './wind.png';
-import surfImg from './surf.png';
-import wingImg from './wing.png';
-import axelleImg from './axelle.jpeg';
-import remyImg from './remy.jpeg';
-import davidImg from './david.jpeg';
-import gabiImg from './gabi.jpeg';
-import lilianImg from './lilian.jpeg';
-import vitorImg from './vitor.jpeg';
+// Using cloud URLs for proper deployment
 
 export const images = {
   // Logo
-  logo: logoImg,
+  logo: "https://static.wixstatic.com/media/12d367_71ebdd7141d041e4be3d91d80d4578dd~mv2.png",
 
   // Hero backgrounds
-  hero: heroImg,
+  hero: "https://static.wixstatic.com/media/12d367_71ebdd7141d041e4be3d91d80d4578dd~mv2.png",
 
   // Experience cards
-  experiencePasseios: passeiosHomeImg,
-  experienceHospedagem: hospedagemHomeImg,
-  experienceTransfer: transferHomeImg,
-  experienceAulas: aulasHomeImg,
+  experiencePasseios: "https://static.wixstatic.com/media/12d367_71ebdd7141d041e4be3d91d80d4578dd~mv2.png",
+  experienceHospedagem: "https://static.wixstatic.com/media/12d367_71ebdd7141d041e4be3d91d80d4578dd~mv2.png",
+  experienceTransfer: "https://static.wixstatic.com/media/12d367_71ebdd7141d041e4be3d91d80d4578dd~mv2.png",
+  experienceAulas: "https://static.wixstatic.com/media/12d367_71ebdd7141d041e4be3d91d80d4578dd~mv2.png",
 
   // Carousel passeios
-  PasseiosLeste: lesteImg,
-  PasseiosOeste: oesteImg,
-  PasseiosExtremo: extremoImg,
+  PasseiosLeste: "https://static.wixstatic.com/media/12d367_71ebdd7141d041e4be3d91d80d4578dd~mv2.png",
+  PasseiosOeste: "https://static.wixstatic.com/media/12d367_71ebdd7141d041e4be3d91d80d4578dd~mv2.png",
+  PasseiosExtremo: "https://static.wixstatic.com/media/12d367_71ebdd7141d041e4be3d91d80d4578dd~mv2.png",
 
   // Carousel hospedagem
-  carouselEconomico: economicoImg,
-  carouselFamilia: familiaImg,
-  carouselLuxo: luxoImg,
+  carouselEconomico: "https://static.wixstatic.com/media/12d367_71ebdd7141d041e4be3d91d80d4578dd~mv2.png",
+  carouselFamilia: "https://static.wixstatic.com/media/12d367_71ebdd7141d041e4be3d91d80d4578dd~mv2.png",
+  carouselLuxo: "https://static.wixstatic.com/media/12d367_71ebdd7141d041e4be3d91d80d4578dd~mv2.png",
 
   // Transfer images
-  transferFortaleza: fortalImg,
-  transferCruz: cruzImg,
+  transferFortaleza: "https://static.wixstatic.com/media/12d367_71ebdd7141d041e4be3d91d80d4578dd~mv2.png",
+  transferCruz: "https://static.wixstatic.com/media/12d367_71ebdd7141d041e4be3d91d80d4578dd~mv2.png",
 
   // Aulas images
-  aulasKitesurf: kiteImg,
-  aulasWindsurf: windImg,
-  aulasSurf: surfImg,
-  aulasWingFoil: wingImg,
+  aulasKitesurf: "https://static.wixstatic.com/media/12d367_71ebdd7141d041e4be3d91d80d4578dd~mv2.png",
+  aulasWindsurf: "https://static.wixstatic.com/media/12d367_71ebdd7141d041e4be3d91d80d4578dd~mv2.png",
+  aulasSurf: "https://static.wixstatic.com/media/12d367_71ebdd7141d041e4be3d91d80d4578dd~mv2.png",
+  aulasWingFoil: "https://static.wixstatic.com/media/12d367_71ebdd7141d041e4be3d91d80d4578dd~mv2.png",
 
   // Avatar
-  avatarAxelle: axelleImg,
-  avatarRemy: remyImg,
-  avatarDavid: davidImg,
-  avatarGabi: gabiImg,
-  avatarLilian: lilianImg,
-  avatarVitor: vitorImg,
+  avatarAxelle: "https://static.wixstatic.com/media/12d367_71ebdd7141d041e4be3d91d80d4578dd~mv2.png",
+  avatarRemy: "https://static.wixstatic.com/media/12d367_71ebdd7141d041e4be3d91d80d4578dd~mv2.png",
+  avatarDavid: "https://static.wixstatic.com/media/12d367_71ebdd7141d041e4be3d91d80d4578dd~mv2.png",
+  avatarGabi: "https://static.wixstatic.com/media/12d367_71ebdd7141d041e4be3d91d80d4578dd~mv2.png",
+  avatarLilian: "https://static.wixstatic.com/media/12d367_71ebdd7141d041e4be3d91d80d4578dd~mv2.png",
+  avatarVitor: "https://static.wixstatic.com/media/12d367_71ebdd7141d041e4be3d91d80d4578dd~mv2.png",
 };
