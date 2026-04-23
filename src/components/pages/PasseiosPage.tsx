@@ -136,7 +136,7 @@ export default function PasseiosPage() {
 
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
 
-          <h1 className="text-3xl md:text-5xl font-black italic tracking-tighter mb-6">
+          <h1 className="text-3xl md:text-5xl font-black italic tracking-tighter mb-6 text-shadow-md">
             Os melhores passeios em Jericoacoara com conforto e segurança
           </h1>
 
