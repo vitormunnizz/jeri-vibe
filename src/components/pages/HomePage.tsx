@@ -1,7 +1,7 @@
+import { images } from '@/assets/images';
 import { Image } from '@/components/ui/image';
 import { MessageCircle } from "lucide-react";
 import { useState } from "react";
-import { images } from '@/assets/images';
 
 export default function HomePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -114,7 +114,7 @@ export default function HomePage() {
 
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
 
-          <h1 className="text-3xl md:text-5xl font-black italic tracking-tighter mb-6">
+          <h1 className="text-3xl md:text-5xl font-black italic tracking-tighter mb-6 text-shadow">
             Jeri4xp: Sua conexão <br /> com o paraíso.
           </h1>
 
