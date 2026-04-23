@@ -22,7 +22,9 @@ export const images = {
   PasseiosExtremo: "../src/assets/extremo.png",
 
   // Carousel hospedagem
-  carouselHospedagem: kitePreaPath,
+  carouselHospedagem: "../src/assets/leste.png",
+  carouselHospedagem: "../src/assets/leste.png",
+  carouselHospedagem: "../src/assets/leste.png",
 
   // Transfer images
   transferFortaleza: "../src/assets/fortal.png",
