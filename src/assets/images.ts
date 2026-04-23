@@ -16,10 +16,12 @@ export const images = {
   experienceTransfer: "../src/assets/transferHome.png",
   experienceAulas: "../src/assets/aulasHome.png",
 
-  // Carousel images
+  // Carousel passeios
   PasseiosLeste: "../src/assets/leste.png",
   PasseiosOeste: "../src/assets/oeste.webp",
   PasseiosExtremo: "../src/assets/extremo.png",
+
+  // Carousel hospedagem
   carouselHospedagem: kitePreaPath,
 
   // Transfer images
