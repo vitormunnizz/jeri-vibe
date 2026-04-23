@@ -453,22 +453,17 @@ export default function AulasPage() {
               rel="noreferrer"
               className="bg-orange-600 hover:bg-white border border-white p-8 rounded-3xl transition flex flex-col items-center justify-center text-center text-white hover:text-orange-600"
             >
-              <div className="mb-4 bg-orange-600 hover:bg-white hover:text-slate-800 p-4 rounded-2xl">
-                <MessageCircle size={40} className="text-white" />
-              </div>
               <h3 className="text-lg font-black mb-2">WhatsApp</h3>
               <p className="font-bold text-base mb-1">(85) 9 9900-1339</p>
               <p className="text-xs uppercase tracking-widest">Clique para conversar</p>
             </a>
 
             {/* Instagram Card */}
-            <motion.a
+            <a
               href="https://instagram.com/jeri4xp"
               target="_blank"
               rel="noreferrer"
               className="bg-orange-700 hover:bg-orange-800 p-8 rounded-3xl transition flex flex-col items-center justify-center text-center text-white"
-              whileHover={{ scale: 1.05, y: -5 }}
-              transition={{ duration: 0.3 }}
             >
               <div className="mb-4 bg-orange-600 p-4 rounded-2xl">
                 <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -478,7 +473,7 @@ export default function AulasPage() {
               <h3 className="text-lg font-black mb-2">Instagram</h3>
               <p className="font-bold text-base mb-1">@jeri4xp</p>
               <p className="text-xs uppercase tracking-widest">Acompanhe as aventuras</p>
-            </motion.a>
+            </.a>
 
             {/* E-mail Card */}
             <motion.a
