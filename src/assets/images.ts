@@ -17,9 +17,9 @@ export const images = {
   experienceAulas: "../src/assets/aulasHome.png",
 
   // Carousel images
-  PasseiosLeste: "../src/assets/aulasHome.png",
-  PasseiosOeste: "../src/assets/aulasHome.png",
-  PasseiosExtremo: "../src/assets/aulasHome.png",
+  PasseiosLeste: "../src/assets/leste.png",
+  PasseiosOeste: "../src/assets/oeste.webp",
+  PasseiosExtremo: "../src/assets/extremo.jpg",
   carouselPasseios: kitePreaPath,
   carouselHospedagem: kitePreaPath,
 
