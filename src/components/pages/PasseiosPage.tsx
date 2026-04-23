@@ -254,7 +254,7 @@ const passeios = [
                 {/* IMAGEM */}
                 <div className="relative h-full">
                   <Image
-                    src={images.carouselPasseios}
+                    src={passeios[carouselIndex].image}
                     alt={passeios[carouselIndex].titulo}
                     className="w-full h-full object-cover"
                   />
