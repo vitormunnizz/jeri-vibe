@@ -40,7 +40,7 @@ export default function HomePage() {
     },
     {
       id: 4,
-      name: "Gabi",
+      name: "Gabriela Maia",
       role: "Fortaleza, Brasil",
       content:
         "Minha experiência com a Jeri 4XP foi fantástica! A equipe é super profissional e atenciosa, me dando todo o suporte necessário. Já quero voltar!",
