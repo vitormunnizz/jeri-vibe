@@ -176,7 +176,7 @@ export default function HomePage() {
 
       {/* EXPERIÊNCIAS */}
       <section id="experiencias" className="py-20 px-6 bg-white">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <div className="flex flex-col items-center mb-16 text-center">
             <span className="uppercase tracking-widest text-xs font-bold mb-2 text-orange-600">
               Explore Jericoacoara
@@ -187,7 +187,7 @@ export default function HomePage() {
             <div className="h-1 w-20 bg-orange-600 mt-4 rounded-full"></div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {experiences.map((item) => (
               <a
                 key={item.name}
