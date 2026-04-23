@@ -29,7 +29,7 @@ export default function HospedagemPage() {
       itens: ['Café da Manhã', 'Ar Condicionado', 'Wi-Fi Grátis', 'Próximo à Vila'],
     },
     {
-      badge: "Casais",
+      badge: "Casais e familiares",
       titulo: "Romantismo & Exclusividade",
       descricao: "Ambientes pensados para momentos a dois, com privacidade e vistas privilegiadas.",
       texto: [
