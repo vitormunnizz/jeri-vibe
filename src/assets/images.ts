@@ -30,7 +30,7 @@ export const images = {
   aulasKitesurf: "../src/assets/kite.png",
   aulasWindsurf: "../src/assets/wind.png",
   aulasSurf: "../src/assets/surf.png",
-  aulasWingFoil: "../src/assets/fortal.png",
+  aulasWingFoil: "../src/assets/wing.png",
 
   // Avatar
   avatarAxelle: "../src/assets/axelle.jpeg",
