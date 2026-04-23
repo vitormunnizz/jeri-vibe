@@ -176,7 +176,7 @@ export default function HomePage() {
 
       {/* EXPERIÊNCIAS */}
       <section id="experiencias" className="py-20 px-6 bg-white">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <div className="flex flex-col items-center mb-16 text-center">
             <span className="uppercase tracking-widest text-xs font-bold mb-2 text-orange-600">
               Explore Jericoacoara
@@ -192,7 +192,7 @@ export default function HomePage() {
               <a
                 key={item.name}
                 href={item.link}
-                className="group relative h-60 rounded-2xl flex flex-col justify-end items-start p-8 overflow-hidden bg-gray-900 shadow-lg hover:shadow-2xl transition-all duration-300"
+                className="group relative h-75 rounded-2xl flex flex-col justify-end items-start p-8 overflow-hidden bg-gray-900 shadow-lg hover:shadow-2xl transition-all duration-300"
               >
                 <Image
                   src={
