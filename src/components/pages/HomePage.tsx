@@ -192,7 +192,7 @@ export default function HomePage() {
               <a
                 key={item.name}
                 href={item.link}
-                className="group relative h-75 rounded-2xl flex flex-col justify-end items-start p-8 overflow-hidden bg-gray-900 shadow-lg hover:shadow-2xl transition-all duration-300"
+                className="group relative h-80 rounded-2xl flex flex-col justify-end items-start p-8 overflow-hidden bg-gray-900 shadow-lg hover:shadow-2xl transition-all duration-300"
               >
                 <Image
                   src={
