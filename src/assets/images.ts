@@ -31,5 +31,5 @@ export const images = {
   aulasWingFoil: kitePreaPath,
 
   // Avatar placeholders
-  avatarPlaceholder: (seed: string) => kitePreaPath,
+  avatarVitor: kitePreaPath,
 };
