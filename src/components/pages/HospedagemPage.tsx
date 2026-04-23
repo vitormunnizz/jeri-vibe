@@ -1,8 +1,8 @@
+import { images } from '@/assets/images';
 import { Image } from '@/components/ui/image';
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, MessageCircle } from "lucide-react";
 import { useState } from "react";
-import { images } from '@/assets/images';
 
 export default function HospedagemPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -136,7 +136,7 @@ export default function HospedagemPage() {
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
 
           <h1 className="text-3xl md:text-5xl font-black italic tracking-tighter mb-6 text-shadow-md">
-            Sua Conexão <br /> com o Paraíso
+            Hospedagem em Jericoacora para uma experiencia inesquecivel
           </h1>
 
           <a
