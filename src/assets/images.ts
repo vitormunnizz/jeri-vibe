@@ -23,8 +23,8 @@ export const images = {
   carouselHospedagem: kitePreaPath,
 
   // Transfer images
-  transferFortaleza: "../src/assets/leste.png",
-  transferCruz: "../src/assets/cruz.png",
+  transferFortaleza: "../src/assets/fortal.png",
+  transferCruz: "../src/assets/cruz.webp",
 
   // Aulas images
   aulasKitesurf: kitePreaPath,
