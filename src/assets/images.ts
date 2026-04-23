@@ -1,46 +1,69 @@
 // Image exports for the Jeri4xp website
 // All images are centralized here for easy management
 
-const kitePreaPath = '../src/assets/kitePrea.png';
+import logoImg from './logo.png';
+import heroImg from './hero.png';
+import passeiosHomeImg from './passeiosHome.png';
+import hospedagemHomeImg from './hospedagemHome.png';
+import transferHomeImg from './transferHome.png';
+import aulasHomeImg from './aulasHome.png';
+import lesteImg from './leste.png';
+import oesteImg from './oeste.webp';
+import extremoImg from './extremo.png';
+import economicoImg from './economico.jpg';
+import familiaImg from './familia.webp';
+import luxoImg from './luxo.jpg';
+import fortalImg from './fortal.png';
+import cruzImg from './cruz.webp';
+import kiteImg from './kite.png';
+import windImg from './wind.png';
+import surfImg from './surf.png';
+import wingImg from './wing.png';
+import axelleImg from './axelle.jpeg';
+import remyImg from './remy.jpeg';
+import davidImg from './david.jpeg';
+import gabiImg from './gabi.jpeg';
+import lilianImg from './lilian.jpeg';
+import vitorImg from './vitor.jpeg';
 
 export const images = {
   // Logo
-  logo: "../src/assets/logo.png",
+  logo: logoImg,
 
   // Hero backgrounds
-  hero: "../src/assets/hero.png",
+  hero: heroImg,
 
   // Experience cards
-  experiencePasseios: "../src/assets/passeiosHome.png",
-  experienceHospedagem:  "../src/assets/hospedagemHome.png",
-  experienceTransfer: "../src/assets/transferHome.png",
-  experienceAulas: "../src/assets/aulasHome.png",
+  experiencePasseios: passeiosHomeImg,
+  experienceHospedagem: hospedagemHomeImg,
+  experienceTransfer: transferHomeImg,
+  experienceAulas: aulasHomeImg,
 
   // Carousel passeios
-  PasseiosLeste: "../src/assets/leste.png",
-  PasseiosOeste: "../src/assets/oeste.webp",
-  PasseiosExtremo: "../src/assets/extremo.png",
+  PasseiosLeste: lesteImg,
+  PasseiosOeste: oesteImg,
+  PasseiosExtremo: extremoImg,
 
   // Carousel hospedagem
-  carouselEconomico: "../src/assets/economico.jpg",
-  carouselFamilia: "../src/assets/familia.webp",
-  carouselLuxo: "../src/assets/luxo.jpg",
+  carouselEconomico: economicoImg,
+  carouselFamilia: familiaImg,
+  carouselLuxo: luxoImg,
 
   // Transfer images
-  transferFortaleza: "../src/assets/fortal.png",
-  transferCruz: "../src/assets/cruz.webp",
+  transferFortaleza: fortalImg,
+  transferCruz: cruzImg,
 
   // Aulas images
-  aulasKitesurf: "../src/assets/kite.png",
-  aulasWindsurf: "../src/assets/wind.png",
-  aulasSurf: "../src/assets/surf.png",
-  aulasWingFoil: "../src/assets/wing.png",
+  aulasKitesurf: kiteImg,
+  aulasWindsurf: windImg,
+  aulasSurf: surfImg,
+  aulasWingFoil: wingImg,
 
   // Avatar
-  avatarAxelle: "../src/assets/axelle.jpeg",
-  avatarRemy: "../src/assets/remy.jpeg",
-  avatarDavid: "../src/assets/david.jpeg",
-  avatarGabi: "../src/assets/gabi.jpeg",
-  avatarLilian: "../src/assets/lilian.jpeg",
-  avatarVitor: "../src/assets/vitor.jpeg",
+  avatarAxelle: axelleImg,
+  avatarRemy: remyImg,
+  avatarDavid: davidImg,
+  avatarGabi: gabiImg,
+  avatarLilian: lilianImg,
+  avatarVitor: vitorImg,
 };
