@@ -59,7 +59,7 @@ export default function HomePage() {
       name: "Vitor Muniz",
       role: "Sobral, Brasil",
       content:
-        "Todas as vezes que for em jericoacoara, vou novamente com a Jeri4xp! Excelente atendimento por parte da equipe.",
+        "Todas as vezes que eu for a Jericoacoara, com certeza escolherei a Jeri4xp novamente! O atendimento da equipe é simplesmente excelente.",
       avatar: images.avatarPlaceholder("vitor"),
     },
   ];
