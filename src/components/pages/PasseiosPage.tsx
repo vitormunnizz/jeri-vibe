@@ -40,7 +40,7 @@ const passeios = [
       "Finalize nas redes do Lago Grande. Ideal para explorar um lado diferente",
       "dos passeios em Jericoacoara."
     ],
-    itens: ['Passeio Ecológico', 'Trilha do Mangue Seco', 'Dunas de Tatajuba', 'Lago Grande'],
+    itens: ['Passeio Ecológico', 'Trilha do Mangue Seco', 'Dunas de Tatajuba', 'Toboágua', 'Tiroleza', 'Lago Grande'],
   },
   {
     badge: "Roteiro Extremo Leste",
