@@ -64,12 +64,28 @@ export default function HomePage() {
     },
   ];
 
-  const experiences = [
-    { name: "Passeios", link: "/passeios" },
-    { name: "Hospedagem", link: "/hospedagem" },
-    { name: "Transfer", link: "/transfer" },
-    { name: "Aulas", link: "/aulas" },
-  ];
+const experiences = [
+  {
+    name: "Passeios",
+    link: "/passeios",
+    image: images.experiencePasseio,
+  },
+  {
+    name: "Hospedagem",
+    link: "/hospedagem",
+    image: images.experienceHospedagem,
+  },
+  {
+    name: "Transfer",
+    link: "/transfer",
+    image: images.experienceTransfer,
+  },
+  {
+    name: "Aulas",
+    link: "/aulas",
+    image: images.experienceAulas,
+  },
+];
 
   return (
     <div className="font-sans">
