@@ -60,7 +60,7 @@ export default function HomePage() {
       role: "Sobral, Brasil",
       content:
         "Todas as vezes que eu for a Jericoacoara, com certeza escolherei a Jeri4xp novamente! O atendimento da equipe é simplesmente excelente.",
-      avatar: images.avatarPlaceholder("vitor"),
+      avatar: images.avatarVitor,
     },
   ];
 
