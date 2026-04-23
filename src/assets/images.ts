@@ -24,7 +24,7 @@ export const images = {
 
   // Transfer images
   transferFortaleza: "../src/assets/leste.png",
-  transferCruz: "../src/assets/leste.png",
+  transferCruz: "../src/assets/cruz.png",
 
   // Aulas images
   aulasKitesurf: kitePreaPath,
