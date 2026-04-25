@@ -234,7 +234,7 @@ export default function HospedagemPage() {
             </button>
 
             <motion.div
-              className="bg-background rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition relative flex-1 h-96 md:h-[500px]"
+              className="bg-background rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition relative flex-1 h-auto md:h-[500px]"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
@@ -255,23 +255,23 @@ export default function HospedagemPage() {
                   />
                 </div>
 
-                <div className="p-8 flex flex-col justify-between overflow-y-auto">
+                <div className="p-6 md:p-8 flex flex-col justify-between overflow-y-auto md:overflow-y-auto overflow-x-hidden scrollbar-hide">
                   <div>
                     <span className="inline-block px-4 py-1 bg-accent/10 text-accent text-xs font-bold rounded-full mb-3 w-fit">
                       {tiposHospedagem[carouselIndex].badge}
                     </span>
 
-                    <h3 className="text-xl md:text-2xl font-black mb-2 text-primary">
+                    <h3 className="text-lg md:text-2xl font-black mb-2 text-primary">
                       {tiposHospedagem[carouselIndex].titulo}
                     </h3>
 
-                    <p className="text-foreground mb-3 text-sm">
+                    <p className="text-foreground mb-3 text-sm md:text-base">
                       {tiposHospedagem[carouselIndex].descricao}
                     </p>
 
                     <div className="text-foreground space-y-1 mb-4">
                       {tiposHospedagem[carouselIndex].texto.map((t, i) => (
-                        <p key={i} className="text-xs">{t}</p>
+                        <p key={i} className="text-xs md:text-sm">{t}</p>
                       ))}
                     </div>
 
@@ -279,7 +279,7 @@ export default function HospedagemPage() {
                       {tiposHospedagem[carouselIndex].itens.map(item => (
                         <div key={item} className="flex items-center gap-2">
                           <span className="text-accent font-bold flex-shrink-0">✓</span>
-                          <span className="text-xs text-foreground">{item}</span>
+                          <span className="text-xs md:text-sm text-foreground">{item}</span>
                         </div>
                       ))}
                     </div>
@@ -294,6 +294,53 @@ export default function HospedagemPage() {
                     Consultar Disponibilidade
                   </a>
                 </div>
+              </div>
+
+              {/* MOBILE CAROUSEL CONTROLS - BOTTOM CENTER */}
+              <div className="md:hidden flex items-center justify-center gap-4 px-4 py-4 bg-muted">
+                {/* LEFT BUTTON */}
+                <button
+                  onClick={() => setCarouselIndex((prev) => (prev - 1 + tiposHospedagem.length) % tiposHospedagem.length)}
+                  className="bg-accent hover:bg-accent/90 text-white p-2 rounded-full transition shadow-lg"
+                  aria-label="Tipo anterior"
+                >
+                  <ChevronLeft size={20} />
+                </button>
+
+                {/* INDICATORS */}
+                <div className="flex gap-2">
+                  {tiposHospedagem.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCarouselIndex(index)}
+                      className={`w-2 h-2 rounded-full transition ${index === carouselIndex ? 'bg-accent' : 'bg-border'
+                        }`}
+                      aria-label={`Ir para tipo ${index + 1}`}
+                    />
+                  ))}
+                </div>
+
+                {/* RIGHT BUTTON */}
+                <button
+                  onClick={() => setCarouselIndex((prev) => (prev + 1) % tiposHospedagem.length)}
+                  className="bg-accent hover:bg-accent/90 text-white p-2 rounded-full transition shadow-lg"
+                  aria-label="Próximo tipo"
+                >
+                  <ChevronRight size={20} />
+                </button>
+              </div>
+
+              {/* DESKTOP INDICATORS - BOTTOM CENTER */}
+              <div className="hidden md:flex items-center justify-center gap-2 py-4 bg-muted">
+                {tiposHospedagem.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCarouselIndex(index)}
+                    className={`w-2 h-2 rounded-full transition ${index === carouselIndex ? 'bg-accent' : 'bg-border'
+                      }`}
+                    aria-label={`Ir para tipo ${index + 1}`}
+                  />
+                ))}
               </div>
             </motion.div>
 

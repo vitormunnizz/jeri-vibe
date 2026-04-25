@@ -236,7 +236,7 @@ export default function AulasPage() {
 
             {/* CAROUSEL ITEM */}
             <motion.div
-              className="bg-background rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition relative flex-1 h-96 md:h-[500px]"
+              className="bg-background rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition relative flex-1 h-auto md:h-[500px]"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
@@ -253,17 +253,17 @@ export default function AulasPage() {
                 </div>
 
                 {/* CONTEÚDO */}
-                <div className="p-8 flex flex-col justify-between overflow-y-auto">
+                <div className="p-6 md:p-8 flex flex-col justify-between overflow-y-auto md:overflow-y-auto overflow-x-hidden scrollbar-hide">
                   <div>
                     <span className="inline-block px-4 py-1 bg-accent/10 text-accent text-xs font-bold rounded-full mb-3 w-fit">
                       Modalidade
                     </span>
 
-                    <h3 className="text-xl md:text-2xl font-black mb-2 text-primary line-clamp-2">
+                    <h3 className="text-lg md:text-2xl font-black mb-2 text-primary line-clamp-2">
                       {aulas[carouselIndex].titulo}
                     </h3>
 
-                    <p className="text-foreground mb-3 text-sm">
+                    <p className="text-foreground mb-3 text-sm md:text-base">
                       {aulas[carouselIndex].desc}
                     </p>
 
@@ -272,7 +272,7 @@ export default function AulasPage() {
                       {aulas[carouselIndex].beneficios.map((beneficio, idx) => (
                         <div key={idx} className="flex items-start gap-2">
                           <span className="text-accent font-bold flex-shrink-0 mt-0.5">✓</span>
-                          <span className="text-xs text-foreground">{beneficio}</span>
+                          <span className="text-xs md:text-sm text-foreground">{beneficio}</span>
                         </div>
                       ))}
                     </div>
@@ -290,42 +290,21 @@ export default function AulasPage() {
                 </div>
               </div>
 
-              {/* MOBILE CAROUSEL CONTROLS - BOTTOM CENTER */}
-              <div className="md:hidden flex items-center justify-center gap-4 px-4 py-4 bg-muted">
-                {/* LEFT BUTTON */}
-                <button
-                  onClick={() => setCarouselIndex((prev) => (prev - 1 + aulas.length) % aulas.length)}
-                  className="bg-accent hover:bg-accent/90 text-white p-2 rounded-full transition shadow-lg"
-                  aria-label="Aula anterior"
-                >
-                  <ChevronLeft size={20} />
-                </button>
+            </motion.div>
 
-                {/* INDICATORS */}
-                <div className="flex gap-2">
-                  {aulas.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setCarouselIndex(index)}
-                      className={`w-2 h-2 rounded-full transition ${index === carouselIndex ? 'bg-accent' : 'bg-border'
-                        }`}
-                      aria-label={`Ir para aula ${index + 1}`}
-                    />
-                  ))}
-                </div>
+            {/* MOBILE CAROUSEL CONTROLS - BOTTOM CENTER */}
+            <div className="md:hidden flex items-center justify-center gap-4 px-4 py-4 bg-muted">
+              {/* LEFT BUTTON */}
+              <button
+                onClick={() => setCarouselIndex((prev) => (prev - 1 + aulas.length) % aulas.length)}
+                className="bg-accent hover:bg-accent/90 text-white p-2 rounded-full transition shadow-lg"
+                aria-label="Aula anterior"
+              >
+                <ChevronLeft size={20} />
+              </button>
 
-                {/* RIGHT BUTTON */}
-                <button
-                  onClick={() => setCarouselIndex((prev) => (prev + 1) % aulas.length)}
-                  className="bg-accent hover:bg-accent/90 text-white p-2 rounded-full transition shadow-lg"
-                  aria-label="Próxima aula"
-                >
-                  <ChevronRight size={20} />
-                </button>
-              </div>
-
-              {/* DESKTOP INDICATORS - BOTTOM CENTER */}
-              <div className="hidden md:flex items-center justify-center gap-2 py-4 bg-muted">
+              {/* INDICATORS */}
+              <div className="flex gap-2">
                 {aulas.map((_, index) => (
                   <button
                     key={index}
@@ -336,7 +315,29 @@ export default function AulasPage() {
                   />
                 ))}
               </div>
-            </motion.div>
+
+              {/* RIGHT BUTTON */}
+              <button
+                onClick={() => setCarouselIndex((prev) => (prev + 1) % aulas.length)}
+                className="bg-accent hover:bg-accent/90 text-white p-2 rounded-full transition shadow-lg"
+                aria-label="Próxima aula"
+              >
+                <ChevronRight size={20} />
+              </button>
+            </div>
+
+            {/* DESKTOP INDICATORS - BOTTOM CENTER */}
+            <div className="hidden md:flex items-center justify-center gap-2 py-4 bg-muted">
+              {aulas.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCarouselIndex(index)}
+                  className={`w-2 h-2 rounded-full transition ${index === carouselIndex ? 'bg-accent' : 'bg-border'
+                    }`}
+                  aria-label={`Ir para aula ${index + 1}`}
+                />
+              ))}
+            </div>
 
             {/* RIGHT BUTTON - OUTSIDE CARD */}
             <button
