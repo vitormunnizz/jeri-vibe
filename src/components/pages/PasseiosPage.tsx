@@ -232,19 +232,44 @@ const passeios = [
           </div>
 
           {/* CAROUSEL CONTAINER */}
-          <div className="relative flex flex-col md:flex-row md:items-center gap-4">
-            {/* LEFT BUTTON - OUTSIDE CARD */}
-            <button
-              onClick={() => setCarouselIndex((prev) => (prev - 1 + passeios.length) % passeios.length)}
-              className="hidden md:flex bg-accent hover:bg-accent/90 text-white p-3 rounded-full transition shadow-lg flex-shrink-0"
-              aria-label="Passeio anterior"
-            >
-              <ChevronLeft size={24} />
-            </button>
+          <div className="flex flex-col gap-4">
+            {/* DESKTOP CONTROLS - TOP */}
+            <div className="hidden md:flex items-center justify-center gap-4">
+              {/* LEFT BUTTON */}
+              <button
+                onClick={() => setCarouselIndex((prev) => (prev - 1 + passeios.length) % passeios.length)}
+                className="bg-accent hover:bg-accent/90 text-white p-3 rounded-full transition shadow-lg flex-shrink-0"
+                aria-label="Passeio anterior"
+              >
+                <ChevronLeft size={24} />
+              </button>
+
+              {/* INDICATORS */}
+              <div className="flex gap-2">
+                {passeios.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCarouselIndex(index)}
+                    className={`w-2 h-2 rounded-full transition ${index === carouselIndex ? 'bg-accent' : 'bg-border'
+                      }`}
+                    aria-label={`Ir para passeio ${index + 1}`}
+                  />
+                ))}
+              </div>
+
+              {/* RIGHT BUTTON */}
+              <button
+                onClick={() => setCarouselIndex((prev) => (prev + 1) % passeios.length)}
+                className="bg-accent hover:bg-accent/90 text-white p-3 rounded-full transition shadow-lg flex-shrink-0"
+                aria-label="Próximo passeio"
+              >
+                <ChevronRight size={24} />
+              </button>
+            </div>
 
             {/* CAROUSEL ITEM */}
             <motion.div
-              className="bg-background rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition relative flex-1 w-full h-auto md:h-[500px]"
+              className="bg-background rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition relative w-full h-auto md:h-[500px]"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
@@ -303,43 +328,21 @@ const passeios = [
                   </a>
                 </div>
               </div>
+            </motion.div>
 
-              {/* MOBILE CAROUSEL CONTROLS - BOTTOM CENTER */}
-              <div className="md:hidden flex items-center justify-center gap-4 px-4 py-4 bg-muted">
-                {/* LEFT BUTTON */}
-                <button
-                  onClick={() => setCarouselIndex((prev) => (prev - 1 + passeios.length) % passeios.length)}
-                  className="bg-accent hover:bg-accent/90 text-white p-2 rounded-full transition shadow-lg"
-                  aria-label="Passeio anterior"
-                >
-                  <ChevronLeft size={20} />
-                </button>
+            {/* MOBILE CAROUSEL CONTROLS - BOTTOM */}
+            <div className="md:hidden flex items-center justify-center gap-4 px-4 py-4">
+              {/* LEFT BUTTON */}
+              <button
+                onClick={() => setCarouselIndex((prev) => (prev - 1 + passeios.length) % passeios.length)}
+                className="bg-accent hover:bg-accent/90 text-white p-2 rounded-full transition shadow-lg"
+                aria-label="Passeio anterior"
+              >
+                <ChevronLeft size={20} />
+              </button>
 
-                {/* INDICATORS */}
-                <div className="flex gap-2">
-                  {passeios.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setCarouselIndex(index)}
-                      className={`w-2 h-2 rounded-full transition ${index === carouselIndex ? 'bg-accent' : 'bg-border'
-                        }`}
-                      aria-label={`Ir para passeio ${index + 1}`}
-                    />
-                  ))}
-                </div>
-
-                {/* RIGHT BUTTON */}
-                <button
-                  onClick={() => setCarouselIndex((prev) => (prev + 1) % passeios.length)}
-                  className="bg-accent hover:bg-accent/90 text-white p-2 rounded-full transition shadow-lg"
-                  aria-label="Próximo passeio"
-                >
-                  <ChevronRight size={20} />
-                </button>
-              </div>
-
-              {/* DESKTOP INDICATORS - BOTTOM CENTER */}
-              <div className="hidden md:flex items-center justify-center gap-2 py-4 bg-muted">
+              {/* INDICATORS */}
+              <div className="flex gap-2">
                 {passeios.map((_, index) => (
                   <button
                     key={index}
@@ -350,16 +353,16 @@ const passeios = [
                   />
                 ))}
               </div>
-            </motion.div>
 
-            {/* RIGHT BUTTON - OUTSIDE CARD */}
-            <button
-              onClick={() => setCarouselIndex((prev) => (prev + 1) % passeios.length)}
-              className="hidden md:flex bg-accent hover:bg-accent/90 text-white p-3 rounded-full transition shadow-lg flex-shrink-0"
-              aria-label="Próximo passeio"
-            >
-              <ChevronRight size={24} />
-            </button>
+              {/* RIGHT BUTTON */}
+              <button
+                onClick={() => setCarouselIndex((prev) => (prev + 1) % passeios.length)}
+                className="bg-accent hover:bg-accent/90 text-white p-2 rounded-full transition shadow-lg"
+                aria-label="Próximo passeio"
+              >
+                <ChevronRight size={20} />
+              </button>
+            </div>
           </div>
         </div>
       </section>

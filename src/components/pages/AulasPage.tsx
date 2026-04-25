@@ -224,19 +224,44 @@ export default function AulasPage() {
           </div>
 
           {/* CAROUSEL CONTAINER */}
-          <div className="relative flex items-center gap-4">
-            {/* LEFT BUTTON - OUTSIDE CARD */}
-            <button
-              onClick={() => setCarouselIndex((prev) => (prev - 1 + aulas.length) % aulas.length)}
-              className="hidden md:flex bg-accent hover:bg-accent/90 text-white p-3 rounded-full transition shadow-lg flex-shrink-0"
-              aria-label="Aula anterior"
-            >
-              <ChevronLeft size={24} />
-            </button>
+          <div className="flex flex-col gap-4">
+            {/* DESKTOP CONTROLS - TOP */}
+            <div className="hidden md:flex items-center justify-center gap-4">
+              {/* LEFT BUTTON */}
+              <button
+                onClick={() => setCarouselIndex((prev) => (prev - 1 + aulas.length) % aulas.length)}
+                className="bg-accent hover:bg-accent/90 text-white p-3 rounded-full transition shadow-lg flex-shrink-0"
+                aria-label="Aula anterior"
+              >
+                <ChevronLeft size={24} />
+              </button>
+
+              {/* INDICATORS */}
+              <div className="flex gap-2">
+                {aulas.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCarouselIndex(index)}
+                    className={`w-2 h-2 rounded-full transition ${index === carouselIndex ? 'bg-accent' : 'bg-border'
+                      }`}
+                    aria-label={`Ir para aula ${index + 1}`}
+                  />
+                ))}
+              </div>
+
+              {/* RIGHT BUTTON */}
+              <button
+                onClick={() => setCarouselIndex((prev) => (prev + 1) % aulas.length)}
+                className="bg-accent hover:bg-accent/90 text-white p-3 rounded-full transition shadow-lg flex-shrink-0"
+                aria-label="Próxima aula"
+              >
+                <ChevronRight size={24} />
+              </button>
+            </div>
 
             {/* CAROUSEL ITEM */}
             <motion.div
-              className="bg-background rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition relative flex-1 h-auto md:h-[500px]"
+              className="bg-background rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition relative w-full h-auto md:h-[500px]"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
@@ -289,11 +314,10 @@ export default function AulasPage() {
                   </a>
                 </div>
               </div>
-
             </motion.div>
 
-            {/* MOBILE CAROUSEL CONTROLS - BOTTOM CENTER */}
-            <div className="md:hidden flex items-center justify-center gap-4 px-4 py-4 bg-muted">
+            {/* MOBILE CAROUSEL CONTROLS - BOTTOM */}
+            <div className="md:hidden flex items-center justify-center gap-4 px-4 py-4">
               {/* LEFT BUTTON */}
               <button
                 onClick={() => setCarouselIndex((prev) => (prev - 1 + aulas.length) % aulas.length)}
@@ -325,28 +349,6 @@ export default function AulasPage() {
                 <ChevronRight size={20} />
               </button>
             </div>
-
-            {/* DESKTOP INDICATORS - BOTTOM CENTER */}
-            <div className="hidden md:flex items-center justify-center gap-2 py-4 bg-muted">
-              {aulas.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCarouselIndex(index)}
-                  className={`w-2 h-2 rounded-full transition ${index === carouselIndex ? 'bg-accent' : 'bg-border'
-                    }`}
-                  aria-label={`Ir para aula ${index + 1}`}
-                />
-              ))}
-            </div>
-
-            {/* RIGHT BUTTON - OUTSIDE CARD */}
-            <button
-              onClick={() => setCarouselIndex((prev) => (prev + 1) % aulas.length)}
-              className="hidden md:flex bg-accent hover:bg-accent/90 text-white p-3 rounded-full transition shadow-lg flex-shrink-0"
-              aria-label="Próxima aula"
-            >
-              <ChevronRight size={24} />
-            </button>
           </div>
         </div>
       </section>
