@@ -261,23 +261,23 @@ const passeios = [
                 </div>
 
                 {/* CONTEÚDO */}
-                <div className="p-8 flex flex-col justify-between overflow-y-auto md:overflow-y-auto overflow-x-hidden scrollbar-hide">
+                <div className="p-6 md:p-8 flex flex-col justify-between overflow-y-auto md:overflow-y-auto overflow-x-hidden scrollbar-hide">
                   <div>
                     <span className="inline-block px-4 py-1 bg-accent/10 text-accent text-xs font-bold rounded-full mb-3 w-fit">
                       {passeios[carouselIndex].badge}
                     </span>
 
-                    <h3 className="text-xl md:text-2xl font-black mb-2 text-primary line-clamp-2">
+                    <h3 className="text-lg md:text-2xl font-black mb-2 text-primary">
                       {passeios[carouselIndex].titulo}
                     </h3>
 
-                    <p className="text-foreground mb-3 text-base line-clamp-2">
+                    <p className="text-foreground mb-3 text-sm md:text-base">
                       {passeios[carouselIndex].descricao}
                     </p>
 
                     <div className="text-foreground space-y-1 mb-4">
                       {passeios[carouselIndex].texto.map((t, i) => (
-                        <p key={i} className="text-xs line-clamp-1">{t}</p>
+                        <p key={i} className="text-xs md:text-sm">{t}</p>
                       ))}
                     </div>
 
@@ -286,7 +286,7 @@ const passeios = [
                       {passeios[carouselIndex].itens.map(item => (
                         <div key={item} className="flex items-center gap-2">
                           <span className="text-accent font-bold flex-shrink-0">✓</span>
-                          <span className="text-xs text-foreground line-clamp-1">{item}</span>
+                          <span className="text-xs md:text-sm text-foreground">{item}</span>
                         </div>
                       ))}
                     </div>
