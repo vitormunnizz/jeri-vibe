@@ -232,7 +232,7 @@ const passeios = [
           </div>
 
           {/* CAROUSEL CONTAINER */}
-          <div className="relative flex items-center gap-4">
+          <div className="relative flex flex-col md:flex-row md:items-center gap-4">
             {/* LEFT BUTTON - OUTSIDE CARD */}
             <button
               onClick={() => setCarouselIndex((prev) => (prev - 1 + passeios.length) % passeios.length)}
@@ -244,7 +244,7 @@ const passeios = [
 
             {/* CAROUSEL ITEM */}
             <motion.div
-              className="bg-background rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition relative flex-1 h-auto md:h-[500px]"
+              className="bg-background rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition relative flex-1 w-full h-auto md:h-[500px]"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
