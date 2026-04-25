@@ -261,7 +261,7 @@ const passeios = [
                 </div>
 
                 {/* CONTEÚDO */}
-                <div className="p-8 flex flex-col justify-between overflow-y-auto">
+                <div className="p-8 flex flex-col justify-between overflow-y-auto md:overflow-y-auto overflow-x-hidden">
                   <div>
                     <span className="inline-block px-4 py-1 bg-accent/10 text-accent text-xs font-bold rounded-full mb-3 w-fit">
                       {passeios[carouselIndex].badge}
