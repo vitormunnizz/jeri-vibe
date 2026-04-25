@@ -81,7 +81,7 @@ const passeios = [
     },
     {
       question: "Qual é melhor: lado leste ou oeste em Jericoacoara?",
-      answer: "O lado leste é o mais famoso, ideal para quem quer lagoas cristalinas e relaxar em redes dentro d’água. Já o lado oeste é mais rústico e exclusivo, tendo como principal atração as dunas e experiências diferentes do tradicional, ideal para quem gosta de aventura. Se quiser viver o melhor dos passeios em Jericoacoara, o ideal é fazer os dois roteiros.",
+      answer: "O lado leste é o mais famoso, ideal para quem quer lagoas cristalinas e relaxar em redes dentro d'água. Já o lado oeste é mais rústico e exclusivo, tendo como principal atração as dunas e experiências diferentes do tradicional, ideal para quem gosta de aventura. Se quiser viver o melhor dos passeios em Jericoacoara, o ideal é fazer os dois roteiros.",
     },
     {
       question: "Vale mais a pena buggy ou quadriciclo em Jericoacoara?",
@@ -159,7 +159,7 @@ const passeios = [
       <section id="geralPasseios" className="bg-orange-600 py-20 px-6 text-white">
         <div className="max-w-5xl mx-auto">
           <div className="flex flex-col items-center mb-12 text-center">
-            <span className="uppercase tracking-widest text-xs font-bold mb-2">		Descubra a Vila
+            <span className="uppercase tracking-widest text-xs font-bold mb-2">			Descubra a Vila
             </span>
             <h2 className="text-3xl md:text-4xl font-black">
               Os Passeios Mais Incríveis de Jericoacoara Começam Aqui                                                                                                  	</h2>
@@ -261,7 +261,7 @@ const passeios = [
                 </div>
 
                 {/* CONTEÚDO */}
-                <div className="p-8 flex flex-col justify-between overflow-y-auto md:overflow-y-auto overflow-x-hidden">
+                <div className="p-8 flex flex-col justify-between overflow-y-auto md:overflow-y-auto overflow-x-hidden scrollbar-hide">
                   <div>
                     <span className="inline-block px-4 py-1 bg-accent/10 text-accent text-xs font-bold rounded-full mb-3 w-fit">
                       {passeios[carouselIndex].badge}
