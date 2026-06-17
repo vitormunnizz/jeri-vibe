@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Image } from '@/components/ui/image';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,8 +12,15 @@ export default function Header() {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="text-2xl font-heading font-bold text-primary hover:text-accent transition-colors">
-            jeri4xp.vercel.app
+          <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+            <Image 
+              src="https://static.wixstatic.com/media/792b6b_e4cfdc776eaf441c98cf9dbd720fe1ce~mv2.png" 
+              alt="Jeri 4XP Logo" 
+              width={40}
+              height={40}
+              className="object-contain"
+            />
+            <span className="text-2xl font-heading font-bold text-primary">jeri4xp</span>
           </Link>
 
           {/* Desktop Navigation */}
