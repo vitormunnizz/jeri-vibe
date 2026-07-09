@@ -3,7 +3,7 @@
 
 export const images = {
   // Logo
-  logo: "https://static.wixstatic.com/media/792b6b_00b0f09268b34fcaa1836d25cfac0276~mv2.png",
+  logo: new URL("../assets/logo.png", import.meta.url).href,
 
   // Hero backgrounds
   hero: new URL("../assets/hero.png", import.meta.url).href,
