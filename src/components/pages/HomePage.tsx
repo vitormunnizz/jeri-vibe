@@ -131,11 +131,11 @@ export default function HomePage() {
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
 
           <h1 className="text-3xl md:text-5xl font-black italic tracking-tighter mb-6 text-shadow-md">
-            Jeri4xp: Sua conexão <br /> com o paraíso.
+            SunRide Jeri: Sua conexão <br /> com o paraíso.
           </h1>
 
           <a
-            href="https://wa.me/5585999001339"
+            href="https://wa.link/n8r30l"
             target="_blank"
             rel="noreferrer"
             className="bg-orange-600 px-6 py-3 rounded-full text-xs font-bold hover:bg-white hover:text-orange-600 transition-all"
