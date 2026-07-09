@@ -19,7 +19,7 @@ export default function HomePage() {
       name: "Axelle Rulfi",
       role: "Genebra, Suíça",
       content:
-        "I found out about Jeri 4XP through a friend's recommendation and it was all great. Kitesurfing and sightseeing, it was all perfect!",
+        "I found out about SunRide Jeri through a friend's recommendation and it was all great. Kitesurfing and sightseeing, it was all perfect!",
       avatar: images.avatarAxelle,
     },
     {
