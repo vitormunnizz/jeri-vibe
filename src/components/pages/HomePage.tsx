@@ -275,7 +275,7 @@ export default function HomePage() {
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {/* WhatsApp Card */}
             <a
-              href="https://wa.me/5585999001339"
+              href="https://wa.link/n8r30l"
               target="_blank"
               rel="noreferrer"
               className="bg-orange-600 hover:bg-white border border-white p-8 rounded-3xl transition flex flex-col items-center justify-center text-center text-white hover:text-orange-600"
