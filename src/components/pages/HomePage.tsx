@@ -281,7 +281,7 @@ export default function HomePage() {
               className="bg-orange-600 hover:bg-white border border-white p-8 rounded-3xl transition flex flex-col items-center justify-center text-center text-white hover:text-orange-600"
             >
               <h3 className="text-lg font-black mb-2">WhatsApp</h3>
-              <p className="font-bold text-base mb-1">(88) 9 9600-1339</p>
+              <p className="font-bold text-base mb-1">(88) 9 9687-9762</p>
               <p className="text-xs uppercase tracking-widest">Clique para conversar</p>
             </a>
 
