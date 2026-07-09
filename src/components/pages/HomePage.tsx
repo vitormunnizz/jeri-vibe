@@ -35,7 +35,7 @@ export default function HomePage() {
       name: "David Kennedy",
       role: "Londres, Reino Unido",
       content:
-        "I had the best experiences in Jericoacoara. Booking everything through Jeri 4XP was the best option.",
+        "I had the best experiences in Jericoacoara. Booking everything through SunRide Jeri was the best option.",
       avatar: images.avatarDavid,
     },
     {
@@ -43,7 +43,7 @@ export default function HomePage() {
       name: "Gabriela Maia",
       role: "Fortaleza, Brasil",
       content:
-        "Minha experiência com a Jeri 4XP foi fantástica! A equipe é super profissional e atenciosa, me dando todo o suporte necessário. Já quero voltar!",
+        "Minha experiência com a SunRide Jeri foi fantástica! A equipe é super profissional e atenciosa, me dando todo o suporte necessário. Já quero voltar!",
       avatar: images.avatarGabi,
     },
     {
