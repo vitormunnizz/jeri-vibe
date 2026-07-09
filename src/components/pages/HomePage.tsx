@@ -237,7 +237,7 @@ export default function HomePage() {
       <section id="depoimentos" className="py-20 px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-black text-center mb-12 text-gray-900">
-            O que dizem sobre a Jeri 4XP
+            O que dizem sobre a SunRide Jeri
           </h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
