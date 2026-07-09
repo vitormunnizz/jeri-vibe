@@ -319,7 +319,7 @@ export default function HomePage() {
 
       {/* BOTÃO WHATSAPP FLUTUANTE */}
       <a
-        href="https://wa.me/5585999001339"
+        href="https://wa.me/501339"
         target="_blank"
         rel="noreferrer"
         className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 p-4 rounded-full text-white shadow-lg transition z-40"
