@@ -289,8 +289,8 @@ export default function HomePage() {
               className="hover:bg-white border border-white p-8 rounded-3xl transition flex flex-col items-center justify-center text-center text-white hover:text-orange-600 bg-secondary"
             >
               <h3 className="text-lg font-black mb-2 text-accent">Instagram</h3>
-              <p className="font-bold text-base mb-1">@jeri4xp</p>
-              <p className="text-xs uppercase tracking-widest">Acompanhe as aventuras</p>
+              <p className="font-bold text-base mb-1 text-accent">@jeri4xp</p>
+              <p className="text-xs uppercase tracking-widest text-accent">Acompanhe as aventuras</p>
             </a>
 
             {/* E-mail Card */}
@@ -298,8 +298,8 @@ export default function HomePage() {
               href="mailto:jeri4xp@gmail.com"
               className="hover:bg-white border border-white p-8 rounded-3xl transition flex flex-col items-center justify-center text-center text-white hover:text-orange-600 bg-secondary"
             >
-              <h3 className="text-lg font-black mb-2">E-mail</h3>
-              <p className="font-bold text-base mb-1">jeri4xp@gmail.com</p>
+              <h3 className="text-lg font-black mb-2 text-accent">E-mail</h3>
+              <p className="font-bold text-base mb-1 text-accent">jeri4xp@gmail.com</p>
               <p className="text-xs uppercase tracking-widest">Envie sua mensagem</p>
             </a>
           </div>
