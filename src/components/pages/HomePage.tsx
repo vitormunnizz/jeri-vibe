@@ -146,7 +146,7 @@ export default function HomePage() {
       </section>
 
       {/* HISTÓRIA */}
-      <section id="historia" className="bg-yellow-400 py-20 px-6 text-white">
+      <section id="historia" className="bg-yellow-400 py-20 px-6 text-black">
         <div className="max-w-5xl mx-auto">
           <div className="flex flex-col items-center mb-12 text-center">
             <span className="uppercase tracking-widest text-xs font-bold mb-2">
@@ -155,7 +155,7 @@ export default function HomePage() {
             <h2 className="text-3xl md:text-4xl font-black">
               História de Jericoacoara
             </h2>
-            <div className="h-1 w-20 bg-white mt-4 rounded-full"></div>
+            <div className="h-1 w-20 bg-black mt-4 rounded-full"></div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-10 leading-relaxed text-base md:text-lg">
@@ -164,7 +164,7 @@ export default function HomePage() {
                 Jericoacoara, carinhosamente apelidada de Jeri, é um destino onde o tempo parece ditar o próprio ritmo através do movimento das marés e dos ventos. Localizada no Ceará, a cerca de 300 km de Fortaleza, a vila transformou-se de uma isolada aldeia de pescadores em um refúgio de fama internacional.
               </p>
 
-              <p className="italic border-l-2 border-white/30 pl-5">
+              <p className="italic border-l-2 border-black/30 pl-5">
                 A essência rústica permanece intacta: as ruas continuam cobertas de areia e a iluminação pública é inexistente para preservar o brilho do céu estrelado, criando uma conexão única com o cosmos.
               </p>
 
