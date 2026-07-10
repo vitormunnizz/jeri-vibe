@@ -192,13 +192,13 @@ export default function HomePage() {
       <section id="experiencias" className="py-20 px-6 bg-white">
         <div className="max-w-5xl mx-auto">
           <div className="flex flex-col items-center mb-16 text-center">
-            <span className="uppercase tracking-widest text-xs font-bold mb-2 text-orange-600">
+            <span className="uppercase tracking-widest text-xs font-bold mb-2 text-accent">
               Explore Jericoacoara
             </span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">
               Nossas Experiências
             </h2>
-            <div className="h-1 w-20 bg-orange-600 mt-4 rounded-full"></div>
+            <div className="h-1 w-20 mt-4 rounded-full bg-accent"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -217,11 +217,11 @@ export default function HomePage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70 group-hover:opacity-60 transition-all duration-300"></div>
 
                 <div className="relative z-10 w-full">
-                  <h2 className="text-white text-3xl font-black mb-4 uppercase italic tracking-tighter">
+                  <h2 className="text-3xl font-black mb-4 uppercase italic tracking-tighter text-primary-foreground">
                     {item.name}
                   </h2>
 
-                  <button className="bg-orange-600 text-white py-3 px-6 rounded-full font-bold text-sm uppercase tracking-widest hover:bg-white hover:text-orange-600 hover:cursor-pointer transition-all duration-300">
+                  <button className="text-white py-3 px-6 rounded-full font-bold text-sm uppercase tracking-widest hover:bg-white hover:text-orange-600 hover:cursor-pointer transition-all duration-300 bg-accent">
                     Saiba mais
                   </button>
                 </div>
@@ -300,7 +300,7 @@ export default function HomePage() {
             >
               <h3 className="text-lg font-black mb-2 text-accent">E-mail</h3>
               <p className="font-bold text-base mb-1 text-accent">jeri4xp@gmail.com</p>
-              <p className="text-xs uppercase tracking-widest">Envie sua mensagem</p>
+              <p className="text-xs uppercase tracking-widest text-accent">Envie sua mensagem</p>
             </a>
           </div>
 
