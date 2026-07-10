@@ -274,11 +274,11 @@ export default function HomePage() {
               href="https://wa.link/n8r30l"
               target="_blank"
               rel="noreferrer"
-              className="hover:bg-white border border-white p-8 rounded-3xl transition flex flex-col items-center justify-center text-center text-white hover:text-orange-600 bg-secondary-foreground"
+              className="hover:bg-white border border-white p-8 rounded-3xl transition flex flex-col items-center justify-center text-center text-white hover:text-orange-600 bg-secondary"
             >
-              <h3 className="text-lg font-black mb-2">WhatsApp</h3>
-              <p className="font-bold text-base mb-1">(88) 9 9687-9762</p>
-              <p className="text-xs uppercase tracking-widest">Clique para conversar</p>
+              <h3 className="text-lg font-black mb-2 text-accent">WhatsApp</h3>
+              <p className="font-bold text-base mb-1 text-accent">(88) 9 9687-9762</p>
+              <p className="text-xs uppercase tracking-widest text-accent">Clique para conversar</p>
             </a>
 
             {/* Instagram Card */}
@@ -288,7 +288,7 @@ export default function HomePage() {
               rel="noreferrer"
               className="hover:bg-white border border-white p-8 rounded-3xl transition flex flex-col items-center justify-center text-center text-white hover:text-orange-600 bg-secondary"
             >
-              <h3 className="text-lg font-black mb-2">Instagram</h3>
+              <h3 className="text-lg font-black mb-2 text-accent">Instagram</h3>
               <p className="font-bold text-base mb-1">@jeri4xp</p>
               <p className="text-xs uppercase tracking-widest">Acompanhe as aventuras</p>
             </a>
