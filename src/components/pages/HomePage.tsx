@@ -221,7 +221,7 @@ export default function HomePage() {
                     {item.name}
                   </h2>
 
-                  <button className="text-white py-3 px-6 rounded-full font-bold text-sm uppercase tracking-widest hover:bg-white hover:text-orange-600 hover:cursor-pointer transition-all duration-300 bg-accent">
+                  <button className="py-3 px-6 rounded-full font-bold text-sm uppercase tracking-widest hover:bg-white hover:text-orange-600 hover:cursor-pointer transition-all duration-300 bg-accent text-secondary">
                     Saiba mais
                   </button>
                 </div>
@@ -289,7 +289,7 @@ export default function HomePage() {
               className="hover:bg-white border border-white p-8 rounded-3xl transition flex flex-col items-center justify-center text-center text-white hover:text-orange-600 bg-secondary"
             >
               <h3 className="text-lg font-black mb-2 text-accent">Instagram</h3>
-              <p className="font-bold text-base mb-1 text-accent">@jeri4xp</p>
+              <p className="font-bold text-base mb-1 text-accent">@sunridejeritours</p>
               <p className="text-xs uppercase tracking-widest text-accent">Acompanhe as aventuras</p>
             </a>
 
