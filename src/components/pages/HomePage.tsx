@@ -96,7 +96,7 @@ export default function HomePage() {
 
           <nav className="hidden md:flex gap-8 text-sm font-bold uppercase tracking-wider">
             {navItems.map((item) => (
-              <a key={item.name} href={item.link} className="hover:text-orange-600 transition">
+              <a key={item.name} href={item.link} className="hover:text-yellow-400 transition">
                 {item.name}
               </a>
             ))}
@@ -118,7 +118,7 @@ export default function HomePage() {
                 key={item.name}
                 href={item.link}
                 onClick={() => setIsMenuOpen(false)}
-                className="text-xl font-black hover:text-orange-600"
+                className="text-xl font-black hover:text-yellow-400"
               >
                 {item.name}
               </a>
@@ -138,7 +138,7 @@ export default function HomePage() {
             href="https://wa.link/n8r30l"
             target="_blank"
             rel="noreferrer"
-            className="bg-orange-600 px-6 py-3 rounded-full text-xs font-bold hover:bg-white hover:text-orange-600 transition-all"
+            className="bg-yellow-400 px-6 py-3 rounded-full text-xs font-bold hover:bg-white hover:text-yellow-400 transition-all"
           >
             Reservar Agora
           </a>
@@ -146,7 +146,7 @@ export default function HomePage() {
       </section>
 
       {/* HISTÓRIA */}
-      <section id="historia" className="bg-orange-600 py-20 px-6 text-white">
+      <section id="historia" className="bg-yellow-400 py-20 px-6 text-white">
         <div className="max-w-5xl mx-auto">
           <div className="flex flex-col items-center mb-12 text-center">
             <span className="uppercase tracking-widest text-xs font-bold mb-2">
@@ -259,7 +259,7 @@ export default function HomePage() {
       </section>
 
       {/* CONTATO */}
-      <section id="contato" className="py-20 px-6 bg-orange-600">
+      <section id="contato" className="py-20 px-6 bg-yellow-400">
         <div className="max-w-5xl mx-auto">
           {/* HEADER */}
           <div className="text-center mb-16">

@@ -25,10 +25,10 @@ export default {
             colors: {
                 primary: '#3A4F66',
                 secondary: '#1E2939',
-                accent: '#E85D2A',
+                accent: '#FFD700',
                 background: '#FFFFFF',
                 foreground: '#2C3E50',
-                link: '#E85D2A',
+                link: '#FFD700',
                 'primary-foreground': '#FFFFFF',
                 'secondary-foreground': '#FFFFFF',
                 'accent-foreground': '#FFFFFF',
