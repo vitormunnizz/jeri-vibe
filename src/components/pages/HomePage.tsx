@@ -144,7 +144,6 @@ export default function HomePage() {
           </a>
         </div>
       </section>
-
       {/* HISTÓRIA */}
       <section id="historia" className="bg-yellow-400 py-20 px-6 text-black">
         <div className="max-w-5xl mx-auto">
@@ -189,7 +188,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* EXPERIÊNCIAS */}
       <section id="experiencias" className="py-20 px-6 bg-white">
         <div className="max-w-5xl mx-auto">
@@ -232,7 +230,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* DEPOIMENTOS */}
       <section id="depoimentos" className="py-20 px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto">
@@ -257,7 +254,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* CONTATO */}
       <section id="contato" className="py-20 px-6 bg-yellow-400">
         <div className="max-w-5xl mx-auto">
@@ -278,7 +274,7 @@ export default function HomePage() {
               href="https://wa.link/n8r30l"
               target="_blank"
               rel="noreferrer"
-              className="bg-orange-600 hover:bg-white border border-white p-8 rounded-3xl transition flex flex-col items-center justify-center text-center text-white hover:text-orange-600"
+              className="hover:bg-white border border-white p-8 rounded-3xl transition flex flex-col items-center justify-center text-center text-white hover:text-orange-600 bg-secondary-foreground"
             >
               <h3 className="text-lg font-black mb-2">WhatsApp</h3>
               <p className="font-bold text-base mb-1">(88) 9 9687-9762</p>
@@ -290,7 +286,7 @@ export default function HomePage() {
               href="https://instagram.com/jeri4xp"
               target="_blank"
               rel="noreferrer"
-              className="bg-orange-600 hover:bg-white border border-white p-8 rounded-3xl transition flex flex-col items-center justify-center text-center text-white hover:text-orange-600"
+              className="hover:bg-white border border-white p-8 rounded-3xl transition flex flex-col items-center justify-center text-center text-white hover:text-orange-600 bg-secondary"
             >
               <h3 className="text-lg font-black mb-2">Instagram</h3>
               <p className="font-bold text-base mb-1">@jeri4xp</p>
@@ -300,7 +296,7 @@ export default function HomePage() {
             {/* E-mail Card */}
             <a
               href="mailto:jeri4xp@gmail.com"
-              className="bg-orange-600 hover:bg-white border border-white p-8 rounded-3xl transition flex flex-col items-center justify-center text-center text-white hover:text-orange-600"
+              className="hover:bg-white border border-white p-8 rounded-3xl transition flex flex-col items-center justify-center text-center text-white hover:text-orange-600 bg-secondary"
             >
               <h3 className="text-lg font-black mb-2">E-mail</h3>
               <p className="font-bold text-base mb-1">jeri4xp@gmail.com</p>
@@ -316,7 +312,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* BOTÃO WHATSAPP FLUTUANTE */}
       <a
         href="https://wa.link/n8r30l"
