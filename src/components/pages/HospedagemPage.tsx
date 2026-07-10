@@ -101,13 +101,13 @@ export default function HospedagemPage() {
 
           <nav className="hidden md:flex gap-8 text-sm font-bold uppercase tracking-wider">
             {navItems.map((item) => (
-              <a key={item.name} href={item.link} className="hover:text-accent transition">
+              <a key={item.name} href={item.link} className="text-black hover:text-accent transition">
                 {item.name}
               </a>
             ))}
           </nav>
 
-          <button onClick={() => setIsMenuOpen(true)} className="md:hidden text-2xl">
+          <button onClick={() => setIsMenuOpen(true)} className="md:hidden text-2xl text-black">
             ☰
           </button>
         </header>
@@ -123,7 +123,7 @@ export default function HospedagemPage() {
                 key={item.name}
                 href={item.link}
                 onClick={() => setIsMenuOpen(false)}
-                className="text-xl font-black hover:text-accent"
+                className="text-xl font-black text-white hover:text-accent"
               >
                 {item.name}
               </a>
@@ -135,7 +135,7 @@ export default function HospedagemPage() {
 
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
 
-          <h1 className="text-3xl md:text-5xl font-black italic tracking-tighter mb-6 text-shadow-md">
+          <h1 className="text-3xl md:text-5xl font-black italic tracking-tighter mb-6 text-black">
             Hospedagem em Jericoacoara para uma experiência inesquecível
           </h1>
 
@@ -143,7 +143,7 @@ export default function HospedagemPage() {
             href="https://wa.me/5585999001339"
             target="_blank"
             rel="noreferrer"
-            className="bg-accent px-8 py-3 rounded-full text-xs font-bold hover:bg-white hover:text-accent transition-all"
+            className="bg-accent px-8 py-3 rounded-full text-xs font-bold text-black hover:bg-white hover:text-accent transition-all"
           >
             Reservar Agora
           </a>

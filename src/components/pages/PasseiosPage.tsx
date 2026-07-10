@@ -100,26 +100,26 @@ const passeios = [
   return (
     <div className="font-sans">
       {/* HERO */}
-      <section className="min-h-screen w-full text-white relative overflow-hidden">
+      <section className="min-h-screen w-full text-black relative overflow-hidden">
         <header className="absolute w-full flex justify-between px-6 md:px-10 py-4 z-50 items-center">
           <a href="/"><Image src={images.logo} alt="Logo Jeri4xp" className="w-20 md:w-24" /></a>
 
           <nav className="hidden md:flex gap-8 text-sm font-bold uppercase tracking-wider">
             {navItems.map((item) => (
-              <a key={item.name} href={item.link} className="hover:text-accent transition">
+              <a key={item.name} href={item.link} className="text-black hover:text-accent transition">
                 {item.name}
               </a>
             ))}
           </nav>
 
-          <button onClick={() => setIsMenuOpen(true)} className="md:hidden text-2xl">
+          <button onClick={() => setIsMenuOpen(true)} className="md:hidden text-2xl text-black">
             ☰
           </button>
         </header>
 
         {isMenuOpen && (
           <div className="fixed inset-0 bg-black flex flex-col items-center justify-center gap-8 z-50 font-bold">
-            <button onClick={() => setIsMenuOpen(false)} className="absolute top-8 right-10 text-3xl">
+            <button onClick={() => setIsMenuOpen(false)} className="absolute top-8 right-10 text-3xl text-white">
               ✕
             </button>
 
@@ -128,7 +128,7 @@ const passeios = [
                 key={item.name}
                 href={item.link}
                 onClick={() => setIsMenuOpen(false)}
-                className="text-xl font-black hover:text-accent"
+                className="text-xl font-black text-white hover:text-accent"
               >
                 {item.name}
               </a>
@@ -140,7 +140,7 @@ const passeios = [
 
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
 
-          <h1 className="text-3xl md:text-5xl font-black italic tracking-tighter mb-6 text-shadow-md">
+          <h1 className="text-3xl md:text-5xl font-black italic tracking-tighter mb-6 text-black">
             Os melhores passeios em Jericoacoara com conforto e segurança
           </h1>
 
@@ -148,7 +148,7 @@ const passeios = [
             href="https://wa.me/5585999001339"
             target="_blank"
             rel="noreferrer"
-            className="bg-accent px-8 py-3 rounded-full text-xs font-bold hover:bg-white hover:text-accent transition-all"
+            className="bg-accent px-8 py-3 rounded-full text-xs font-bold text-black hover:bg-white hover:text-accent transition-all"
           >
             Reservar Agora
           </a>
@@ -159,10 +159,12 @@ const passeios = [
       <section id="geralPasseios" className="bg-orange-600 py-20 px-6 text-white">
         <div className="max-w-5xl mx-auto">
           <div className="flex flex-col items-center mb-12 text-center">
-            <span className="uppercase tracking-widest text-xs font-bold mb-2">			Descubra a Vila
+            <span className="uppercase tracking-widest text-xs font-bold mb-2">
+              Descubra a Vila
             </span>
             <h2 className="text-3xl md:text-4xl font-black">
-              Os Passeios Mais Incríveis de Jericoacoara Começam Aqui                                                                                                  	</h2>
+              Os Passeios Mais Incríveis de Jericoacoara Começam Aqui
+            </h2>
             <div className="h-1 w-20 bg-white mt-4 rounded-full"></div>
           </div>
           <div className="grid md:grid-cols-2 gap-10 leading-relaxed text-base md:text-lg">

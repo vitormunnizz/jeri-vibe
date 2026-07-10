@@ -51,13 +51,13 @@ export default function TransferPage() {
 
           <nav className="hidden md:flex gap-8 text-sm font-bold uppercase tracking-wider">
             {navItems.map((item) => (
-              <a key={item.name} href={item.link} className="hover:text-orange-600 transition">
+              <a key={item.name} href={item.link} className="text-black hover:text-orange-600 transition">
                 {item.name}
               </a>
             ))}
           </nav>
 
-          <button onClick={() => setIsMenuOpen(true)} className="md:hidden text-2xl">
+          <button onClick={() => setIsMenuOpen(true)} className="md:hidden text-2xl text-black">
             ☰
           </button>
         </header>
@@ -73,7 +73,7 @@ export default function TransferPage() {
                 key={item.name}
                 href={item.link}
                 onClick={() => setIsMenuOpen(false)}
-                className="text-xl font-black hover:text-orange-600"
+                className="text-xl font-black text-white hover:text-orange-600"
               >
                 {item.name}
               </a>
@@ -85,7 +85,7 @@ export default function TransferPage() {
 
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
 
-          <h1 className="text-3xl md:text-5xl font-black italic tracking-tighter mb-6 text-shadow-md">
+          <h1 className="text-3xl md:text-5xl font-black italic tracking-tighter mb-6 text-black">
             Como Chegar em Jericoacoara com <br /> Transfer Seguro e Confortável
           </h1>
 
@@ -93,7 +93,7 @@ export default function TransferPage() {
             href="https://wa.me/5585999001339"
             target="_blank"
             rel="noreferrer"
-            className="bg-orange-600 px-8 py-3 rounded-full text-xs font-bold hover:bg-white hover:text-orange-600 transition-all"
+            className="bg-orange-600 px-8 py-3 rounded-full text-xs font-bold text-black hover:bg-white hover:text-orange-600 transition-all"
           >
             Reservar Agora
           </a>
